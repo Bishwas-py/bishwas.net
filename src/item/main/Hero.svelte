@@ -1,12 +1,12 @@
 <script lang="ts">
-    import {fade} from "svelte/transition";
+    import {fade, scale} from "svelte/transition";
     import Skills from "$item/main/Skills.svelte";
     export let imageUrl = "https://avatars.githubusercontent.com/u/42182303?v=4";
 </script>
 
 <header class="max-w-3xl">
     <div class="hero-content">
-        <div class="hero-image-container">
+        <div class="hero-image-container" in:scale={{start: 3}}>
             <img src={imageUrl} alt="Bishwas Bhandari" class="hero-image"/>
         </div>
         <div class="hero-text">
@@ -36,6 +36,7 @@
     .hero-image-container {
         @apply overflow-hidden w-32 mb-4 shadow-md dark:outline;
         animation: wobble 2s infinite;
+        border-radius: 28% 25% 28% 25%;
         @apply md:sticky top-7;
     }
 
