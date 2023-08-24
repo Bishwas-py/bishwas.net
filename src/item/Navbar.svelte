@@ -1,7 +1,11 @@
+<script lang="ts">
+    import {page} from '$app/stores';
+</script>
+
 <nav>
     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/projects">Projects</a></li>
+        <li class:active={$page.url.pathname === "/"}><a href="/">Home</a></li>
+        <li class:active={$page.url.pathname === "/projects"}><a href="/projects">Projects</a></li>
     </ul>
 </nav>
 
@@ -22,6 +26,10 @@
         @apply dark:hover:drop-shadow-white-lg hover:drop-shadow-dark-lg;
         @apply dark:hover:text-blue-200;
         @apply duration-300;
+    }
+
+    ul li.active {
+        @apply font-bold dark:text-blue-100;
     }
 
     ul li a {

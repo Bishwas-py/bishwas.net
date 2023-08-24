@@ -42,7 +42,8 @@
                target="_blank">
                 <iconify-icon icon="mdi:facebook"></iconify-icon>
             </a>
-            <a class="ml-auto text-lg font-noto-sans flex items-center gap-2" in:fade={{delay: 870}} href="mailto:yo@bishwas.net">
+            <a class="ml-auto text-lg font-noto-sans flex items-center gap-2" in:fade={{delay: 870}}
+               href="mailto:yo@bishwas.net">
                 <iconify-icon icon="mdi:email"></iconify-icon>
                 <span>mail me</span>
             </a>

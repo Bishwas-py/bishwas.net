@@ -24,6 +24,10 @@ const config = {
                 'dark-md': '0 4px 6px rgba(0,0,0, 0.1)',
                 'dark-lg': '0px 15px 15px rgba(0,0,0,1)',
                 'dark-xl': '0px 20px 25px rgba(0,0,0,1)',
+                'gold-sm': '0 1px 2px rgba(255,215,0, 0.05)',
+                'gold-md': '0 4px 6px rgba(255,215,0, 0.1)',
+                'gold-lg': '0px 15px 15px rgba(255,215,0,1)',
+                'gold-xl': '0px 20px 25px rgba(255,215,0,1)'
             },
             colors: {
                 'primary': '#202124',
