@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>Bishwas Bhandari | Intro</title>
+    <title>Bishwas Bhandari</title>
 </svelte:head>
 
 
