@@ -38,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-cloudflare": "^2.3.3",
 		"iconify-icon": "^1.0.8",
 		"svelte-preprocess": "^5.0.4"
 	}
