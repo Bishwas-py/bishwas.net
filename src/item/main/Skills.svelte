@@ -9,15 +9,15 @@
 </script>
 
 <div class="tags mt-5">
-    <div class="skill-tag python" in:fade={{delay: 780}}>
+    <div class="skill-tag python" in:fade={{delay: 580}}>
         <span class="tag-text">Python</span>
         <iconify-icon icon="mdi:language-python"></iconify-icon>
     </div>
-    <div class="skill-tag django" in:fade={{delay: 770}}>
+    <div class="skill-tag django" in:fade={{delay: 670}}>
         <span class="tag-text">Django</span>
         <iconify-icon icon="simple-icons:django"></iconify-icon>
     </div>
-    <div class="skill-tag svelte" in:fade={{delay: 790}}>
+    <div class="skill-tag svelte" in:fade={{delay: 780}}>
         <span class="tag-text">Svelte</span>
         <iconify-icon icon="simple-icons:svelte"></iconify-icon>
     </div>
@@ -43,7 +43,7 @@
             <iconify-icon icon="mdi:broadcast"></iconify-icon>
         </div>
     {/if}
-    <button class="load-more" on:click={toggleLoadMoreSkills} in:fade={{delay: 930}}>
+    <button class="load-more" on:click={toggleLoadMoreSkills} in:fade={{delay: 830}}>
         <span class="tag-text">{loadMore ? 'Show less' : 'Show more'}</span>
         <iconify-icon icon={loadMore ? 'mdi:chevron-up' : 'mdi:chevron-down'}></iconify-icon>
     </button>

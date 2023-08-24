@@ -97,19 +97,17 @@
 
 <div class="contact-me">
 
-
-    <a class="text-lg font-noto-sans flex items-center gap-2" in:fade={{delay: 870}}
+    <a class="text-lg font-noto-sans flex items-center gap-2"
        href="https://github.com/bishwas-py/">
         <iconify-icon icon="mdi:github"></iconify-icon>
         <span>git me</span>
     </a>
 
-    <a class="text-lg font-noto-sans flex items-center gap-2" in:fade={{delay: 870}}
+    <a class="text-lg font-noto-sans flex items-center gap-2"
        href="mailto:yo@bishwas.net">
         <iconify-icon icon="mdi:email"></iconify-icon>
         <span>mail me</span>
     </a>
-
 
 </div>
 

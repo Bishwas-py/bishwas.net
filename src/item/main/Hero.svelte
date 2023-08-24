@@ -6,13 +6,13 @@
 
 <header class="max-w-3xl">
     <div class="hero-content">
-            <div class="hero-image-container w-32 h-32" transition:send>
-                <img src="/me-bishwas.png" alt="Bishwas Bhandari" class="hero-image"/>
-            </div>
+        <div class="hero-image-container w-32 h-32" transition:send>
+            <img src="/me-bishwas.png" alt="Bishwas Bhandari" class="hero-image"/>
+        </div>
         <div class="hero-text">
-            <span class="text-7xl font-noto-sans px-0 mb-1" in:fade={{delay: 300}}>Hi, Man!</span>
-            <h1 class="text-2xl font-noto-sans mb-4 ml-2" in:fade={{delay: 400}}>I am Bishwas.</h1>
-            <p class="text-lg font-noto-sans ml-1" in:fade={{delay: 550}}>
+            <span class="text-7xl font-noto-sans px-0 mb-1" in:fade={{delay: 100}}>Hi, Man!</span>
+            <h1 class="text-2xl font-noto-sans mb-4 ml-2" in:fade={{delay: 200}}>I am Bishwas.</h1>
+            <p class="text-lg font-noto-sans ml-1" in:fade={{delay: 450}}>
                 A Full-Stack Web developer doing Django Python, Svelte/Kit, Ruby on Rails, React.js &
                 Next JS. I love to develop things, I'd rather say I am addicted to development and coding.
             </p>
