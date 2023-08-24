@@ -2,7 +2,7 @@
     import {fade} from "svelte/transition";
 </script>
 
-<div in:fade={{delay: 1220}}>
+<div in:fade={{delay: 920}}>
     <div class="intro max-w-3xl mt-12">
         <h2 class="text-2xl font-noto-sans mb-3">Intro</h2>
         <p class="text-lg font-noto-sans">
