@@ -1,22 +1,122 @@
 <script lang="ts">
-
+    import {fly, fade} from "svelte/transition";
 </script>
 
-<div class="projects-tab">
-    <h1 class="text-2xl font-bold">Projects</h1>
-    <p class="text-gray-500 dark:text-gray-400">Here are some of my projects</p>
+<div class="intro">
+    <p>
+        I have worked on many projects, some of them are my own and some of them are for clients. I have worked on
+        different technologies and frameworks. I have worked on different types of projects, from small to large scale
+        projects.
+    </p>
+
+    <div class="tags mt-7">
+        <a class="skill-tag typescript" href="https://www.npmjs.com/package/seord" target="_blank"
+           in:fade={{delay: 780}}>
+            <span class="tag-text">SEOrd</span>
+            <iconify-icon icon="mdi:language-typescript" class="tag-icon"></iconify-icon>
+        </a>
+        <a class="skill-tag python" href="https://pypi.org/project/fiverr-api/" target="_blank" in:fade={{delay: 780}}>
+            <span class="tag-text">Fiverr API</span>
+            <iconify-icon icon="mdi:language-python" class="tag-icon"></iconify-icon>
+        </a>
+        <a class="skill-tag react" href="https://speedclicking.com" target="_blank" in:fade={{delay: 780}}>
+            <span class="tag-text">Speed Clicking</span>
+            <iconify-icon icon="simple-icons:react" class="tag-icon"></iconify-icon>
+            <iconify-icon icon="simple-icons:tailwindcss" class="tag-icon"></iconify-icon>
+            <iconify-icon icon="mdi:language-javascript" class="tag-icon"></iconify-icon>
+        </a>
+        <a class="skill-tag python" href="https://pypi.org/project/regxon/" target="_blank" in:fade={{delay: 780}}>
+            <span class="tag-text">RegXon</span>
+            <iconify-icon icon="mdi:language-python" class="tag-icon"></iconify-icon>
+        </a>
+        <a class="skill-tag django" href="https://github.com/Bishwas-py/shazam" target="_blank" in:fade={{delay: 780}}>
+            <span class="tag-text">Shazam</span>
+            <iconify-icon icon="simple-icons:svelte" class="tag-icon"></iconify-icon>
+            <iconify-icon icon="mdi:language-python" class="tag-icon"></iconify-icon>
+            <iconify-icon icon="simple-icons:django" class="tag-icon"></iconify-icon>
+        </a>
+        <a class="skill-tag javascript" href="https://github.com/Bishwas-py/bishwas.net" target="_blank"
+           in:fade={{delay: 780}}>
+            <span class="tag-text">My Portfolio</span>
+            <iconify-icon icon="simple-icons:svelte" class="tag-icon"></iconify-icon>
+            <iconify-icon icon="simple-icons:typescript" class="tag-icon"></iconify-icon>
+            <iconify-icon icon="simple-icons:tailwindcss" class="tag-icon"></iconify-icon>
+        </a>
+    </div>
+
 </div>
 
+
+<div class="image-tab">
+    <a class="image" href="https://webmatrices.com" target="_blank" rel="noopener noreferrer"
+       in:fly={{duration: 300, y: '53'}}>
+        <img src="/projects/webmatrices.png" alt="blogstorm">
+    </a>
+    <a class="image" href="https://www.blogstorm.ai" target="_blank" rel="noopener noreferrer"
+       in:fly={{duration: 700, y: '53'}}>
+        <img src="/projects/blogstorm.png" alt="blogstorm">
+    </a>
+    <a class="image" href="https://www.webmatrices.com/long-tail-keywords" target="_blank" rel="noopener noreferrer"
+       in:fly={{duration: 2000, y: '53'}}>
+        <img src="/projects/webmatrices-long-form.png" alt="webmatrices long-tail keywords">
+    </a>
+    <a class="image" href="https://www.webmatrices.com/long-tail-keywords" target="_blank" rel="noopener noreferrer"
+       in:fly={{duration: 1200, y: '53'}}>
+        <img src="/projects/webmatrices-long-form-used.png" alt="webmatrices long-tail keywords">
+    </a>
+    <a class="image" href="https://www.xoomato.com" target="_blank" rel="noopener noreferrer"
+       in:fly={{duration: 1500, y: '53'}}>
+        <img src="/projects/xoomato.png" alt="xoomato">
+    </a>
+    <a class="image" href="https://https://github.com/Bishwas-py/deviser-club" target="_blank" rel="noopener noreferrer"
+       in:fly={{duration: 1700, y: '53'}}>
+        <img src="/projects/deviser-club.png" alt="deviser club">
+    </a>
+    <a class="image h-full" href="https://www.liveinabroad.com" target="_blank" rel="noopener noreferrer"
+       in:fly={{duration: 2200, y: '53'}}>
+        <img src="/projects/liveinabroad.png" alt="liveinabroad" class="h-full">
+    </a>
+    <a class="image" href="https://www.xoomato.com" target="_blank" rel="noopener noreferrer"
+       in:fly={{duration: 2700, y: '53'}}>
+        <img src="/projects/xoomato-front.png" alt="xoomato">
+    </a>
+    <a class="image" href="https://www.blogstorm.ai" target="_blank" rel="noopener noreferrer"
+       in:fly={{duration: 3100, y: '53'}}>
+        <img src="/projects/blogstorm-interface.png" alt="blogstorm interface">
+    </a>
+</div>
+
+<p class="outro">
+    I have worked on many other projects, but I am not indexing them here because they are not public or I don't have
+    the permission to share them.
+</p>
+
+
 <style lang="postcss">
-    .projects-tab {
-        @apply mt-2 mb-2;
-        @apply bg-white dark:bg-gray-800;
+    .image-tab {
+        @apply max-w-3xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+        @apply gap-10;
+        @apply mt-16;
+    }
+
+    .image {
+    }
+
+    img {
+        @apply w-full;
         @apply rounded-lg;
-        @apply shadow-md;
-        @apply p-4;
-        @apply border border-gray-200 dark:border-gray-700;
-        @apply dark:text-gray-200;
-        @apply dark:hover:text-gray-100;
-        @apply w-full max-w-3xl;
+        @apply shadow;
+        @apply rounded-lg shadow-md;
+        @apply outline outline-accent dark:outline-stone-950;
+        @apply shadow hover:scale-110 duration-200 delay-150;
+        @apply cursor-pointer;
+    }
+
+    .intro {
+        @apply max-w-3xl;
+    }
+
+    p.outro {
+        @apply max-w-3xl mt-16;
     }
 </style>

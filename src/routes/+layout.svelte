@@ -24,7 +24,7 @@
     </main>
     <AppearanceSwitch/>
 </div>
-<img src="/img.png" alt="Bishwas Bhandari PNG"
+<img src="/bg.png" alt="Bishwas Bhandari PNG"
      class="fixed top-0 right-0 w-screen h-screen -z-10 bg-black opacity-20 invert dark:invert-0">
 
 <style lang="postcss">

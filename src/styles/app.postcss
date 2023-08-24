@@ -4,7 +4,6 @@
 @tailwind utilities;
 
 
-
 @keyframes wobble {
     0%, 100% {
         border-radius: 28% 25% 28% 25%;
@@ -45,6 +44,12 @@
 
     .dark ::-webkit-scrollbar-thumb {
         @apply bg-gray-600;
+    }
+
+    .link-inked {
+        @apply text-purple-800 font-semibold hover:text-purple-600;
+        @apply dark:text-purple-200 dark:hover:text-purple-400;
+        @apply duration-75;
     }
 
 }
