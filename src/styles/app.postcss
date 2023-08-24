@@ -1,0 +1,50 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@keyframes wobble {
+    0%, 100% {
+        border-radius: 28% 25% 28% 25%;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 25% 28% 25% 28%;
+        transform: rotate(-1deg);
+    }
+    50% {
+        border-radius: 28% 25% 28% 25%;
+        transform: rotate(0deg);
+    }
+    75% {
+        border-radius: 25% 28% 25% 28%;
+        transform: rotate(1deg);
+        scale: 103%;
+    }
+}
+
+@layer components {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-gray-200;
+    }
+
+    .dark ::-webkit-scrollbar-track {
+        @apply bg-gray-700;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-gray-400;
+        @apply rounded-full;
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+        @apply bg-gray-600;
+    }
+
+}

@@ -1,0 +1,8 @@
+/* Regular */
+@font-face {
+    font-family: 'noto-sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('../assets/noto-sans/NotoSans-Regular.woff2') format('woff2');
+    font-display: swap;
+}
