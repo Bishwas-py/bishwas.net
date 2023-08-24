@@ -1,13 +1,14 @@
 <script lang="ts">
-    import {fade, scale} from "svelte/transition";
+    import {fade} from "svelte/transition";
     import Skills from "$item/main/Skills.svelte";
+    import {send} from "$lib";
 </script>
 
 <header class="max-w-3xl">
     <div class="hero-content">
-        <div class="hero-image-container" in:scale={{start: 3}}>
-            <img src="/me-bishwas.png" alt="Bishwas Bhandari" class="hero-image"/>
-        </div>
+            <div class="hero-image-container w-32 h-32" transition:send>
+                <img src="/me-bishwas.png" alt="Bishwas Bhandari" class="hero-image"/>
+            </div>
         <div class="hero-text">
             <span class="text-7xl font-noto-sans px-0 mb-1" in:fade={{delay: 300}}>Hi, Man!</span>
             <h1 class="text-2xl font-noto-sans mb-4 ml-2" in:fade={{delay: 400}}>I am Bishwas.</h1>
@@ -29,17 +30,6 @@
     .hero-content {
         @apply flex flex-col md:flex-row items-start;
         @apply gap-4 md:gap-9;
-    }
-
-    .hero-image-container {
-        @apply overflow-hidden w-32 h-32 flex-shrink-0 mb-4 shadow-md dark:outline;
-        animation: wobble 2s infinite;
-        border-radius: 28% 25% 28% 25%;
-        @apply md:sticky top-7;
-    }
-
-    .hero-image {
-        @apply w-full h-full object-cover scale-110 hover:scale-150 object-top duration-200 cursor-zoom-in;
     }
 
     .hero-text {

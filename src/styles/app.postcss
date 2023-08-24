@@ -52,4 +52,17 @@
         @apply duration-75;
     }
 
+
+    .hero-image-container {
+        @apply overflow-hidden flex-shrink-0 mb-4 shadow-md dark:outline;
+        animation: wobble 2s infinite;
+        border-radius: 28% 25% 28% 25%;
+        @apply md:sticky top-7;
+    }
+
+    .hero-image {
+        @apply w-full h-full object-cover scale-110 hover:scale-150 object-top duration-200 cursor-zoom-in;
+    }
+
+
 }

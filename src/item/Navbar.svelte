@@ -1,6 +1,14 @@
 <script lang="ts">
     import {page} from '$app/stores';
+    import {send, receive} from "$lib";
 </script>
+
+{#if $page.url.pathname !== "/"}
+    <div class="fixed md:top-13 left-7 hero-image-container drop-shadow-none w-7 h-7" in:send
+         out:receive>
+        <img src="/me-bishwas.png" alt="Bishwas Bhandari" class="hero-image"/>
+    </div>
+{/if}
 
 <nav>
     <ul>
@@ -26,6 +34,10 @@
         @apply dark:hover:drop-shadow-white-lg hover:drop-shadow-dark-lg;
         @apply dark:hover:text-blue-200;
         @apply duration-300;
+    }
+
+    ul li.hero-image-container {
+        @apply bg-green-500;
     }
 
     ul li.active {
