@@ -3,14 +3,15 @@
     import {send, receive} from "$lib";
 </script>
 
-{#if $page.url.pathname !== "/"}
-    <div class="fixed md:top-13 left-7 hero-image-container drop-shadow-none w-7 h-7" in:send
-         out:receive>
-        <img src="/me-bishwas.png" alt="Bishwas Bhandari" class="hero-image"/>
-    </div>
-{/if}
-
 <nav>
+
+    {#if $page.url.pathname !== "/"}
+        <div class="absolute top-0 left-7 hero-image-container drop-shadow-none w-7 h-7" in:send
+             out:receive>
+            <img src="/me-bishwas.png" alt="Bishwas Bhandari" class="hero-image"/>
+        </div>
+    {/if}
+
     <ul>
         <li class:active={$page.url.pathname === "/"}><a href="/">Home</a></li>
         <li class:active={$page.url.pathname === "/projects"}><a href="/projects">Projects</a></li>
@@ -20,9 +21,8 @@
 <style lang="postcss">
 
     nav {
-        @apply flex flex-col items-center;
+        @apply flex flex-col relative items-center;
         @apply mt-16 md:mt-14 py-1;
-        @apply dark:drop-shadow-white-xl drop-shadow-dark-xl;
     }
 
     ul {
