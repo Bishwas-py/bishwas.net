@@ -24,15 +24,15 @@
     </main>
     <AppearanceSwitch/>
 </div>
-<img src="/bg.png" alt="Bishwas Bhandari PNG"
-     class="fixed top-0 right-0 w-screen h-screen -z-10 bg-black opacity-20 invert dark:invert-0">
+
+<div class="bg-overlay">
+    <div class="overlay"></div>
+    <img src="/bg.png" alt="Bishwas Bhandari PNG">
+</div>
 
 <style lang="postcss">
     div.be-love {
         @apply font-inter;
-        @apply bg-gradient-to-b;
-        @apply from-purple-100/75 to-slate-200/75;
-        @apply dark:from-gray-950/95 dark:to-slate-950/95;
         @apply text-slate-900 dark:text-slate-100;
         @apply w-full min-h-screen;
         @apply flex flex-col;
@@ -48,5 +48,20 @@
     main div.spread-love {
         @apply flex flex-col items-center;
         @apply w-full px-4;
+    }
+
+    .bg-overlay {
+        @apply fixed top-0 w-screen h-screen;
+    }
+    .bg-overlay .overlay {
+        @apply h-full w-full;
+        @apply bg-gradient-to-b;
+        @apply from-purple-100/75 to-slate-200/75;
+        @apply dark:from-gray-950/95 dark:to-slate-950/95;
+    }
+    .bg-overlay img {
+        @apply -z-10 bg-black opacity-20 invert dark:invert-0;
+        @apply w-full h-full;
+        @apply absolute top-0 left-0;
     }
 </style>
