@@ -8,9 +8,12 @@
 
 <div class="intro">
     <p>
-        I have worked on many projects, some of them are my own and some of them are for clients. I have worked on
-        different technologies and frameworks. I have worked on different types of projects, from small to large scale
-        projects.
+        I have worked on many projects, some of them are my own and some of them are for clients, using
+        different technologies and frameworks, from small to large scale projects.
+    </p>
+
+    <p class="mt-7">
+        Here are some of the projects that I have worked on.
     </p>
 
     <div class="tags mt-7">
@@ -66,11 +69,11 @@
     </a>
     <a class="image" href="https://www.speedclicking.com" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 1200, y: '53'}}>
-        <img src="/projects/speedclicking.png" alt="webmatrices long-tail keywords">
+        <img src="/projects/speedclicking.png" alt="speedclicking game developed by bishwas using react/tailwind/nexjs">
     </a>
     <a class="image" href="https://www.xoomato.com" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 1500, y: '53'}}>
-        <img src="/projects/xoomato.png" alt="xoomato">
+        <img src="/projects/xoomato.png" alt="xoomato, a url security service">
     </a>
     <a class="image" href="https://github.com/Bishwas-py/deviser-club" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 1700, y: '53'}}>
