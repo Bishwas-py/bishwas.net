@@ -1,13 +1,13 @@
 <script lang="ts">
     import {page} from '$app/stores';
-    import {send, receive} from "$lib";
+    import {fly} from 'svelte/transition';
 </script>
 
 <nav>
 
     {#if $page.url.pathname !== "/"}
-        <div class="absolute top-0 left-7 hero-image-container drop-shadow-none w-7 h-7" in:send
-             out:receive>
+        <div class="absolute top-0 left-7 hero-image-container drop-shadow-none w-7 h-7"
+             transition:fly={{x: -100, duration: 500}}>
             <img src="/me-bishwas.png" alt="Bishwas Bhandari" class="hero-image"/>
         </div>
     {/if}
