@@ -1,9 +1,13 @@
+<script lang="ts">
+    import  {fade, fly} from "svelte/transition";
+</script>
+
 <svelte:head>
     <title>Experience | Bishwas</title>
 </svelte:head>
 
 
-<div class="experience-intro">
+<div class="experience-intro" in:fade>
     <h1>Experience</h1>
     <p>
         I have been working as a software developer since 2020, and I have been working as a freelancer since 2018.
@@ -11,8 +15,9 @@
         ranging from bot development, desktop application development, and web development.
     </p>
 </div>
+
 <div class="experiences">
-    <div class="experience">
+    <div class="experience" in:fly={{y: 50, duration: 500}}>
         <div class="experience-item">
             <iconify-icon icon="ph:code-fill" class="bg-purple-500 text-purple-100"></iconify-icon>
             <div class="experience-item-title">
@@ -39,7 +44,7 @@
         </ul>
     </div>
 
-    <div class="experience">
+    <div class="experience" in:fly={{y: 50, duration: 500, delay: 100}}>
         <div class="experience-item">
             <iconify-icon icon="teenyicons:python-solid" class="bg-yellow-500 text-yellow-100"></iconify-icon>
             <div class="experience-item-title">
@@ -63,7 +68,7 @@
 
     </div>
 
-    <div class="experience">
+    <div class="experience" in:fly={{y: 50, duration: 500, delay: 200}}>
         <div class="experience-item">
             <iconify-icon icon="jam:fiverr" class="bg-emerald-500 text-emerald-100"></iconify-icon>
             <div class="experience-item-title">
@@ -88,7 +93,7 @@
         </ul>
     </div>
 
-    <div class="experience">
+    <div class="experience" in:fly={{y: 50, duration: 500, delay: 300}}>
         <div class="experience-item">
             <iconify-icon icon="mdi:forum" class="bg-cyan-500 text-cyan-100"></iconify-icon>
             <div class="experience-item-title">
