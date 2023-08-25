@@ -67,14 +67,16 @@
 
 .social-tag {
     @apply flex items-center justify-center;
-    @apply py-1 px-3 rounded-full;
-    @apply w-10 h-10;
-    @apply text-lg font-medium;
+    @apply rounded-full;
+    @apply w-7 h-7;
+    @apply text-sm font-medium;
     @apply dark:text-stone-400 hover:text-white dark:hover:text-red-200;
-    @apply dark:bg-stone-900/40 bg-stone-200;
-    @apply outline;
+    @apply dark:bg-stone-900 bg-stone-200;
+    @apply drop-shadow dark:drop-shadow-none;
+    @apply dark:outline dark:outline-1;
     @apply cursor-pointer;
     @apply duration-200;
+    @apply active:scale-95 duration-100;
 }
 
 .social-tag.linkedin {
@@ -100,4 +102,25 @@
 .social-tag.facebook {
     @apply hover:bg-blue-300 hover:text-blue-950;
     @apply dark:hover:outline-blue-700 dark:hover:bg-blue-900 dark:hover:text-blue-200;
+}
+
+
+.socials {
+    @apply flex md:flex-col gap-2;
+    @apply absolute bottom-10 md:bottom-7;
+    @apply left-1 md:-left-16;
+}
+
+.go-link {
+    @apply text-lg flex items-center gap-2;
+    @apply active:scale-95 duration-100;
+}
+
+.go-link.is-linkable {
+    @apply text-gray-950 hover:text-blue-950;
+    @apply dark:text-gray-50 dark:hover:text-blue-50;
+}
+
+.social-button {
+    @apply px-0 md:-ml-7;
 }

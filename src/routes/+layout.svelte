@@ -13,15 +13,17 @@
     import '$fonts/styles/noto-sans.css';
     import AppearanceSwitch from "$item/AppearanceSwitch.svelte";
     import Navbar from "$item/Navbar.svelte";
+    import Footer from "$item/Footer.svelte";
 </script>
 
-<div class="be-love">
+<div class="layout-container">
     <Navbar/>
     <main>
         <div class="spread-love">
             <slot/>
         </div>
     </main>
+    <Footer/>
     <AppearanceSwitch/>
 </div>
 
@@ -31,17 +33,18 @@
 </div>
 
 <style lang="postcss">
-    div.be-love {
-        @apply font-inter;
+    div.layout-container {
+        @apply font-noto-sans;
         @apply text-slate-900 dark:text-slate-100;
         @apply w-full min-h-screen;
         @apply flex flex-col;
         @apply relative;
         @apply z-10;
+        @apply pb-7;
     }
 
     main {
-        @apply pt-9 pb-7;
+        @apply pt-9;
         @apply flex flex-col items-center;
     }
 
@@ -53,12 +56,14 @@
     .bg-overlay {
         @apply fixed top-0 w-screen h-screen;
     }
+
     .bg-overlay .overlay {
         @apply h-full w-full;
         @apply bg-gradient-to-b;
         @apply from-purple-100/75 to-slate-200/75;
         @apply dark:from-gray-950/95 dark:to-slate-950/95;
     }
+
     .bg-overlay img {
         @apply -z-10 bg-black opacity-20 invert dark:invert-0;
         @apply w-full h-full;
