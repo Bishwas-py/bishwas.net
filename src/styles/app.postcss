@@ -34,20 +34,20 @@
     }
 
     ::-webkit-scrollbar-track {
-        @apply bg-gray-200;
+        @apply bg-gray-400;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-stone-600;
+        @apply rounded-full;
     }
 
     .dark ::-webkit-scrollbar-track {
         @apply bg-gray-700;
     }
 
-    ::-webkit-scrollbar-thumb {
-        @apply bg-gray-400;
-        @apply rounded-full;
-    }
-
     .dark ::-webkit-scrollbar-thumb {
-        @apply bg-gray-600;
+        @apply bg-gray-500;
     }
 
     .link-inked {
@@ -65,8 +65,6 @@
     }
 
     .hero-image {
-        @apply w-full h-full object-cover scale-110 hover:scale-150 object-top duration-200 cursor-zoom-in;
+        @apply w-full h-full object-cover scale-110 hover:scale-150 hover:object-top duration-200 cursor-zoom-in;
     }
-
-
 }

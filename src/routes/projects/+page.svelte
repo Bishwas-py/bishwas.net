@@ -74,7 +74,7 @@
     </a>
     <a class="image" href="https://https://github.com/Bishwas-py/deviser-club" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 1700, y: '53'}}>
-        <img src="/projects/deviser-club.png" alt="deviser club">
+        <img src="/projects/deviser-club.png" alt="deviser club" class="h-full">
     </a>
     <a class="image h-full" href="https://www.liveinabroad.com" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 2200, y: '53'}}>
@@ -127,7 +127,7 @@
         @apply shadow;
         @apply rounded-lg shadow-md;
         @apply outline outline-accent dark:outline-stone-950;
-        @apply shadow hover:scale-110 duration-200 delay-150;
+        @apply shadow hover:shadow-lg hover:shadow-black/40 dark:hover:shadow-white/30 duration-200;
         @apply cursor-pointer;
     }
 
@@ -141,5 +141,6 @@
 
     .contact-me {
         @apply max-w-3xl mt-16 flex flex-col md:flex-row justify-between w-full;
+        @apply gap-3;
     }
 </style>
