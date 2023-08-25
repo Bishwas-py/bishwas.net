@@ -54,7 +54,7 @@
 </div>
 
 
-<div class="image-tab">
+<div class="image-tab min-h-[40vh]">
     <a class="image" href="https://webmatrices.com" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 300, y: '53'}}>
         <img src="/projects/webmatrices.jpg" alt="webmatrices">
@@ -89,7 +89,8 @@
     </a>
     <a class="image" href="https://www.blogstorm.ai" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 3100, y: '53'}}>
-        <img src="/projects/blogstorm-interface.jpg" alt="blogstorm interface, a project for AI content generation and optimization">
+        <img src="/projects/blogstorm-interface.jpg"
+             alt="blogstorm interface, a project for AI content generation and optimization">
     </a>
 </div>
 
@@ -105,11 +106,9 @@
         @apply mt-16;
     }
 
-    .image {
-    }
-
     img {
-        @apply w-full h-36;
+        @apply w-full h-full;
+        aspect-ratio: 15.8 / 10;
         @apply rounded-lg;
         @apply shadow;
         @apply rounded-lg shadow-md;
