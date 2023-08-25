@@ -10,7 +10,8 @@
             <img src="/me-bishwas.png" alt="Bishwas Bhandari" class="hero-image"/>
         </div>
         <div class="hero-text">
-            <span class="text-5xl duration-200 sm:text-6xl md:text-7xl font-noto-sans px-0 mb-1" in:fade={{delay: 100}}>
+            <span class="text-5xl duration-200 sm:text-6xl md:text-7xl font-noto-sans px-0 mb-1"
+                  in:fade={{delay: 100}}>
                 Hey, <span class="group">Geeks</span>!
             </span>
             <h1 class="text-2xl font-noto-sans mb-4 ml-2" in:fade={{delay: 200}}>I am Bishwas.</h1>
