@@ -1,7 +1,7 @@
 /* Regular */
 @font-face {
     font-family: 'dancing-script';
-    src: local(''), url('../assets/dancing-script/DancingScript-VariableFont_wght.ttf') format('truetype');
+    src: local('sans-serif'), url('../assets/dancing-script/DancingScript-VariableFont_wght.ttf') format('truetype');
     font-weight: 125 950;
     font-stretch: 75% 125%;
     font-display: swap;

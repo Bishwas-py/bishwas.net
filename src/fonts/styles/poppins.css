@@ -3,7 +3,7 @@
     font-family: 'poppins';
     font-style: normal;
     font-weight: 400;
-    src: local(''), url('../assets/poppins/Poppins-Regular.ttf') format('truetype');
+    src: local('sans-serif'), url('../assets/poppins/Poppins-Regular.ttf') format('truetype');
     font-display: swap;
 }
 
@@ -13,7 +13,6 @@
     font-family: 'poppins';
     font-style: normal;
     font-weight: 500;
-    src: local(''), url('../assets/poppins/Poppins-Medium.ttf') format('truetype');
+    src: local('sans-serif'), url('../assets/poppins/Poppins-Medium.ttf') format('truetype');
     font-display: swap;
 }
-
