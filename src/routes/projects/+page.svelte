@@ -20,34 +20,34 @@
         <a class="skill-tag typescript" href="https://www.npmjs.com/package/seord" target="_blank"
            in:fade>
             <span class="tag-text">SEOrd</span>
-            <iconify-icon icon="mdi:language-typescript" class="tag-icon"></iconify-icon>
+            <iconify-icon icon="mdi:language-typescript"></iconify-icon>
         </a>
         <a class="skill-tag python" href="https://pypi.org/project/fiverr-api/" target="_blank" in:fade>
             <span class="tag-text">Fiverr API</span>
-            <iconify-icon icon="mdi:language-python" class="tag-icon"></iconify-icon>
+            <iconify-icon icon="mdi:language-python"></iconify-icon>
         </a>
         <a class="skill-tag react" href="https://github.com/Bishwas-py/speedclicking.com" target="_blank" in:fade>
             <span class="tag-text">Speed Clicking</span>
-            <iconify-icon icon="simple-icons:react" class="tag-icon"></iconify-icon>
-            <iconify-icon icon="simple-icons:tailwindcss" class="tag-icon"></iconify-icon>
-            <iconify-icon icon="mdi:language-javascript" class="tag-icon"></iconify-icon>
+            <iconify-icon icon="simple-icons:react"></iconify-icon>
+            <iconify-icon icon="simple-icons:tailwindcss"></iconify-icon>
+            <iconify-icon icon="mdi:language-javascript"></iconify-icon>
         </a>
         <a class="skill-tag python" href="https://pypi.org/project/regxon/" target="_blank" in:fade>
             <span class="tag-text">RegXon</span>
-            <iconify-icon icon="mdi:language-python" class="tag-icon"></iconify-icon>
+            <iconify-icon icon="mdi:language-python"></iconify-icon>
         </a>
         <a class="skill-tag django" href="https://github.com/Bishwas-py/shazam" target="_blank" in:fade>
             <span class="tag-text">Shazam</span>
-            <iconify-icon icon="simple-icons:svelte" class="tag-icon"></iconify-icon>
-            <iconify-icon icon="mdi:language-python" class="tag-icon"></iconify-icon>
-            <iconify-icon icon="simple-icons:django" class="tag-icon"></iconify-icon>
+            <iconify-icon icon="simple-icons:svelte"></iconify-icon>
+            <iconify-icon icon="mdi:language-python"></iconify-icon>
+            <iconify-icon icon="simple-icons:django"></iconify-icon>
         </a>
         <a class="skill-tag javascript" href="https://github.com/Bishwas-py/bishwas.net" target="_blank"
            in:fade>
             <span class="tag-text">My Portfolio</span>
-            <iconify-icon icon="simple-icons:svelte" class="tag-icon"></iconify-icon>
-            <iconify-icon icon="simple-icons:typescript" class="tag-icon"></iconify-icon>
-            <iconify-icon icon="simple-icons:tailwindcss" class="tag-icon"></iconify-icon>
+            <iconify-icon icon="simple-icons:svelte"></iconify-icon>
+            <iconify-icon icon="simple-icons:typescript"></iconify-icon>
+            <iconify-icon icon="simple-icons:tailwindcss"></iconify-icon>
         </a>
     </div>
 
@@ -109,7 +109,7 @@
     }
 
     img {
-        @apply w-full aspect-video;
+        @apply w-full h-36;
         @apply rounded-lg;
         @apply shadow;
         @apply rounded-lg shadow-md;
