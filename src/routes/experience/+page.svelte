@@ -1,3 +1,8 @@
+<svelte:head>
+    <title>Experience | Bishwas</title>
+</svelte:head>
+
+
 <div class="experience-intro">
     <h1>Experience</h1>
     <p>
