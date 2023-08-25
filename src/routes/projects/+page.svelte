@@ -72,7 +72,7 @@
        in:fly={{duration: 1500, y: '53'}}>
         <img src="/projects/xoomato.png" alt="xoomato">
     </a>
-    <a class="image" href="https://https://github.com/Bishwas-py/deviser-club" target="_blank" rel="noopener noreferrer"
+    <a class="image" href="https://github.com/Bishwas-py/deviser-club" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 1700, y: '53'}}>
         <img src="/projects/deviser-club.png" alt="deviser club" class="h-full">
     </a>
