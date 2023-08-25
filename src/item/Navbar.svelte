@@ -8,7 +8,7 @@
     {#if $page.url.pathname !== "/"}
         <div class="md:absolute md:top-0 md:left-7 mr-7 md:mr-0 hero-image-container w-7 h-7"
              transition:fly={{x: -100, duration: 500}}>
-            <img src="/me-bishwas.png" alt="Bishwas Bhandari" class="hero-image"/>
+            <img src="/me-bishwas.jpg" alt="Bishwas Bhandari" class="hero-image"/>
         </div>
     {/if}
 
