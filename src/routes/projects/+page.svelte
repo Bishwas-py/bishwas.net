@@ -54,7 +54,7 @@
 <div class="image-tab">
     <a class="image" href="https://webmatrices.com" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 300, y: '53'}}>
-        <img src="/projects/webmatrices.png" alt="blogstorm">
+        <img src="/projects/webmatrices.png" alt="webmatrices">
     </a>
     <a class="image" href="https://www.blogstorm.ai" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 700, y: '53'}}>
