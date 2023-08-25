@@ -11,8 +11,7 @@
         </div>
         <div class="hero-text">
             <span class="text-5xl duration-200 sm:text-6xl md:text-7xl font-noto-sans px-0 mb-1" in:fade={{delay: 100}}>
-                Hey,
-                <span class="group"><span class="group-hover:inline hidden">Wo/</span><span class="peer">Man</span></span>!
+                Hey, <span class="group">Geeks</span>!
             </span>
             <h1 class="text-2xl font-noto-sans mb-4 ml-2" in:fade={{delay: 200}}>I am Bishwas.</h1>
             <p class="text-lg font-noto-sans ml-1" in:fade={{delay: 450}}>
