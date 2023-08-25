@@ -57,39 +57,39 @@
 <div class="image-tab">
     <a class="image" href="https://webmatrices.com" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 300, y: '53'}}>
-        <img src="/projects/webmatrices.png" alt="webmatrices">
+        <img src="/projects/webmatrices.jpg" alt="webmatrices">
     </a>
     <a class="image" href="https://www.blogstorm.ai" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 700, y: '53'}}>
-        <img src="/projects/blogstorm.png" alt="blogstorm">
+        <img src="/projects/blogstorm.jpg" alt="blogstorm">
     </a>
     <a class="image" href="https://www.webmatrices.com/long-tail-keywords" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 2000, y: '53'}}>
-        <img src="/projects/webmatrices-long-form-used.png" alt="webmatrices long-tail keywords">
+        <img src="/projects/webmatrices-long-form-used.jpg" alt="webmatrices long-tail keywords">
     </a>
     <a class="image" href="https://www.speedclicking.com" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 1200, y: '53'}}>
-        <img src="/projects/speedclicking.png" alt="speedclicking game developed by bishwas using react/tailwind/nexjs">
+        <img src="/projects/speedclicking.jpg" alt="speedclicking game developed by bishwas using react/tailwind/nexjs">
     </a>
     <a class="image" href="https://www.xoomato.com" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 1500, y: '53'}}>
-        <img src="/projects/xoomato.png" alt="xoomato, a url security service">
+        <img src="/projects/xoomato.jpg" alt="xoomato, a url security service">
     </a>
     <a class="image" href="https://github.com/Bishwas-py/deviser-club" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 1700, y: '53'}}>
-        <img src="/projects/deviser-club.png" alt="deviser club, a ruby on rails project" class="h-full">
+        <img src="/projects/deviser-club.jpg" alt="deviser club, a ruby on rails project" class="h-full">
     </a>
     <a class="image h-full" href="https://www.liveinabroad.com" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 2200, y: '53'}}>
-        <img src="/projects/liveinabroad.png" alt="liveinabroad, a flarum forum project" class="h-full">
+        <img src="/projects/liveinabroad.jpg" alt="liveinabroad, a flarum forum project" class="h-full">
     </a>
     <a class="image" href="https://www.xoomato.com" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 2700, y: '53'}}>
-        <img src="/projects/xoomato-front.png" alt="xoomato front page">
+        <img src="/projects/xoomato-front.jpg" alt="xoomato front page">
     </a>
     <a class="image" href="https://www.blogstorm.ai" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 3100, y: '53'}}>
-        <img src="/projects/blogstorm-interface.png" alt="blogstorm interface, a project for AI content generation and optimization">
+        <img src="/projects/blogstorm-interface.jpg" alt="blogstorm interface, a project for AI content generation and optimization">
     </a>
 </div>
 
