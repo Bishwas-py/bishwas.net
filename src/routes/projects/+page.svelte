@@ -77,19 +77,19 @@
     </a>
     <a class="image" href="https://github.com/Bishwas-py/deviser-club" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 1700, y: '53'}}>
-        <img src="/projects/deviser-club.png" alt="deviser club" class="h-full">
+        <img src="/projects/deviser-club.png" alt="deviser club, a ruby on rails project" class="h-full">
     </a>
     <a class="image h-full" href="https://www.liveinabroad.com" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 2200, y: '53'}}>
-        <img src="/projects/liveinabroad.png" alt="liveinabroad" class="h-full">
+        <img src="/projects/liveinabroad.png" alt="liveinabroad, a flarum forum project" class="h-full">
     </a>
     <a class="image" href="https://www.xoomato.com" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 2700, y: '53'}}>
-        <img src="/projects/xoomato-front.png" alt="xoomato">
+        <img src="/projects/xoomato-front.png" alt="xoomato front page">
     </a>
     <a class="image" href="https://www.blogstorm.ai" target="_blank" rel="noopener noreferrer"
        in:fly={{duration: 3100, y: '53'}}>
-        <img src="/projects/blogstorm-interface.png" alt="blogstorm interface">
+        <img src="/projects/blogstorm-interface.png" alt="blogstorm interface, a project for AI content generation and optimization">
     </a>
 </div>
 
