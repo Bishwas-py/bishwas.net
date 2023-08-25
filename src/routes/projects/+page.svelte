@@ -98,22 +98,6 @@
     the permission to share them.
 </p>
 
-<div class="contact-me">
-
-    <a class="text-lg font-noto-sans flex items-center gap-2"
-       href="https://github.com/bishwas-py/">
-        <iconify-icon icon="mdi:github"></iconify-icon>
-        <span>git me</span>
-    </a>
-
-    <a class="text-lg font-noto-sans flex items-center gap-2"
-       href="mailto:yo@bishwas.net">
-        <iconify-icon icon="mdi:email"></iconify-icon>
-        <span>mail me</span>
-    </a>
-
-</div>
-
 <style lang="postcss">
     .image-tab {
         @apply max-w-3xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
@@ -140,10 +124,5 @@
 
     p.outro {
         @apply max-w-3xl mt-16;
-    }
-
-    .contact-me {
-        @apply max-w-3xl mt-16 flex flex-col md:flex-row justify-between w-full;
-        @apply gap-3;
     }
 </style>

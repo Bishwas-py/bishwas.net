@@ -11,12 +11,12 @@
             <img src="/me-bishwas.png" alt="Bishwas Bhandari" class="hero-image"/>
         </div>
         <div class="hero-text">
-            <span class="text-5xl duration-200 sm:text-6xl md:text-7xl font-noto-sans px-0 mb-1"
+            <span class="text-5xl duration-200 sm:text-6xl md:text-7xl px-0 mb-1"
                   in:fade={{delay: 100}}>
                 Hey, <span class="group">Geeks</span>!
             </span>
-            <h1 class="text-2xl font-noto-sans mb-4 ml-2" in:fade={{delay: 200}}>I am Bishwas.</h1>
-            <p class="text-lg font-noto-sans ml-1" in:fade={{delay: 450}}>
+            <h1 class="text-2xl mb-4 ml-2" in:fade={{delay: 200}}>I am Bishwas.</h1>
+            <p class="text-lg ml-1" in:fade={{delay: 450}}>
                 A Full-Stack Web developer doing Django Python, Svelte/Kit, Ruby on Rails, React.js &
                 Next JS. I love to develop things, I'd rather say I am addicted to development and coding.
             </p>
