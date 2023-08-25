@@ -109,7 +109,7 @@
     }
 
     img {
-        @apply w-full;
+        @apply w-full aspect-video;
         @apply rounded-lg;
         @apply shadow;
         @apply rounded-lg shadow-md;
