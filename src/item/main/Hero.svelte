@@ -1,12 +1,13 @@
 <script lang="ts">
     import {fade} from "svelte/transition";
     import Skills from "$item/main/Skills.svelte";
-    import {send} from "$lib";
+    import {fly} from "svelte/transition";
 </script>
 
 <header class="max-w-3xl">
     <div class="hero-content">
-        <div class="hero-image-container w-32 h-32" transition:send>
+        <div class="hero-image-container w-32 h-32"
+             in:fly={{ y: 300 }}>
             <img src="/me-bishwas.png" alt="Bishwas Bhandari" class="hero-image"/>
         </div>
         <div class="hero-text">
