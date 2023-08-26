@@ -8,11 +8,21 @@
     @apply flex items-center gap-2;
     @apply py-1 px-3 rounded-md;
     @apply text-sm font-medium;
-    @apply dark:text-stone-400 hover:text-white dark:hover:text-red-200;
-    @apply dark:bg-stone-900/40 bg-stone-200;
+    @apply text-neutral-700 dark:text-stone-400 hover:text-white dark:hover:text-red-200;
     @apply outline;
-    @apply cursor-pointer;
-    @apply duration-200;
+    @apply duration-75;
+    @apply bg-stone-100 dark:bg-stone-950;
+}
+
+.skill-tag iconify-icon.open {
+    @apply absolute top-0 left-0 h-4 w-4 rounded-tl-md rounded-br-md text-xs;
+    @apply flex items-center justify-center;
+    @apply outline-1 outline;
+    @apply bg-inherit outline-inherit text-inherit;
+}
+
+.skill-tag:has(iconify-icon.open) {
+    @apply pl-6 relative;
 }
 
 .skill-tag iconify-icon {
@@ -20,52 +30,52 @@
 }
 
 .skill-tag.django {
-    @apply hover:bg-green-300 hover:text-green-900;
+    @apply hover:bg-green-100 hover:text-green-900;
     @apply dark:hover:outline-green-700 dark:hover:bg-green-900 dark:hover:text-green-200;
 }
 
 .skill-tag.python {
-    @apply hover:bg-orange-300 hover:text-orange-950;
+    @apply hover:bg-orange-100 hover:text-orange-950;
     @apply dark:hover:outline-orange-700 dark:hover:bg-orange-900 dark:hover:text-orange-200;
 }
 
 .skill-tag.svelte {
-    @apply hover:bg-amber-300 hover:text-amber-950;
+    @apply hover:bg-amber-100 hover:text-amber-950;
     @apply dark:hover:outline-amber-700 dark:hover:bg-amber-900 dark:hover:text-amber-200;
 }
 
 .skill-tag.rails {
-    @apply hover:bg-rose-300 hover:text-rose-950;
+    @apply hover:bg-rose-100 hover:text-rose-950;
     @apply dark:hover:outline-rose-700 dark:hover:bg-rose-900 dark:hover:text-rose-200;
 }
 
 .skill-tag.react {
-    @apply hover:bg-cyan-300 hover:text-cyan-950;
+    @apply hover:bg-cyan-100 hover:text-cyan-950;
     @apply dark:hover:outline-cyan-700 dark:hover:bg-cyan-900 dark:hover:text-cyan-200;
 }
 
 .skill-tag.github {
-    @apply hover:bg-gray-300 hover:text-gray-950;
+    @apply hover:bg-gray-100 hover:text-gray-950;
     @apply dark:hover:outline-gray-700 dark:hover:bg-gray-900 dark:hover:text-gray-200;
 }
 
 .skill-tag.tailwind {
-    @apply hover:bg-blue-300 hover:text-blue-950;
+    @apply hover:bg-blue-100 hover:text-blue-950;
     @apply dark:hover:outline-blue-700 dark:hover:bg-blue-900 dark:hover:text-blue-200;
 }
 
 .skill-tag.typescript {
-    @apply hover:bg-blue-300 hover:text-blue-950;
+    @apply hover:bg-blue-100 hover:text-blue-950;
     @apply dark:hover:outline-blue-700 dark:hover:bg-blue-900 dark:hover:text-blue-200;
 }
 
 .skill-tag.javascript {
-    @apply hover:bg-yellow-300 hover:text-yellow-950;
+    @apply hover:bg-yellow-100 hover:text-yellow-950;
     @apply dark:hover:outline-yellow-700 dark:hover:bg-yellow-900 dark:hover:text-yellow-200;
 }
 
 .skill-tag.sockets {
-    @apply hover:bg-indigo-300 hover:text-indigo-950;
+    @apply hover:bg-indigo-100 hover:text-indigo-950;
     @apply dark:hover:outline-indigo-700 dark:hover:bg-indigo-900 dark:hover:text-indigo-200;
 }
 

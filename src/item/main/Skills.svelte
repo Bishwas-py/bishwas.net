@@ -52,6 +52,7 @@
 <style lang="postcss">
     .load-more {
         @apply flex items-center justify-center;
+        @apply active:scale-95 duration-200;
     }
 
     .load-more iconify-icon {
