@@ -1,5 +1,7 @@
 <script lang="ts">
     import {fly, fade} from "svelte/transition";
+
+    let isModalEnabled = false;
 </script>
 
 <svelte:head>
@@ -21,26 +23,31 @@
            in:fade>
             <span class="tag-text">SEOrd</span>
             <iconify-icon icon="mdi:language-typescript"></iconify-icon>
+            <iconify-icon icon="fluent:open-12-regular" class="open"></iconify-icon>
         </a>
         <a class="skill-tag python" href="https://pypi.org/project/fiverr-api/" target="_blank" in:fade>
             <span class="tag-text">Fiverr API</span>
             <iconify-icon icon="mdi:language-python"></iconify-icon>
+            <iconify-icon icon="fluent:open-12-regular" class="open"></iconify-icon>
         </a>
         <a class="skill-tag react" href="https://github.com/Bishwas-py/speedclicking.com" target="_blank" in:fade>
             <span class="tag-text">Speed Clicking</span>
             <iconify-icon icon="simple-icons:react"></iconify-icon>
             <iconify-icon icon="simple-icons:tailwindcss"></iconify-icon>
             <iconify-icon icon="mdi:language-javascript"></iconify-icon>
+            <iconify-icon icon="fluent:open-12-regular" class="open"></iconify-icon>
         </a>
         <a class="skill-tag python" href="https://pypi.org/project/regxon/" target="_blank" in:fade>
             <span class="tag-text">RegXon</span>
             <iconify-icon icon="mdi:language-python"></iconify-icon>
+            <iconify-icon icon="fluent:open-12-regular" class="open"></iconify-icon>
         </a>
         <a class="skill-tag django" href="https://github.com/Bishwas-py/shazam" target="_blank" in:fade>
             <span class="tag-text">Shazam</span>
             <iconify-icon icon="simple-icons:svelte"></iconify-icon>
             <iconify-icon icon="mdi:language-python"></iconify-icon>
             <iconify-icon icon="simple-icons:django"></iconify-icon>
+            <iconify-icon icon="fluent:open-12-regular" class="open"></iconify-icon>
         </a>
         <a class="skill-tag javascript" href="https://github.com/Bishwas-py/bishwas.net" target="_blank"
            in:fade>
@@ -48,6 +55,7 @@
             <iconify-icon icon="simple-icons:svelte"></iconify-icon>
             <iconify-icon icon="simple-icons:typescript"></iconify-icon>
             <iconify-icon icon="simple-icons:tailwindcss"></iconify-icon>
+            <iconify-icon icon="fluent:open-12-regular" class="open"></iconify-icon>
         </a>
     </div>
 
@@ -55,7 +63,8 @@
 
 
 <div class="image-tab min-h-[40vh]">
-    <a class="image" href="https://webmatrices.com" target="_blank" rel="noopener noreferrer"
+    <a class="image" href="https://webmatrices.com" target="_blank"
+       rel="noopener noreferrer"
        in:fly={{duration: 300, y: '53'}}>
         <img src="/projects/webmatrices.jpg" alt="webmatrices">
     </a>
@@ -106,7 +115,10 @@
         @apply mt-16;
     }
 
-    img {
+    .image {
+    }
+
+    .image img {
         @apply w-full h-full;
         aspect-ratio: 15.8 / 10;
         @apply rounded-lg;
@@ -123,5 +135,17 @@
 
     p.outro {
         @apply max-w-3xl mt-16;
+    }
+
+    .call-to-action {
+        @apply px-3 py-2 rounded-lg shadow-lg;
+    }
+
+    .call-to-action.blue-500 {
+        @apply text-blue-500 bg-blue-50 hover:bg-blue-100 dark:bg-blue-950 dark:hover:bg-blue-900 dark:text-blue-400
+    }
+
+    .call-to-action.amber-500 {
+        @apply text-amber-500 bg-amber-50 hover:bg-amber-100 dark:bg-amber-950 dark:hover:bg-amber-900 dark:text-amber-400
     }
 </style>
