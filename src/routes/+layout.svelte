@@ -2,7 +2,7 @@
     import 'iconify-icon';
     import '$styles/app.postcss';
     import '$styles/icons.postcss';
-    import '$styles/app.postcss';
+
     import '$fonts/styles/play-fair.css';
     import '$fonts/styles/combo.css';
     import '$fonts/styles/lato.css';
@@ -11,6 +11,7 @@
     import '$fonts/styles/dancing-script.css';
     import '$fonts/styles/poppins.css';
     import '$fonts/styles/noto-sans.css';
+
     import AppearanceSwitch from "$item/AppearanceSwitch.svelte";
     import Navbar from "$item/Navbar.svelte";
     import Footer from "$item/Footer.svelte";
