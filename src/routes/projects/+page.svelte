@@ -19,6 +19,13 @@
     </p>
 
     <div class="tags mt-7">
+        <a class="skill-tag svelte" href="https://www.npmjs.com/package/seord" target="_blank" in:fade>
+            <span class="tag-text">Tipex</span>
+            <iconify-icon icon="simple-icons:svelte"></iconify-icon>
+            <iconify-icon icon="mdi:language-typescript"></iconify-icon>
+            <iconify-icon icon="lucide:pen-line"></iconify-icon>
+            <iconify-icon icon="fluent:open-12-regular" class="open"></iconify-icon>
+        </a>
         <a class="skill-tag typescript" href="https://www.npmjs.com/package/seord" target="_blank"
            in:fade>
             <span class="tag-text">SEOrd</span>
