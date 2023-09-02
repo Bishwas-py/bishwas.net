@@ -19,7 +19,7 @@
     </p>
 
     <div class="tags mt-7">
-        <a class="skill-tag svelte" href="https://www.npmjs.com/package/seord" target="_blank" in:fade>
+        <a class="skill-tag svelte" href="https://www.npmjs.com/package/@friendofsvelte/tipex" target="_blank" in:fade>
             <span class="tag-text">Tipex</span>
             <iconify-icon icon="simple-icons:svelte"></iconify-icon>
             <iconify-icon icon="mdi:language-typescript"></iconify-icon>
@@ -142,17 +142,5 @@
 
     p.outro {
         @apply max-w-3xl mt-16;
-    }
-
-    .call-to-action {
-        @apply px-3 py-2 rounded-lg shadow-lg;
-    }
-
-    .call-to-action.blue-500 {
-        @apply text-blue-500 bg-blue-50 hover:bg-blue-100 dark:bg-blue-950 dark:hover:bg-blue-900 dark:text-blue-400
-    }
-
-    .call-to-action.amber-500 {
-        @apply text-amber-500 bg-amber-50 hover:bg-amber-100 dark:bg-amber-950 dark:hover:bg-amber-900 dark:text-amber-400
     }
 </style>
