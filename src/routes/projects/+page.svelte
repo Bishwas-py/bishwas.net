@@ -19,53 +19,68 @@
     </p>
 
     <div class="tags mt-7">
+        <a class="skill-tag svelte" href="https://github.com/bishwas-py/djapy" target="_blank" in:fade>
+            <span class="tag-text">Djapy</span>
+            <iconify-icon icon="simple-icons:django"/>
+            <iconify-icon icon="mdi:language-python"/>
+            <iconify-icon icon="lucide:network"/>
+            <iconify-icon icon="fluent:open-12-regular" class="open"/>
+        </a>
         <a class="skill-tag svelte" href="https://www.npmjs.com/package/@friendofsvelte/tipex" target="_blank" in:fade>
             <span class="tag-text">Tipex</span>
-            <iconify-icon icon="simple-icons:svelte"></iconify-icon>
-            <iconify-icon icon="mdi:language-typescript"></iconify-icon>
-            <iconify-icon icon="lucide:pen-line"></iconify-icon>
-            <iconify-icon icon="fluent:open-12-regular" class="open"></iconify-icon>
+            <iconify-icon icon="simple-icons:svelte"/>
+            <iconify-icon icon="mdi:language-typescript"/>
+            <iconify-icon icon="lucide:pen-line"/>
+            <iconify-icon icon="fluent:open-12-regular" class="open"/>
         </a>
         <a class="skill-tag typescript" href="https://www.npmjs.com/package/seord" target="_blank"
            in:fade>
             <span class="tag-text">SEOrd</span>
-            <iconify-icon icon="mdi:language-typescript"></iconify-icon>
-            <iconify-icon icon="fluent:open-12-regular" class="open"></iconify-icon>
+            <iconify-icon icon="mdi:language-typescript"/>
+            <iconify-icon icon="fluent:open-12-regular" class="open"/>
         </a>
         <a class="skill-tag python" href="https://pypi.org/project/fiverr-api/" target="_blank" in:fade>
             <span class="tag-text">Fiverr API</span>
-            <iconify-icon icon="mdi:language-python"></iconify-icon>
-            <iconify-icon icon="fluent:open-12-regular" class="open"></iconify-icon>
+            <iconify-icon icon="mdi:language-python"/>
+            <iconify-icon icon="fluent:open-12-regular" class="open"/>
         </a>
         <a class="skill-tag react" href="https://github.com/Bishwas-py/speedclicking.com" target="_blank" in:fade>
             <span class="tag-text">Speed Clicking</span>
-            <iconify-icon icon="simple-icons:react"></iconify-icon>
-            <iconify-icon icon="simple-icons:tailwindcss"></iconify-icon>
-            <iconify-icon icon="mdi:language-javascript"></iconify-icon>
-            <iconify-icon icon="fluent:open-12-regular" class="open"></iconify-icon>
+            <iconify-icon icon="simple-icons:react"/>
+            <iconify-icon icon="simple-icons:tailwindcss"/>
+            <iconify-icon icon="mdi:language-javascript"/>
+            <iconify-icon icon="fluent:open-12-regular" class="open"/>
         </a>
         <a class="skill-tag python" href="https://pypi.org/project/regxon/" target="_blank" in:fade>
             <span class="tag-text">RegXon</span>
-            <iconify-icon icon="mdi:language-python"></iconify-icon>
-            <iconify-icon icon="fluent:open-12-regular" class="open"></iconify-icon>
+            <iconify-icon icon="mdi:language-python"/>
+            <iconify-icon icon="fluent:open-12-regular" class="open"/>
         </a>
         <a class="skill-tag django" href="https://github.com/Bishwas-py/shazam" target="_blank" in:fade>
             <span class="tag-text">Shazam</span>
-            <iconify-icon icon="simple-icons:svelte"></iconify-icon>
-            <iconify-icon icon="mdi:language-python"></iconify-icon>
-            <iconify-icon icon="simple-icons:django"></iconify-icon>
-            <iconify-icon icon="fluent:open-12-regular" class="open"></iconify-icon>
+            <iconify-icon icon="simple-icons:svelte"/>
+            <iconify-icon icon="mdi:language-python"/>
+            <iconify-icon icon="simple-icons:django"/>
+            <iconify-icon icon="fluent:open-12-regular" class="open"/>
         </a>
         <a class="skill-tag javascript" href="https://github.com/Bishwas-py/bishwas.net" target="_blank"
            in:fade>
             <span class="tag-text">My Portfolio</span>
-            <iconify-icon icon="simple-icons:svelte"></iconify-icon>
-            <iconify-icon icon="simple-icons:typescript"></iconify-icon>
-            <iconify-icon icon="simple-icons:tailwindcss"></iconify-icon>
-            <iconify-icon icon="fluent:open-12-regular" class="open"></iconify-icon>
+            <iconify-icon icon="simple-icons:svelte"/>
+            <iconify-icon icon="simple-icons:typescript"/>
+            <iconify-icon icon="simple-icons:tailwindcss"/>
+            <iconify-icon icon="fluent:open-12-regular" class="open"/>
         </a>
     </div>
 
+
+    <div class="mt-7 bg-green-700 rounded-xl px-3 py-2 dark:bg-emerald-800 border-l-2 border-green-500 dark:border-emerald-500 shadow">
+        <h3 class="text-2xl font-bold text-white dark:text-emerald-200">Just wanna share you about Djapy</h3>
+        <p class="text-white dark:text-emerald-200 mt-3">
+            Djapy is an open source project that I have been working on for a while. It is a django/python package that
+            enforces instantaneous generation of API endpoints, with extreme speed and flexibility.
+        </p>
+    </div>
 </div>
 
 
