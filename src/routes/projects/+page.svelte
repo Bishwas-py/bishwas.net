@@ -72,15 +72,6 @@
             <iconify-icon icon="fluent:open-12-regular" class="open"/>
         </a>
     </div>
-
-
-    <div class="mt-7 bg-green-700 rounded-xl px-3 py-2 dark:bg-emerald-800 border-l-2 border-green-500 dark:border-emerald-500 shadow">
-        <h3 class="text-2xl font-bold text-white dark:text-emerald-200">Just wanna share you about Djapy</h3>
-        <p class="text-white dark:text-emerald-200 mt-3">
-            Djapy is an open source project that I have been working on for a while. It is a django/python package that
-            enforces instantaneous generation of API endpoints, with extreme speed and flexibility.
-        </p>
-    </div>
 </div>
 
 
