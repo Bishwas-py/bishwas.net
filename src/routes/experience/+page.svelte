@@ -1,5 +1,5 @@
 <script lang="ts">
-    import  {fade, fly} from "svelte/transition";
+    import {fade, fly} from "svelte/transition";
 </script>
 
 <svelte:head>
@@ -33,14 +33,13 @@
         </p>
 
         <ul>
-            <li>Develop backend and API; Python/Django</li>
+            <li>Develop microservices, tasks modules and APIs; Django/FastAPI</li>
             <li>Developing and designing frontend with SvelteKit and Tailwind CSS</li>
             <li>Integrate the backend with the frontend</li>
-            <li>Deploying and managing AWS instances for essential services</li>
+            <li>CI/CD web services; Github Actions, AWS Lambda and EC2</li>
             <li>Test the feature integrations</li>
-            <li>WordPress Rest API Integration</li>
+            <li>WordPress plugins development and API integration</li>
             <li>Develop bots and crawlers to perform specific tasks</li>
-            <li>CI/CD</li>
         </ul>
     </div>
 
@@ -62,8 +61,7 @@
             <li>Develop API, automated bots, task scheduling, and backend</li>
             <li>Develop frontend based on provided design</li>
             <li>Developing and designing frontend with NextJs/ReactJS and Tailwind CSS</li>
-            <li>Integrate the backend with the frontend</li>
-            <li>Deploy the web app to web servers</li>
+            <li>Deployment on relative AWS instance</li>
         </ul>
 
     </div>
