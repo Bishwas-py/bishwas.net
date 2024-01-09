@@ -17,16 +17,45 @@
 </div>
 
 <div class="experiences">
+    <div class="experience" in:fly={{y: 50, duration: 500, delay: 90}}>
+        <div class="experience-item">
+            <iconify-icon icon="ph:code-fill" class="bg-indigo-500 text-purple-100"></iconify-icon>
+            <div class="experience-item-title">
+                <h2>REtech software</h2>
+                <div class="project-info">
+                    <span class="explained">January 2024 - PRESENT (Svelte/Kit Developer)</span>
+                    <a href="https://retech-software.de/" target="_blank"
+                       class="link">
+                        <span>Visit company page</span>
+                        <iconify-icon icon="mdi:open-in-new"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <p>
+            REtech software is a German-based company that develops software solutions for companies. I am working
+            here as a Svelte/Kit developer, and I am responsible for developing the frontend of the web app.
+        </p>
+
+        <ul>
+            <li>Develop frontend with Svelte/Kit and Tailwind CSS</li>
+            <li>Integrate the backend with the frontend</li>
+            <li>Test the feature integrations</li>
+            <li>Co-operate with the backend developers</li>
+        </ul>
+    </div>
+
     <div class="experience" in:fly={{y: 50, duration: 500}}>
         <div class="experience-item">
-            <iconify-icon icon="ph:code-fill" class="bg-purple-500 text-purple-100"></iconify-icon>
+            <iconify-icon icon="mdi:brain" class="bg-purple-500 text-purple-100"></iconify-icon>
             <div class="experience-item-title">
                 <h2>Blogstorm.AI</h2>
                 <div class="project-info">
                     <span class="explained">April 2023 - PRESENT (Full Stack Engineer)</span>
                     <a href="https://app.blogstorm.ai/" target="_blank"
                        class="link">
-                        <span>Visit Project</span>
+                        <span>Visit project</span>
                         <iconify-icon icon="mdi:open-in-new"/>
                     </a>
                 </div>
@@ -82,7 +111,7 @@
                     <span class="explained">2018 - 2020 (Full Stack Developer/Freelancer)</span>
                     <a href="https://fiverr.com/bishwasbh" target="_blank"
                        class="link">
-                        <span>Visit Profile</span>
+                        <span>Visit profile</span>
                         <iconify-icon icon="mdi:open-in-new"/>
                     </a>
                 </div>
@@ -114,7 +143,7 @@
                     <span class="explained">2020 - PRESENT (Admin)</span>
                     <a href="https://webmatrices.com/" target="_blank"
                        class="link">
-                        <span>Visit Project</span>
+                        <span>Visit project</span>
                         <iconify-icon icon="mdi:open-in-new"/>
                     </a>
                 </div>
@@ -168,9 +197,8 @@
     }
 
     .experience-item iconify-icon:first-child {
-        @apply mt-0.5 w-10 h-10 rounded-full;
-        @apply flex items-center justify-center;
-        @apply text-xl;
+        @apply mt-0.5 w-10 h-10 rounded-full
+        flex items-center justify-center flex-shrink-0 text-xl;
     }
 
     .experience-item-title {
