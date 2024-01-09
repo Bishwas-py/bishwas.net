@@ -1,7 +1,5 @@
 <script lang="ts">
     import {fly, fade} from "svelte/transition";
-
-    let isModalEnabled = false;
 </script>
 
 <svelte:head>
