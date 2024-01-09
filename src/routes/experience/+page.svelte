@@ -20,14 +20,14 @@
     <div class="experience" in:fly={{y: 50, duration: 500}}>
         <div class="experience-item">
             <iconify-icon icon="ph:code-fill" class="bg-purple-500 text-purple-100"></iconify-icon>
-            <div class="experience-item-title w-full">
+            <div class="experience-item-title">
                 <h2>Blogstorm.AI</h2>
-                <div class="flex flex-col gap-2 md:gap-0 md:flex-row justify-between w-full">
+                <div class="project-info">
                     <span class="explained">April 2023 - PRESENT (Full Stack Engineer)</span>
                     <a href="https://app.blogstorm.ai/" target="_blank"
-                       class="flex items-center gap-2 text-xs text-indigo-700 dark:text-indigo-300">
+                       class="link">
                         <span>Visit Project</span>
-                        <iconify-icon icon="mdi:open-in-new" class="text-xs"/>
+                        <iconify-icon icon="mdi:open-in-new"/>
                     </a>
                 </div>
             </div>
@@ -78,7 +78,14 @@
             <iconify-icon icon="jam:fiverr" class="bg-emerald-500 text-emerald-100"></iconify-icon>
             <div class="experience-item-title">
                 <h2>Fiverr</h2>
-                <span class="explained">2018 - 2020 (Full Stack Developer/Freelancer)</span>
+                <div class="project-info">
+                    <span class="explained">2018 - 2020 (Full Stack Developer/Freelancer)</span>
+                    <a href="https://fiverr.com/bishwasbh" target="_blank"
+                       class="link">
+                        <span>Visit Profile</span>
+                        <iconify-icon icon="mdi:open-in-new"/>
+                    </a>
+                </div>
             </div>
         </div>
         <p>
@@ -103,12 +110,12 @@
             <iconify-icon icon="mdi:forum" class="bg-cyan-500 text-cyan-100"></iconify-icon>
             <div class="experience-item-title w-full">
                 <h2>Webmatrices</h2>
-                <div class="flex flex-col gap-2 md:gap-0 md:flex-row justify-between w-full">
+                <div class="project-info">
                     <span class="explained">2020 - PRESENT (Admin)</span>
                     <a href="https://webmatrices.com/" target="_blank"
-                       class="flex items-center gap-2 text-xs text-indigo-700 dark:text-indigo-300">
+                       class="link">
                         <span>Visit Project</span>
-                        <iconify-icon icon="mdi:open-in-new" class="text-xs"/>
+                        <iconify-icon icon="mdi:open-in-new"/>
                     </a>
                 </div>
             </div>
@@ -167,7 +174,7 @@
     }
 
     .experience-item-title {
-        @apply flex flex-col gap-0;
+        @apply flex flex-col gap-0 w-full;
     }
 
     .experience-item-title h2 {
@@ -191,5 +198,17 @@
 
     .experience-outro {
         @apply max-w-3xl mt-8;
+    }
+
+    .project-info {
+        @apply flex flex-col gap-2 md:gap-0 md:flex-row justify-between w-full;
+    }
+
+    .project-info .link {
+        @apply flex items-center gap-2 text-xs text-indigo-700 dark:text-indigo-300;
+    }
+
+    .project-info .link iconify-icon {
+        @apply w-4 h-4 text-xs;
     }
 </style>
