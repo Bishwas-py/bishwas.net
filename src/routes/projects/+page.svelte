@@ -123,23 +123,16 @@
 
 <style lang="postcss">
     .image-tab {
-        @apply max-w-3xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
-        @apply gap-10;
-        @apply mt-16;
+        @apply max-w-3xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16;
     }
 
     .image {
     }
 
     .image img {
-        @apply w-full h-full;
+        @apply w-full h-full rounded-lg shadow outline outline-accent dark:outline-stone-950 hover:shadow-lg
+        hover:shadow-black/40 dark:hover:shadow-white/30 duration-200 cursor-pointer;
         aspect-ratio: 15.8 / 10;
-        @apply rounded-lg;
-        @apply shadow;
-        @apply rounded-lg shadow-md;
-        @apply outline outline-accent dark:outline-stone-950;
-        @apply shadow hover:shadow-lg hover:shadow-black/40 dark:hover:shadow-white/30 duration-200;
-        @apply cursor-pointer;
     }
 
     .intro {

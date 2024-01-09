@@ -20,16 +20,23 @@
     <div class="experience" in:fly={{y: 50, duration: 500}}>
         <div class="experience-item">
             <iconify-icon icon="ph:code-fill" class="bg-purple-500 text-purple-100"></iconify-icon>
-            <div class="experience-item-title">
+            <div class="experience-item-title w-full">
                 <h2>Blogstorm.AI</h2>
-                <h3>April 2023 - PRESENT (Full Stack Engineer)</h3>
+                <div class="flex flex-col gap-2 md:gap-0 md:flex-row justify-between w-full">
+                    <span class="explained">April 2023 - PRESENT (Full Stack Engineer)</span>
+                    <a href="https://app.blogstorm.ai/" target="_blank"
+                       class="flex items-center gap-2 text-xs text-indigo-700 dark:text-indigo-300">
+                        <span>Visit Project</span>
+                        <iconify-icon icon="mdi:open-in-new" class="text-xs"/>
+                    </a>
+                </div>
             </div>
         </div>
 
         <p>
             Blogstorm.AI is an AI-based articles and blog writing system with SEO analysis and integration on it
             associated with a US-based company called Rankiit LLC. I am Full Stack Engineering with backend, frontend
-            and prompt engineering services.
+            and prompt engineering services. Basically, I single handedly developed the whole system from scratch.
         </p>
 
         <ul>
@@ -48,7 +55,7 @@
             <iconify-icon icon="teenyicons:python-solid" class="bg-yellow-500 text-yellow-100"></iconify-icon>
             <div class="experience-item-title">
                 <h2>Cynical Technology</h2>
-                <h3>Dec 2022 - 20 April 2023 (Mid. Python Developer)</h3>
+                <span class="explained">Dec 2022 - 20 April 2023 (Mid. Python Developer)</span>
             </div>
         </div>
         <p>
@@ -71,7 +78,7 @@
             <iconify-icon icon="jam:fiverr" class="bg-emerald-500 text-emerald-100"></iconify-icon>
             <div class="experience-item-title">
                 <h2>Fiverr</h2>
-                <h3>2018 - 2020 (Full Stack Developer/Freelancer)</h3>
+                <span class="explained">2018 - 2020 (Full Stack Developer/Freelancer)</span>
             </div>
         </div>
         <p>
@@ -94,9 +101,16 @@
     <div class="experience" in:fly={{y: 50, duration: 500, delay: 300}}>
         <div class="experience-item">
             <iconify-icon icon="mdi:forum" class="bg-cyan-500 text-cyan-100"></iconify-icon>
-            <div class="experience-item-title">
+            <div class="experience-item-title w-full">
                 <h2>Webmatrices</h2>
-                <h3>2020 - PRESENT (Admin)</h3>
+                <div class="flex flex-col gap-2 md:gap-0 md:flex-row justify-between w-full">
+                    <span class="explained">2020 - PRESENT (Admin)</span>
+                    <a href="https://webmatrices.com/" target="_blank"
+                       class="flex items-center gap-2 text-xs text-indigo-700 dark:text-indigo-300">
+                        <span>Visit Project</span>
+                        <iconify-icon icon="mdi:open-in-new" class="text-xs"/>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -126,7 +140,7 @@
     }
 
     .experience-intro h1 {
-        @apply text-4xl font-bold text-gray-900 dark:text-gray-100;
+        @apply text-4xl font-bold text-gray-900 dark:text-gray-100 mb-0;
     }
 
     .experience-intro p {
@@ -146,21 +160,21 @@
         @apply flex items-start gap-4;
     }
 
-    .experience-item iconify-icon {
+    .experience-item iconify-icon:first-child {
         @apply mt-0.5 w-10 h-10 rounded-full;
         @apply flex items-center justify-center;
         @apply text-xl;
     }
 
     .experience-item-title {
-        @apply flex flex-col;
+        @apply flex flex-col gap-0;
     }
 
     .experience-item-title h2 {
         @apply text-xl font-semibold text-gray-900 dark:text-gray-100;
     }
 
-    .experience-item-title h3 {
+    .experience-item-title .explained {
         @apply text-xs text-gray-700 dark:text-gray-300;
     }
 
