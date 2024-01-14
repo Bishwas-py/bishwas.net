@@ -23,7 +23,7 @@
             <div class="experience-item-title">
                 <h2>REtech software</h2>
                 <div class="project-info">
-                    <span class="explained">January 2024 - PRESENT (Svelte/Kit Developer)</span>
+                    <span class="explained">January 2024 - PRESENT (Svelte/Kit Freelance Developer)</span>
                     <a href="https://retech-software.de/" target="_blank"
                        class="link">
                         <span>Visit company page</span>
