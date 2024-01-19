@@ -9,7 +9,12 @@
 <div class="intro">
     <p>
         I have worked on many projects, some of them are my own and some of them are for clients, using
-        different technologies and frameworks, from small to large scale projects.
+        different technologies and frameworks, from small to large scale projects. Check this
+        <a class="link-inked inline-flex gap-1 items-center" href="https://github.com/Bishwas-py/bishwas.net" target="_blank"
+           in:fade>
+            <span class="tag-text">portfolio</span>
+            <iconify-icon icon="simple-icons:svelte"/>
+        </a> here.
     </p>
 
     <p class="mt-7">
@@ -59,14 +64,6 @@
             <iconify-icon icon="simple-icons:svelte"/>
             <iconify-icon icon="mdi:language-python"/>
             <iconify-icon icon="simple-icons:django"/>
-            <iconify-icon icon="fluent:open-12-regular" class="open"/>
-        </a>
-        <a class="skill-tag javascript" href="https://github.com/Bishwas-py/bishwas.net" target="_blank"
-           in:fade>
-            <span class="tag-text">My Portfolio</span>
-            <iconify-icon icon="simple-icons:svelte"/>
-            <iconify-icon icon="simple-icons:typescript"/>
-            <iconify-icon icon="simple-icons:tailwindcss"/>
             <iconify-icon icon="fluent:open-12-regular" class="open"/>
         </a>
     </div>
