@@ -22,6 +22,15 @@
             existence.
         </p>
     </div>
+
+    <div class="max-w-3xl mt-12">
+        <h2 class="text-2xl mb-3">Am I really educated?</h2>
+        <p class="text-lg">
+            I have been studying Bachelor of Computer Applications at Manipal University Jaipur. And my high
+            school was at Kathmandu Bernhardt College with Science as major (with Computer Science and Mathematics).
+            If that's what you define as "educated", then yes I am.
+        </p>
+    </div>
 </div>
 
 <style lang="postcss">
