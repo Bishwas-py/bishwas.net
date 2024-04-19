@@ -10,9 +10,10 @@
 <div class="experience-intro" in:fade>
     <h1>Experience</h1>
     <p>
-        I have been working as a software developer since 2020, and I have been working as a freelancer since 2018.
+        I have been working as a full-time software developer since 2020, and a freelancer since 2018.
         As I have already indexed by <a href="/projects">projects</a>, I have worked on a variety of projects,
-        ranging from bot development, desktop application development, and web development.
+        ranging from web development, desktop application development, and bot development. Here are some of the
+        works, I have been involved in.
     </p>
 </div>
 
