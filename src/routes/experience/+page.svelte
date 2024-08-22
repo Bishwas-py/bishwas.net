@@ -1,11 +1,17 @@
 <script lang="ts">
     import {fade, fly} from "svelte/transition";
+    import MdiBrainIcon from 'virtual:icons/mdi/brain';
+    import PhCodeFillIcon from 'virtual:icons/ph/code-fill';
+    import TeenyPythonIcon from 'virtual:icons/teenyicons/python-solid';
+    import JamFiverrIcon from 'virtual:icons/jam/fiverr';
+    import MdiForumIcon from 'virtual:icons/mdi/forum';
+    import F7ChartBarCircleFill from 'virtual:icons/f7/chart-bar-circle-fill';
+    import MdiOpenInNewIcon from 'virtual:icons/mdi/open-in-new';
 </script>
 
 <svelte:head>
     <title>Experience | Bishwas</title>
 </svelte:head>
-
 
 <div class="experience-intro" in:fade>
     <h1>Experience</h1>
@@ -20,15 +26,47 @@
 <div class="experiences">
     <div class="experience" in:fly={{y: 50, duration: 500}}>
         <div class="experience-item">
-            <iconify-icon icon="mdi:brain" class="bg-purple-500 text-purple-100"></iconify-icon>
+            <F7ChartBarCircleFill class="bg-purple-500 text-purple-100"/>
+            <div class="experience-item-title">
+                <h2>Only Sales</h2>
+                <div class="project-info">
+                    <span class="explained">July 2023 - PRESENT (Frontend Project Lead)</span>
+                    <a href="https://app.blogstorm.ai/" target="_blank" class="link">
+                        <span>Visit project</span>
+                        <MdiOpenInNewIcon/>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <p>
+            <!--            About: OnlySales is the easiest app to use for health advisors! Upload leads, manually or automatic, and handle replies, calls, and track your deals inside of the app. -->
+            <!--            Review #1: "OnlySales offers the most user friendly platform on the market right now and has boosted my sales substantially! 2021 sales year = 150K commission, 2022 sales year with OnlySales = $300K+ commission, on to 2023!!! 10/10 recommend!!!"
+
+            -->
+            OnlySales is a CRM system for health advisors. I am working here as a Frontend Project Lead, and responsible
+            for
+            developing the frontend of the web app.
+        </p>
+
+        <ul>
+            <li>Lead the frontend team, with SvelteKit, Tailwind CSS and Node.JS implementation and development</li>
+            <li>Develop and maintain components, pages, and features</li>
+            <li>Manage SvelteKit's store, routing, and server-side rendering</li>
+            <li>Integrate the backend with the frontend and middle-end</li>
+        </ul>
+    </div>
+
+    <div class="experience" in:fly={{y: 50, duration: 500}}>
+        <div class="experience-item">
+            <MdiBrainIcon class="bg-green-500 text-green-100"/>
             <div class="experience-item-title">
                 <h2>Blogstorm.AI</h2>
                 <div class="project-info">
                     <span class="explained">April 2023 - PRESENT (Full Stack Engineer)</span>
-                    <a href="https://app.blogstorm.ai/" target="_blank"
-                       class="link">
+                    <a href="https://app.blogstorm.ai/" target="_blank" class="link">
                         <span>Visit project</span>
-                        <iconify-icon icon="mdi:open-in-new"/>
+                        <MdiOpenInNewIcon/>
                     </a>
                 </div>
             </div>
@@ -53,7 +91,7 @@
 
     <div class="experience" in:fly={{y: 50, duration: 500, delay: 90}}>
         <div class="experience-item">
-            <iconify-icon icon="ph:code-fill" class="bg-indigo-500 text-purple-100"></iconify-icon>
+            <PhCodeFillIcon class="bg-indigo-500 text-purple-100"/>
             <div class="experience-item-title">
                 <div class="flex items-center gap-3">
                     <h2>REtech software</h2>
@@ -61,10 +99,9 @@
                 </div>
                 <div class="project-info">
                     <span class="explained">January 2024 - April 2024 (Svelte/Kit Freelance Developer)</span>
-                    <a href="https://retech-software.de/" target="_blank"
-                       class="link">
+                    <a href="https://retech-software.de/" target="_blank" class="link">
                         <span>Visit company page</span>
-                        <iconify-icon icon="mdi:open-in-new"/>
+                        <MdiOpenInNewIcon/>
                     </a>
                 </div>
             </div>
@@ -85,7 +122,7 @@
 
     <div class="experience" in:fly={{y: 50, duration: 500, delay: 100}}>
         <div class="experience-item">
-            <iconify-icon icon="teenyicons:python-solid" class="bg-yellow-500 text-yellow-100"></iconify-icon>
+            <TeenyPythonIcon class="bg-yellow-500 text-yellow-100"/>
             <div class="experience-item-title">
                 <h2>Cynical Technology</h2>
                 <span class="explained">Dec 2022 - 20 April 2023 (Mid. Python Developer)</span>
@@ -103,20 +140,18 @@
             <li>Developing and designing frontend with NextJs/ReactJS and Tailwind CSS</li>
             <li>Deployment on relative AWS instance</li>
         </ul>
-
     </div>
 
     <div class="experience" in:fly={{y: 50, duration: 500, delay: 200}}>
         <div class="experience-item">
-            <iconify-icon icon="jam:fiverr" class="bg-emerald-500 text-emerald-100"></iconify-icon>
+            <JamFiverrIcon class="bg-emerald-500 text-emerald-100"/>
             <div class="experience-item-title">
                 <h2>Fiverr</h2>
                 <div class="project-info">
                     <span class="explained">2018 - 2020 (Full Stack Developer/Freelancer)</span>
-                    <a href="https://fiverr.com/bishwasbh" target="_blank"
-                       class="link">
+                    <a href="https://fiverr.com/bishwasbh" target="_blank" class="link">
                         <span>Visit profile</span>
-                        <iconify-icon icon="mdi:open-in-new"/>
+                        <MdiOpenInNewIcon/>
                     </a>
                 </div>
             </div>
@@ -140,15 +175,14 @@
 
     <div class="experience" in:fly={{y: 50, duration: 500, delay: 300}}>
         <div class="experience-item">
-            <iconify-icon icon="mdi:forum" class="bg-cyan-500 text-cyan-100"></iconify-icon>
+            <MdiForumIcon class="bg-cyan-500 text-cyan-100"/>
             <div class="experience-item-title w-full">
                 <h2>Webmatrices</h2>
                 <div class="project-info">
                     <span class="explained">2020 - PRESENT (Admin)</span>
-                    <a href="https://webmatrices.com/" target="_blank"
-                       class="link">
+                    <a href="https://webmatrices.com/" target="_blank" class="link">
                         <span>Visit project</span>
-                        <iconify-icon icon="mdi:open-in-new"/>
+                        <MdiOpenInNewIcon/>
                     </a>
                 </div>
             </div>
@@ -200,9 +234,9 @@
         @apply flex items-start gap-4;
     }
 
-    .experience-item iconify-icon:first-child {
-        @apply mt-0.5 w-10 h-10 rounded-full
-        flex items-center justify-center flex-shrink-0 text-xl;
+    .experience-item :global(svg:first-child) {
+        @apply mt-0.5 w-10 h-10 px-2 rounded-full
+        flex items-center justify-center flex-shrink-0;
     }
 
     .experience-item-title {
@@ -238,9 +272,5 @@
 
     .project-info .link {
         @apply flex items-center gap-2 text-xs text-indigo-700 dark:text-indigo-300;
-    }
-
-    .project-info .link iconify-icon {
-        @apply w-4 h-4 text-xs;
     }
 </style>
