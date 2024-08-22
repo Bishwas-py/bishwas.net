@@ -30,7 +30,7 @@
             <div class="experience-item-title">
                 <h2>Only Sales</h2>
                 <div class="project-info">
-                    <span class="explained">July 2023 - PRESENT (Frontend Project Lead)</span>
+                    <h3 class="explained">July 2023 - PRESENT (Frontend Project Lead / SvelteKit)</h3>
                     <a href="https://app.blogstorm.ai/" target="_blank" class="link">
                         <span>Visit project</span>
                         <MdiOpenInNewIcon/>
@@ -40,10 +40,6 @@
         </div>
 
         <p>
-            <!--            About: OnlySales is the easiest app to use for health advisors! Upload leads, manually or automatic, and handle replies, calls, and track your deals inside of the app. -->
-            <!--            Review #1: "OnlySales offers the most user friendly platform on the market right now and has boosted my sales substantially! 2021 sales year = 150K commission, 2022 sales year with OnlySales = $300K+ commission, on to 2023!!! 10/10 recommend!!!"
-
-            -->
             OnlySales is a CRM system for health advisors. I am working here as a Frontend Project Lead, and responsible
             for
             developing the frontend of the web app.
@@ -63,7 +59,7 @@
             <div class="experience-item-title">
                 <h2>Blogstorm.AI</h2>
                 <div class="project-info">
-                    <span class="explained">April 2023 - PRESENT (Full Stack Engineer)</span>
+                    <h3 class="explained">April 2023 - PRESENT (Full Stack Engineer)</h3>
                     <a href="https://app.blogstorm.ai/" target="_blank" class="link">
                         <span>Visit project</span>
                         <MdiOpenInNewIcon/>
@@ -98,7 +94,7 @@
                     <span class="text-xs text-gray-500/75 uppercase">[Part-time]</span>
                 </div>
                 <div class="project-info">
-                    <span class="explained">January 2024 - April 2024 (Svelte/Kit Freelance Developer)</span>
+                    <h3 class="explained">January 2024 - April 2024 (Svelte/Kit Freelance Developer)</h3>
                     <a href="https://retech-software.de/" target="_blank" class="link">
                         <span>Visit company page</span>
                         <MdiOpenInNewIcon/>
@@ -125,7 +121,7 @@
             <TeenyPythonIcon class="bg-yellow-500 text-yellow-100"/>
             <div class="experience-item-title">
                 <h2>Cynical Technology</h2>
-                <span class="explained">Dec 2022 - 20 April 2023 (Mid. Python Developer)</span>
+                <h3 class="explained">Dec 2022 - 20 April 2023 (Mid. Python Developer)</h3>
             </div>
         </div>
         <p>
@@ -148,7 +144,7 @@
             <div class="experience-item-title">
                 <h2>Fiverr</h2>
                 <div class="project-info">
-                    <span class="explained">2018 - 2020 (Full Stack Developer/Freelancer)</span>
+                    <h3 class="explained">2018 - 2020 (Full Stack Developer/Freelancer)</h3>
                     <a href="https://fiverr.com/bishwasbh" target="_blank" class="link">
                         <span>Visit profile</span>
                         <MdiOpenInNewIcon/>
@@ -179,7 +175,7 @@
             <div class="experience-item-title w-full">
                 <h2>Webmatrices</h2>
                 <div class="project-info">
-                    <span class="explained">2020 - PRESENT (Admin)</span>
+                    <h3 class="explained">2020 - PRESENT (Admin)</h3>
                     <a href="https://webmatrices.com/" target="_blank" class="link">
                         <span>Visit project</span>
                         <MdiOpenInNewIcon/>
