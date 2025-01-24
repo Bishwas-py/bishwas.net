@@ -1,7 +1,7 @@
 <script lang="ts">
 	import {fade} from 'svelte/transition';
 
-	export let projects = [
+	const PROJECTS = [
 		{
 			name: 'Webmatrices',
 			timeline: 'March 2020 - Present',
@@ -125,7 +125,7 @@
 </div>
 
 <div class="flex flex-col gap-10 max-w-3xl">
-	{#each projects as project}
+	{#each PROJECTS as project}
 		<div class="flex flex-col">
 			<div class="flex w-full gap-4">
 				<a href={project.link} target="_blank" class="block relative w-32 group rounded-md overflow-clip">
