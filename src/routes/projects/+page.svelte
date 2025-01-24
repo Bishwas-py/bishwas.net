@@ -134,7 +134,7 @@
 			target="_blank"
 			in:fade>
 			<span class="tag-text">my portfolio</span>
-			<iconify-icon icon="simple-icons:svelte" />
+			<iconify-icon icon="simple-icons:svelte"></iconify-icon>
 		</a> reflects both technical precision and practical purpose, combining engineering
 		principles with creative problem-solving.
 	</p>
@@ -160,7 +160,7 @@
 				</a>
 				<div class="flex flex-col">
 					<h2 class="text-xl font-semibold">{project.name}</h2>
-					<p class="text-gray-600 text-sm">{project.timeline}</p>
+					<p class="text-gray-600 dark:text-gray-400 text-sm">{project.timeline}</p>
 					<ul class="mt-1 flex flex-wrap gap-2">
 						{#each project.technologies as tech}
 							<li class={tech.class}>

@@ -14,7 +14,10 @@ const config = {
 			$styles: './src/styles'
 		}
 	},
-	plugins: []
+	plugins: [],
+	compilerOptions: {
+		runes: true
+	}
 };
 
 export default config;
