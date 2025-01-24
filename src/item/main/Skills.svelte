@@ -1,7 +1,7 @@
 <script lang="ts">
     import {fade} from 'svelte/transition';
 
-    let loadMore = false;
+    let loadMore = $state(false);
 
     function toggleLoadMoreSkills() {
         loadMore = !loadMore;

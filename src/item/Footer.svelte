@@ -2,48 +2,55 @@
 	import { fly } from 'svelte/transition';
 	import { page } from '$app/stores';
 
-	let showExtraSocial = false;
+	let showExtraSocial = $state(false);
+	const pathname = $derived($page.url.pathname);
 </script>
 
 <footer>
 	<div class="footer-left">
-		{#if showExtraSocial && $page.url.pathname === "/"}
+		{#if showExtraSocial && pathname === "/"}
 			<div class="socials" in:fly={{y: 30, duration: 50}} out:fly={{y: 30, duration: 760}}>
 				<a class="social-tag github" href="https://github.com/bishwas-py"
 					 target="_blank"
 					 rel="noopener noreferrer"
-					 transition:fly={{y: 10, duration: 300}}>
+					 transition:fly={{y: 10, duration: 300}}
+					 aria-label="Github"
+				>
 					<iconify-icon icon="mdi:github"></iconify-icon>
 				</a>
 				<a class="social-tag linkedin" href="https://www.linkedin.com/in/bishwasbh/"
 					 target="_blank"
 					 rel="noopener noreferrer"
-					 transition:fly={{y: 15, duration: 390}}>
+					 transition:fly={{y: 15, duration: 390}}
+					 aria-label="Linkedin">
 					<iconify-icon icon="mdi:linkedin"></iconify-icon>
 				</a>
 				<a class="social-tag twitter" href="https://twitter.com/BhBishwas"
 					 target="_blank"
 					 rel="noopener noreferrer"
-					 transition:fly={{y: 20, duration: 480}}>
+					 transition:fly={{y: 20, duration: 480}}
+					 aria-label="Twitter">
 					<iconify-icon icon="mdi:twitter"></iconify-icon>
 				</a>
 				<a class="social-tag instagram" href="https://www.instagram.com/bishwas.py/"
 					 target="_blank"
 					 rel="noopener noreferrer"
-					 transition:fly={{y: 25, duration: 570}}>
+					 transition:fly={{y: 25, duration: 570}}
+					 aria-label="Instagram">
 					<iconify-icon icon="mdi:instagram"></iconify-icon>
 				</a>
 				<a class="social-tag facebook" href="https://www.facebook.com/bishwasbh/"
 					 target="_blank"
 					 rel="noopener noreferrer"
-					 transition:fly={{y: 30, duration: 660}}>
+					 transition:fly={{y: 30, duration: 660}}
+					 aria-label="Facebook">
 					<iconify-icon icon="mdi:facebook"></iconify-icon>
 				</a>
 			</div>
 		{/if}
-		{#if $page.url.pathname === "/"}
+		{#if pathname === "/"}
 			<button class="go-link social-button"
-							on:click={() => showExtraSocial = !showExtraSocial}>
+							onclick={() => showExtraSocial = !showExtraSocial}>
 				<iconify-icon icon={showExtraSocial ? 'mdi:chevron-up' : 'mdi:chevron-down'}></iconify-icon>
 				<span>socials</span>
 			</button>
