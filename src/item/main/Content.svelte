@@ -1,36 +1,36 @@
 <script lang="ts">
-    import {fade} from "svelte/transition";
+	import { fade } from 'svelte/transition';
 </script>
 
 <div in:fade={{delay: 920}}>
-    <div class="intro max-w-3xl mt-12">
-        <h2 class="text-2xl mb-3">Intro</h2>
-        <p class="text-lg">
-            I'm a software engineer with 5 years of experience. I design and develop fast, reliable and readable
-            applications for global businesses. I have strong technical, communication and product management skills. I
-            love
-            mentoring, tutoring and contributing to open-source projects.
-        </p>
-    </div>
+	<div class="intro max-w-3xl mt-12">
+		<h2 class="text-2xl mb-3">Intro</h2>
+		<p class="text-lg">
+			I am a software engineer who believes in the power of clean, thoughtful code. Over the past 5 years, I've
+			architected enterprise applications that scale and developer tools that inspire. When a project lands on my desk,
+			it's not just about writing code – it's about understanding the challenge, designing elegant solutions, and
+			building something that makes a real impact.
+		</p>
+	</div>
 
 
-    <div class="max-w-3xl mt-12">
-        <h2 class="text-2xl mb-3">Why I Exist?</h2>
-        <p class="text-lg">
-            My purpose is to serve humans via shaping innovative web solutions. As a full-stack developer, I fuse
-            technology with positive change, crafting impactful digital experiences that weave into the fabric of human
-            existence.
-        </p>
-    </div>
+	<div class="max-w-3xl mt-12">
+		<h2 class="text-2xl mb-3">Why I Exist?</h2>
+		<p class="text-lg">
+			In the intersection of code and human experience lies my purpose: engineering solutions that serve society.
+			As a full-stack developer, I create software systems that are efficient, reliable, and purposeful. Every
+			project is approached with methodical precision and a clear focus on sustainable value creation.
+		</p>
+	</div>
 
-    <div class="max-w-3xl mt-12">
-        <h2 class="text-2xl mb-3">Am I really educated?</h2>
-        <p class="text-lg">
-            I have been studying Bachelor of Computer Applications at Manipal University Jaipur. And my high
-            school was at Kathmandu Bernhardt College with Science as major (with Computer Science and Mathematics).
-            If that's what you define as "educated", then yes I am.
-        </p>
-    </div>
+	<div class="max-w-3xl mt-12">
+		<h2 class="text-2xl mb-3">Education & Expertise</h2>
+		<p class="text-lg">
+			I am pursuing Bachelor of Computer Applications at Manipal University Jaipur, combining theoretical foundations
+			with practical expertise. My ongoing professional development includes hands-on system architecture,
+			open-source contributions, and structured learning in modern web technologies.
+		</p>
+	</div>
 </div>
 
 <style lang="postcss">
