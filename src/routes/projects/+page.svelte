@@ -1,4 +1,6 @@
-<script>
+<script lang="ts">
+	import {fade} from 'svelte/transition';
+
 	export let projects = [
 		{
 			name: 'Webmatrices',
@@ -105,31 +107,45 @@
 	];
 </script>
 
-<div class="intro max-w-3xl">
-	<h1 class="text-4xl font-bold mb-6">Projects</h1>
+<div class="intro max-w-3xl mb-7">
+	<p>
+		I have worked on many projects, some of them are my own and some of them are for clients, using
+		different technologies and frameworks, from small to large scale projects. Check this
+		<a class="link-inked inline-flex gap-1 items-center" href="https://github.com/Bishwas-py/bishwas.net"
+			 target="_blank"
+			 in:fade>
+			<span class="tag-text">portfolio</span>
+			<iconify-icon icon="simple-icons:svelte" />
+		</a> here.
+	</p>
+
+	<p class="mt-7">
+		Here are some of the projects that I have worked on.
+	</p>
 </div>
 
-<div class="flex flex-col gap-7">
+<div class="flex flex-col gap-10 max-w-3xl">
 	{#each projects as project}
 		<div class="flex flex-col">
 			<div class="flex w-full gap-4">
 				<a href={project.link} target="_blank" class="block relative w-32 group rounded-md overflow-clip">
 					<img src={project.image} alt={project.name}
-							 class="w-auto h-auto rounded group-hover:opacity-75 transition-opacity duration-300" />
+							 class="w-auto h-full rounded group-hover:opacity-75 transition-opacity duration-300" />
 					<div
 						class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 						<p class="text-white text-lg font-bold">Learn more</p>
 					</div>
+					<iconify-icon icon="ph:arrow-square-in-duotone" class="absolute bottom-1 right-2 group-hover:hidden text-gray-400"></iconify-icon>
 				</a>
 				<div class="flex flex-col">
 					<h2 class="text-xl font-semibold">{project.name}</h2>
 					<p class="text-gray-600 text-sm">{project.timeline}</p>
 					<ul class="mt-1 flex flex-wrap gap-2">
 						{#each project.technologies as tech}
-							<a class={tech.class}>
+							<li class={tech.class}>
 								<iconify-icon icon={tech.icon}></iconify-icon>
 								{tech.name}
-							</a>
+							</li>
 						{/each}
 					</ul>
 				</div>
