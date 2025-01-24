@@ -152,7 +152,7 @@
 	{#each PROJECTS as project}
 		<div class="flex flex-col">
 			<div class="flex w-full gap-4">
-				<a href={project.link} target="_blank" class="block relative w-32 group rounded-md overflow-clip">
+				<a href={project.link} target="_blank" class="block relative w-32 min-h-16 max-h-24 group rounded-md overflow-clip">
 					<img src={project.image} alt={project.name}
 							 class="w-auto h-full rounded group-hover:opacity-75 transition-opacity duration-300" />
 					<div
