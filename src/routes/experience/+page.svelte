@@ -42,16 +42,15 @@
 		</div>
 
 		<p>
-			OnlySales is a CRM system for health advisors. I am working here as a Frontend Project Lead, and responsible
-			for
-			developing the frontend of the web app.
+			OnlySales is a CRM system for health advisors, US-based. I am worked here as a
+			Frontend Project Lead, and responsible for developing the frontend of the web app.
 		</p>
 
 		<ul>
 			<li>Lead the frontend team, with SvelteKit, Tailwind CSS and Node.JS implementation and development</li>
-			<li>Develop and maintain components, pages, and features</li>
-			<li>Manage SvelteKit's store, routing, and server-side rendering</li>
-			<li>Integrate the backend with the frontend and middle-end</li>
+			<li>Developed and maintained components, pages, and features</li>
+			<li>Managed SvelteKit's store, routing, and server-side rendering</li>
+			<li>Integrated the backend with the frontend and middle-end</li>
 		</ul>
 	</div>
 
