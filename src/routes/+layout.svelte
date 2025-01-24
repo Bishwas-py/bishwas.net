@@ -8,13 +8,15 @@
 	import AppearanceSwitch from '$item/AppearanceSwitch.svelte';
 	import Navbar from '$item/Navbar.svelte';
 	import Footer from '$item/Footer.svelte';
+
+	let { children } = $props();
 </script>
 
 <div class="layout-container">
 	<Navbar />
 	<main>
 		<div class="spread-love">
-			<slot />
+			{@render children()}
 		</div>
 	</main>
 	<Footer />

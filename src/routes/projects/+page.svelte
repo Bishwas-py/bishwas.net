@@ -124,6 +124,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Projects, on python, django, svelte, typescript and more | Bishwas</title>
+</svelte:head>
+
 <div class="intro max-w-3xl mb-7">
 	<p>
 		As a systematic developer, I create solutions ranging from client-focused applications to open-source frameworks.
