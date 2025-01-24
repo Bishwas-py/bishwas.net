@@ -19,7 +19,7 @@
 		I have been working as a full-stack software developer since 2020, and a freelancer since 2018. I work primarily
 		with Python/Django for backend and SvelteKit/React for frontend development. My experience includes building web
 		applications, microservices, and developer tools, with a focus on creating practical solutions for real-world
-		problems. I actively contribute to open-source <a href="/projects">projects</a> and enjoy building tools that help
+		problems. I actively contribute to open-source <a href="/projects" class="link-inked">projects</a> and enjoy building tools that help
 		other developers.
 	</p>
 </div>
