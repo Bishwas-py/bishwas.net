@@ -1,36 +1,34 @@
 <script lang="ts">
-    import 'iconify-icon';
-    import '$styles/app.postcss';
-    import '$styles/icons.postcss';
+	import 'iconify-icon';
+	import '$styles/app.css';
+	import '$styles/icons.css';
 
-    import '$fonts/styles/noto-sans.css';
-    import '$fonts/styles/work-sans.css';
+	import '$fonts/styles/noto-sans.css';
 
-    import AppearanceSwitch from "$item/AppearanceSwitch.svelte";
-    import Navbar from "$item/Navbar.svelte";
-    import Footer from "$item/Footer.svelte";
+	import AppearanceSwitch from '$item/AppearanceSwitch.svelte';
+	import Navbar from '$item/Navbar.svelte';
+	import Footer from '$item/Footer.svelte';
 </script>
 
 <div class="layout-container">
-    <Navbar/>
-    <main>
-        <div class="spread-love">
-            <slot/>
-        </div>
-    </main>
-    <Footer/>
-    <AppearanceSwitch/>
+	<Navbar />
+	<main>
+		<div class="spread-love">
+			<slot />
+		</div>
+	</main>
+	<Footer />
+	<AppearanceSwitch />
 </div>
 
 <div class="bg-overlay">
-    <div class="overlay"></div>
-    <img src="/bg.png" alt="Bishwas Bhandari PNG">
+	<div class="overlay"></div>
+	<img src="/bg.png" alt="Bishwas Bhandari PNG">
 </div>
 
 <style lang="postcss">
     div.layout-container {
-        @apply font-noto-sans
-        text-slate-900 dark:text-slate-100
+        @apply text-slate-900 dark:text-slate-100
         w-full min-h-screen
         flex flex-col relative z-10 pb-7;
     }
