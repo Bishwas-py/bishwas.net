@@ -1,24 +1,24 @@
 <script lang="ts">
-    import {page} from '$app/stores';
-    import {fly} from 'svelte/transition';
+	import { page } from '$app/stores';
+	import { fly } from 'svelte/transition';
 </script>
 
 <nav>
 
-    {#if $page.url.pathname !== "/"}
-        <div class="-top-14 duration-300 left-7 absolute md:top-0 md:left-7 mr-7 md:mr-0 hero-image-container w-7 h-7"
-             transition:fly={{x: -100, duration: 500}}>
-            <img src="/me-bishwas.jpg" alt="Bishwas Bhandari | Django and Svelte Developer | Open Source Python Dev"
-                 class="hero-image"/>
-        </div>
-    {/if}
-    <div class="nav-wrap">
-        <ul>
-            <li class:active={$page.url.pathname === "/"}><a href="/">Home</a></li>
-            <li class:active={$page.url.pathname === "/projects"}><a href="/projects">Projects</a></li>
-            <li class:active={$page.url.pathname === "/experience"}><a href="/experience">Experience</a></li>
-        </ul>
-    </div>
+	{#if $page.url.pathname !== "/"}
+		<div class="-top-14 duration-300 left-7 absolute md:top-0 md:left-7 mr-7 md:mr-0 hero-image-container w-7 h-7"
+				 transition:fly={{x: -100, duration: 500}}>
+			<img src="/me-bishwas.jpg" alt="Bishwas Bhandari | Django and Svelte Developer | Open Source Python Dev"
+					 class="hero-image" />
+		</div>
+	{/if}
+	<div class="nav-wrap">
+		<ul>
+			<li class:active={$page.url.pathname === "/"}><a href="/">Home</a></li>
+			<li class:active={$page.url.pathname === "/projects"}><a href="/projects">Projects</a></li>
+			<li class:active={$page.url.pathname === "/experience"}><a href="/experience">Experience</a></li>
+		</ul>
+	</div>
 </nav>
 
 <style lang="postcss">
@@ -32,10 +32,8 @@
     }
 
     ul li {
-        @apply dark:hover:drop-shadow-white-lg hover:drop-shadow-dark-lg;
-        @apply dark:hover:text-blue-200;
-        @apply duration-300;
-        @apply md:text-base text-sm;
+        @apply dark:hover:drop-shadow-white-lg hover:drop-shadow-dark-lg dark:hover:text-blue-200
+        duration-300 md:text-base text-sm;
     }
 
     ul li.active {
@@ -43,8 +41,7 @@
     }
 
     ul li a {
-        @apply md:py-2 md:px-3;
-        @apply py-0.5 px-1;
+        @apply md:py-2 md:px-3 py-0.5 px-1;
     }
 
     .nav-wrap {

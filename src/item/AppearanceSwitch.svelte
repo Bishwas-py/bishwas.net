@@ -1,21 +1,24 @@
 <script lang="ts">
-    import {onMount} from 'svelte';
-    import {fly, fade} from "svelte/transition";
-    import {initDarkMode, isDarkMode, toggleDarkMode} from "@friendofsvelte/toggle";
-
-    onMount(initDarkMode);
+	import { onMount } from 'svelte';
+	import { fly, fade } from 'svelte/transition';
+	import TrackAppearance from '@friendofsvelte/toggle';
+	import { appearance } from '@friendofsvelte/toggle';
 </script>
 
-<button on:click={toggleDarkMode} transition:fade>
-            <span transition:fly={{y: 5, duration: 1060}} class="icons">
-                {#if $isDarkMode}
-                    <iconify-icon icon="mdi:weather-night"/>
-                {:else}
-                    <iconify-icon icon="mdi:weather-sunny"/>
-                {/if}
-            </span>
-    <span class="text">
-        {$isDarkMode ? 'Night' : 'Day'}
+<TrackAppearance />
+
+<button onclick={()=>{
+  appearance.dark=!appearance.dark
+}} transition:fade>
+  <span transition:fly={{y: 5, duration: 1060}} class="icons">
+      {#if appearance.dark}
+        <iconify-icon icon="mdi:weather-night"></iconify-icon>
+      {:else}
+        <iconify-icon icon="mdi:weather-sunny"></iconify-icon>
+      {/if}
+  </span>
+	<span class="text">
+        {appearance.dark ? 'Night' : 'Day'}
     </span>
 </button>
 
