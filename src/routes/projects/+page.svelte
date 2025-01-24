@@ -1,140 +1,146 @@
-<script lang="ts">
-    import {fly, fade} from "svelte/transition";
+<script>
+	export let projects = [
+		{
+			name: 'Webmatrices',
+			timeline: 'March 2020 - Present',
+			description:
+				'A SaaS web application designed to provide tools for digital creators, freelancers, bloggers, and developers.',
+			technologies: [
+				{ name: 'Django/Djapy', icon: 'mdi:language-python', class: 'skill-tag django' },
+				{ name: 'SvelteKit', icon: 'logos:svelte-icon', class: 'skill-tag svelte' }
+			],
+			highlights: [
+				'Developed robust APIs and features to support user needs.',
+				'Conducted in-depth research to align tools with industry trends.',
+				'Enhanced user engagement through data-driven updates.'
+			],
+			link: 'https://webmatrices.com',
+			image: '/projects/webmatrices.jpg'
+		},
+		{
+			name: 'Djapy',
+			timeline: 'Open-Source Framework',
+			description:
+				'A REST API framework built on Django, emphasizing a \'no framework inside a framework\' principle.',
+			technologies: [
+				{ name: 'Django', icon: 'mdi:language-python', class: 'skill-tag django' },
+				{ name: 'Pydantic', icon: 'mdi:json', class: 'skill-tag python' },
+				{ name: 'Swagger', icon: 'mdi:api', class: 'skill-tag python' }
+			],
+			highlights: [
+				'Promoted flexibility while ensuring user-friendly API design.',
+				'Integrated strict input/output control to reduce errors.',
+				'Enhanced developer experience through comprehensive Swagger documentation.'
+			],
+			link: 'https://github.com/Bishwas-py/djapy',
+			image: '/projects/blogstorm-interface.jpg'
+		},
+		{
+			name: '@friendofsvelte/tipex',
+			timeline: '2023',
+			description:
+				'A rich-text editor for Svelte, simplifying text editing with frameworks like Tiptap and Prosemirror.',
+			technologies: [
+				{ name: 'Tiptap', icon: 'mdi:format-text', class: 'skill-tag react' },
+				{ name: 'Prosemirror', icon: 'mdi:mirror', class: 'skill-tag react' },
+				{ name: 'Svelte', icon: 'logos:svelte-icon', class: 'skill-tag svelte' }
+			],
+			highlights: [
+				'Drag-and-drop and clipboard support for image uploads.',
+				'Easy integration and customization for developers.',
+				'Provided detailed documentation and npm package.'
+			],
+			link: 'https://tipex.pages.dev',
+			image: '/projects/blogstorm.jpg'
+		},
+		{
+			name: 'Speed Clicking',
+			timeline: 'Browser-Based Game',
+			description:
+				'A game built to measure click speed, designed for gamers needing quick reflexes.',
+			technologies: [
+				{ name: 'Next.js', icon: 'logos:nextjs-icon', class: 'skill-tag react' },
+				{ name: 'Tailwind CSS', icon: 'logos:tailwindcss-icon', class: 'skill-tag tailwind' }
+			],
+			highlights: [
+				'Created responsive, user-friendly gameplay mechanics.',
+				'Optimized performance for various devices and browsers.',
+				'Inspired by a personal need, making it a fun, practical solution.'
+			],
+			link: 'https://bishwas-py/speedclicking.com',
+			image: '/projects/speedclicking.jpg'
+		},
+		{
+			name: 'SEOrd - SEO Analyzer',
+			timeline: 'Node.js Library',
+			description:
+				'An advanced content SEO analyzer library for swift analysis of HTML content.',
+			technologies: [
+				{ name: 'Node.js', icon: 'logos:nodejs-icon', class: 'skill-tag typescript' },
+				{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' },
+				{ name: 'JavaScript', icon: 'logos:javascript-icon', class: 'skill-tag javascript' }
+			],
+			highlights: [
+				'Evaluates keyword density, meta descriptions, and link structure.',
+				'Fills a critical gap in the Node.js ecosystem for SEO analysis.'
+			],
+			link: 'https://npmjs.com/package/seord',
+			image: '/projects/liveinabroad.jpg'
+		},
+		{
+			name: 'Deviser Club',
+			timeline: 'Blogging Platform',
+			description:
+				'An open-source blogging platform enhancing author autonomy while ensuring exceptional audience experience.',
+			technologies: [
+				{ name: 'Ruby on Rails 7', icon: 'mdi:language-ruby-on-rails', class: 'skill-tag rails' }
+			],
+			highlights: [
+				'Focused on seamless content creation and publishing workflows.',
+				'Enabled publishers with tools for better audience engagement.'
+			],
+			link: 'https://github.com/Bishwas-py/deviser-club',
+			image: '/projects/deviser-club.jpg'
+		}
+	];
 </script>
 
-<svelte:head>
-    <title>Projects | Bishwas</title>
-</svelte:head>
-
-<div class="intro">
-    <p>
-        I have worked on many projects, some of them are my own and some of them are for clients, using
-        different technologies and frameworks, from small to large scale projects. Check this
-        <a class="link-inked inline-flex gap-1 items-center" href="https://github.com/Bishwas-py/bishwas.net" target="_blank"
-           in:fade>
-            <span class="tag-text">portfolio</span>
-            <iconify-icon icon="simple-icons:svelte"/>
-        </a> here.
-    </p>
-
-    <p class="mt-7">
-        Here are some of the projects that I have worked on.
-    </p>
-
-    <div class="tags mt-7">
-        <a class="skill-tag svelte" href="https://github.com/bishwas-py/djapy" target="_blank" in:fade>
-            <span class="tag-text">Djapy</span>
-            <iconify-icon icon="simple-icons:django"/>
-            <iconify-icon icon="mdi:language-python"/>
-            <iconify-icon icon="lucide:network"/>
-            <iconify-icon icon="fluent:open-12-regular" class="open"/>
-        </a>
-        <a class="skill-tag svelte" href="https://www.npmjs.com/package/@friendofsvelte/tipex" target="_blank" in:fade>
-            <span class="tag-text">Tipex</span>
-            <iconify-icon icon="simple-icons:svelte"/>
-            <iconify-icon icon="mdi:language-typescript"/>
-            <iconify-icon icon="lucide:pen-line"/>
-            <iconify-icon icon="fluent:open-12-regular" class="open"/>
-        </a>
-        <a class="skill-tag typescript" href="https://www.npmjs.com/package/seord" target="_blank"
-           in:fade>
-            <span class="tag-text">SEOrd</span>
-            <iconify-icon icon="mdi:language-typescript"/>
-            <iconify-icon icon="fluent:open-12-regular" class="open"/>
-        </a>
-        <a class="skill-tag python" href="https://pypi.org/project/fiverr-api/" target="_blank" in:fade>
-            <span class="tag-text">Fiverr API</span>
-            <iconify-icon icon="mdi:language-python"/>
-            <iconify-icon icon="fluent:open-12-regular" class="open"/>
-        </a>
-        <a class="skill-tag react" href="https://github.com/Bishwas-py/speedclicking.com" target="_blank" in:fade>
-            <span class="tag-text">Speed Clicking</span>
-            <iconify-icon icon="simple-icons:react"/>
-            <iconify-icon icon="simple-icons:tailwindcss"/>
-            <iconify-icon icon="mdi:language-javascript"/>
-            <iconify-icon icon="fluent:open-12-regular" class="open"/>
-        </a>
-        <a class="skill-tag python" href="https://pypi.org/project/regxon/" target="_blank" in:fade>
-            <span class="tag-text">RegXon</span>
-            <iconify-icon icon="mdi:language-python"/>
-            <iconify-icon icon="fluent:open-12-regular" class="open"/>
-        </a>
-        <a class="skill-tag django" href="https://github.com/Bishwas-py/shazam" target="_blank" in:fade>
-            <span class="tag-text">Shazam</span>
-            <iconify-icon icon="simple-icons:svelte"/>
-            <iconify-icon icon="mdi:language-python"/>
-            <iconify-icon icon="simple-icons:django"/>
-            <iconify-icon icon="fluent:open-12-regular" class="open"/>
-        </a>
-    </div>
+<div class="intro max-w-3xl">
+	<h1 class="text-4xl font-bold mb-6">Projects</h1>
 </div>
 
-
-<div class="image-tab min-h-[40vh]">
-    <a class="image" href="https://webmatrices.com" target="_blank"
-       rel="noopener noreferrer"
-       in:fly={{duration: 300, y: '53'}}>
-        <img src="/projects/webmatrices.jpg" alt="webmatrices">
-    </a>
-    <a class="image" href="https://www.blogstorm.ai" target="_blank" rel="noopener noreferrer"
-       in:fly={{duration: 700, y: '53'}}>
-        <img src="/projects/blogstorm.jpg" alt="blogstorm">
-    </a>
-    <a class="image" href="https://www.webmatrices.com/long-tail-keywords" target="_blank" rel="noopener noreferrer"
-       in:fly={{duration: 2000, y: '53'}}>
-        <img src="/projects/webmatrices-long-form-used.jpg" alt="webmatrices long-tail keywords">
-    </a>
-    <a class="image" href="https://www.speedclicking.com" target="_blank" rel="noopener noreferrer"
-       in:fly={{duration: 1200, y: '53'}}>
-        <img src="/projects/speedclicking.jpg" alt="speedclicking game developed by bishwas using react/tailwind/nexjs">
-    </a>
-    <a class="image" href="https://www.xoomato.com" target="_blank" rel="noopener noreferrer"
-       in:fly={{duration: 1500, y: '53'}}>
-        <img src="/projects/xoomato.jpg" alt="xoomato, a url security service">
-    </a>
-    <a class="image" href="https://github.com/Bishwas-py/deviser-club" target="_blank" rel="noopener noreferrer"
-       in:fly={{duration: 1700, y: '53'}}>
-        <img src="/projects/deviser-club.jpg" alt="deviser club, a ruby on rails project" class="h-full">
-    </a>
-    <a class="image h-full" href="https://www.liveinabroad.com" target="_blank" rel="noopener noreferrer"
-       in:fly={{duration: 2200, y: '53'}}>
-        <img src="/projects/liveinabroad.jpg" alt="liveinabroad, a flarum forum project" class="h-full">
-    </a>
-    <a class="image" href="https://www.xoomato.com" target="_blank" rel="noopener noreferrer"
-       in:fly={{duration: 2700, y: '53'}}>
-        <img src="/projects/xoomato-front.jpg" alt="xoomato front page">
-    </a>
-    <a class="image" href="https://www.blogstorm.ai" target="_blank" rel="noopener noreferrer"
-       in:fly={{duration: 3100, y: '53'}}>
-        <img src="/projects/blogstorm-interface.jpg"
-             alt="blogstorm interface, a project for AI content generation and optimization">
-    </a>
+<div class="flex flex-col gap-7">
+	{#each projects as project}
+		<div class="flex flex-col">
+			<div class="flex w-full gap-4">
+				<a href={project.link} target="_blank" class="block relative w-32 group rounded-md overflow-clip">
+					<img src={project.image} alt={project.name}
+							 class="w-auto h-auto rounded group-hover:opacity-75 transition-opacity duration-300" />
+					<div
+						class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+						<p class="text-white text-lg font-bold">Learn more</p>
+					</div>
+				</a>
+				<div class="flex flex-col">
+					<h2 class="text-xl font-semibold">{project.name}</h2>
+					<p class="text-gray-600 text-sm">{project.timeline}</p>
+					<ul class="mt-1 flex flex-wrap gap-2">
+						{#each project.technologies as tech}
+							<a class={tech.class}>
+								<iconify-icon icon={tech.icon}></iconify-icon>
+								{tech.name}
+							</a>
+						{/each}
+					</ul>
+				</div>
+			</div>
+			<p class="mt-2">{project.description}</p>
+			<ul class="mt-2 list-disc list-inside">
+				{#each project.highlights as highlight}
+					<li>{highlight}</li>
+				{/each}
+			</ul>
+		</div>
+	{/each}
 </div>
 
-<p class="outro">
-    I have worked on many other projects, but I am not indexing them here because they are not public or I don't have
-    the permission to share them.
-</p>
-
-<style lang="postcss">
-    .image-tab {
-        @apply max-w-3xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16;
-    }
-
-    .image {
-    }
-
-    .image img {
-        @apply w-full h-full rounded-lg shadow outline outline-accent dark:outline-stone-950 hover:shadow-lg
-        hover:shadow-black/40 dark:hover:shadow-white/30 duration-200 cursor-pointer;
-        aspect-ratio: 15.8 / 10;
-    }
-
-    .intro {
-        @apply max-w-3xl;
-    }
-
-    p.outro {
-        @apply max-w-3xl mt-16;
-    }
-</style>
