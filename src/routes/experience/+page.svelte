@@ -33,7 +33,7 @@
 				<h2>Only Sales</h2>
 				<div class="project-info">
 					<h3 class="explained">July 2023 - Jan 2025 (Frontend Project Lead / SvelteKit)</h3>
-					<a href="https://app.blogstorm.ai/" target="_blank" class="link">
+					<a href="https://onlysales.io/" target="_blank" class="link">
 						<span>Visit project</span>
 						<MdiOpenInNewIcon />
 					</a>
