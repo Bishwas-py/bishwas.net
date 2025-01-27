@@ -42,7 +42,7 @@
 		</div>
 
 		<p>
-			OnlySales is a CRM system for health advisors, US-based. I am worked here as a
+			OnlySales is a CRM system for health advisors, US-based. I worked here as a
 			Frontend Project Lead, and responsible for developing the frontend of the web app.
 		</p>
 
@@ -71,8 +71,8 @@
 
 		<p>
 			Blogstorm.AI is an AI-based articles and blog writing system with SEO analysis and integration on it
-			associated with a US-based company called Rankiit LLC. I am Full Stack Engineering with backend, frontend
-			and prompt engineering services. Basically, I single handedly developed the whole system from scratch.
+			associated with a US-based company called Rankiit LLC. I was Full Stack Engineering with backend, frontend
+			and prompt engineering services. Basically, I single-handedly developed the whole system from scratch.
 		</p>
 
 		<ul>
@@ -126,8 +126,8 @@
 			</div>
 		</div>
 		<p>
-			Cynical Tech is a cyber security company, and I primarily do backend and API development here as Python
-			Developer. As frontend is also something I enjoy a lot to do, so I am working here as a full-stack
+			Cynical Tech is a cyber security company, and I primarily did backend and API development here as Python
+			Developer. As frontend is also something I enjoy a lot to do, so I worked here as a full-stack
 			developer.
 		</p>
 
@@ -154,7 +154,7 @@
 			</div>
 		</div>
 		<p>
-			I have been working as a freelancer on Fiverr since 2018, worked on a variety of projects,
+			I worked as a freelancer on Fiverr since 2018, on a variety of projects,
 			ranging from bot development, desktop application development, and web development.
 		</p>
 
