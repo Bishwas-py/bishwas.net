@@ -51,6 +51,7 @@
 			<li>Developed and maintained components, pages, and features</li>
 			<li>Managed SvelteKit's store, routing, and server-side rendering</li>
 			<li>Integrated the backend with the frontend and middle-end</li>
+			<li>Went to Philippines, for a business-tourism trip, guided with Svelte5 and integration</li>
 		</ul>
 	</div>
 
