@@ -3,7 +3,7 @@
 	import TempPreferencesEcoOutline from 'virtual:icons/material-symbols/temp-preferences-eco-outline';
 </script>
 
-<div in:fly={{ y: 20, duration: 600 }}>
+<div class="flex flex-col gap-2" in:fly={{ y: 20, duration: 600 }}>
 	<div class="flex items-center gap-4">
 		<TempPreferencesEcoOutline
 			class="w-10 h-10 p-2.5 shrink-0 rounded-full bg-orange-500/10 text-green-500
