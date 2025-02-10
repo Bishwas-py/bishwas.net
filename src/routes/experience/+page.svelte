@@ -78,13 +78,15 @@
 
 		<ul>
 			<li>Develop microservices, tasks modules and APIs; Django/FastAPI</li>
-			<li>Developing and designing frontend with SvelteKit and Tailwind CSS</li>
+			<li>Developing and designing frontend with SvelteKit and Tailwind CSS — 
+					<a href="/svelte-developer" class="link-inked">read about my Svelte journey</a>
+			</li>
 			<li>Integrate the backend with the frontend</li>
 			<li>CI/CD web services; Github Actions, AWS Lambda and EC2</li>
 			<li>Test the feature integrations</li>
 			<li>WordPress plugins development and API integration</li>
 			<li>Develop bots and crawlers to perform specific tasks</li>
-		</ul>
+	</ul>
 	</div>
 
 	<div class="experience" in:fly={{y: 50, duration: 500, delay: 90}}>
