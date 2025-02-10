@@ -10,15 +10,14 @@
 	import ContributionHighlights from './contribution-highlights.svelte';
 	import LookingForward from './looking-forward.svelte';
 	import ExpertiseShowcase from './expertise-showcase.svelte';
+	import Meta from '$item/Meta.svelte';
 </script>
 
-<svelte:head>
-	<title>Svelte Developer, that guy? | Bishwas Bhandari</title>
-	<meta
-		name="description"
-		content="From complex React architectures to elegant Svelte solutions - my journey as a developer who found clarity in Svelte's simplicity."
-	/>
-</svelte:head>
+<Meta
+	title="Svelte Developer, that guy? | Bishwas Bhandari"
+	description="My journey as a developer who found clarity in Svelte's simplicity, crushing the React Complex, and infinite Django loops."
+	keywords="svelte, sveltekit developer, django, react, python, full-stack developer"
+/>
 
 <div class="journey-intro max-w-3xl" in:fade>
 	<h1 class="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
