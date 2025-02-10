@@ -1,100 +1,103 @@
 .tags {
-    @apply flex gap-3 flex-wrap duration-300;
+  @apply flex flex-wrap gap-3 duration-300;
 }
 
 .skill-tag {
-    @apply flex items-center gap-2 py-1 px-3 rounded-md text-sm font-medium text-neutral-700 dark:text-stone-400 hover:text-white dark:hover:text-red-200 outline duration-75 bg-stone-100 dark:bg-stone-950;
+  @apply flex items-center gap-2 rounded-md bg-stone-100 px-3 py-1 text-sm font-medium text-neutral-700 outline duration-75 hover:text-white dark:text-stone-400 dark:hover:text-red-200 dark:bg-stone-950;
 }
 
 .skill-tag iconify-icon.open {
-    @apply absolute top-0 left-0 h-4 w-4 rounded-tl-md rounded-br-md text-xs flex items-center justify-center outline-1 outline bg-inherit outline-inherit text-inherit;
+  @apply absolute top-0 left-0 flex h-4 w-4 items-center justify-center rounded-tl-md rounded-br-md bg-inherit text-xs text-inherit outline outline-1 outline-inherit;
 }
 
 .skill-tag:has(iconify-icon.open) {
-    @apply pl-6 relative;
+  @apply relative pl-6;
 }
 
 .skill-tag iconify-icon {
-    @apply w-3;
+  @apply w-3;
 }
 
 .skill-tag.django {
-    @apply hover:bg-green-100 hover:text-green-900 dark:hover:outline-green-700 dark:hover:bg-green-900 dark:hover:text-green-200;
+  @apply hover:bg-green-100 hover:text-green-900 dark:hover:outline-green-700 dark:hover:bg-green-900 dark:hover:text-green-200;
 }
 
 .skill-tag.python {
-    @apply hover:bg-orange-100 hover:text-orange-950 dark:hover:outline-orange-700 dark:hover:bg-orange-900 dark:hover:text-orange-200;
+  @apply hover:bg-orange-100 hover:text-orange-950 dark:hover:outline-orange-700 dark:hover:bg-orange-900 dark:hover:text-orange-200;
 }
 
 .skill-tag.svelte {
-    @apply hover:bg-amber-100 hover:text-amber-950 dark:hover:outline-amber-700 dark:hover:bg-amber-900 dark:hover:text-amber-200;
+  @apply hover:bg-amber-100 hover:text-amber-950 dark:hover:outline-amber-700 dark:hover:bg-amber-900 dark:hover:text-amber-200;
 }
 
 .skill-tag.rails {
-    @apply hover:bg-rose-100 hover:text-rose-950 dark:hover:outline-rose-700 dark:hover:bg-rose-900 dark:hover:text-rose-200;
+  @apply hover:bg-rose-100 hover:text-rose-950 dark:hover:outline-rose-700 dark:hover:bg-rose-900 dark:hover:text-rose-200;
 }
 
 .skill-tag.react {
-    @apply hover:bg-cyan-100 hover:text-cyan-950 dark:hover:outline-cyan-700 dark:hover:bg-cyan-900 dark:hover:text-cyan-200;
+  @apply hover:bg-cyan-100 hover:text-cyan-950 dark:hover:outline-cyan-700 dark:hover:bg-cyan-900 dark:hover:text-cyan-200;
 }
 
 .skill-tag.github {
-    @apply hover:bg-gray-100 hover:text-gray-950 dark:hover:outline-gray-700 dark:hover:bg-gray-900 dark:hover:text-gray-200;
+  @apply hover:bg-gray-100 hover:text-gray-950 dark:hover:outline-gray-700 dark:hover:bg-gray-900 dark:hover:text-gray-200;
 }
 
 .skill-tag.tailwind {
-    @apply hover:bg-blue-100 hover:text-blue-950 dark:hover:outline-blue-700 dark:hover:bg-blue-900 dark:hover:text-blue-200;
+  @apply hover:bg-blue-100 hover:text-blue-950 dark:hover:outline-blue-700 dark:hover:bg-blue-900 dark:hover:text-blue-200;
 }
 
 .skill-tag.typescript {
-    @apply hover:bg-blue-100 hover:text-blue-950 dark:hover:outline-blue-700 dark:hover:bg-blue-900 dark:hover:text-blue-200;
+  @apply hover:bg-blue-100 hover:text-blue-950 dark:hover:outline-blue-700 dark:hover:bg-blue-900 dark:hover:text-blue-200;
 }
 
 .skill-tag.javascript {
-    @apply hover:bg-yellow-100 hover:text-yellow-950 dark:hover:outline-yellow-700 dark:hover:bg-yellow-900 dark:hover:text-yellow-200;
+  @apply hover:bg-yellow-100 hover:text-yellow-950 dark:hover:outline-yellow-700 dark:hover:bg-yellow-900 dark:hover:text-yellow-200;
 }
 
 .skill-tag.sockets {
-    @apply hover:bg-indigo-100 hover:text-indigo-950 dark:hover:outline-indigo-700 dark:hover:bg-indigo-900 dark:hover:text-indigo-200;
+  @apply hover:bg-indigo-100 hover:text-indigo-950 dark:hover:outline-indigo-700 dark:hover:bg-indigo-900 dark:hover:text-indigo-200;
 }
 
 .social-tag {
-    @apply flex items-center justify-center rounded-full w-7 h-7 text-sm font-medium dark:text-stone-400 hover:text-white dark:hover:text-red-200 dark:bg-stone-900 bg-stone-200 drop-shadow dark:drop-shadow-none dark:outline dark:outline-1 cursor-pointer duration-200 active:scale-95 duration-100;
+  @apply flex h-7 w-7 cursor-pointer items-center justify-center rounded-full bg-stone-200 text-sm font-medium drop-shadow duration-100 duration-200 hover:text-white active:scale-95 dark:text-stone-400 dark:hover:text-red-200 dark:bg-stone-900 dark:drop-shadow-none dark:outline dark:outline-1;
 }
 
 .social-tag.linkedin {
-    @apply hover:bg-cyan-300 hover:text-cyan-950 dark:hover:outline-cyan-700 dark:hover:bg-cyan-900 dark:hover:text-cyan-200;
+  @apply hover:bg-cyan-300 hover:text-cyan-950 dark:hover:outline-cyan-700 dark:hover:bg-cyan-900 dark:hover:text-cyan-200;
 }
 
 .social-tag.twitter {
-    @apply hover:bg-blue-300 hover:text-blue-950 dark:hover:outline-blue-400 dark:hover:bg-blue-900 dark:hover:text-blue-200;
+  @apply hover:bg-blue-300 hover:text-blue-950 dark:hover:outline-blue-400 dark:hover:bg-blue-900 dark:hover:text-blue-200;
 }
 
 .social-tag.instagram {
-    @apply hover:bg-pink-300 hover:text-pink-950 dark:hover:outline-pink-700 dark:hover:bg-pink-900 dark:hover:text-pink-200;
+  @apply hover:bg-pink-300 hover:text-pink-950 dark:hover:outline-pink-700 dark:hover:bg-pink-900 dark:hover:text-pink-200;
 }
 
 .social-tag.github {
-    @apply hover:bg-gray-300 hover:text-gray-950 dark:hover:outline-gray-700 dark:hover:bg-gray-900 dark:hover:text-gray-200;
+  @apply hover:bg-gray-300 hover:text-gray-950 dark:hover:outline-gray-700 dark:hover:bg-gray-900 dark:hover:text-gray-200;
 }
 
 .social-tag.facebook {
-    @apply hover:bg-blue-300 hover:text-blue-950 dark:hover:outline-blue-700 dark:hover:bg-blue-900 dark:hover:text-blue-200;
+  @apply hover:bg-blue-300 hover:text-blue-950 dark:hover:outline-blue-700 dark:hover:bg-blue-900 dark:hover:text-blue-200;
 }
 
+.social-tag.reddit {
+  @apply hover:bg-orange-300 hover:text-orange-950 dark:hover:outline-orange-700 dark:hover:bg-orange-900 dark:hover:text-orange-200;
+}
 
 .socials {
-    @apply flex md:flex-col gap-2 absolute bottom-10 md:bottom-7 left-1 md:-left-16;
+  @apply absolute bottom-10 left-1 flex gap-2 md:flex-col md:bottom-7 md:-left-16;
 }
 
 .go-link {
-    @apply text-lg flex items-center gap-2 active:scale-95 duration-100;
+  @apply flex items-center gap-2 text-lg duration-100 active:scale-95;
 }
 
 .go-link.is-linkable {
-    @apply text-gray-950 hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-50;
+  @apply text-gray-950 hover:text-blue-950 dark:text-gray-50 dark:hover:text-blue-50;
 }
 
 .social-button {
-    @apply px-0 md:-ml-7;
+  @apply px-0 md:-ml-7;
 }
