@@ -17,6 +17,7 @@
 	title="Svelte Developer, that guy? | Bishwas Bhandari"
 	description="My journey as a developer who found clarity in Svelte's simplicity, crushing the React Complex, and infinite Django loops."
 	keywords="svelte, sveltekit developer, django, react, python, full-stack developer"
+	og_image="/og-svelte-developer.jpg"
 />
 
 <div class="journey-intro max-w-3xl" in:fade>

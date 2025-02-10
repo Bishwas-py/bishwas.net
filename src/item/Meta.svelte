@@ -33,6 +33,8 @@
 	}
 	if (!og_image) {
 		og_image = `${page.url.origin}/og.png`;
+	} else if (og_image.startsWith('/')) {
+		og_image = `${page.url.origin}${og_image}`;
 	}
 </script>
 
@@ -56,8 +58,8 @@
 		<meta
 			property="og:image" content={og_image} />
 		<meta property="og:image:type" content="image/png">
-		<meta property="og:image:width" content="1080">
-		<meta property="og:image:height" content="1920">
+		<meta property="og:image:width" content="1728">
+		<meta property="og:image:height" content="1080">
 	{/if}
 	{#if og_description}
 		<meta
