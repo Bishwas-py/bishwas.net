@@ -9,8 +9,9 @@
 			by developers worldwide for its simplicity and flexibility.
 		</AwesomeCard>
 		<AwesomeCard title="SvelteKit Mastery">
-			From static site generation to server-side rendering, I've mastered SvelteKit's capabilities
-			to build performant, scalable applications.
+			From server-side rendering to forms-actions and beyond,
+			I've mastered SvelteKit's capabilities to build performant,
+			scalable applications.
 		</AwesomeCard>
 		<AwesomeCard title="Svelte Community & Docs">
 			Top 1% Svelte Subreddit contributor sharing solutions and insights. Fixed svelte docs bug to
