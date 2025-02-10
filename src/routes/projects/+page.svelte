@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
+	import Meta from '$item/Meta.svelte';
 
 	const PROJECTS = [
 		{
@@ -124,9 +125,12 @@
 	];
 </script>
 
-<svelte:head>
-	<title>Projects, on python, django, svelte, typescript and more | Bishwas</title>
-</svelte:head>
+
+<Meta
+	title="Projects, on python, django, svelte, typescript and more | Bishwas"
+	description="Collection of projects that I have worked on, including web applications, libraries, and open-source frameworks."
+	keywords="svelte, django, python, typescript, web development, open-source, projects"
+/>
 
 <div class="intro max-w-3xl mb-7">
 	<p>

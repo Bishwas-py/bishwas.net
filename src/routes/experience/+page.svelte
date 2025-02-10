@@ -7,11 +7,14 @@
 	import MdiForumIcon from 'virtual:icons/mdi/forum';
 	import F7ChartBarCircleFill from 'virtual:icons/f7/chart-bar-circle-fill';
 	import MdiOpenInNewIcon from 'virtual:icons/mdi/open-in-new';
+	import Meta from '$item/Meta.svelte';
 </script>
 
-<svelte:head>
-	<title>Experience | Bishwas</title>
-</svelte:head>
+<Meta
+	title="Experience | Bishwas"
+	description="Showcasing my professional experience as a full-stack web developer."
+	keywords="full-stack developer, web development, SvelteKit, Python, Django, portfolio"
+/>
 
 <div class="experience-intro" in:fade>
 	<h1>Experience</h1>
