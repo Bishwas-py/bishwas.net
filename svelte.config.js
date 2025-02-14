@@ -11,7 +11,8 @@ const config = {
 			$item: './src/item',
 			$fonts: './src/fonts',
 			$utils: './src/utils',
-			$styles: './src/styles'
+			$styles: './src/styles',
+			$icons: './src/icons'
 		}
 	},
 	plugins: [],

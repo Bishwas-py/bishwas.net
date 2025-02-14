@@ -1,3 +1,8 @@
+<!-- looking-forward.svelte -->
+<script lang="ts">
+	import CTA from './cta.svelte';
+</script>
+
 <div class="mt-10 p-6 rounded-lg bg-gradient-to-br from-orange-500/5 to-purple-500/5">
 	<h3 class="text-xl font-semibold mb-4">Looking Forward</h3>
 	<p class="text-gray-800 dark:text-gray-200">
@@ -5,10 +10,7 @@
 		With Svelte, I'm not just building applications – I'm helping shape a more intuitive way of
 		creating for the web.
 	</p>
-	<div class="mt-6 text-sm text-gray-600 dark:text-gray-400">
-		Want to explore how Svelte can transform your project?
-		<a href="mailto:yo@bishwas.net" class="text-orange-600 dark:text-orange-400 hover:underline"
-			>Let's talk</a
-		>
+	<div class="mt-6">
+		<CTA />
 	</div>
 </div>
