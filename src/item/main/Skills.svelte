@@ -20,10 +20,6 @@
 		<span class="sr-only">Hire Svelte Developer</span>
 		<iconify-icon icon="simple-icons:svelte"></iconify-icon>
 	</a>
-	<div class="skill-tag python cursor-not-allowed" in:fade={{ delay: 580 }}>
-		<span class="tag-text">Python</span>
-		<iconify-icon icon="mdi:language-python"></iconify-icon>
-	</div>
 	<a
 		class="skill-tag django"
 		in:fade={{ delay: 670 }}
@@ -32,6 +28,10 @@
 		<span class="tag-text">Django</span>
 		<iconify-icon icon="simple-icons:django"></iconify-icon>
 	</a>
+	<div class="skill-tag python cursor-not-allowed" in:fade={{ delay: 580 }}>
+		<span class="tag-text">Python</span>
+		<iconify-icon icon="mdi:language-python"></iconify-icon>
+	</div>
 	{#if loadMore}
 		<div class="skill-tag typescript cursor-not-allowed" in:fade>
 			<span class="tag-text">TypeScript</span>
