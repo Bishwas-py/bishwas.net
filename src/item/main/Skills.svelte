@@ -20,10 +20,13 @@
 		<span class="sr-only">Hire Svelte Developer</span>
 		<iconify-icon icon="simple-icons:svelte"></iconify-icon>
 	</a>
-	<div class="skill-tag python cursor-not-allowed" in:fade={{ delay: 580 }}>
+	<a
+		class="skill-tag python cursor-not-allowed" in:fade={{ delay: 580 }}
+		href="/django-developer"
+	>
 		<span class="tag-text">Python</span>
 		<iconify-icon icon="mdi:language-python"></iconify-icon>
-	</div>
+	</a>
 	<div class="skill-tag django cursor-not-allowed" in:fade={{ delay: 670 }}>
 		<span class="tag-text">Django</span>
 		<iconify-icon icon="simple-icons:django"></iconify-icon>
@@ -57,11 +60,11 @@
 </div>
 
 <style lang="postcss">
-	.load-more {
-		@apply flex items-center justify-center active:scale-95 duration-200;
-	}
+    .load-more {
+        @apply flex items-center justify-center active:scale-95 duration-200;
+    }
 
-	.load-more iconify-icon {
-		@apply w-5 h-5 text-xl;
-	}
+    .load-more iconify-icon {
+        @apply w-5 h-5 text-xl;
+    }
 </style>
