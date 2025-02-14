@@ -1,6 +1,6 @@
 <!-- looking-forward.svelte -->
 <script lang="ts">
-	import CTA from './cta.svelte';
+	import CTA from '$item/CTA.svelte';
 </script>
 
 <div class="mt-10 p-6 rounded-lg bg-gradient-to-br from-orange-500/5 to-purple-500/5">
