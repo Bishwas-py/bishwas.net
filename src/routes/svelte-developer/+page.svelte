@@ -11,6 +11,7 @@
 	import LookingForward from './looking-forward.svelte';
 	import ExpertiseShowcase from './expertise-showcase.svelte';
 	import Meta from '$item/Meta.svelte';
+	import Video from './Video.svelte';
 </script>
 
 <Meta
@@ -137,26 +138,6 @@
 	<ContributionHighlights />
 	<TechImpact />
 	<ValueProposition />
+	<Video />
 	<LookingForward />
 </div>
-
-<style lang="postcss">
-	.milestone {
-		@apply transition-all duration-300 hover:shadow-md;
-	}
-	.expertise-showcase {
-		@apply relative;
-	}
-
-	.contribution-highlights .group {
-		@apply transition-all duration-300;
-	}
-
-	.tech-impact {
-		@apply relative;
-	}
-
-	.future-vision {
-		@apply transition-all duration-300 hover:from-orange-500/10 hover:to-purple-500/10;
-	}
-</style>
