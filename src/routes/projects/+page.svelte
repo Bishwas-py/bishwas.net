@@ -4,6 +4,25 @@
 
 	const PROJECTS = [
 		{
+			name: 'SatzMaster',
+			timeline: '2024 - Present',
+			description:
+				'An interactive German language learning application featuring typing exercises, sentence building, and grammar reflex training.',
+			technologies: [
+				{ name: 'Next.js', icon: 'logos:nextjs-icon', class: 'skill-tag react' },
+				{ name: 'React', icon: 'logos:react', class: 'skill-tag react' },
+				{ name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss', class: 'skill-tag tailwind' }
+			],
+			highlights: [
+				'Interactive German sentence typing for muscle memory development',
+				'Sentence building exercises from keywords for grammar practice',
+				'Neural pattern recognition for advanced grammar training',
+				'Multiple difficulty levels from A1 to C1 German proficiency'
+			],
+			link: 'https://satzmacher.bishwas.net/',
+			image: '/projects/satzmacher.jpg'
+		},
+		{
 			name: 'Webmatrices',
 			timeline: 'March 2020 - Present',
 			description:
