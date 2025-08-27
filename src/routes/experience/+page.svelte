@@ -7,6 +7,7 @@
 	import MdiForumIcon from 'virtual:icons/mdi/forum';
 	import F7ChartBarCircleFill from 'virtual:icons/f7/chart-bar-circle-fill';
 	import MdiOpenInNewIcon from 'virtual:icons/mdi/open-in-new';
+	import MdiSailBoatIcon from 'virtual:icons/mdi/sail-boat';
 	import Meta from '$item/Meta.svelte';
 </script>
 
@@ -29,6 +30,36 @@
 </div>
 
 <div class="experiences">
+	<div class="experience" in:fly={{y: 50, duration: 500}}>
+		<div class="experience-item">
+			<MdiSailBoatIcon class="bg-blue-500 text-blue-100" />
+			<div class="experience-item-title">
+				<h2>Mako Labs</h2>
+				<div class="project-info">
+					<h3 class="explained">Mar 2025 - Present (Full Stack Engineer)</h3>
+					<a href="https://makolabs.ai/" target="_blank" class="link">
+						<span>Visit company</span>
+						<MdiOpenInNewIcon />
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<p>
+			Mako Labs is a Singaporean international company helping companies in Japan, Germany, and UK build software.
+			I develop and deliver software solutions for clients through Mako Labs, focusing on successful project
+			delivery and client satisfaction.
+		</p>
+
+		<ul>
+			<li>Architect and develop full-stack applications across diverse technology stacks from Python to Rust</li>
+			<li>Work independently using my own tools and methodologies</li>
+			<li>Collaborate with teams to meet project specifications and deadlines</li>
+			<li>Ensure professional-quality deliverables that meet industry standards</li>
+			<li>Provide regular progress updates and technical documentation</li>
+		</ul>
+	</div>
+
 	<div class="experience" in:fly={{y: 50, duration: 500}}>
 		<div class="experience-item">
 			<F7ChartBarCircleFill class="bg-purple-500 text-purple-100" />
