@@ -26,7 +26,7 @@
 			name: 'Webmatrices',
 			timeline: 'March 2020 - Present',
 			description:
-				'SaaS web application designed to provide tools for digital creators, freelancers, bloggers, and developers.',
+				'A SaaS web application designed to provide tools for digital creators, freelancers, bloggers, and developers.',
 			technologies: [
 				{ name: 'Django/Djapy', icon: 'mdi:language-python', class: 'skill-tag django' },
 				{ name: 'SvelteKit', icon: 'logos:svelte-icon', class: 'skill-tag svelte' }
