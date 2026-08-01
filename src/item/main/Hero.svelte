@@ -1,13 +1,7 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 	import Skills from '$item/main/Skills.svelte';
-	import { fly } from 'svelte/transition';
-
-	const UPSTREAM = [
-		{ name: 'pydantic/pydantic', url: 'https://github.com/pydantic/pydantic/pull/13537' },
-		{ name: 'sveltejs/kit', url: 'https://github.com/sveltejs/kit/pull/16349' },
-		{ name: 'litestar-org/litestar', url: 'https://github.com/litestar-org/litestar/pull/4925' }
-	];
+	import { FEATURED as UPSTREAM, prUrl } from '$utils/open-source';
 
 	const joiner = (i: number) => (i === 0 ? '' : i === UPSTREAM.length - 1 ? ' and ' : ', ');
 </script>
@@ -15,7 +9,7 @@
 <header class="max-w-3xl">
 	<div class="hero-content">
 		<div class="hero-image-container w-32 h-32" in:fly={{ y: 300 }}>
-			<img src="/me-bishwas.jpg" alt="Bishwas Bhandari - Full-Stack Developer" class="hero-image" />
+			<img src="/me-bishwas.jpeg" alt="Bishwas Bhandari - Full-Stack Developer" class="hero-image" />
 		</div>
 		<div class="hero-text">
 			<span
@@ -29,10 +23,10 @@
 				When I'm not building with Django or Svelte, you'll find me learning German or doing
 				<a href="/open-source" class="link-inked">open-source</a>, lately in
 				{#each UPSTREAM as repo, i}{joiner(i)}<a
-						href={repo.url}
+						href={prUrl(repo)}
 						target="_blank"
 						rel="noopener"
-						class="link-inked">{repo.name}</a
+						class="link-inked">{repo.repo}</a
 					>{/each}. Nepal-born, globally connected.
 			</p>
 			<Skills />

@@ -3,14 +3,13 @@
 	import Meta from '$item/Meta.svelte';
 	import PatchCard from './PatchCard.svelte';
 	import Ticked from './Ticked.svelte';
-	import { MAINTAINED, PATCHES, REPORTED } from './data';
+	import { MAINTAINED, PATCHES, REPORTED } from '$utils/open-source';
 
 	const STATS = [
-		{ value: '4', label: 'merged upstream' },
+		{ value: String(PATCHES.length), label: 'merged upstream' },
 		{ value: '605', label: 'stars on what I maintain' },
 		{ value: '549', label: 'public commits' }
 	];
-
 </script>
 
 <Meta
@@ -43,7 +42,6 @@
 		</div>
 	{/each}
 </div>
-
 
 <section class="max-w-3xl w-full mb-16">
 	<h2 class="section-title">
@@ -79,7 +77,7 @@
 				</div>
 				<p class="project-tagline">{project.tagline}</p>
 				<div class="project-meta">
-					<span class="role">{project.role}</span>
+					<span class="role pill-accent">{project.role}</span>
 					<span class="metric"><iconify-icon icon="ph:star-fill"></iconify-icon>{project.stars}</span>
 					{#if project.commits}
 						<span class="metric">{project.commits} commits</span>
@@ -114,7 +112,6 @@
 </section>
 
 <style lang="postcss">
-
     .intro h1 {
         @apply text-3xl md:text-4xl font-bold leading-tight mb-3;
     }
@@ -191,9 +188,7 @@
     }
 
     .project-meta .role {
-        @apply rounded-full px-2 py-0.5 not-italic
-        bg-purple-100/80 text-purple-900
-        dark:bg-purple-950/70 dark:text-purple-200;
+        @apply px-2 py-0.5 not-italic;
     }
 
     .reported {

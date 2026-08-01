@@ -1,12 +1,10 @@
 export type Patch = {
 	repo: string;
-	repoUrl: string;
 	stars: string;
 	icon: string;
-	accent: string;
+	accent: 'rose' | 'orange' | 'amber';
 	title: string;
 	prNumber: number;
-	url: string;
 	mergedIn: string;
 	diff: { added: number; removed: number; files: number };
 	symptom: { code: string; result: string };
@@ -14,16 +12,17 @@ export type Patch = {
 	fix: string;
 };
 
+export const repoUrl = (repo: string) => `https://github.com/${repo}`;
+export const prUrl = (patch: Patch) => `${repoUrl(patch.repo)}/pull/${patch.prNumber}`;
+
 export const PATCHES: Patch[] = [
 	{
 		repo: 'pydantic/pydantic',
-		repoUrl: 'https://github.com/pydantic/pydantic',
 		stars: '28.4k',
 		icon: 'simple-icons:pydantic',
 		accent: 'rose',
 		title: '`SecretStr` equality raised `TypeError` on non-ASCII values',
 		prNumber: 13537,
-		url: 'https://github.com/pydantic/pydantic/pull/13537',
 		mergedIn: 'merged in 1h 40m',
 		diff: { added: 8, removed: 1, files: 2 },
 		symptom: {
@@ -35,13 +34,11 @@ export const PATCHES: Patch[] = [
 	},
 	{
 		repo: 'sveltejs/kit',
-		repoUrl: 'https://github.com/sveltejs/kit',
 		stars: '20.7k',
 		icon: 'simple-icons:svelte',
 		accent: 'orange',
 		title: 'POST fell through to a 405 instead of the page it belonged to',
 		prNumber: 16349,
-		url: 'https://github.com/sveltejs/kit/pull/16349',
 		mergedIn: 'closed a 2 yr 9 mo old issue',
 		diff: { added: 37, removed: 7, files: 6 },
 		symptom: {
@@ -53,13 +50,11 @@ export const PATCHES: Patch[] = [
 	},
 	{
 		repo: 'litestar-org/litestar',
-		repoUrl: 'https://github.com/litestar-org/litestar',
 		stars: '8.4k',
 		icon: 'simple-icons:python',
 		accent: 'amber',
 		title: 'Prometheus default let metric cardinality grow without bound',
 		prNumber: 4925,
-		url: 'https://github.com/litestar-org/litestar/pull/4925',
 		mergedIn: 'breaking change, accepted',
 		diff: { added: 28, removed: 2, files: 3 },
 		symptom: {
@@ -71,13 +66,11 @@ export const PATCHES: Patch[] = [
 	},
 	{
 		repo: 'litestar-org/litestar',
-		repoUrl: 'https://github.com/litestar-org/litestar',
 		stars: '8.4k',
 		icon: 'simple-icons:python',
 		accent: 'amber',
 		title: 'Acronyms shattered into single letters across the OpenAPI spec',
 		prNumber: 4921,
-		url: 'https://github.com/litestar-org/litestar/pull/4921',
 		mergedIn: 'merged in 1h 47m',
 		diff: { added: 41, removed: 2, files: 2 },
 		symptom: {
@@ -95,7 +88,6 @@ export type Project = {
 	url: string;
 	stars: number;
 	commits: number;
-	lang: string;
 	icon: string;
 	role: string;
 };
@@ -107,7 +99,6 @@ export const MAINTAINED: Project[] = [
 		url: 'https://tipex.pages.dev/',
 		stars: 425,
 		commits: 224,
-		lang: 'Svelte',
 		icon: 'simple-icons:svelte',
 		role: 'author'
 	},
@@ -118,7 +109,6 @@ export const MAINTAINED: Project[] = [
 		url: 'https://djapy-docs.pages.dev/',
 		stars: 120,
 		commits: 507,
-		lang: 'Python',
 		icon: 'simple-icons:django',
 		role: 'author'
 	},
@@ -126,10 +116,8 @@ export const MAINTAINED: Project[] = [
 		name: 'django-svelte-template',
 		tagline:
 			'Production template wiring SvelteKit to Django: auth, form actions, flash messages, validation.',
-		url: 'https://github.com/Bishwas-py/django-svelte-template',
 		stars: 72,
 		commits: 115,
-		lang: 'Python',
 		icon: 'simple-icons:django',
 		role: 'author'
 	},
@@ -139,7 +127,6 @@ export const MAINTAINED: Project[] = [
 		url: 'https://www.npmjs.com/package/seord',
 		stars: 50,
 		commits: 52,
-		lang: 'TypeScript',
 		icon: 'simple-icons:npm',
 		role: 'author'
 	},
@@ -150,7 +137,6 @@ export const MAINTAINED: Project[] = [
 		url: 'https://fymo.mintlify.app/',
 		stars: 9,
 		commits: 280,
-		lang: 'Python',
 		icon: 'simple-icons:python',
 		role: 'building now'
 	},
@@ -158,16 +144,21 @@ export const MAINTAINED: Project[] = [
 		name: 'friendofsvelte/*',
 		tagline:
 			'Svelte 5 utility packages: persistent state, mermaid renderer, type-safe icons, django-kit, toggle, progress.',
-		url: 'https://github.com/orgs/friendofsvelte/repositories',
 		stars: 131,
 		commits: 0,
-		lang: 'Svelte',
 		icon: 'simple-icons:svelte',
 		role: 'org maintainer'
 	}
 ];
 
-export const REPORTED = [
+export type Reported = {
+	repo: string;
+	stars: string;
+	title: string;
+	url: string;
+};
+
+export const REPORTED: Reported[] = [
 	{
 		repo: 'vitalik/django-ninja',
 		stars: '9.2k',
@@ -193,3 +184,5 @@ export const REPORTED = [
 		url: 'https://github.com/zed-industries/zed/issues/13634'
 	}
 ];
+
+export const FEATURED = PATCHES.slice(0, 3);

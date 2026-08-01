@@ -1,10 +1,14 @@
+<script lang="ts" module>
+	const BARS = 24;
+	const BAR_SLOTS: undefined[] = Array.from({ length: BARS });
+</script>
+
 <script lang="ts">
-	import type { Patch } from './data';
+	import { prUrl, repoUrl, type Patch } from '$utils/open-source';
 	import Ticked from './Ticked.svelte';
 
 	let { patch }: { patch: Patch } = $props();
 
-	const BARS = 24;
 	let addedBars = $derived(
 		Math.max(1, Math.round((patch.diff.added / (patch.diff.added + patch.diff.removed)) * BARS))
 	);
@@ -15,7 +19,7 @@
 
 	<div class="body">
 		<header>
-			<a href={patch.repoUrl} target="_blank" rel="noopener" class="repo accent-{patch.accent}">
+			<a href={repoUrl(patch.repo)} target="_blank" rel="noopener" class="repo accent-{patch.accent}">
 				<iconify-icon icon={patch.icon}></iconify-icon>
 				<span class="font-semibold">{patch.repo}</span>
 				<span class="stars">
@@ -23,7 +27,7 @@
 					{patch.stars}
 				</span>
 			</a>
-			<span class="merged">{patch.mergedIn}</span>
+			<span class="merged pill-accent">{patch.mergedIn}</span>
 		</header>
 
 		<h3><Ticked text={patch.title} /></h3>
@@ -40,7 +44,7 @@
 
 		<footer>
 			<div class="diffbar" aria-hidden="true">
-				{#each Array(BARS) as _, i}
+				{#each BAR_SLOTS as _, i}
 					<span class={i < addedBars ? 'add' : 'del'}></span>
 				{/each}
 			</div>
@@ -49,7 +53,7 @@
 				<span class="del-text">−{patch.diff.removed}</span>
 				<span class="files">{patch.diff.files} files</span>
 			</span>
-			<a href={patch.url} target="_blank" rel="noopener" class="prlink">
+			<a href={prUrl(patch)} target="_blank" rel="noopener" class="prlink">
 				#{patch.prNumber}
 				<iconify-icon icon="ph:arrow-square-out-duotone"></iconify-icon>
 			</a>
@@ -115,9 +119,7 @@
     }
 
     .merged {
-        @apply text-xs font-medium rounded-full px-2.5 py-1
-        bg-purple-100/80 text-purple-900
-        dark:bg-purple-950/70 dark:text-purple-200;
+        @apply text-xs font-medium px-2.5 py-1;
     }
 
     h3 {
