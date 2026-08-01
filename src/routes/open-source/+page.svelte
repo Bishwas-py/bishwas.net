@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 	import Meta from '$item/Meta.svelte';
 	import PatchCard from './PatchCard.svelte';
 	import Ticked from './Ticked.svelte';
@@ -19,12 +19,21 @@
 	keywords="open source, pydantic, sveltekit, litestar, djapy, tipex, fymo, python, svelte, contributions"
 />
 
-<h1 class="sr-only">Open source</h1>
-
-<p class="lede max-w-3xl w-full">
-	Each one below starts with the bug the way it actually showed up, then what changed. The green
-	and red are the real diff, and the number on the right opens the pull request.
-</p>
+<div class="intro max-w-3xl w-full mb-8">
+	<h1>Work I've done in the open.</h1>
+	<p>
+		Patches sent upstream, and the projects I keep alive. Everything links to the pull request on
+		<a
+			class="link-inked inline-flex gap-1 items-center"
+			href="https://github.com/Bishwas-py"
+			target="_blank"
+			rel="noopener"
+			in:fade>
+			<span>GitHub</span>
+			<iconify-icon icon="simple-icons:github"></iconify-icon>
+		</a>.
+	</p>
+</div>
 
 <div class="stats max-w-3xl w-full mb-12">
 	{#each STATS as stat, i}
@@ -106,8 +115,12 @@
 
 <style lang="postcss">
 
-    .lede {
-        @apply max-w-[64ch] mb-8 text-gray-600 dark:text-gray-400;
+    .intro h1 {
+        @apply text-3xl md:text-4xl font-bold leading-tight mb-3;
+    }
+
+    .intro p {
+        @apply text-gray-700 dark:text-gray-300;
     }
 
     .stats {

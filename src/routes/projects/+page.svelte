@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition';
 	import Meta from '$item/Meta.svelte';
 
 	const PROJECTS = [
@@ -276,12 +277,26 @@
 	keywords="svelte, django, python, typescript, web development, open-source, projects"
 />
 
-<h1 class="sr-only">Projects</h1>
+<div class="intro max-w-3xl mb-7">
+	<p>
+		As a systematic developer, I create solutions ranging from client-focused applications to open-source frameworks.
+		Each project in
+		<a
+			class="link-inked inline-flex gap-1 items-center"
+			href="https://github.com/Bishwas-py/bishwas.net"
+			target="_blank"
+			in:fade>
+			<span class="tag-text">my portfolio</span>
+			<iconify-icon icon="simple-icons:svelte"></iconify-icon>
+		</a> reflects both technical precision and practical purpose, combining engineering
+		principles with creative problem-solving.
+	</p>
 
-<p class="lede max-w-3xl w-full">
-	Some of these are load-bearing. One of them counts how fast you can click. I'd rather show you
-	both than pretend I only ever built the serious ones.
-</p>
+	<p class="mt-7">
+		Here are some of the projects that I have worked on. For the fixes I have merged into other
+		people's frameworks, see <a class="link-inked" href="/open-source">open source</a>.
+	</p>
+</div>
 
 {#each GROUPS as group}
 <section class="max-w-3xl w-full mb-14">
@@ -327,10 +342,6 @@
 {/each}
 
 <style lang="postcss">
-    .lede {
-        @apply max-w-[62ch] mb-12 text-lg leading-relaxed;
-    }
-
     .group-title {
         @apply text-2xl font-bold pb-2 border-b border-gray-300/60 dark:border-gray-700/60;
     }
