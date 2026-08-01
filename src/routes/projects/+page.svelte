@@ -265,8 +265,8 @@
 
 	const GROUPS = [
 		{ key: 'frameworks', label: 'Frameworks' },
-		{ key: 'products', label: 'Products' },
-		{ key: 'tools', label: 'Libraries & tools' }
+		{ key: 'tools', label: 'Libraries & tools' },
+		{ key: 'products', label: 'Products' }
 	];
 </script>
 
