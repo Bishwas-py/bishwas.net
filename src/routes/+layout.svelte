@@ -8,9 +8,12 @@
 	import AppearanceSwitch from '$item/AppearanceSwitch.svelte';
 	import Navbar from '$item/Navbar.svelte';
 	import Footer from '$item/Footer.svelte';
+	import AvatarFlight from '$item/AvatarFlight.svelte';
 
 	let { children } = $props();
 </script>
+
+<AvatarFlight />
 
 <div class="layout-container">
 	<Navbar />
