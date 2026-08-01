@@ -13,22 +13,21 @@
 
 <div class="intro max-w-3xl mb-7">
 	<p>
-		As a systematic developer, I create solutions ranging from client-focused applications to open-source frameworks.
-		Each project in
+		Most of these began because I wanted something to exist and it did not. A few grew into
+		libraries with users I have never met; the rest stayed small and quietly useful. Even
 		<a
 			class="link-inked inline-flex gap-1 items-center"
 			href="https://github.com/Bishwas-py/bishwas.net"
 			target="_blank"
 			in:fade>
-			<span class="tag-text">my portfolio</span>
+			<span class="tag-text">this site</span>
 			<iconify-icon icon="simple-icons:svelte"></iconify-icon>
-		</a> reflects both technical precision and practical purpose, combining engineering
-		principles with creative problem-solving.
+		</a> is one of them, source and all.
 	</p>
 
 	<p class="mt-7">
-		Here are some of the projects that I have worked on. For the fixes I have merged into other
-		people's frameworks, see <a class="link-inked" href="/open-source">open source</a>.
+		Nothing here is a mockup or a tutorial I followed along with. The bugs I fixed inside other
+		people's code live on the <a class="link-inked" href="/open-source">open source</a> page instead.
 	</p>
 </div>
 
