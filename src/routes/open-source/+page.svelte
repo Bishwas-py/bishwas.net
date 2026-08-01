@@ -6,17 +6,11 @@
 	import { MAINTAINED, PATCHES, REPORTED } from './data';
 
 	const STATS = [
-		{ value: '57k+', label: 'stars on repos I patched' },
 		{ value: '4', label: 'merged upstream' },
-		{ value: '549', label: 'public commits' },
-		{ value: '605', label: 'stars on what I maintain' }
+		{ value: '605', label: 'stars on what I maintain' },
+		{ value: '549', label: 'public commits' }
 	];
 
-	const PROOF = [
-		{ icon: 'ph:timer-duotone', head: 'Merged in 1h 40m', sub: 'pydantic took my patch same day' },
-		{ icon: 'ph:hourglass-duotone', head: 'Closed a 2 yr 9 mo bug', sub: 'SvelteKit issue nobody had fixed' },
-		{ icon: 'ph:warning-octagon-duotone', head: 'Shipped a breaking change', sub: 'Litestar default, argued and accepted' }
-	];
 </script>
 
 <Meta
@@ -41,7 +35,7 @@
 	</p>
 </div>
 
-<div class="stats max-w-3xl w-full mb-6">
+<div class="stats max-w-3xl w-full mb-14">
 	{#each STATS as stat, i}
 		<div class="stat" in:fly={{ y: 12, delay: i * 70, duration: 400 }}>
 			<span class="value">{stat.value}</span>
@@ -50,17 +44,6 @@
 	{/each}
 </div>
 
-<div class="proof max-w-3xl w-full mb-14">
-	{#each PROOF as item, i}
-		<div class="proof-item" in:fly={{ y: 12, delay: 250 + i * 70, duration: 400 }}>
-			<iconify-icon icon={item.icon}></iconify-icon>
-			<div>
-				<p class="proof-head">{item.head}</p>
-				<p class="proof-sub">{item.sub}</p>
-			</div>
-		</div>
-	{/each}
-</div>
 
 <section class="max-w-3xl w-full mb-16">
 	<h2 class="section-title">
@@ -140,28 +123,9 @@
     }
 
     .stats {
-        @apply grid grid-cols-2 md:grid-cols-4 gap-4 w-full;
+        @apply grid grid-cols-3 gap-3 sm:gap-4 w-full;
     }
 
-    .proof {
-        @apply grid sm:grid-cols-3 gap-4 w-full;
-    }
-
-    .proof-item {
-        @apply flex items-start gap-2.5;
-    }
-
-    .proof-item iconify-icon {
-        @apply text-xl mt-0.5 flex-shrink-0 text-purple-700 dark:text-purple-300;
-    }
-
-    .proof-head {
-        @apply font-semibold text-sm leading-snug;
-    }
-
-    .proof-sub {
-        @apply text-xs text-gray-600 dark:text-gray-400 leading-snug mt-0.5;
-    }
 
     .stat {
         @apply flex flex-col gap-1 rounded-lg px-4 py-3
