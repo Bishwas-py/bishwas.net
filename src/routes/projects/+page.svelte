@@ -286,8 +286,8 @@
 					<img src={project.image} alt={project.name}
 							 class="w-auto h-full rounded group-hover:opacity-75 transition-opacity duration-300" />
 					<div
-						class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-						<p class="text-white text-lg font-bold">Learn more</p>
+						class="absolute inset-0 bg-black/60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+						<p class="text-white text-xs font-semibold">Learn more</p>
 					</div>
 					<iconify-icon icon="ph:arrow-square-in-duotone"
 												class="absolute bottom-1 right-2 group-hover:hidden text-gray-400"></iconify-icon>
@@ -295,7 +295,7 @@
 				<div class="flex flex-col">
 					<h2 class="text-xl font-semibold">{project.name}</h2>
 					<p class="text-gray-600 dark:text-gray-400 text-sm">{project.timeline}</p>
-					<ul class="mt-1 flex flex-wrap gap-2">
+					<ul class="mt-1.5 flex flex-wrap gap-2">
 						{#each project.technologies as tech}
 							<li class={tech.class}>
 								<iconify-icon icon={tech.icon}></iconify-icon>
@@ -306,7 +306,7 @@
 				</div>
 			</div>
 			<p class="mt-2">{project.description}</p>
-			<ul class="mt-2 list-disc list-inside">
+			<ul class="mt-2 list-disc list-outside pl-5 space-y-1 marker:text-gray-400 dark:marker:text-gray-600">
 				{#each project.highlights as highlight}
 					<li>{highlight}</li>
 				{/each}

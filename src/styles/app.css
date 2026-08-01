@@ -59,7 +59,7 @@
 
 
     .hero-image-container {
-        @apply overflow-hidden flex-shrink-0 shadow-md dark:outline;
+        @apply overflow-hidden flex-shrink-0 shadow-md dark:outline dark:outline-1 dark:outline-stone-700;
         animation: wobble 2s infinite;
         border-radius: 28% 25% 28% 25%;
         @apply md:sticky top-7;
