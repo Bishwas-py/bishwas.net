@@ -18,7 +18,10 @@
 			<a href={patch.repoUrl} target="_blank" rel="noopener" class="repo accent-{patch.accent}">
 				<iconify-icon icon={patch.icon}></iconify-icon>
 				<span class="font-semibold">{patch.repo}</span>
-				<span class="stars">{patch.stars}★</span>
+				<span class="stars">
+					<iconify-icon icon="ph:star-fill"></iconify-icon>
+					{patch.stars}
+				</span>
 			</a>
 			<span class="merged">{patch.mergedIn}</span>
 		</header>
@@ -104,7 +107,11 @@
     }
 
     .stars {
-        @apply text-gray-500 dark:text-gray-400 text-xs font-mono;
+        @apply inline-flex items-center gap-1 text-gray-500 dark:text-gray-400 text-xs;
+    }
+
+    .stars iconify-icon {
+        @apply text-[0.85em] text-amber-500/80 dark:text-amber-400/70;
     }
 
     .merged {
