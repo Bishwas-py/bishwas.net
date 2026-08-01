@@ -169,7 +169,7 @@
     }
 
     .stat .value {
-        @apply text-2xl font-bold font-mono text-purple-800 dark:text-purple-200;
+        @apply text-2xl font-bold text-purple-800 dark:text-purple-200;
     }
 
     .stat .label {
