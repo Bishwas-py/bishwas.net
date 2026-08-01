@@ -35,7 +35,7 @@
 	</p>
 </div>
 
-<div class="stats max-w-3xl w-full mb-14">
+<div class="stats max-w-3xl w-full mb-12">
 	{#each STATS as stat, i}
 		<div class="stat" in:fly={{ y: 12, delay: i * 70, duration: 400 }}>
 			<span class="value">{stat.value}</span>
@@ -123,21 +123,21 @@
     }
 
     .stats {
-        @apply grid grid-cols-3 gap-3 sm:gap-4 w-full;
+        @apply flex flex-wrap items-baseline gap-x-3 gap-y-2;
     }
 
-
     .stat {
-        @apply flex flex-col gap-1 rounded-lg px-4 py-3
-        bg-white/50 dark:bg-gray-800/40 shadow-sm;
+        @apply flex items-baseline gap-1.5 pr-3
+        border-r border-gray-300/70 dark:border-gray-700/70
+        last:border-r-0 last:pr-0;
     }
 
     .stat .value {
-        @apply text-2xl font-bold text-purple-800 dark:text-purple-200;
+        @apply text-xl font-bold text-purple-800 dark:text-purple-200;
     }
 
     .stat .label {
-        @apply text-xs leading-snug text-gray-600 dark:text-gray-400;
+        @apply text-sm text-gray-600 dark:text-gray-400;
     }
 
     .section-title {
