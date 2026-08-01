@@ -4,6 +4,25 @@
 
 	const PROJECTS = [
 		{
+			name: 'Fymo',
+			timeline: '2025 - Present, Python Framework',
+			description:
+				'A Python web framework that server-renders real Svelte 5 components, so the backend and the page live in one repo and one deploy.',
+			technologies: [
+				{ name: 'Python', icon: 'mdi:language-python', class: 'skill-tag python' },
+				{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' },
+				{ name: 'esbuild', icon: 'logos:esbuild', class: 'skill-tag javascript' }
+			],
+			highlights: [
+				'Compiles Svelte once at build time; a long-lived Node sidecar renders each request over stdio, so nothing compiles on the fly.',
+				'SvelteKit-style remote functions let the frontend call typed Python endpoints directly.',
+				'Ships a durable job queue, real-time broadcasts and scaffolded password auth you can read and delete.',
+				'Deploys as a single WSGI app, with no second server to run.'
+			],
+			link: 'https://fymo.mintlify.app/',
+			image: '/projects/fymo.jpg'
+		},
+		{
 			name: 'SatzMaster',
 			timeline: '2024 - Present',
 			description:
@@ -76,6 +95,93 @@
 			image: '/projects/tipex.jpg'
 		},
 		{
+			name: 'Django + SvelteKit Template',
+			timeline: '72 stars, Production Template',
+			description:
+				'A production template wiring SvelteKit to Django, with the plumbing that usually costs a week already solved.',
+			technologies: [
+				{ name: 'Django', icon: 'mdi:language-python', class: 'skill-tag django' },
+				{ name: 'SvelteKit', icon: 'logos:svelte-icon', class: 'skill-tag svelte' },
+				{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' }
+			],
+			highlights: [
+				'Session auth that survives server-side rendering, with form actions posting straight to Django.',
+				'Django messages bridged into Svelte as toast and flash notifications.',
+				'Server-side validation errors surfaced back into SvelteKit form state.'
+			],
+			link: 'https://github.com/Bishwas-py/django-svelte-template',
+			image: '/projects/django-svelte-template.jpg'
+		},
+		{
+			name: '@friendofsvelte/mermaid',
+			timeline: '36 stars, Svelte 5 Package',
+			description:
+				'A Mermaid renderer for Svelte 5: pass it Mermaid source, get an SVG in the DOM.',
+			technologies: [
+				{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' },
+				{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' }
+			],
+			highlights: [
+				'One typed component, with a snippet slot for parse errors instead of a thrown exception.',
+				'A dynamic import keeps mermaid.js out of the server bundle entirely.',
+				'Built on Svelte 5 runes throughout.'
+			],
+			link: 'https://mermaid-cjv.pages.dev/',
+			image: '/projects/fos-mermaid.jpg'
+		},
+		{
+			name: '@friendofsvelte/state',
+			timeline: '39 stars, Svelte 5 Package',
+			description:
+				'Type-safe persistent state for Svelte 5, backed by localStorage or sessionStorage.',
+			technologies: [
+				{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' },
+				{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' }
+			],
+			highlights: [
+				'A single PersistentState class covers definition, persistence and cross-component sync.',
+				'Full type inference, with zero dependencies beyond Svelte itself.',
+				'The storage backend is a constructor argument rather than a separate API.'
+			],
+			link: 'https://www.npmjs.com/package/@friendofsvelte/state',
+			image: '/projects/fos-state.jpg'
+		},
+		{
+			name: 'Svelicon',
+			timeline: '21 stars, CLI Tool',
+			description:
+				'A CLI that turns Iconify SVGs into type-safe Svelte components, so icons ship as code instead of a runtime fetch.',
+			technologies: [
+				{ name: 'Node.js', icon: 'logos:nodejs-icon', class: 'skill-tag typescript' },
+				{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' },
+				{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' }
+			],
+			highlights: [
+				'Interactive search across the Iconify collections, with batched parallel downloads.',
+				'Generates typed components and validates tsconfig path mappings automatically.',
+				'Emits JavaScript or TypeScript depending on the project it runs in.'
+			],
+			link: 'https://www.npmjs.com/package/svelicon',
+			image: '/projects/fos-svelicon.jpg'
+		},
+		{
+			name: 'notify',
+			timeline: 'Go Library',
+			description:
+				'A Go library for Linux desktop notifications with action buttons and sound, spoken over D-Bus.',
+			technologies: [
+				{ name: 'Go', icon: 'logos:go', class: 'skill-tag go' },
+				{ name: 'D-Bus', icon: 'mdi:linux', class: 'skill-tag github' }
+			],
+			highlights: [
+				'Action buttons bound directly to Go functions, with click handling wired through D-Bus.',
+				'Sound alerts by freedesktop name or custom file.',
+				'Struct-based configuration rather than a builder chain.'
+			],
+			link: 'https://github.com/Bishwas-py/notify',
+			image: '/projects/notify.jpg'
+		},
+		{
 			name: 'SEOrd - SEO Analyzer',
 			timeline: 'Node.js Library',
 			description:
@@ -123,7 +229,7 @@
 				'Optimized performance for various devices and browsers.',
 				'Inspired by a personal need, making it a fun, practical solution.'
 			],
-			link: 'https://bishwas-py/speedclicking.com',
+			link: 'https://github.com/Bishwas-py/speedclicking.com',
 			image: '/projects/speedclicking.jpg'
 		},
 		{
@@ -167,7 +273,8 @@
 	</p>
 
 	<p class="mt-7">
-		Here are some of the projects that I have worked on.
+		Here are some of the projects that I have worked on. For the fixes I have merged into other
+		people's frameworks, see <a class="link-inked" href="/open-source">open source</a>.
 	</p>
 </div>
 

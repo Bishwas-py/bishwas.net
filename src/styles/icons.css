@@ -54,6 +54,10 @@
   @apply hover:bg-yellow-100 hover:text-yellow-950 dark:hover:outline-yellow-700 dark:hover:bg-yellow-900 dark:hover:text-yellow-200;
 }
 
+.skill-tag.go {
+  @apply hover:bg-sky-100 hover:text-sky-950 dark:hover:outline-sky-700 dark:hover:bg-sky-900 dark:hover:text-sky-200;
+}
+
 .skill-tag.sockets {
   @apply hover:bg-indigo-100 hover:text-indigo-950 dark:hover:outline-indigo-700 dark:hover:bg-indigo-900 dark:hover:text-indigo-200;
 }
