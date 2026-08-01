@@ -329,18 +329,12 @@
 					</ul>
 				</div>
 			</div>
-			<p class="mt-2">{project.description}</p>
-			<details class="detail mt-2">
-				<summary>
-					<iconify-icon icon="ph:caret-right-bold"></iconify-icon>
-					<span>what it does</span>
-				</summary>
-				<ul class="list-disc list-outside pl-5 space-y-1 marker:text-gray-400 dark:marker:text-gray-600">
-					{#each project.highlights as highlight}
-						<li>{highlight}</li>
-					{/each}
-				</ul>
-			</details>
+			<p class="description">{project.description}</p>
+			<ul class="highlights">
+				{#each project.highlights as highlight}
+					<li>{highlight}</li>
+				{/each}
+			</ul>
 		</div>
 	{/each}
 	</div>
@@ -352,26 +346,13 @@
         @apply text-2xl font-bold pb-2 border-b border-gray-300/60 dark:border-gray-700/60;
     }
 
-    .detail summary {
-        @apply cursor-pointer select-none list-none w-fit
-        inline-flex items-center gap-1.5 text-sm
-        text-gray-500 hover:text-purple-800
-        dark:text-gray-400 dark:hover:text-purple-200 duration-75;
+    .description {
+        @apply mt-2.5 max-w-[62ch] leading-relaxed;
     }
 
-    .detail summary::-webkit-details-marker {
-        @apply hidden;
-    }
-
-    .detail summary iconify-icon {
-        @apply text-[0.7em] duration-200;
-    }
-
-    .detail[open] summary iconify-icon {
-        @apply rotate-90;
-    }
-
-    .detail ul {
-        @apply mt-2 text-sm text-gray-700 dark:text-gray-300;
+    .highlights {
+        @apply mt-2 max-w-[68ch] list-disc list-outside pl-5 space-y-1
+        text-sm leading-relaxed text-gray-600 dark:text-gray-400
+        marker:text-gray-400/70 dark:marker:text-gray-600;
     }
 </style>
