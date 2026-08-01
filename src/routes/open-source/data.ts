@@ -10,8 +10,8 @@ export type Patch = {
 	mergedIn: string;
 	diff: { added: number; removed: number; files: number };
 	symptom: { code: string; result: string };
+	chips: string[];
 	fix: string;
-	note?: string;
 };
 
 export const PATCHES: Patch[] = [
@@ -30,8 +30,8 @@ export const PATCHES: Patch[] = [
 			code: "SecretStr('café') == SecretStr('café')",
 			result: 'TypeError: comparing strings with non-ASCII characters is not supported'
 		},
-		fix: 'A recent switch to `secrets.compare_digest()` broke it: the function only accepts ASCII when handed `str`. Encoding both sides to bytes first restores equality for any value and keeps the constant-time guarantee that motivated the switch.',
-		note: 'Regression I caught by reading the commit that introduced it, before anyone filed a bug.'
+		chips: ['regression', 'caught before anyone filed it', 'constant-time preserved'],
+		fix: 'A recent switch to `secrets.compare_digest()` broke it: the function only accepts ASCII when handed `str`. Encoding both sides to bytes first restores equality for any value and keeps the constant-time guarantee that motivated the switch.'
 	},
 	{
 		repo: 'sveltejs/kit',
@@ -45,11 +45,11 @@ export const PATCHES: Patch[] = [
 		mergedIn: 'closed a 2 yr 9 mo old issue',
 		diff: { added: 37, removed: 7, files: 6 },
 		symptom: {
-			code: "POST /contact   →   +server.js exports only GET",
+			code: 'POST /contact   →   +server.js exports only GET',
 			result: '405 Method Not Allowed — even though +page.server.js had a matching action'
 		},
-		fix: 'Routing handed the POST to the sibling endpoint and stopped there. Now an endpoint exporting neither `POST` nor `fallback` is treated as unusable and the request falls through to the page actions, mirroring the `endpoint_can_handle` pattern already used for GET/HEAD.',
-		note: 'Closed issue #10863, open since October 2023.'
+		chips: ['issue open 2 yr 9 mo', 'core routing', 'new test fixture'],
+		fix: 'Routing handed the POST to the sibling endpoint and stopped there. Now an endpoint exporting neither `POST` nor `fallback` is treated as unusable and the request falls through to the page actions, mirroring the `endpoint_can_handle` pattern already used for GET/HEAD.'
 	},
 	{
 		repo: 'litestar-org/litestar',
@@ -66,8 +66,8 @@ export const PATCHES: Patch[] = [
 			code: '/users/1   /users/2   /users/3   …',
 			result: 'one Prometheus time series per parameter value, forever'
 		},
-		fix: '`group_path=True` already collapsed these to the route template `/users/{user_id}`, but the safe behaviour was opt-in, so every default deployment leaked memory silently. I flipped the default and kept raw paths reachable through `group_path=False`.',
-		note: 'A default-changing break in a metrics API, argued and merged in under two days.'
+		chips: ['breaking change', 'unbounded memory fix', 'merged in 2 days'],
+		fix: '`group_path=True` already collapsed these to the route template `/users/{user_id}`, but the safe behaviour was opt-in, so every default deployment leaked memory silently. I flipped the default and kept raw paths reachable through `group_path=False`.'
 	},
 	{
 		repo: 'litestar-org/litestar',
@@ -84,8 +84,8 @@ export const PATCHES: Patch[] = [
 			code: 'InvalidAPIKeyError',
 			result: '"Invalid A P I Key Error"  —  published in the public API docs'
 		},
-		fix: 'The splitter broke before every capital letter, including each one inside an uppercase run. Splitting only at real word boundaries keeps acronyms intact: `HTTPTimeoutError` → `HTTP Timeout Error`, `MissingJWTError` → `Missing JWT Error`.',
-		note: 'Closed issue #4004, open since February 2025.'
+		chips: ['issue open 1 yr 5 mo', 'public API docs', 'parametrised tests'],
+		fix: 'The splitter broke before every capital letter, including each one inside an uppercase run. Splitting only at real word boundaries keeps acronyms intact: `HTTPTimeoutError` → `HTTP Timeout Error`, `MissingJWTError` → `Missing JWT Error`.'
 	}
 ];
 
@@ -113,7 +113,8 @@ export const MAINTAINED: Project[] = [
 	},
 	{
 		name: 'djapy',
-		tagline: 'Django REST framework with no framework inside the framework. Pydantic schemas, generated Swagger.',
+		tagline:
+			'Django REST framework with no framework inside the framework. Pydantic schemas, generated Swagger.',
 		url: 'https://djapy-docs.pages.dev/',
 		stars: 120,
 		commits: 507,
@@ -123,7 +124,8 @@ export const MAINTAINED: Project[] = [
 	},
 	{
 		name: 'django-svelte-template',
-		tagline: 'Production template wiring SvelteKit to Django: auth, form actions, flash messages, validation.',
+		tagline:
+			'Production template wiring SvelteKit to Django: auth, form actions, flash messages, validation.',
 		url: 'https://github.com/Bishwas-py/django-svelte-template',
 		stars: 72,
 		commits: 115,
@@ -143,7 +145,8 @@ export const MAINTAINED: Project[] = [
 	},
 	{
 		name: 'fymo',
-		tagline: 'Python SSR framework for Svelte 5: esbuild pipeline, Node sidecar, remote functions, durable job queue.',
+		tagline:
+			'Python SSR framework for Svelte 5: esbuild pipeline, Node sidecar, remote functions, durable job queue.',
 		url: 'https://fymo.mintlify.app/',
 		stars: 9,
 		commits: 280,
@@ -153,7 +156,8 @@ export const MAINTAINED: Project[] = [
 	},
 	{
 		name: 'friendofsvelte/*',
-		tagline: 'Svelte 5 utility packages: persistent state, mermaid renderer, type-safe icons, django-kit, toggle, progress.',
+		tagline:
+			'Svelte 5 utility packages: persistent state, mermaid renderer, type-safe icons, django-kit, toggle, progress.',
 		url: 'https://github.com/orgs/friendofsvelte/repositories',
 		stars: 131,
 		commits: 0,

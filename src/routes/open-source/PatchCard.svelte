@@ -33,11 +33,11 @@
 			</p>
 		</div>
 
-		<p class="fix"><Ticked text={patch.fix} /></p>
-
-		{#if patch.note}
-			<p class="note"><Ticked text={patch.note} /></p>
-		{/if}
+		<ul class="chips">
+			{#each patch.chips as chip}
+				<li>{chip}</li>
+			{/each}
+		</ul>
 
 		<footer>
 			<div class="diffbar" aria-hidden="true">
@@ -55,6 +55,11 @@
 				<iconify-icon icon="ph:arrow-square-out-duotone"></iconify-icon>
 			</a>
 		</footer>
+
+		<details class="detail">
+			<summary>what I changed</summary>
+			<p><Ticked text={patch.fix} /></p>
+		</details>
 	</div>
 </article>
 
@@ -130,12 +135,24 @@
         @apply flex-shrink-0 mt-0.5;
     }
 
-    .fix {
-        @apply text-gray-800 dark:text-gray-200 leading-relaxed;
+    .chips {
+        @apply flex flex-wrap gap-1.5;
     }
 
-    .note {
-        @apply text-sm italic text-gray-600 dark:text-gray-400;
+    .chips li {
+        @apply text-xs rounded px-2 py-0.5 font-mono
+        bg-stone-200/70 text-stone-700
+        dark:bg-stone-800/70 dark:text-stone-300;
+    }
+
+    .detail summary {
+        @apply cursor-pointer select-none text-xs font-mono w-fit
+        text-gray-500 hover:text-purple-800
+        dark:text-gray-400 dark:hover:text-purple-200 duration-75;
+    }
+
+    .detail p {
+        @apply mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300;
     }
 
     footer {
