@@ -10,7 +10,7 @@ export type Patch = {
 	mergedIn: string;
 	diff: { added: number; removed: number; files: number };
 	symptom: { code: string; result: string };
-	chips: string[];
+	context: string;
 	fix: string;
 };
 
@@ -30,7 +30,7 @@ export const PATCHES: Patch[] = [
 			code: "SecretStr('café') == SecretStr('café')",
 			result: 'TypeError: comparing strings with non-ASCII characters is not supported'
 		},
-		chips: ['regression', 'caught before anyone filed it', 'constant-time preserved'],
+		context: 'A regression I caught by reading the commit that caused it, before anyone filed a bug.',
 		fix: 'A recent switch to `secrets.compare_digest()` broke it: the function only accepts ASCII when handed `str`. Encoding both sides to bytes first restores equality for any value and keeps the constant-time guarantee that motivated the switch.'
 	},
 	{
@@ -48,7 +48,7 @@ export const PATCHES: Patch[] = [
 			code: 'POST /contact   →   +server.js exports only GET',
 			result: '405 Method Not Allowed — even though +page.server.js had a matching action'
 		},
-		chips: ['issue open 2 yr 9 mo', 'core routing', 'new test fixture'],
+		context: 'Core routing, plus a test fixture that did not exist before.',
 		fix: 'Routing handed the POST to the sibling endpoint and stopped there. Now an endpoint exporting neither `POST` nor `fallback` is treated as unusable and the request falls through to the page actions, mirroring the `endpoint_can_handle` pattern already used for GET/HEAD.'
 	},
 	{
@@ -66,7 +66,7 @@ export const PATCHES: Patch[] = [
 			code: '/users/1   /users/2   /users/3   …',
 			result: 'one Prometheus time series per parameter value, forever'
 		},
-		chips: ['breaking change', 'unbounded memory fix', 'merged in 2 days'],
+		context: 'Changing a public default was the only real fix, so I argued for it and it landed.',
 		fix: '`group_path=True` already collapsed these to the route template `/users/{user_id}`, but the safe behaviour was opt-in, so every default deployment leaked memory silently. I flipped the default and kept raw paths reachable through `group_path=False`.'
 	},
 	{
@@ -84,7 +84,7 @@ export const PATCHES: Patch[] = [
 			code: 'InvalidAPIKeyError',
 			result: '"Invalid A P I Key Error"  —  published in the public API docs'
 		},
-		chips: ['issue open 1 yr 5 mo', 'public API docs', 'parametrised tests'],
+		context: 'This text was shipping in the public API docs of every Litestar app.',
 		fix: 'The splitter broke before every capital letter, including each one inside an uppercase run. Splitting only at real word boundaries keeps acronyms intact: `HTTPTimeoutError` → `HTTP Timeout Error`, `MissingJWTError` → `Missing JWT Error`.'
 	}
 ];

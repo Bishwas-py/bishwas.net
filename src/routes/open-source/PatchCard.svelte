@@ -33,11 +33,7 @@
 			</p>
 		</div>
 
-		<ul class="chips">
-			{#each patch.chips as chip}
-				<li>{chip}</li>
-			{/each}
-		</ul>
+		<p class="context">{patch.context}</p>
 
 		<footer>
 			<div class="diffbar" aria-hidden="true">
@@ -138,14 +134,8 @@
         @apply flex-shrink-0 mt-0.5;
     }
 
-    .chips {
-        @apply flex flex-wrap gap-1.5;
-    }
-
-    .chips li {
-        @apply text-xs rounded px-2 py-0.5 font-mono
-        bg-stone-200/70 text-stone-700
-        dark:bg-stone-800/70 dark:text-stone-300;
+    .context {
+        @apply text-sm leading-relaxed text-gray-600 dark:text-gray-400;
     }
 
     .detail summary {
