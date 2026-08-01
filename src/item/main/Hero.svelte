@@ -4,9 +4,9 @@
 	import { fly } from 'svelte/transition';
 
 	const UPSTREAM = [
-		{ name: 'pydantic', url: 'https://github.com/pydantic/pydantic/pull/13537' },
-		{ name: 'SvelteKit', url: 'https://github.com/sveltejs/kit/pull/16349' },
-		{ name: 'Litestar', url: 'https://github.com/litestar-org/litestar/pull/4925' }
+		{ name: 'pydantic/pydantic', url: 'https://github.com/pydantic/pydantic/pull/13537' },
+		{ name: 'sveltejs/kit', url: 'https://github.com/sveltejs/kit/pull/16349' },
+		{ name: 'litestar-org/litestar', url: 'https://github.com/litestar-org/litestar/pull/4925' }
 	];
 
 	const joiner = (i: number) => (i === 0 ? '' : i === UPSTREAM.length - 1 ? ' and ' : ', ');
