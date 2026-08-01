@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fade, fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import Meta from '$item/Meta.svelte';
 	import PatchCard from './PatchCard.svelte';
 	import Ticked from './Ticked.svelte';
@@ -19,21 +19,7 @@
 	keywords="open source, pydantic, sveltekit, litestar, djapy, tipex, fymo, python, svelte, contributions"
 />
 
-<div class="intro max-w-3xl w-full mb-8">
-	<h1>Work I've done in the open.</h1>
-	<p>
-		Patches sent upstream, and the projects I keep alive. Everything links to the pull request on
-		<a
-			class="link-inked inline-flex gap-1 items-center"
-			href="https://github.com/Bishwas-py"
-			target="_blank"
-			rel="noopener"
-			in:fade>
-			<span>GitHub</span>
-			<iconify-icon icon="simple-icons:github"></iconify-icon>
-		</a>.
-	</p>
-</div>
+<h1 class="sr-only">Open source</h1>
 
 <div class="stats max-w-3xl w-full mb-12">
 	{#each STATS as stat, i}
@@ -114,13 +100,6 @@
 </section>
 
 <style lang="postcss">
-    .intro h1 {
-        @apply text-3xl md:text-4xl font-bold leading-tight mb-3;
-    }
-
-    .intro p {
-        @apply text-gray-700 dark:text-gray-300;
-    }
 
     .stats {
         @apply flex flex-wrap items-baseline gap-x-3 gap-y-2;

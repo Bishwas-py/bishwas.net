@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
 	import Meta from '$item/Meta.svelte';
 
 	const PROJECTS = [
@@ -277,26 +276,7 @@
 	keywords="svelte, django, python, typescript, web development, open-source, projects"
 />
 
-<div class="intro max-w-3xl mb-7">
-	<p>
-		As a systematic developer, I create solutions ranging from client-focused applications to open-source frameworks.
-		Each project in
-		<a
-			class="link-inked inline-flex gap-1 items-center"
-			href="https://github.com/Bishwas-py/bishwas.net"
-			target="_blank"
-			in:fade>
-			<span class="tag-text">my portfolio</span>
-			<iconify-icon icon="simple-icons:svelte"></iconify-icon>
-		</a> reflects both technical precision and practical purpose, combining engineering
-		principles with creative problem-solving.
-	</p>
-
-	<p class="mt-7">
-		Here are some of the projects that I have worked on. For the fixes I have merged into other
-		people's frameworks, see <a class="link-inked" href="/open-source">open source</a>.
-	</p>
-</div>
+<h1 class="sr-only">Projects</h1>
 
 {#each GROUPS as group}
 <section class="max-w-3xl w-full mb-14">
