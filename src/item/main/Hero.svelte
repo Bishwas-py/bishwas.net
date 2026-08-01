@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { fade, fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	import Skills from '$item/main/Skills.svelte';
+	import { AVATAR, receive, send } from '$utils/avatar-transition';
 	import { FEATURED as UPSTREAM, prUrl } from '$utils/open-source';
 
 	const joiner = (i: number) => (i === 0 ? '' : i === UPSTREAM.length - 1 ? ' and ' : ', ');
@@ -8,8 +9,18 @@
 
 <header class="max-w-3xl">
 	<div class="hero-content">
-		<div class="hero-image-container w-32 h-32" in:fly={{ y: 300 }}>
-			<img src="/me-bishwas.jpeg" alt="Bishwas Bhandari - Full-Stack Developer" class="hero-image" />
+		<div
+			class="avatar-slot w-32 h-32"
+			in:receive={{ key: AVATAR }}
+			out:send={{ key: AVATAR }}
+		>
+			<div class="hero-image-container w-full h-full">
+				<img
+					src="/me-bishwas.jpeg"
+					alt="Bishwas Bhandari - Full-Stack Developer"
+					class="hero-image"
+				/>
+			</div>
 		</div>
 		<div class="hero-text">
 			<span
@@ -43,6 +54,10 @@
 	.hero-content {
 		@apply flex flex-col md:flex-row items-start;
 		@apply gap-4 md:gap-9;
+	}
+
+	.avatar-slot {
+		@apply flex-shrink-0 md:sticky top-7;
 	}
 
 	.hero-text {
