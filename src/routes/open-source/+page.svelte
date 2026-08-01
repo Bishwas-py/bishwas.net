@@ -97,7 +97,7 @@
 				<p class="project-tagline">{project.tagline}</p>
 				<div class="project-meta">
 					<span class="role">{project.role}</span>
-					<span class="metric">{project.stars}★</span>
+					<span class="metric"><iconify-icon icon="ph:star-fill"></iconify-icon>{project.stars}</span>
 					{#if project.commits}
 						<span class="metric">{project.commits} commits</span>
 					{/if}
@@ -121,7 +121,7 @@
 			<li>
 				<a href={issue.url} target="_blank" rel="noopener">
 					<span class="repo">{issue.repo}</span>
-					<span class="stars">{issue.stars}★</span>
+					<span class="stars"><iconify-icon icon="ph:star-fill"></iconify-icon>{issue.stars}</span>
 					<span class="title"><Ticked text={issue.title} /></span>
 					<iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
 				</a>
@@ -213,8 +213,16 @@
     }
 
     .project-meta {
-        @apply flex flex-wrap items-center gap-2 text-xs font-mono
+        @apply flex flex-wrap items-center gap-2 text-xs
         text-gray-500 dark:text-gray-400;
+    }
+
+    .project-meta .metric {
+        @apply inline-flex items-center gap-1;
+    }
+
+    .project-meta .metric iconify-icon {
+        @apply text-[0.9em] text-amber-500/80 dark:text-amber-400/70;
     }
 
     .project-meta .role {
@@ -237,14 +245,18 @@
     }
 
     .reported .stars {
-        @apply font-mono text-xs text-gray-500 dark:text-gray-400;
+        @apply inline-flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400;
+    }
+
+    .reported .stars iconify-icon {
+        @apply text-[0.9em] text-amber-500/80 dark:text-amber-400/70;
     }
 
     .reported .title {
         @apply text-gray-700 dark:text-gray-300;
     }
 
-    .reported iconify-icon {
+    .reported li a > iconify-icon {
         @apply ml-auto text-gray-400 dark:text-gray-500;
     }
 </style>
