@@ -5,6 +5,7 @@
 	const PROJECTS = [
 		{
 			name: 'Fymo',
+			group: 'frameworks',
 			timeline: '2025 - Present, Python Framework',
 			description:
 				'A Python web framework that server-renders real Svelte 5 components, so the backend and the page live in one repo and one deploy.',
@@ -24,6 +25,7 @@
 		},
 		{
 			name: 'SatzMaster',
+			group: 'products',
 			timeline: '2024 - Present',
 			description:
 				'An interactive German language learning application featuring typing exercises, sentence building, and grammar reflex training.',
@@ -43,6 +45,7 @@
 		},
 		{
 			name: 'Webmatrices',
+			group: 'products',
 			timeline: 'March 2020 - Present',
 			description:
 				'A SaaS web application designed to provide tools for digital creators, freelancers, bloggers, and developers.',
@@ -60,6 +63,7 @@
 		},
 		{
 			name: 'Djapy',
+			group: 'frameworks',
 			timeline: 'Open-Source Framework',
 			description:
 				'A REST API framework built on Django, emphasizing a \'no framework inside a framework\' principle.',
@@ -78,6 +82,7 @@
 		},
 		{
 			name: '@friendofsvelte/tipex',
+			group: 'tools',
 			timeline: '2023',
 			description:
 				'A rich-text editor for Svelte, simplifying text editing with frameworks like Tiptap and Prosemirror.',
@@ -96,6 +101,7 @@
 		},
 		{
 			name: 'Django + SvelteKit Template',
+			group: 'frameworks',
 			timeline: '72 stars, Production Template',
 			description:
 				'A production template wiring SvelteKit to Django, with the plumbing that usually costs a week already solved.',
@@ -114,6 +120,7 @@
 		},
 		{
 			name: '@friendofsvelte/mermaid',
+			group: 'tools',
 			timeline: '36 stars, Svelte 5 Package',
 			description:
 				'A Mermaid renderer for Svelte 5: pass it Mermaid source, get an SVG in the DOM.',
@@ -131,6 +138,7 @@
 		},
 		{
 			name: '@friendofsvelte/state',
+			group: 'tools',
 			timeline: '39 stars, Svelte 5 Package',
 			description:
 				'Type-safe persistent state for Svelte 5, backed by localStorage or sessionStorage.',
@@ -148,6 +156,7 @@
 		},
 		{
 			name: 'Svelicon',
+			group: 'tools',
 			timeline: '21 stars, CLI Tool',
 			description:
 				'A CLI that turns Iconify SVGs into type-safe Svelte components, so icons ship as code instead of a runtime fetch.',
@@ -166,6 +175,7 @@
 		},
 		{
 			name: 'notify',
+			group: 'tools',
 			timeline: 'Go Library',
 			description:
 				'A Go library for Linux desktop notifications with action buttons and sound, spoken over D-Bus.',
@@ -183,6 +193,7 @@
 		},
 		{
 			name: 'SEOrd - SEO Analyzer',
+			group: 'tools',
 			timeline: 'Node.js Library',
 			description:
 				'An advanced content SEO analyzer library for swift analysis of HTML content.',
@@ -200,6 +211,7 @@
 		},
 		{
 			name: 'Fiverr Scraper API',
+			group: 'tools',
 			timeline: 'Python Library',
 			description:
 				'A Python library that programmatically extracts data from Fiverr gig pages and user profiles for analysis and automation.',
@@ -217,6 +229,7 @@
 		},
 		{
 			name: 'Speed Clicking',
+			group: 'products',
 			timeline: 'Browser-Based Game',
 			description:
 				'A game built to measure click speed, designed for gamers needing quick reflexes.',
@@ -234,6 +247,7 @@
 		},
 		{
 			name: 'Deviser Club',
+			group: 'products',
 			timeline: 'Blogging Platform',
 			description:
 				'An open-source blogging platform enhancing author autonomy while ensuring exceptional audience experience.',
@@ -247,6 +261,12 @@
 			link: 'https://github.com/Bishwas-py/deviser-club',
 			image: '/projects/deviser-club.jpg'
 		}
+	];
+
+	const GROUPS = [
+		{ key: 'frameworks', label: 'Frameworks' },
+		{ key: 'products', label: 'Products' },
+		{ key: 'tools', label: 'Libraries & tools' }
 	];
 </script>
 
@@ -278,8 +298,12 @@
 	</p>
 </div>
 
-<div class="flex flex-col gap-10 max-w-3xl">
-	{#each PROJECTS as project}
+{#each GROUPS as group}
+<section class="max-w-3xl w-full mb-14">
+	<h2 class="group-title">{group.label}</h2>
+
+	<div class="flex flex-col gap-9 mt-6">
+	{#each PROJECTS.filter((p) => p.group === group.key) as project}
 		<div class="flex flex-col">
 			<div class="flex w-full gap-4">
 				<a href={project.link} target="_blank" class="block relative w-32 min-h-16 max-h-24 group rounded-md overflow-clip">
@@ -306,12 +330,48 @@
 				</div>
 			</div>
 			<p class="mt-2">{project.description}</p>
-			<ul class="mt-2 list-disc list-outside pl-5 space-y-1 marker:text-gray-400 dark:marker:text-gray-600">
-				{#each project.highlights as highlight}
-					<li>{highlight}</li>
-				{/each}
-			</ul>
+			<details class="detail mt-2">
+				<summary>
+					<iconify-icon icon="ph:caret-right-bold"></iconify-icon>
+					<span>what it does</span>
+				</summary>
+				<ul class="list-disc list-outside pl-5 space-y-1 marker:text-gray-400 dark:marker:text-gray-600">
+					{#each project.highlights as highlight}
+						<li>{highlight}</li>
+					{/each}
+				</ul>
+			</details>
 		</div>
 	{/each}
-</div>
+	</div>
+</section>
+{/each}
 
+<style lang="postcss">
+    .group-title {
+        @apply text-2xl font-bold pb-2 border-b border-gray-300/60 dark:border-gray-700/60;
+    }
+
+    .detail summary {
+        @apply cursor-pointer select-none list-none w-fit
+        inline-flex items-center gap-1.5 text-sm
+        text-gray-500 hover:text-purple-800
+        dark:text-gray-400 dark:hover:text-purple-200 duration-75;
+    }
+
+    .detail summary::-webkit-details-marker {
+        @apply hidden;
+    }
+
+    .detail summary iconify-icon {
+        @apply text-[0.7em] duration-200;
+    }
+
+    .detail[open] summary iconify-icon {
+        @apply rotate-90;
+    }
+
+    .detail ul {
+        @apply mt-2 text-sm text-gray-700 dark:text-gray-300;
+    }
+</style>
