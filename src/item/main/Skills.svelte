@@ -28,28 +28,28 @@
 		<span class="tag-text">Django</span>
 		<iconify-icon icon="simple-icons:django"></iconify-icon>
 	</a>
-	<div class="skill-tag python cursor-not-allowed" in:fade={{ delay: 580 }}>
+	<div class="skill-tag python" in:fade={{ delay: 580 }}>
 		<span class="tag-text">Python</span>
 		<iconify-icon icon="mdi:language-python"></iconify-icon>
 	</div>
 	{#if loadMore}
-		<div class="skill-tag typescript cursor-not-allowed" in:fade>
+		<div class="skill-tag typescript" in:fade>
 			<span class="tag-text">TypeScript</span>
 			<iconify-icon icon="mdi:language-typescript"></iconify-icon>
 		</div>
-		<div class="skill-tag react cursor-not-allowed" in:fade>
+		<div class="skill-tag react" in:fade>
 			<span class="tag-text">React.js</span>
 			<iconify-icon icon="mdi:react"></iconify-icon>
 		</div>
-		<div class="skill-tag rails cursor-not-allowed" in:fade>
+		<div class="skill-tag rails" in:fade>
 			<span class="tag-text">Ruby on Rails</span>
 			<iconify-icon icon="mdi:language-ruby-on-rails"></iconify-icon>
 		</div>
-		<div class="skill-tag tailwind cursor-not-allowed" in:fade>
+		<div class="skill-tag tailwind" in:fade>
 			<span class="tag-text">Tailwind CSS</span>
 			<iconify-icon icon="simple-icons:tailwindcss"></iconify-icon>
 		</div>
-		<div class="skill-tag sockets cursor-not-allowed" in:fade>
+		<div class="skill-tag sockets" in:fade>
 			<span class="tag-text">Sockets</span>
 			<iconify-icon icon="mdi:broadcast"></iconify-icon>
 		</div>
