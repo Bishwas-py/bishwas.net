@@ -58,6 +58,11 @@
     }
 
 
+    .pill-accent {
+        @apply rounded-full bg-purple-100/80 text-purple-900
+        dark:bg-purple-950/70 dark:text-purple-200;
+    }
+
     .hero-image-container {
         @apply overflow-hidden flex-shrink-0 shadow-md dark:outline dark:outline-1 dark:outline-stone-700;
         animation: wobble 2s infinite;
