@@ -26,9 +26,9 @@
 />
 
 <div class="intro max-w-3xl w-full mb-8">
-	<h1>I fix the frameworks other people build on.</h1>
+	<h1>Work I've done in the open.</h1>
 	<p>
-		Every claim below links to the real pull request on
+		Patches sent upstream, and the projects I keep alive. Everything links to the pull request on
 		<a
 			class="link-inked inline-flex gap-1 items-center"
 			href="https://github.com/Bishwas-py"
