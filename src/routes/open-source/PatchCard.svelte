@@ -57,7 +57,10 @@
 		</footer>
 
 		<details class="detail">
-			<summary>what I changed</summary>
+			<summary>
+				<iconify-icon icon="ph:caret-right-bold"></iconify-icon>
+				<span>what I changed</span>
+			</summary>
 			<p><Ticked text={patch.fix} /></p>
 		</details>
 	</div>
@@ -146,9 +149,22 @@
     }
 
     .detail summary {
-        @apply cursor-pointer select-none text-xs font-mono w-fit
+        @apply cursor-pointer select-none list-none w-fit
+        inline-flex items-center gap-1.5 text-sm
         text-gray-500 hover:text-purple-800
         dark:text-gray-400 dark:hover:text-purple-200 duration-75;
+    }
+
+    .detail summary::-webkit-details-marker {
+        @apply hidden;
+    }
+
+    .detail summary iconify-icon {
+        @apply text-[0.7em] duration-200;
+    }
+
+    .detail[open] summary iconify-icon {
+        @apply rotate-90;
     }
 
     .detail p {
