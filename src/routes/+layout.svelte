@@ -8,12 +8,12 @@
 	import AppearanceSwitch from '$item/AppearanceSwitch.svelte';
 	import Navbar from '$item/Navbar.svelte';
 	import Footer from '$item/Footer.svelte';
-	import AvatarFlight from '$item/AvatarFlight.svelte';
+	import { avatarFlight } from '$utils/avatar-flight';
 
 	let { children } = $props();
-</script>
 
-<AvatarFlight />
+	avatarFlight();
+</script>
 
 <div class="layout-container">
 	<Navbar />
@@ -28,33 +28,33 @@
 
 <div class="bg-overlay">
 	<div class="overlay"></div>
-	<img src="/bg.png" alt="Bishwas Bhandari PNG">
+	<img src="/bg.png" alt="Bishwas Bhandari PNG" />
 </div>
 
 <style lang="postcss">
-    div.layout-container {
-        @apply text-slate-900 dark:text-slate-100
+	div.layout-container {
+		@apply text-slate-900 dark:text-slate-100
         w-full min-h-screen
         flex flex-col relative z-10 pb-7;
-    }
+	}
 
-    main {
-        @apply pt-9 flex flex-col items-center;
-    }
+	main {
+		@apply pt-9 flex flex-col items-center;
+	}
 
-    main div.spread-love {
-        @apply flex flex-col items-center w-full px-4;
-    }
+	main div.spread-love {
+		@apply flex flex-col items-center w-full px-4;
+	}
 
-    .bg-overlay {
-        @apply fixed top-0 w-screen h-screen;
-    }
+	.bg-overlay {
+		@apply fixed top-0 w-screen h-screen;
+	}
 
-    .bg-overlay .overlay {
-        @apply h-full w-full bg-gradient-to-b from-purple-100/75 to-slate-200/75 dark:from-gray-950/95 dark:to-slate-950/95;
-    }
+	.bg-overlay .overlay {
+		@apply h-full w-full bg-gradient-to-b from-purple-100/75 to-slate-200/75 dark:from-gray-950/95 dark:to-slate-950/95;
+	}
 
-    .bg-overlay img {
-        @apply -z-10 bg-black opacity-20 invert dark:invert-0 w-full h-full absolute top-0 left-0;
-    }
+	.bg-overlay img {
+		@apply -z-10 bg-black opacity-20 invert dark:invert-0 w-full h-full absolute top-0 left-0;
+	}
 </style>
