@@ -6,8 +6,8 @@
 
 <Meta
 	title="Bishwas Bhandari"
-	description="I am Bishwas, a full-stack web developer and this is my portfolio website."
-	keywords="Bishwas, Bhandari, Bishwas Bhandari portfolio, who is Bishwas"
+	description="Full-stack developer working in Python, Django and Svelte. Patches merged into pydantic, SvelteKit and Litestar; author of djapy and tipex."
+	keywords="Bishwas, Bhandari, Bishwas Bhandari portfolio, who is Bishwas, python developer, django developer, sveltekit developer, open source contributor"
 />
 
 <Hero />

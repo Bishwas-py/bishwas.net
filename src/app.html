@@ -8,20 +8,20 @@
 	<meta name="theme-color" content="#000000" />
 	<link rel="apple-touch-icon" href="%sveltekit.assets%/favicon.png" />
 	%sveltekit.head%
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3TVQN40YZ0"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+
+		gtag('js', new Date());
+
+		gtag('config', 'G-3TVQN40YZ0');
+	</script>
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3TVQN40YZ0"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-
-	function gtag() {
-		dataLayer.push(arguments);
-	}
-
-	gtag('js', new Date());
-
-	gtag('config', 'G-3TVQN40YZ0');
-</script>
-<body data-sveltekit-preload-data="hover">
+<body data-sveltekit-preload-data="hover" data-sveltekit-preload-code="eager">
 <div style="display: contents">%sveltekit.body%</div>
 </body>
 </html>
