@@ -8,9 +8,7 @@
 
 <header class="max-w-3xl">
 	<div class="hero-content">
-		<div
-			class="avatar-slot w-32 h-32" data-avatar
-		>
+		<div class="avatar-slot w-32 h-32" data-avatar>
 			<div class="hero-image-container w-full h-full">
 				<img
 					src="/me-bishwas.jpeg"
