@@ -279,8 +279,8 @@
 <h1 class="sr-only">Projects</h1>
 
 <p class="lede max-w-3xl w-full">
-	Grouped by what they are rather than when I made them. Every link goes to the running thing or
-	its source, and the star counts are whatever GitHub says today.
+	Some of these are load-bearing. One of them counts how fast you can click. I'd rather show you
+	both than pretend I only ever built the serious ones.
 </p>
 
 {#each GROUPS as group}
@@ -328,7 +328,7 @@
 
 <style lang="postcss">
     .lede {
-        @apply max-w-[64ch] mb-10 text-gray-600 dark:text-gray-400;
+        @apply max-w-[62ch] mb-12 text-lg leading-relaxed;
     }
 
     .group-title {
