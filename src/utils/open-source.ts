@@ -21,6 +21,23 @@ export const PATCHES: Patch[] = [
 		stars: '28.4k',
 		icon: 'simple-icons:pydantic',
 		accent: 'rose',
+		title: '`field_title_generator` was documented with a signature it never accepted',
+		prNumber: 13565,
+		mergedIn: 'merged in 14m',
+		diff: { added: 4, removed: 4, files: 1 },
+		symptom: {
+			code: 'Field(field_title_generator=lambda field_name: field_name.upper())',
+			result: 'TypeError: <lambda>() takes 1 positional argument but 2 were given'
+		},
+		context:
+			'Four docstrings promised a one-argument callable, so following the documentation was guaranteed to crash.',
+		fix: 'The callable is handed the field name and its info object, which `ConfigDict.field_title_generator` already described correctly. This aligns the `fields.py` docstrings on `Field()`, `FieldInfo.from_field()`, `computed_field()` and `ComputedFieldInfo` with the signature the code actually calls.'
+	},
+	{
+		repo: 'pydantic/pydantic',
+		stars: '28.4k',
+		icon: 'simple-icons:pydantic',
+		accent: 'rose',
 		title: '`SecretStr` equality raised `TypeError` on non-ASCII values',
 		prNumber: 13537,
 		mergedIn: 'merged in 1h 40m',
@@ -29,7 +46,8 @@ export const PATCHES: Patch[] = [
 			code: "SecretStr('café') == SecretStr('café')",
 			result: 'TypeError: comparing strings with non-ASCII characters is not supported'
 		},
-		context: 'A regression I caught by reading the commit that caused it, before anyone filed a bug.',
+		context:
+			'A regression I caught by reading the commit that caused it, before anyone filed a bug.',
 		fix: 'A recent switch to `secrets.compare_digest()` broke it: the function only accepts ASCII when handed `str`. Encoding both sides to bytes first restores equality for any value and keeps the constant-time guarantee that motivated the switch.'
 	},
 	{
@@ -185,4 +203,6 @@ export const REPORTED: Reported[] = [
 	}
 ];
 
-export const FEATURED = PATCHES.slice(0, 3);
+export const FEATURED = PATCHES.filter(
+	(patch, i) => PATCHES.findIndex((other) => other.repo === patch.repo) === i
+).slice(0, 3);
