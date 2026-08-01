@@ -21,6 +21,11 @@
 
 <h1 class="sr-only">Open source</h1>
 
+<p class="lede max-w-3xl w-full">
+	Each one below starts with the bug the way it actually showed up, then what changed. The green
+	and red are the real diff, and the number on the right opens the pull request.
+</p>
+
 <div class="stats max-w-3xl w-full mb-12">
 	{#each STATS as stat, i}
 		<div class="stat" in:fly={{ y: 12, delay: i * 70, duration: 400 }}>
@@ -100,6 +105,10 @@
 </section>
 
 <style lang="postcss">
+
+    .lede {
+        @apply max-w-[64ch] mb-8 text-gray-600 dark:text-gray-400;
+    }
 
     .stats {
         @apply flex flex-wrap items-baseline gap-x-3 gap-y-2;
