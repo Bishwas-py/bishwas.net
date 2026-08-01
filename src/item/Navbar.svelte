@@ -1,14 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { AVATAR, receive, send } from '$utils/avatar-transition';
 </script>
 
 <nav>
 
 	{#if $page.url.pathname !== "/"}
-		<div class="-top-14 left-7 absolute md:top-0 md:left-7 mr-7 md:mr-0 w-7 h-7"
-				 in:receive={{ key: AVATAR }}
-				 out:send={{ key: AVATAR }}>
+		<div class="-top-14 left-7 absolute md:top-0 md:left-7 mr-7 md:mr-0 w-7 h-7" data-avatar>
 			<div class="hero-image-container w-full h-full">
 				<img src="/me-bishwas.jpeg" alt="Bishwas Bhandari | Django and Svelte Developer | Open Source Python Dev"
 						 class="hero-image" />

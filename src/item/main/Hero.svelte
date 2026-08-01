@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import Skills from '$item/main/Skills.svelte';
-	import { AVATAR, receive, send } from '$utils/avatar-transition';
 	import { FEATURED as UPSTREAM, prUrl } from '$utils/open-source';
 
 	const joiner = (i: number) => (i === 0 ? '' : i === UPSTREAM.length - 1 ? ' and ' : ', ');
@@ -10,9 +9,7 @@
 <header class="max-w-3xl">
 	<div class="hero-content">
 		<div
-			class="avatar-slot w-32 h-32"
-			in:receive={{ key: AVATAR }}
-			out:send={{ key: AVATAR }}
+			class="avatar-slot w-32 h-32" data-avatar
 		>
 			<div class="hero-image-container w-full h-full">
 				<img
