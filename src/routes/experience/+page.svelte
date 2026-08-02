@@ -9,6 +9,7 @@
 	import MdiOpenInNewIcon from 'virtual:icons/mdi/open-in-new';
 	import MdiSailBoatIcon from 'virtual:icons/mdi/sail-boat';
 	import Meta from '$item/Meta.svelte';
+	import { FREELANCING_SINCE, FULL_TIME_SINCE, yearsSince } from '$utils/years';
 </script>
 
 <Meta
@@ -27,6 +28,17 @@
 		building tools that help
 		other developers.
 	</p>
+
+	<div class="stats mt-5">
+		<div class="stat">
+			<span class="value">{yearsSince(FULL_TIME_SINCE)}</span>
+			<span class="label">years full-time</span>
+		</div>
+		<div class="stat">
+			<span class="value">{yearsSince(FREELANCING_SINCE)}</span>
+			<span class="label">years including freelance</span>
+		</div>
+	</div>
 </div>
 
 <div class="experiences">
