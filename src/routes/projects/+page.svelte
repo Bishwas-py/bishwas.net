@@ -29,7 +29,7 @@
 	<p class="mt-7">
 		All of these are mine end to end, not mockups or tutorials I followed along with. The bugs I
 		fixed inside other people's code live on the
-		<a class="link-inked" href="/open-source">open source</a> page instead.
+		<a class="link-inked" href="/contributions">open source</a> page instead.
 	</p>
 </div>
 
