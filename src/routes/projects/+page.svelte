@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import Meta from '$item/Meta.svelte';
-	import { GROUPED } from './data';
+	import { avatarOf, GROUPED } from './data';
 </script>
 
 <Meta
@@ -82,6 +82,26 @@
 							<li>{highlight}</li>
 						{/each}
 					</ul>
+					{#if 'community' in project}
+						<p class="community">
+							<span class="faces">
+								{#each project.community.people as login}
+									<img
+										src={avatarOf(login)}
+										alt={login}
+										title={login}
+										width="18"
+										height="18"
+										loading="lazy"
+										decoding="async"
+									/>
+								{/each}
+							</span>
+							<a href={project.community.url} target="_blank" rel="noopener" class="said">
+								{project.community.summary}
+							</a>
+						</p>
+					{/if}
 					{#if 'featured' in project}
 						<p class="featured">
 							<iconify-icon icon="simple-icons:svelte"></iconify-icon>
@@ -113,6 +133,24 @@
 
 	.description {
 		@apply mt-2.5 max-w-[62ch] leading-relaxed;
+	}
+
+	.community {
+		@apply mt-2.5 flex items-center gap-2 max-w-[68ch] text-sm
+		text-gray-600 dark:text-gray-400;
+	}
+
+	.faces {
+		@apply flex items-center -space-x-1.5 shrink-0;
+	}
+
+	.faces img {
+		@apply w-[18px] h-[18px] rounded-full ring-2 ring-white/90 dark:ring-gray-800;
+	}
+
+	.said {
+		@apply decoration-transparent underline underline-offset-4 duration-150
+        hover:decoration-gray-400/70 dark:hover:decoration-gray-500/70;
 	}
 
 	.featured {
