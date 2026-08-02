@@ -26,7 +26,7 @@
 			</span>
 			<h1 class="text-2xl mb-4 ml-2" in:fade={{ delay: 200 }}>I'm Bishwas, Full-Stack Developer</h1>
 			<p class="text-lg ml-1" in:fade={{ delay: 450 }}>
-				When I'm not building with Django or Svelte, you'll find me learning German or doing
+				When I'm not building with Python or Svelte, you'll find me learning German or doing
 				<a href="/open-source" class="link-inked">open-source</a>, lately in
 				{#each UPSTREAM as repo, i}{joiner(i)}<a
 						href={prUrl(repo)}
