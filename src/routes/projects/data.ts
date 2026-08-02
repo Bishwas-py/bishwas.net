@@ -87,7 +87,9 @@ export const PROJECTS: Project[] = [
 			icon: 'ph:newspaper-clipping-fill',
 			lead: 'Cited by',
 			links: [
+				{ label: 'JavaScript Weekly', url: 'https://javascriptweekly.com/issues/782' },
 				{ label: 'The New Stack', url: 'https://thenewstack.io/ai-slop-open-source/' },
+				{ label: 'Frontend at Scale', url: 'https://frontendatscale.com/issues/55/' },
 				{
 					label: 'University of Waterloo',
 					url: 'https://uwaterloo.ca/web-resources/blog/web-dev-rev-wrap-january-27-2026'
