@@ -21,6 +21,7 @@ export const PROJECTS = [
 			'Ships as one WSGI app, because not deploying two things was the entire point.'
 		],
 		featured: {
+			icon: 'ph:bookmark-simple-duotone',
 			lead: 'Listed in',
 			links: [{ label: 'sveltethemes.dev', url: 'https://sveltethemes.dev/Bishwas-py/fymo' }]
 		},
@@ -81,6 +82,7 @@ export const PROJECTS = [
 			'Generate Swagger from the same annotations, so the documentation cannot drift away from the code.'
 		],
 		featured: {
+			icon: 'ph:bookmark-simple-duotone',
 			lead: 'Listed in',
 			links: [
 				{ label: 'djangopackages.org', url: 'https://djangopackages.org/packages/p/djapy/' },
@@ -124,6 +126,7 @@ export const PROJECTS = [
 			'Rewrote the control system and floating menu for Svelte 5 runes rather than patching the old reactivity around them.'
 		],
 		featured: {
+			icon: 'simple-icons:svelte',
 			lead: 'Featured twice in',
 			strong: "Svelte's official newsletter",
 			links: [
@@ -167,6 +170,7 @@ export const PROJECTS = [
 			'Fed server-side validation errors back into form state rather than duplicating the rules in the frontend.'
 		],
 		featured: {
+			icon: 'ph:bookmark-simple-duotone',
 			lead: 'Listed in',
 			links: [
 				{
@@ -218,6 +222,7 @@ export const PROJECTS = [
 			'Emit JavaScript or TypeScript depending on the project rather than forcing my preference on it.'
 		],
 		featured: {
+			icon: 'simple-icons:svelte',
 			lead: 'Featured under Icon Libraries in',
 			strong: "Svelte's official newsletter",
 			links: [
@@ -258,6 +263,7 @@ export const PROJECTS = [
 			'Covered it with Playwright end to end, since the failure I cared about only shows up in a real browser.'
 		],
 		featured: {
+			icon: 'ph:newspaper-clipping-duotone',
 			lead: 'Written up on',
 			links: [
 				{
@@ -285,6 +291,7 @@ export const PROJECTS = [
 			'Held it to zero dependencies beyond Svelte, because a persistence helper should not own your bundle.'
 		],
 		featured: {
+			icon: 'ph:newspaper-clipping-duotone',
 			lead: 'Written up on',
 			links: [
 				{
@@ -327,6 +334,7 @@ export const PROJECTS = [
 			'Kept it synchronous and down to one dependency, so it drops into a build step without ceremony.'
 		],
 		featured: {
+			icon: 'ph:newspaper-clipping-duotone',
 			lead: 'Picked as one of twelve open-source tools for content creators by',
 			links: [
 				{
