@@ -2,7 +2,7 @@ export type Patch = {
 	repo: string;
 	stars: string;
 	icon: string;
-	accent: 'rose' | 'orange' | 'amber';
+	accent: 'rose' | 'orange' | 'amber' | 'emerald';
 	title: string;
 	prNumber: number;
 	mergedIn: string;
@@ -144,6 +144,24 @@ export const PATCHES: Patch[] = [
 			review: 'https://github.com/litestar-org/litestar/pull/4921#pullrequestreview-4692440207'
 		},
 		fix: 'The splitter broke before every capital letter, including each one inside an uppercase run. Splitting only at real word boundaries keeps acronyms intact: `HTTPTimeoutError` → `HTTP Timeout Error`, `MissingJWTError` → `Missing JWT Error`.'
+	},
+	{
+		repo: 'dj-stripe/dj-stripe',
+		stars: '1.8k',
+		icon: 'simple-icons:django',
+		accent: 'emerald',
+		title: 'The docs sent new users to an installation page that did not resolve',
+		prNumber: 1906,
+		mergedIn: 'merged the same day',
+		diff: { added: 1, removed: 1, files: 1 },
+		symptom: {
+			code: 'docs/index.md  ->  Installation.md',
+			result: 'a relative link that 404s once the docs are built'
+		},
+		context:
+			'One line, and the smallest thing here, but it was the first link anyone installing the library would click.',
+		approval: { login: 'jleclanche' },
+		fix: 'The relative `Installation.md` reference does not resolve in the built site, so it points at the full `dj-stripe.dev` installation URL instead. Jerome Leclanche, who maintains dj-stripe, merged it the same morning.'
 	}
 ];
 

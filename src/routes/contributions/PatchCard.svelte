@@ -158,6 +158,10 @@
 		@apply text-amber-600 dark:text-amber-400;
 	}
 
+	.accent-emerald iconify-icon {
+		@apply text-emerald-600 dark:text-emerald-400;
+	}
+
 	.stars {
 		@apply inline-flex items-center gap-1 text-gray-500 dark:text-gray-400 text-xs;
 	}
