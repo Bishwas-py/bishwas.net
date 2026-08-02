@@ -166,6 +166,15 @@ export const PROJECTS = [
 			'A dynamic import keeps mermaid.js out of the server bundle entirely.',
 			'Built on Svelte 5 runes throughout.'
 		],
+		featured: {
+			lead: 'Written up on',
+			links: [
+				{
+					label: 'jqueryscript.net',
+					url: 'https://next.jqueryscript.net/svelte/mermaid-ssr-theming/'
+				}
+			]
+		},
 		link: 'https://mermaid-cjv.pages.dev/',
 		image: '/projects/fos-mermaid.jpg'
 	},
