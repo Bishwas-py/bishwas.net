@@ -195,6 +195,15 @@ export const PROJECTS = [
 			'Full type inference, with zero dependencies beyond Svelte itself.',
 			'The storage backend is a constructor argument rather than a separate API.'
 		],
+		featured: {
+			lead: 'Written up on',
+			links: [
+				{
+					label: 'kitemetric.com',
+					url: 'https://kitemetric.com/blogs/svelte-5-persistent-state-effortless-persistence-with-runes'
+				}
+			]
+		},
 		link: 'https://www.npmjs.com/package/@friendofsvelte/state',
 		image: '/projects/fos-state.jpg'
 	},
