@@ -451,7 +451,7 @@ export const PROJECTS: Project[] = [
 		group: 'products',
 		timeline: '97 stars, 389 commits in six weeks',
 		description:
-			'I wanted to know whether an open source Medium alternative could put authors in charge without getting complicated. The README still argues that simple beats complex, and I built it on Rails 7 to find out.',
+			'I wanted to know whether an open source Medium alternative could put authors in charge without getting complicated. Simple beats complex was the whole bet, and I built it on Rails 7 to find out.',
 		technologies: [
 			{ name: 'Ruby on Rails 7', icon: 'mdi:language-ruby-on-rails', class: 'skill-tag rails' }
 		],
