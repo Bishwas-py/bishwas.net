@@ -86,16 +86,18 @@
 						<p class="worked-label">Worked with</p>
 						{#if project.community.faces}
 							<p class="face-row">
-								{#each project.community.faces as login}
-									<img
-										src={avatarOf(login)}
-										alt={login}
-										title={login}
-										width="22"
-										height="22"
-										loading="lazy"
-										decoding="async"
-									/>
+								{#each project.community.faces as face}
+									<a class="face" href={face.url} target="_blank" rel="noopener">
+										<img
+											src={avatarOf(face.login)}
+											alt={face.login}
+											width="22"
+											height="22"
+											loading="lazy"
+											decoding="async"
+										/>
+										<span class="tip"><b>{face.login}</b> {face.did}</span>
+									</a>
 								{/each}
 								{#if project.community.facesMore}
 									<span class="face-more">+{project.community.facesMore}</span>
@@ -181,9 +183,34 @@
 		@apply mt-1.5 flex items-center -space-x-2;
 	}
 
-	.face-row img {
+	.face {
+		@apply relative block;
+	}
+
+	.face img {
 		@apply w-[22px] h-[22px] rounded-full ring-2 ring-white/90 dark:ring-gray-900
-        transition-transform duration-150 hover:-translate-y-0.5 hover:z-10;
+        transition-transform duration-150;
+	}
+
+	.face:hover {
+		@apply z-20;
+	}
+
+	.face:hover img,
+	.face:focus-visible img {
+		@apply -translate-y-0.5 ring-purple-400/70 dark:ring-purple-500/60;
+	}
+
+	.tip {
+		@apply pointer-events-none absolute bottom-full left-1/2 z-30 mb-2 w-max max-w-[240px]
+        -translate-x-1/2 rounded-md px-2.5 py-1.5 text-xs leading-snug text-left
+        opacity-0 transition-opacity duration-150 shadow-lg
+        bg-gray-900 text-gray-100 dark:bg-gray-100 dark:text-gray-900;
+	}
+
+	.face:hover .tip,
+	.face:focus-visible .tip {
+		@apply opacity-100;
 	}
 
 	.face-more {

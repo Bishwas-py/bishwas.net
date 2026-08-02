@@ -17,7 +17,7 @@ export type Project = {
 		links: { label: string; url: string }[];
 	};
 	community?: {
-		faces?: string[];
+		faces?: { login: string; did: string; url: string }[];
 		facesMore?: number;
 		people: { login: string; did: string; url: string }[];
 		more?: string;
@@ -192,15 +192,51 @@ export const PROJECTS: Project[] = [
 		},
 		community: {
 			faces: [
-				'bluepuma77',
-				'lgrkvst',
-				'digitaldrreamer',
-				'zulienr',
-				'ikshyza',
-				'robishx',
-				'lalilaloe',
-				'MihaelBercic',
-				'kinderhead'
+				{
+					login: 'bluepuma77',
+					did: 'raised five issues, starting with missing CSS in the install instructions',
+					url: 'https://github.com/friendofsvelte/tipex/issues?q=is%3Aissue+author%3Abluepuma77'
+				},
+				{
+					login: 'lgrkvst',
+					did: 'raised four issues on default buttons, focus stealing and the placeholder',
+					url: 'https://github.com/friendofsvelte/tipex/issues?q=is%3Aissue+author%3Algrkvst'
+				},
+				{
+					login: 'digitaldrreamer',
+					did: 'reported a broken TipTap peer dependency on install',
+					url: 'https://github.com/friendofsvelte/tipex/issues?q=is%3Aissue+author%3Adigitaldrreamer'
+				},
+				{
+					login: 'zulienr',
+					did: 'reported control buttons not rendering, including on Safari',
+					url: 'https://github.com/friendofsvelte/tipex/issues?q=is%3Aissue+author%3Azulienr'
+				},
+				{
+					login: 'ikshyza',
+					did: 'found a build where only one version shipped its CSS',
+					url: 'https://github.com/friendofsvelte/tipex/issues?q=is%3Aissue+author%3Aikshyza'
+				},
+				{
+					login: 'robishx',
+					did: 'asked for background props and a way to drop the focus ring',
+					url: 'https://github.com/friendofsvelte/tipex/issues?q=is%3Aissue+author%3Arobishx'
+				},
+				{
+					login: 'lalilaloe',
+					did: 'hit an error using it in a PWA outside SvelteKit',
+					url: 'https://github.com/friendofsvelte/tipex/issues?q=is%3Aissue+author%3Alalilaloe'
+				},
+				{
+					login: 'MihaelBercic',
+					did: 'asked how Enter and Shift+Enter should behave',
+					url: 'https://github.com/friendofsvelte/tipex/issues/44'
+				},
+				{
+					login: 'kinderhead',
+					did: 'found that default extensions could not be replaced',
+					url: 'https://github.com/friendofsvelte/tipex/issues/46'
+				}
 			],
 			facesMore: 20,
 			people: [
@@ -452,13 +488,41 @@ export const PROJECTS: Project[] = [
 		],
 		community: {
 			faces: [
-				'ruizuo11',
-				'mubashardev',
-				'south1907',
-				'MatteoSchifano',
-				'toffuffee',
-				'jayvs6341',
-				'wuchuanshiqi'
+				{
+					login: 'ruizuo11',
+					did: 'reported profile scraping returning nothing',
+					url: 'https://github.com/Bishwas-py/fiverr-scraping-api/issues?q=is%3Aissue+author%3Aruizuo11'
+				},
+				{
+					login: 'mubashardev',
+					did: 'reported a NoneType error in the parser',
+					url: 'https://github.com/Bishwas-py/fiverr-scraping-api/issues?q=is%3Aissue+author%3Amubashardev'
+				},
+				{
+					login: 'south1907',
+					did: 'reported the scraper silently failing',
+					url: 'https://github.com/Bishwas-py/fiverr-scraping-api/issues?q=is%3Aissue+author%3Asouth1907'
+				},
+				{
+					login: 'MatteoSchifano',
+					did: 'traced an UnboundLocalError to the breadcrumb parser',
+					url: 'https://github.com/Bishwas-py/fiverr-scraping-api/issues?q=is%3Aissue+author%3AMatteoSchifano'
+				},
+				{
+					login: 'toffuffee',
+					did: 'reported a NoneType error on findChild',
+					url: 'https://github.com/Bishwas-py/fiverr-scraping-api/issues?q=is%3Aissue+author%3Atoffuffee'
+				},
+				{
+					login: 'jayvs6341',
+					did: 'reported another NoneType case',
+					url: 'https://github.com/Bishwas-py/fiverr-scraping-api/issues?q=is%3Aissue+author%3Ajayvs6341'
+				},
+				{
+					login: 'wuchuanshiqi',
+					did: 'asked how profile_scrape is meant to be used',
+					url: 'https://github.com/Bishwas-py/fiverr-scraping-api/issues?q=is%3Aissue+author%3Awuchuanshiqi'
+				}
 			],
 			people: [
 				{
