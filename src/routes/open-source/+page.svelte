@@ -6,12 +6,11 @@
 	import { MAINTAINED, PATCHES, REPORTED } from '$utils/open-source';
 
 	const totalStars = MAINTAINED.reduce((sum, project) => sum + project.stars, 0);
-	const totalCommits = MAINTAINED.reduce((sum, project) => sum + project.commits, 0);
 
 	const STATS = [
 		{ value: String(PATCHES.length), label: 'merged upstream' },
-		{ value: totalStars.toLocaleString('en-US'), label: 'stars across my projects' },
-		{ value: totalCommits.toLocaleString('en-US'), label: 'commits behind them' }
+		{ value: String(MAINTAINED.length), label: 'projects maintained' },
+		{ value: totalStars.toLocaleString('en-US'), label: 'stars on them' }
 	];
 </script>
 
