@@ -83,6 +83,18 @@ export const PROJECTS: Project[] = [
 			'Answer and moderate it myself, which means I hear about a broken feature from a member before any dashboard tells me.',
 			'Kept it running for six years, which is a different discipline from launching something.'
 		],
+		featured: {
+			icon: 'ph:newspaper-clipping-fill',
+			lead: 'Cited by',
+			links: [
+				{ label: 'The New Stack', url: 'https://thenewstack.io/ai-slop-open-source/' },
+				{
+					label: 'University of Waterloo',
+					url: 'https://uwaterloo.ca/web-resources/blog/web-dev-rev-wrap-january-27-2026'
+				},
+				{ label: 'svelte.dev', url: 'https://svelte.dev/blog/whats-new-in-svelte-july-2026' }
+			]
+		},
 		link: 'https://webmatrices.com',
 		image: '/projects/webmatrices.jpg'
 	},

@@ -127,7 +127,11 @@
 										target="_blank"
 										rel="noopener"
 										class="link-inked">{link.label}</a
-									>{i < project.featured.links.length - 1 ? ' and ' : '.'}{/each}
+									>{i < project.featured.links.length - 2
+										? ', '
+										: i === project.featured.links.length - 2
+											? ' and '
+											: '.'}{/each}
 							</span>
 						</p>
 					{/if}
