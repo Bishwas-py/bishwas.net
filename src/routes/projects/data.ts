@@ -319,7 +319,7 @@ export const PROJECTS: Project[] = [
 		],
 		featured: {
 			icon: 'ph:newspaper-clipping-fill',
-			lead: 'Written up on',
+			lead: 'Reviewed by',
 			links: [
 				{
 					label: 'jqueryscript.net',
@@ -347,7 +347,7 @@ export const PROJECTS: Project[] = [
 		],
 		featured: {
 			icon: 'ph:newspaper-clipping-fill',
-			lead: 'Written up on',
+			lead: 'Reviewed by',
 			links: [
 				{
 					label: 'kitemetric.com',
