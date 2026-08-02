@@ -63,12 +63,31 @@
 					rel="noopener"
 					class="who">{patch.approval.login}</a
 				>
-				{patch.approval.note
-					? 'approved it'
-					: 'reviewed and merged it'}{#if patch.approval.note}<span class="note"
-						>&ldquo;{patch.approval.note}&rdquo;</span
-					>{/if}
+				{#if patch.approval.review}
+					<a href={patch.approval.review} target="_blank" rel="noopener" class="said">
+						approved it{#if patch.approval.note}<span class="note"
+								>&ldquo;{patch.approval.note}&rdquo;</span
+							>{/if}
+					</a>
+				{:else}
+					merged it
+				{/if}
 			</span>
+
+			{#if patch.approval.alsoOn}
+				<span class="also" title="Also on the thread: {patch.approval.alsoOn.join(', ')}">
+					{#each patch.approval.alsoOn as login}
+						<img
+							src={avatarOf(login)}
+							alt={login}
+							width="18"
+							height="18"
+							loading="lazy"
+							decoding="async"
+						/>
+					{/each}
+				</span>
+			{/if}
 		</p>
 
 		<footer>
@@ -188,6 +207,20 @@
 	.approval .who {
 		@apply font-medium text-gray-800 hover:text-purple-800
         dark:text-gray-200 dark:hover:text-purple-200 duration-75;
+	}
+
+	.approval .said {
+		@apply decoration-transparent underline underline-offset-4 duration-150
+        hover:decoration-gray-400/70 dark:hover:decoration-gray-500/70;
+	}
+
+	.also {
+		@apply flex items-center -space-x-1.5 shrink-0;
+	}
+
+	.also img {
+		@apply w-[18px] h-[18px] rounded-full ring-2
+        ring-white/90 dark:ring-gray-800;
 	}
 
 	.approval .note {
