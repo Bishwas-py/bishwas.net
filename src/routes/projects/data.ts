@@ -93,16 +93,16 @@ export const PROJECTS = [
 			people: [
 				{
 					login: 'Microturbine',
-					did: 'stopped data being reparsed when the schema already returned it',
+					did: 'merged their fix for reparsed schema data',
 					url: 'https://github.com/Bishwas-py/djapy/pull/25'
 				},
 				{
 					login: 'philrdubois',
-					did: 'found Swagger marking query parameters as path parameters',
+					did: 'fixed the Swagger bug they found',
 					url: 'https://github.com/Bishwas-py/djapy/issues/32'
 				}
 			],
-			more: '3 more contributed',
+			more: 'three more contributors',
 			url: 'https://github.com/Bishwas-py/djapy/pulls?q=is%3Apr'
 		},
 		link: 'https://github.com/Bishwas-py/djapy',
@@ -136,16 +136,16 @@ export const PROJECTS = [
 			people: [
 				{
 					login: 'Ayush-Tripathy',
-					did: 'added an autofocus prop',
+					did: 'merged their autofocus prop',
 					url: 'https://github.com/friendofsvelte/tipex/pull/28'
 				},
 				{
 					login: 'kinderhead',
-					did: 'found that default extensions could not be replaced',
+					did: 'answered them on replacing default extensions',
 					url: 'https://github.com/friendofsvelte/tipex/issues/46'
 				}
 			],
-			more: '28 more opened issues I worked through',
+			more: 'answered 38 of 40 reporters, closed all 40',
 			url: 'https://github.com/friendofsvelte/tipex/issues?q=is%3Aissue'
 		},
 		link: 'https://tipex.pages.dev',
@@ -188,12 +188,12 @@ export const PROJECTS = [
 			people: [
 				{
 					login: 'Rey092',
-					did: 'caught a missing Django import',
+					did: 'fixed the missing Django import they hit',
 					url: 'https://github.com/Bishwas-py/django-svelte-template/issues/1'
 				},
 				{
 					login: 'cd-4',
-					did: 'raised the CORS setup',
+					did: 'worked through the CORS setup with them',
 					url: 'https://github.com/Bishwas-py/django-svelte-template/issues/3'
 				}
 			],
@@ -229,12 +229,12 @@ export const PROJECTS = [
 			people: [
 				{
 					login: 'MarArMar',
-					did: 'pinned the Svelte 5 requirement',
+					did: 'merged their Svelte 5 requirement',
 					url: 'https://github.com/friendofsvelte/svelicon/pull/1'
 				},
 				{
 					login: 'Tyler-Petrov',
-					did: 'moved it to types and added env config',
+					did: 'reviewed their move to types and env config',
 					url: 'https://github.com/friendofsvelte/svelicon/pull/2'
 				}
 			],
@@ -301,7 +301,7 @@ export const PROJECTS = [
 			people: [
 				{
 					login: 'notsidney',
-					did: 'fixed storage initialisation on the server',
+					did: 'merged their server-side storage fix',
 					url: 'https://github.com/friendofsvelte/state/pull/2'
 				}
 			],
@@ -337,7 +337,7 @@ export const PROJECTS = [
 			people: [
 				{
 					login: 'paulrohrbeck',
-					did: 'spotted a typo in the output and sent the fix',
+					did: 'merged their fix for the output message',
 					url: 'https://github.com/Bishwas-py/seord/pull/3'
 				}
 			],
@@ -365,16 +365,16 @@ export const PROJECTS = [
 			people: [
 				{
 					login: 'ruizuo11',
-					did: 'reported that profile scraping had broken',
+					did: 'answered them when profile scraping broke',
 					url: 'https://github.com/Bishwas-py/fiverr-scraping-api/issues/1'
 				},
 				{
 					login: 'MatteoSchifano',
-					did: 'traced it to the breadcrumb parser',
+					did: 'traced it with them to the breadcrumb parser',
 					url: 'https://github.com/Bishwas-py/fiverr-scraping-api/issues/5'
 				}
 			],
-			more: '5 more filed reports',
+			more: 'closed all seven reports',
 			url: 'https://github.com/Bishwas-py/fiverr-scraping-api/issues?q=is%3Aissue'
 		},
 		link: 'https://github.com/Bishwas-py/fiverr-scraping-api',
@@ -432,16 +432,16 @@ export const PROJECTS = [
 			people: [
 				{
 					login: 'yshmarov',
-					did: 'sent three cleanup patches',
+					did: 'merged their three cleanup patches',
 					url: 'https://github.com/Bishwas-py/deviser-club/pulls?q=is%3Apr+author%3Ayshmarov'
 				},
 				{
 					login: 'lucascarrias',
-					did: 'stood up the RSpec suite',
+					did: 'merged the RSpec suite they built',
 					url: 'https://github.com/Bishwas-py/deviser-club/pull/11'
 				}
 			],
-			more: '2 more filed 14 issues between them',
+			more: 'merged six patches in all',
 			url: 'https://github.com/Bishwas-py/deviser-club/pulls?q=is%3Apr'
 		},
 		link: 'https://github.com/Bishwas-py/deviser-club',

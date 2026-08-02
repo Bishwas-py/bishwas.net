@@ -83,6 +83,7 @@
 						{/each}
 					</ul>
 					{#if 'community' in project}
+						<p class="worked-label">Worked with</p>
 						<ul class="worked-with">
 							{#each project.community.people as person}
 								<li>
@@ -143,8 +144,13 @@
 		@apply mt-2.5 max-w-[62ch] leading-relaxed;
 	}
 
+	.worked-label {
+		@apply mt-3 text-xs uppercase tracking-wider
+		text-gray-400 dark:text-gray-500;
+	}
+
 	.worked-with {
-		@apply mt-3 flex flex-col gap-1.5 max-w-[68ch] text-sm
+		@apply mt-1.5 flex flex-col gap-1.5 max-w-[68ch] text-sm
 		text-gray-600 dark:text-gray-400;
 	}
 
