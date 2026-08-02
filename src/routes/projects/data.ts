@@ -319,8 +319,8 @@ export const PROJECTS = [
 ];
 
 export const GROUPS = [
-	{ key: 'frameworks', label: 'Frameworks' },
 	{ key: 'tools', label: 'Libraries & tools' },
+	{ key: 'frameworks', label: 'Frameworks' },
 	{ key: 'products', label: 'Products' }
 ];
 
