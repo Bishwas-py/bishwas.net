@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import Meta from '$item/Meta.svelte';
-	import { GROUPED } from './data';
+	import { avatarOf, GROUPED } from './data';
 </script>
-
 
 <Meta
 	title="Projects, on python, django, svelte, typescript and more | Bishwas"
@@ -12,6 +11,7 @@
 />
 
 <div class="intro max-w-3xl mb-7">
+	<h1>Things I made.</h1>
 	<p>
 		Most of these began because I wanted something to exist and it did not. A few grew into
 		libraries with users I have never met; the rest stayed small and quietly useful. Even
@@ -19,75 +19,186 @@
 			class="link-inked inline-flex gap-1 items-center"
 			href="https://github.com/Bishwas-py/bishwas.net"
 			target="_blank"
-			in:fade>
+			in:fade
+		>
 			<span class="tag-text">this site</span>
 			<iconify-icon icon="simple-icons:svelte"></iconify-icon>
 		</a> is one of them, source and all.
 	</p>
 
 	<p class="mt-7">
-		Nothing here is a mockup or a tutorial I followed along with. The bugs I fixed inside other
-		people's code live on the <a class="link-inked" href="/open-source">open source</a> page instead.
+		All of these are mine end to end, not mockups or tutorials I followed along with. The bugs I
+		fixed inside other people's code live on the
+		<a class="link-inked" href="/contributions">open source</a> page instead.
 	</p>
 </div>
 
 {#each GROUPED as group}
-<section class="max-w-3xl w-full mb-14">
-	<h2 class="group-title">{group.label}</h2>
+	<section class="max-w-3xl w-full mb-14">
+		<h2 class="group-title">{group.label}</h2>
 
-	<div class="flex flex-col gap-9 mt-6">
-	{#each group.projects as project}
-		<div class="flex flex-col">
-			<div class="flex w-full gap-4">
-				<a href={project.link} target="_blank" class="block relative w-32 min-h-16 max-h-24 group rounded-md overflow-clip">
-					<img src={project.image} alt={project.name}
-							 loading="lazy"
-							 decoding="async"
-							 class="w-auto h-full rounded group-hover:opacity-75 transition-opacity duration-300" />
-					<div
-						class="absolute inset-0 bg-black/60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-						<p class="text-white text-xs font-semibold">Learn more</p>
-					</div>
-					<iconify-icon icon="ph:arrow-square-in-duotone"
-												class="absolute bottom-1 right-2 group-hover:hidden text-gray-400"></iconify-icon>
-				</a>
+		<div class="flex flex-col gap-9 mt-6">
+			{#each group.projects as project}
 				<div class="flex flex-col">
-					<h2 class="text-xl font-semibold">{project.name}</h2>
-					<p class="text-gray-600 dark:text-gray-400 text-sm">{project.timeline}</p>
-					<ul class="tags mt-1.5">
-						{#each project.technologies as tech}
-							<li class={tech.class}>
-								<iconify-icon icon={tech.icon}></iconify-icon>
-								{tech.name}
-							</li>
+					<div class="flex w-full gap-4">
+						<a
+							href={project.link}
+							target="_blank"
+							class="block relative w-32 min-h-16 max-h-24 group rounded-md overflow-clip"
+						>
+							<img
+								src={project.image}
+								alt={project.name}
+								loading="lazy"
+								decoding="async"
+								class="w-auto h-full rounded group-hover:opacity-75 transition-opacity duration-300"
+							/>
+							<div
+								class="absolute inset-0 bg-black/60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+							>
+								<p class="text-white text-xs font-semibold">Learn more</p>
+							</div>
+							<iconify-icon
+								icon="ph:arrow-square-in-duotone"
+								class="absolute bottom-1 right-2 group-hover:hidden text-gray-400"
+							></iconify-icon>
+						</a>
+						<div class="flex flex-col">
+							<h2 class="text-xl font-semibold">{project.name}</h2>
+							<p class="text-gray-600 dark:text-gray-400 text-sm">{project.timeline}</p>
+							<ul class="tags mt-1.5">
+								{#each project.technologies as tech}
+									<li class={tech.class}>
+										<iconify-icon icon={tech.icon}></iconify-icon>
+										{tech.name}
+									</li>
+								{/each}
+							</ul>
+						</div>
+					</div>
+					<p class="description">{project.description}</p>
+					<ul class="highlights">
+						{#each project.highlights as highlight}
+							<li>{highlight}</li>
 						{/each}
 					</ul>
+					{#if project.community}
+						<p class="worked-label">Worked with</p>
+						<ul class="worked-with">
+							{#each project.community.people as person}
+								<li>
+									<img
+										src={avatarOf(person.login)}
+										alt=""
+										width="18"
+										height="18"
+										loading="lazy"
+										decoding="async"
+									/>
+									<a href={person.url} target="_blank" rel="noopener" class="said">
+										<span class="name">{person.login}</span>
+										{person.did}
+									</a>
+								</li>
+							{/each}
+							{#if project.community.more}
+								<li class="rest">
+									<a href={project.community.url} target="_blank" rel="noopener" class="said">
+										{project.community.more}
+									</a>
+								</li>
+							{/if}
+						</ul>
+					{/if}
+					{#if project.featured}
+						<p class="featured">
+							<iconify-icon
+								icon={project.featured.icon}
+								class:svelte-mark={project.featured.icon === 'simple-icons:svelte'}
+							></iconify-icon>
+							<span>
+								{project.featured.lead}
+								{#if project.featured.strong}<strong>{project.featured.strong}</strong>{/if}:
+								{#each project.featured.links as link, i}<a
+										href={link.url}
+										target="_blank"
+										rel="noopener"
+										class="link-inked">{link.label}</a
+									>{i < project.featured.links.length - 1 ? ' and ' : '.'}{/each}
+							</span>
+						</p>
+					{/if}
 				</div>
-			</div>
-			<p class="description">{project.description}</p>
-			<ul class="highlights">
-				{#each project.highlights as highlight}
-					<li>{highlight}</li>
-				{/each}
-			</ul>
+			{/each}
 		</div>
-	{/each}
-	</div>
-</section>
+	</section>
 {/each}
 
 <style lang="postcss">
-    .group-title {
-        @apply text-2xl font-bold pb-2 border-b border-gray-300/60 dark:border-gray-700/60;
-    }
+	.intro h1 {
+		@apply text-3xl md:text-4xl font-bold leading-tight mb-3;
+	}
 
-    .description {
-        @apply mt-2.5 max-w-[62ch] leading-relaxed;
-    }
+	.group-title {
+		@apply text-2xl font-bold pb-2 border-b border-gray-300/60 dark:border-gray-700/60;
+	}
 
-    .highlights {
-        @apply mt-2 max-w-[68ch] list-disc list-outside pl-5 space-y-1
+	.description {
+		@apply mt-2.5 max-w-[62ch] leading-relaxed;
+	}
+
+	.worked-label {
+		@apply mt-3 text-xs uppercase tracking-wider
+		text-gray-400 dark:text-gray-500;
+	}
+
+	.worked-with {
+		@apply mt-1.5 flex flex-col gap-1.5 max-w-[68ch] text-sm
+		text-gray-600 dark:text-gray-400;
+	}
+
+	.worked-with li {
+		@apply flex items-center gap-2;
+	}
+
+	.worked-with img {
+		@apply w-[18px] h-[18px] rounded-full shrink-0
+        outline outline-1 outline-stone-300/70 dark:outline-stone-700;
+	}
+
+	.worked-with .name {
+		@apply font-medium text-gray-800 dark:text-gray-200;
+	}
+
+	.worked-with .rest {
+		@apply pl-[26px] text-gray-500 dark:text-gray-500;
+	}
+
+	.said {
+		@apply decoration-transparent underline underline-offset-4 duration-150
+        hover:decoration-gray-400/70 dark:hover:decoration-gray-500/70;
+	}
+
+	.featured {
+		@apply mt-2.5 flex items-baseline gap-1.5 max-w-[68ch] text-sm
+		text-gray-600 dark:text-gray-400;
+	}
+
+	.featured strong {
+		@apply font-medium text-gray-700 dark:text-gray-300;
+	}
+
+	.featured iconify-icon {
+		@apply text-[0.95em] shrink-0 text-gray-400 dark:text-gray-500;
+	}
+
+	.featured iconify-icon.svelte-mark {
+		@apply text-orange-600 dark:text-orange-400;
+	}
+
+	.highlights {
+		@apply mt-2 max-w-[68ch] list-disc list-outside pl-5 space-y-1
         text-sm leading-relaxed text-gray-600 dark:text-gray-400
         marker:text-gray-400/70 dark:marker:text-gray-600;
-    }
+	}
 </style>

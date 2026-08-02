@@ -10,12 +10,38 @@ export type Patch = {
 	symptom: { code: string; result: string };
 	context: string;
 	fix: string;
+	approval: { login: string; note?: string; review?: string; alsoOn?: string[] };
 };
+
+export const avatarOf = (login: string) => `/people/${login}.jpg`;
 
 export const repoUrl = (repo: string) => `https://github.com/${repo}`;
 export const prUrl = (patch: Patch) => `${repoUrl(patch.repo)}/pull/${patch.prNumber}`;
 
 export const PATCHES: Patch[] = [
+	{
+		repo: 'sveltejs/kit',
+		stars: '20.7k',
+		icon: 'simple-icons:svelte',
+		accent: 'orange',
+		title: 'Docs code blocks lost their controls on the types reference page',
+		prNumber: 12969,
+		mergedIn: 'four maintainers on the thread',
+		diff: { added: 1, removed: 1, files: 1 },
+		symptom: {
+			code: 'documentation/docs/98-reference/54-types.md',
+			result: 'code blocks rendered with no copy control and no heading links'
+		},
+		context:
+			'Reported on svelte.dev as issue 815 and left open; the page was simply missing a flag its neighbours had.',
+		approval: {
+			login: 'teemingc',
+			note: 'Thanks!',
+			review: 'https://github.com/sveltejs/kit/pull/12969#pullrequestreview-2431887877',
+			alsoOn: ['Rich-Harris', 'dummdidumm', 'benmccann']
+		},
+		fix: 'The page lacked `link: true` in its frontmatter, which is what makes the docs renderer emit the block controls and heading anchors. One line, and the reference page behaves like the rest of the documentation again.'
+	},
 	{
 		repo: 'pydantic/pydantic',
 		stars: '28.4k',
@@ -31,6 +57,7 @@ export const PATCHES: Patch[] = [
 		},
 		context:
 			'Four docstrings promised a one-argument callable, so following the documentation was guaranteed to crash.',
+		approval: { login: 'Viicos' },
 		fix: 'The callable is handed the field name and its info object, which `ConfigDict.field_title_generator` already described correctly. This aligns the `fields.py` docstrings on `Field()`, `FieldInfo.from_field()`, `computed_field()` and `ComputedFieldInfo` with the signature the code actually calls.'
 	},
 	{
@@ -48,6 +75,11 @@ export const PATCHES: Patch[] = [
 		},
 		context:
 			'A regression I caught by reading the commit that caused it, before anyone filed a bug.',
+		approval: {
+			login: 'Viicos',
+			note: "Thanks, the documentation isn't documenting this prominently, so I missed it when reading.",
+			review: 'https://github.com/pydantic/pydantic/pull/13537#pullrequestreview-4808429838'
+		},
 		fix: 'A recent switch to `secrets.compare_digest()` broke it: the function only accepts ASCII when handed `str`. Encoding both sides to bytes first restores equality for any value and keeps the constant-time guarantee that motivated the switch.'
 	},
 	{
@@ -64,6 +96,12 @@ export const PATCHES: Patch[] = [
 			result: '405 Method Not Allowed — even though +page.server.js had a matching action'
 		},
 		context: 'Core routing, plus a test fixture that did not exist before.',
+		approval: {
+			login: 'Rich-Harris',
+			note: 'thank you!',
+			review: 'https://github.com/sveltejs/kit/pull/16349#pullrequestreview-4738993808',
+			alsoOn: ['teemingc']
+		},
 		fix: 'Routing handed the POST to the sibling endpoint and stopped there. Now an endpoint exporting neither `POST` nor `fallback` is treated as unusable and the request falls through to the page actions, mirroring the `endpoint_can_handle` pattern already used for GET/HEAD.'
 	},
 	{
@@ -80,6 +118,10 @@ export const PATCHES: Patch[] = [
 			result: 'one Prometheus time series per parameter value, forever'
 		},
 		context: 'Changing a public default was the only real fix, so I argued for it and it landed.',
+		approval: {
+			login: 'provinzkraut',
+			review: 'https://github.com/litestar-org/litestar/pull/4925#pullrequestreview-4711515407'
+		},
 		fix: '`group_path=True` already collapsed these to the route template `/users/{user_id}`, but the safe behaviour was opt-in, so every default deployment leaked memory silently. I flipped the default and kept raw paths reachable through `group_path=False`.'
 	},
 	{
@@ -96,76 +138,12 @@ export const PATCHES: Patch[] = [
 			result: '"Invalid A P I Key Error"  —  published in the public API docs'
 		},
 		context: 'This text was shipping in the public API docs of every Litestar app.',
+		approval: {
+			login: 'sobolevn',
+			note: 'Looks good to me :)',
+			review: 'https://github.com/litestar-org/litestar/pull/4921#pullrequestreview-4692440207'
+		},
 		fix: 'The splitter broke before every capital letter, including each one inside an uppercase run. Splitting only at real word boundaries keeps acronyms intact: `HTTPTimeoutError` → `HTTP Timeout Error`, `MissingJWTError` → `Missing JWT Error`.'
-	}
-];
-
-export type Project = {
-	name: string;
-	tagline: string;
-	url: string;
-	stars: number;
-	commits: number;
-	icon: string;
-	role: string;
-};
-
-export const MAINTAINED: Project[] = [
-	{
-		name: 'friendofsvelte/tipex',
-		tagline: 'Styled rich-text editor for SvelteKit, built on TipTap and ProseMirror.',
-		url: 'https://tipex.pages.dev/',
-		stars: 425,
-		commits: 224,
-		icon: 'simple-icons:svelte',
-		role: 'author'
-	},
-	{
-		name: 'djapy',
-		tagline:
-			'Django REST framework with no framework inside the framework. Pydantic schemas, generated Swagger.',
-		url: 'https://djapy-docs.pages.dev/',
-		stars: 120,
-		commits: 507,
-		icon: 'simple-icons:django',
-		role: 'author'
-	},
-	{
-		name: 'django-svelte-template',
-		tagline:
-			'Production template wiring SvelteKit to Django: auth, form actions, flash messages, validation.',
-		stars: 72,
-		commits: 115,
-		icon: 'simple-icons:django',
-		role: 'author'
-	},
-	{
-		name: 'seord',
-		tagline: 'Rule-based content SEO analyzer for Node. Redesigned as an engine for 1.0.',
-		url: 'https://www.npmjs.com/package/seord',
-		stars: 50,
-		commits: 52,
-		icon: 'simple-icons:npm',
-		role: 'author'
-	},
-	{
-		name: 'fymo',
-		tagline:
-			'Python SSR framework for Svelte 5: esbuild pipeline, Node sidecar, remote functions, durable job queue.',
-		url: 'https://fymo.mintlify.app/',
-		stars: 9,
-		commits: 280,
-		icon: 'simple-icons:python',
-		role: 'building now'
-	},
-	{
-		name: 'friendofsvelte/*',
-		tagline:
-			'Svelte 5 utility packages: persistent state, mermaid renderer, type-safe icons, django-kit, toggle, progress.',
-		stars: 131,
-		commits: 0,
-		icon: 'simple-icons:svelte',
-		role: 'org maintainer'
 	}
 ];
 

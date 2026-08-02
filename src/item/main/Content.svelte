@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
+	import { FULL_TIME_SINCE, yearsSince } from '$utils/years';
 </script>
 
 <div in:fade={{delay: 920}}>
 	<div class="intro max-w-3xl mt-12">
 		<h2 class="text-2xl mb-3">Intro</h2>
 		<p class="text-lg">
-			I am a software engineer who believes in the power of clean, thoughtful code. Over the past 6 years, I've
+			I am a software engineer who believes in the power of clean, thoughtful code. Over the past {yearsSince(FULL_TIME_SINCE)} years, I've
 			architected enterprise applications that scale and developer tools that inspire. When a project lands on my desk,
 			it's not just about writing code – it's about understanding the challenge, designing elegant solutions, and
 			building something that makes a real impact.
