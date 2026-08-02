@@ -33,16 +33,16 @@ export const PROJECTS = [
 		group: 'products',
 		timeline: '2024 - Present',
 		description:
-			'I was learning German and none of the apps drilled the thing I was actually bad at, which was building sentences under time pressure. So I built the drill I needed.',
+			'I am learning German and wanted drilling rather than flashcards, so I built three modes I keep coming back to: transcribing sentences, building them from keywords, and reflex drills on grammar patterns.',
 		technologies: [
 			{ name: 'Next.js', icon: 'logos:nextjs-icon', class: 'skill-tag react' },
 			{ name: 'React', icon: 'logos:react', class: 'skill-tag react' },
 			{ name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss', class: 'skill-tag tailwind' }
 		],
 		highlights: [
-			'Built it around typing rather than multiple choice, because recognition was never my problem and recall was.',
-			'Graded it A1 to C1 so it keeps being useful as I improve instead of being outgrown in a month.',
-			'Kept the loop short enough to run between other work, which is the only reason I still use it.'
+			'Made typing the input, because recognising a correct sentence and producing one are not the same skill.',
+			'Graded every mode A1 to C1, from articles and simple verbs up to subjunctive and passive, so it stays useful as I improve.',
+			'Added timed sprints and a twenty sentence marathon, since the thing I am bad at is grammar under time pressure.'
 		],
 		link: 'https://satzmacher.bishwas.net/',
 		image: '/projects/satzmacher.jpg'
@@ -52,15 +52,15 @@ export const PROJECTS = [
 		group: 'products',
 		timeline: 'March 2020 - Present',
 		description:
-			'I have run Webmatrices since 2020, a community where people bring SEO, Django and AdSense problems and get answers. It is the longest-lived thing I own.',
+			'I have run Webmatrices since 2020: a community where bloggers, publishers and freelancers bring AdSense, SEO and coding problems and get answers from people who have had them.',
 		technologies: [
 			{ name: 'Django/Djapy', icon: 'mdi:language-python', class: 'skill-tag django' },
 			{ name: 'SvelteKit', icon: 'logos:svelte-icon', class: 'skill-tag svelte' }
 		],
 		highlights: [
 			'Built its APIs on djapy, my own framework, so I was the first person to live with its mistakes.',
-			'Answer and moderate it myself, which means I see the failure reports before any dashboard does.',
-			'Kept it running for six years, which is a different discipline from shipping something.'
+			'Answer and moderate it myself, which means I hear about a broken feature from a member before any dashboard tells me.',
+			'Kept it running for six years, which is a different discipline from launching something.'
 		],
 		link: 'https://webmatrices.com',
 		image: '/projects/webmatrices.jpg'
@@ -361,15 +361,15 @@ export const PROJECTS = [
 		group: 'tools',
 		timeline: '84 stars, Python Library',
 		description:
-			'I was doing Fiverr research by hand and wanted the data as JSON. I built the scraper for myself, published it, and have been maintaining it for strangers ever since.',
+			'I needed Fiverr gig and profile data as structured JSON and there was no clean way to get it, so I wrote the library and put it on PyPI. Seven people have filed issues against it since.',
 		technologies: [
 			{ name: 'Python', icon: 'mdi:language-python', class: 'skill-tag python' },
 			{ name: 'Web Scraping', icon: 'mdi:web', class: 'skill-tag django' }
 		],
 		highlights: [
 			'Return both parsed JSON and the raw soup, so callers can take my parsing or ignore it entirely.',
-			'Wired in proxy and ScraperAPI support so the caller can route around rate limits instead of forking the library.',
-			'Kept install to a single pip package, because anything harder and people just copy the file.'
+			'Wired in proxy and ScraperAPI support so people can route around rate limits without forking it.',
+			'Kept install to one pip package, because anything harder and people just copy the file.'
 		],
 		community: {
 			people: [
@@ -413,15 +413,15 @@ export const PROJECTS = [
 		group: 'products',
 		timeline: 'Browser-Based Game',
 		description:
-			'I wanted to know my click speed and every site that measured it was buried in ads. This was a weekend build to scratch that, and I left it that way.',
+			'My fourteen year old brother plays Minecraft and wanted the clicking trainer he used to do more. I asked why I should not just build it, so I did, and shipped what he asked for.',
 		technologies: [
 			{ name: 'Next.js', icon: 'logos:nextjs-icon', class: 'skill-tag react' },
 			{ name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss', class: 'skill-tag tailwind' }
 		],
 		highlights: [
-			'Kept it to one page with nothing between arriving and playing, because the whole interaction lasts ten seconds.',
-			'Spent the time on input accuracy rather than decoration, since that is the only thing being measured.',
-			'Left it finished rather than finding reasons to keep working on it.'
+			'Built the features he actually named: fullscreen, a much bigger click area, and a dark mode I threw in.',
+			'Took the spec from someone who would use it daily rather than deciding for him what a good trainer looked like.',
+			'Left it finished once it did what he wanted, instead of finding reasons to keep going.'
 		],
 		link: 'https://github.com/Bishwas-py/speedclicking.com',
 		image: '/projects/speedclicking.jpg'
@@ -431,14 +431,14 @@ export const PROJECTS = [
 		group: 'products',
 		timeline: '97 stars, Blogging Platform',
 		description:
-			'I wanted to find out whether a Medium alternative could give authors real control, and I wanted to learn Rails properly rather than through tutorials. This was both.',
+			'I wanted to know whether an open source Medium alternative could put authors in charge without getting complicated. The README still argues that simple beats complex, and I built it on Rails 7 to find out.',
 		technologies: [
 			{ name: 'Ruby on Rails 7', icon: 'mdi:language-ruby-on-rails', class: 'skill-tag rails' }
 		],
 		highlights: [
-			'Chose Rails 7 deliberately so I would learn it under real constraints instead of a toy project.',
-			'Held the data model simple on purpose; the README still argues that simple beats complex.',
-			"Ran it in the open from the first commit, which is why other people's patches ended up in it."
+			'Kept the data model deliberately small, because every feature I skipped was one an author would not have to think about.',
+			"Ran it in the open from the first commit, which is why other people's patches ended up in it.",
+			'Stopped when I had the answer rather than carrying it on as a product.'
 		],
 		community: {
 			people: [
