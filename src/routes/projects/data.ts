@@ -6,7 +6,7 @@ export const PROJECTS = [
 	{
 		name: 'Fymo',
 		group: 'frameworks',
-		timeline: '2025 - Present, Python Framework',
+		timeline: '280 commits in nine days, 2026',
 		description:
 			'I got tired of maintaining a frontend repo, a backend repo, and an API layer whose only job was to let the two talk. Fymo renders real Svelte 5 from Python, in one repo and one deploy.',
 		technologies: [
@@ -68,7 +68,7 @@ export const PROJECTS = [
 	{
 		name: 'Djapy',
 		group: 'frameworks',
-		timeline: '120 stars, Django Framework',
+		timeline: '120 stars, 507 commits since 2023',
 		description:
 			'Django REST Framework kept asking me to write serializers for things Django already knew. Djapy uses type hints as the contract instead: a decorator, a return type, done.',
 		technologies: [
@@ -112,7 +112,7 @@ export const PROJECTS = [
 	{
 		name: '@friendofsvelte/tipex',
 		group: 'tools',
-		timeline: '425 stars, 2023',
+		timeline: '425 stars, maintained since 2023',
 		description:
 			'I wanted a rich-text editor for SvelteKit that looked finished the moment it was installed. TipTap and ProseMirror handle the document model; everything above them is mine.',
 		technologies: [
@@ -156,7 +156,7 @@ export const PROJECTS = [
 	{
 		name: 'Django + SvelteKit Template',
 		group: 'frameworks',
-		timeline: '72 stars, Production Template',
+		timeline: '72 stars, 2024 to 2025',
 		description:
 			'Every time I paired Django with SvelteKit I rebuilt the same plumbing. I solved it once properly and made that the starting point instead of doing it again.',
 		technologies: [
@@ -208,7 +208,7 @@ export const PROJECTS = [
 	{
 		name: 'Svelicon',
 		group: 'tools',
-		timeline: '21 stars, CLI Tool',
+		timeline: '21 stars, CLI, v2 in 2025',
 		description:
 			'Every Svelte project I start needs icons, and the libraries I tried either fetched them at runtime or shipped the whole set. I wrote a CLI that puts the icons into the project as real components.',
 		technologies: [
@@ -250,7 +250,7 @@ export const PROJECTS = [
 	{
 		name: '@friendofsvelte/mermaid',
 		group: 'tools',
-		timeline: '36 stars, Svelte 5 Package',
+		timeline: '36 stars, Svelte 5, since 2025',
 		description:
 			'I needed Mermaid diagrams on a server-rendered SvelteKit site, and the wrappers I found either broke during SSR or pulled mermaid.js into the first load. So I wrote the component I wanted.',
 		technologies: [
@@ -278,7 +278,7 @@ export const PROJECTS = [
 	{
 		name: '@friendofsvelte/state',
 		group: 'tools',
-		timeline: '39 stars, Svelte 5 Package',
+		timeline: '39 stars, Svelte 5, since 2025',
 		description:
 			'Runes gave me reactivity but not persistence, and I kept rewriting the same localStorage glue in every project. This is that glue written once, typed.',
 		technologies: [
@@ -320,9 +320,9 @@ export const PROJECTS = [
 	{
 		name: 'SEOrd - SEO Analyzer',
 		group: 'tools',
-		timeline: '50 stars, Node.js Library',
+		timeline: '50 stars, rebuilt for 2.0 in 2026',
 		description:
-			'I had a hard time finding a decent SEO analyser for Node, so I wrote one. For 1.0 I rebuilt it as a rule engine rather than the pile of checks it had grown into.',
+			'I had a hard time finding a decent SEO analyser for Node, so I wrote one. For 2.0 I rebuilt it as a rule engine rather than the pile of checks it had grown into.',
 		technologies: [
 			{ name: 'Node.js', icon: 'logos:nodejs-icon', class: 'skill-tag typescript' },
 			{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' },
@@ -359,7 +359,7 @@ export const PROJECTS = [
 	{
 		name: 'Fiverr Scraper API',
 		group: 'tools',
-		timeline: '84 stars, Python Library',
+		timeline: '84 stars, 2021 to 2024',
 		description:
 			'I needed Fiverr gig and profile data as structured JSON and there was no clean way to get it, so I wrote the library and put it on PyPI. Seven people have filed issues against it since.',
 		technologies: [
@@ -393,7 +393,7 @@ export const PROJECTS = [
 	{
 		name: 'notify',
 		group: 'tools',
-		timeline: 'Go Library',
+		timeline: 'Go over D-Bus, 2025',
 		description:
 			'I wanted my own Go scripts to raise desktop notifications on Linux without dragging in a desktop framework, so I wrote a thin layer over D-Bus.',
 		technologies: [
@@ -411,7 +411,7 @@ export const PROJECTS = [
 	{
 		name: 'Speed Clicking',
 		group: 'products',
-		timeline: 'Browser-Based Game',
+		timeline: 'Browser game, 2022',
 		description:
 			'My fourteen year old brother plays Minecraft and wanted the clicking trainer he used to do more. I asked why I should not just build it, so I did, and shipped what he asked for.',
 		technologies: [
@@ -429,7 +429,7 @@ export const PROJECTS = [
 	{
 		name: 'Deviser Club',
 		group: 'products',
-		timeline: '97 stars, Blogging Platform',
+		timeline: '97 stars, 389 commits in six weeks',
 		description:
 			'I wanted to know whether an open source Medium alternative could put authors in charge without getting complicated. The README still argues that simple beats complex, and I built it on Rails 7 to find out.',
 		technologies: [
@@ -438,7 +438,7 @@ export const PROJECTS = [
 		highlights: [
 			'Kept the data model deliberately small, because every feature I skipped was one an author would not have to think about.',
 			"Ran it in the open from the first commit, which is why other people's patches ended up in it.",
-			'Stopped when I had the answer rather than carrying it on as a product.'
+			'Wrote 389 commits in six weeks and then stopped, because I had the answer and it was not going to be a product.'
 		],
 		community: {
 			people: [
