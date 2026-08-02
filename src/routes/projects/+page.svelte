@@ -84,6 +84,24 @@
 					</ul>
 					{#if project.community}
 						<p class="worked-label">Worked with</p>
+						{#if project.community.faces}
+							<p class="face-row">
+								{#each project.community.faces as login}
+									<img
+										src={avatarOf(login)}
+										alt={login}
+										title={login}
+										width="22"
+										height="22"
+										loading="lazy"
+										decoding="async"
+									/>
+								{/each}
+								{#if project.community.facesMore}
+									<span class="face-more">+{project.community.facesMore}</span>
+								{/if}
+							</p>
+						{/if}
 						<ul class="worked-with">
 							{#each project.community.people as person}
 								<li>
@@ -157,6 +175,19 @@
 	.worked-label {
 		@apply mt-3 text-xs uppercase tracking-wider
 		text-gray-400 dark:text-gray-500;
+	}
+
+	.face-row {
+		@apply mt-1.5 flex items-center -space-x-2;
+	}
+
+	.face-row img {
+		@apply w-[22px] h-[22px] rounded-full ring-2 ring-white/90 dark:ring-gray-900
+        transition-transform duration-150 hover:-translate-y-0.5 hover:z-10;
+	}
+
+	.face-more {
+		@apply pl-3.5 text-xs text-gray-500 dark:text-gray-400;
 	}
 
 	.worked-with {

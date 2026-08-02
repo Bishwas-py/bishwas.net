@@ -17,6 +17,8 @@ export type Project = {
 		links: { label: string; url: string }[];
 	};
 	community?: {
+		faces?: string[];
+		facesMore?: number;
 		people: { login: string; did: string; url: string }[];
 		more?: string;
 		url: string;
@@ -189,16 +191,33 @@ export const PROJECTS: Project[] = [
 			]
 		},
 		community: {
+			faces: [
+				'bluepuma77',
+				'lgrkvst',
+				'digitaldrreamer',
+				'zulienr',
+				'ikshyza',
+				'robishx',
+				'lalilaloe',
+				'MihaelBercic',
+				'kinderhead'
+			],
+			facesMore: 20,
 			people: [
+				{
+					login: 'bluepuma77',
+					did: 'traded twenty-one messages across their five issues',
+					url: 'https://github.com/friendofsvelte/tipex/issues?q=is%3Aissue+author%3Abluepuma77'
+				},
+				{
+					login: 'lgrkvst',
+					did: 'worked through four issues on the controls and focus behaviour',
+					url: 'https://github.com/friendofsvelte/tipex/issues?q=is%3Aissue+author%3Algrkvst'
+				},
 				{
 					login: 'Ayush-Tripathy',
 					did: 'merged their autofocus prop',
 					url: 'https://github.com/friendofsvelte/tipex/pull/28'
-				},
-				{
-					login: 'kinderhead',
-					did: 'answered them on replacing default extensions',
-					url: 'https://github.com/friendofsvelte/tipex/issues/46'
 				}
 			],
 			more: 'answered 38 of 40 reporters, closed all 40',
@@ -427,6 +446,15 @@ export const PROJECTS: Project[] = [
 			'Kept install to one pip package, because anything harder and people just copy the file.'
 		],
 		community: {
+			faces: [
+				'ruizuo11',
+				'mubashardev',
+				'south1907',
+				'MatteoSchifano',
+				'toffuffee',
+				'jayvs6341',
+				'wuchuanshiqi'
+			],
 			people: [
 				{
 					login: 'ruizuo11',
