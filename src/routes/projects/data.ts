@@ -8,17 +8,17 @@ export const PROJECTS = [
 		group: 'frameworks',
 		timeline: '2025 - Present, Python Framework',
 		description:
-			'A Python web framework that server-renders real Svelte 5 components, so the backend and the page live in one repo and one deploy.',
+			'I got tired of maintaining a frontend repo, a backend repo, and an API layer whose only job was to let the two talk. Fymo renders real Svelte 5 from Python, in one repo and one deploy.',
 		technologies: [
 			{ name: 'Python', icon: 'mdi:language-python', class: 'skill-tag python' },
 			{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' },
 			{ name: 'esbuild', icon: 'logos:esbuild', class: 'skill-tag javascript' }
 		],
 		highlights: [
-			'Compiles Svelte once at build time; a long-lived Node sidecar renders each request over stdio, so nothing compiles on the fly.',
-			'SvelteKit-style remote functions let the frontend call typed Python endpoints directly.',
-			'Ships a durable job queue, real-time broadcasts and scaffolded password auth you can read and delete.',
-			'Deploys as a single WSGI app, with no second server to run.'
+			'Compile Svelte once at build time and keep a long-lived Node process for rendering, so nothing compiles per request.',
+			"Borrowed SvelteKit's remote functions so the frontend calls typed Python directly and I never write an API layer again.",
+			'Generate the auth into your project as plain code you can read and delete, rather than hiding it inside the framework.',
+			'Ships as one WSGI app, because not deploying two things was the entire point.'
 		],
 		featured: {
 			lead: 'Listed in',
@@ -32,17 +32,16 @@ export const PROJECTS = [
 		group: 'products',
 		timeline: '2024 - Present',
 		description:
-			'An interactive German language learning application featuring typing exercises, sentence building, and grammar reflex training.',
+			'I was learning German and none of the apps drilled the thing I was actually bad at, which was building sentences under time pressure. So I built the drill I needed.',
 		technologies: [
 			{ name: 'Next.js', icon: 'logos:nextjs-icon', class: 'skill-tag react' },
 			{ name: 'React', icon: 'logos:react', class: 'skill-tag react' },
 			{ name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss', class: 'skill-tag tailwind' }
 		],
 		highlights: [
-			'Interactive German sentence typing for muscle memory development',
-			'Sentence building exercises from keywords for grammar practice',
-			'Neural pattern recognition for advanced grammar training',
-			'Multiple difficulty levels from A1 to C1 German proficiency'
+			'Built it around typing rather than multiple choice, because recognition was never my problem and recall was.',
+			'Graded it A1 to C1 so it keeps being useful as I improve instead of being outgrown in a month.',
+			'Kept the loop short enough to run between other work, which is the only reason I still use it.'
 		],
 		link: 'https://satzmacher.bishwas.net/',
 		image: '/projects/satzmacher.jpg'
@@ -52,15 +51,15 @@ export const PROJECTS = [
 		group: 'products',
 		timeline: 'March 2020 - Present',
 		description:
-			'A SaaS web application designed to provide tools for digital creators, freelancers, bloggers, and developers.',
+			'I have run Webmatrices since 2020, a community where people bring SEO, Django and AdSense problems and get answers. It is the longest-lived thing I own.',
 		technologies: [
 			{ name: 'Django/Djapy', icon: 'mdi:language-python', class: 'skill-tag django' },
 			{ name: 'SvelteKit', icon: 'logos:svelte-icon', class: 'skill-tag svelte' }
 		],
 		highlights: [
-			'Developed robust APIs and features to support user needs.',
-			'Conducted in-depth research to align tools with industry trends.',
-			'Enhanced user engagement through data-driven updates.'
+			'Built its APIs on djapy, my own framework, so I was the first person to live with its mistakes.',
+			'Answer and moderate it myself, which means I see the failure reports before any dashboard does.',
+			'Kept it running for six years, which is a different discipline from shipping something.'
 		],
 		link: 'https://webmatrices.com',
 		image: '/projects/webmatrices.jpg'
@@ -70,16 +69,16 @@ export const PROJECTS = [
 		group: 'frameworks',
 		timeline: '120 stars, Django Framework',
 		description:
-			"A REST API framework built on Django, emphasizing a 'no framework inside a framework' principle.",
+			'Django REST Framework kept asking me to write serializers for things Django already knew. Djapy uses type hints as the contract instead: a decorator, a return type, done.',
 		technologies: [
 			{ name: 'Django', icon: 'mdi:language-python', class: 'skill-tag django' },
 			{ name: 'Pydantic', icon: 'mdi:json', class: 'skill-tag python' },
 			{ name: 'Swagger', icon: 'mdi:api', class: 'skill-tag python' }
 		],
 		highlights: [
-			'Promoted flexibility while ensuring user-friendly API design.',
-			'Integrated strict input/output control to reduce errors.',
-			'Enhanced developer experience through comprehensive Swagger documentation.'
+			'Made the function signature the schema, so there is no second place to keep in sync.',
+			'Kept plain Django decorators like cache_page working, because a framework inside a framework was the thing I was trying to avoid.',
+			'Generate Swagger from the same annotations, so the documentation cannot drift away from the code.'
 		],
 		featured: {
 			lead: 'Listed in',
@@ -113,16 +112,16 @@ export const PROJECTS = [
 		group: 'tools',
 		timeline: '425 stars, 2023',
 		description:
-			'A rich-text editor for Svelte, simplifying text editing with frameworks like Tiptap and Prosemirror.',
+			'I wanted a rich-text editor for SvelteKit that looked finished the moment it was installed. TipTap and ProseMirror handle the document model; everything above them is mine.',
 		technologies: [
 			{ name: 'Tiptap', icon: 'mdi:format-text', class: 'skill-tag react' },
 			{ name: 'Prosemirror', icon: 'material-symbols:owl', class: 'skill-tag react' },
 			{ name: 'Svelte', icon: 'logos:svelte-icon', class: 'skill-tag svelte' }
 		],
 		highlights: [
-			'Drag-and-drop and clipboard support for image uploads.',
-			'Easy integration and customization for developers.',
-			'Provided detailed documentation and npm package.'
+			'Took TipTap rather than hand-rolling a ProseMirror layer, so I inherited its extension system and only had to own the Svelte side.',
+			'Ship the styling inside the package instead of leaving it to whoever installs it, which is the whole reason it looks done out of the box.',
+			'Rewrote the control system and floating menu for Svelte 5 runes rather than patching the old reactivity around them.'
 		],
 		featured: {
 			lead: 'Featured twice in',
@@ -156,16 +155,16 @@ export const PROJECTS = [
 		group: 'frameworks',
 		timeline: '72 stars, Production Template',
 		description:
-			'A production template wiring SvelteKit to Django, with the plumbing that usually costs a week already solved.',
+			'Every time I paired Django with SvelteKit I rebuilt the same plumbing. I solved it once properly and made that the starting point instead of doing it again.',
 		technologies: [
 			{ name: 'Django', icon: 'mdi:language-python', class: 'skill-tag django' },
 			{ name: 'SvelteKit', icon: 'logos:svelte-icon', class: 'skill-tag svelte' },
 			{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' }
 		],
 		highlights: [
-			'Session auth that survives server-side rendering, with form actions posting straight to Django.',
-			'Django messages bridged into Svelte as toast and flash notifications.',
-			'Server-side validation errors surfaced back into SvelteKit form state.'
+			'Got session auth working through server-side rendering, which is the part that breaks first and costs the most to debug.',
+			'Bridged Django messages into Svelte toasts so the backend keeps owning the wording.',
+			'Fed server-side validation errors back into form state rather than duplicating the rules in the frontend.'
 		],
 		featured: {
 			lead: 'Listed in',
@@ -207,16 +206,16 @@ export const PROJECTS = [
 		group: 'tools',
 		timeline: '21 stars, CLI Tool',
 		description:
-			'A CLI that turns Iconify SVGs into type-safe Svelte components, so icons ship as code instead of a runtime fetch.',
+			'Every Svelte project I start needs icons, and the libraries I tried either fetched them at runtime or shipped the whole set. I wrote a CLI that puts the icons into the project as real components.',
 		technologies: [
 			{ name: 'Node.js', icon: 'logos:nodejs-icon', class: 'skill-tag typescript' },
 			{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' },
 			{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' }
 		],
 		highlights: [
-			'Interactive search across the Iconify collections, with batched parallel downloads.',
-			'Generates typed components and validates tsconfig path mappings automatically.',
-			'Emits JavaScript or TypeScript depending on the project it runs in.'
+			'Generate typed components ahead of time, so icons cost nothing at runtime and a wrong name fails at compile.',
+			'Made it validate tsconfig path mappings while generating, because a broken mapping is the kind of thing you find much later.',
+			'Emit JavaScript or TypeScript depending on the project rather than forcing my preference on it.'
 		],
 		featured: {
 			lead: 'Featured under Icon Libraries in',
@@ -247,15 +246,16 @@ export const PROJECTS = [
 		name: '@friendofsvelte/mermaid',
 		group: 'tools',
 		timeline: '36 stars, Svelte 5 Package',
-		description: 'A Mermaid renderer for Svelte 5: pass it Mermaid source, get an SVG in the DOM.',
+		description:
+			'I needed Mermaid diagrams on a server-rendered SvelteKit site, and the wrappers I found either broke during SSR or pulled mermaid.js into the first load. So I wrote the component I wanted.',
 		technologies: [
 			{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' },
 			{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' }
 		],
 		highlights: [
-			'One typed component, with a snippet slot for parse errors instead of a thrown exception.',
-			'A dynamic import keeps mermaid.js out of the server bundle entirely.',
-			'Built on Svelte 5 runes throughout.'
+			'Load mermaid.js behind a dynamic import so it never reaches the server bundle.',
+			"Hand back a snippet on parse errors instead of throwing, because a bad diagram in someone's content should not take the page down.",
+			'Covered it with Playwright end to end, since the failure I cared about only shows up in a real browser.'
 		],
 		featured: {
 			lead: 'Written up on',
@@ -274,15 +274,15 @@ export const PROJECTS = [
 		group: 'tools',
 		timeline: '39 stars, Svelte 5 Package',
 		description:
-			'Type-safe persistent state for Svelte 5, backed by localStorage or sessionStorage.',
+			'Runes gave me reactivity but not persistence, and I kept rewriting the same localStorage glue in every project. This is that glue written once, typed.',
 		technologies: [
 			{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' },
 			{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' }
 		],
 		highlights: [
-			'A single PersistentState class covers definition, persistence and cross-component sync.',
-			'Full type inference, with zero dependencies beyond Svelte itself.',
-			'The storage backend is a constructor argument rather than a separate API.'
+			'Put definition, persistence and cross-component sync in a single class, so there is nothing else to learn.',
+			'Made the storage backend a constructor argument rather than a separate API, so moving from local to session is one word.',
+			'Held it to zero dependencies beyond Svelte, because a persistence helper should not own your bundle.'
 		],
 		featured: {
 			lead: 'Written up on',
@@ -314,15 +314,17 @@ export const PROJECTS = [
 		name: 'SEOrd - SEO Analyzer',
 		group: 'tools',
 		timeline: '50 stars, Node.js Library',
-		description: 'An advanced content SEO analyzer library for swift analysis of HTML content.',
+		description:
+			'I had a hard time finding a decent SEO analyser for Node, so I wrote one. For 1.0 I rebuilt it as a rule engine rather than the pile of checks it had grown into.',
 		technologies: [
 			{ name: 'Node.js', icon: 'logos:nodejs-icon', class: 'skill-tag typescript' },
 			{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' },
 			{ name: 'JavaScript', icon: 'skill-icons:javascript', class: 'skill-tag javascript' }
 		],
 		highlights: [
-			'Evaluates keyword density, meta descriptions, and link structure.',
-			'Fills a critical gap in the Node.js ecosystem for SEO analysis.'
+			'Turned 22 checks into individually disableable rules, so the score can be explained rather than just produced.',
+			'Weighted each rule and exposed the breakdown, because a number nobody can account for is not something you can act on.',
+			'Kept it synchronous and down to one dependency, so it drops into a build step without ceremony.'
 		],
 		featured: {
 			lead: 'Picked as one of twelve open-source tools for content creators by',
@@ -351,15 +353,15 @@ export const PROJECTS = [
 		group: 'tools',
 		timeline: '84 stars, Python Library',
 		description:
-			'A Python library that programmatically extracts data from Fiverr gig pages and user profiles for analysis and automation.',
+			'I was doing Fiverr research by hand and wanted the data as JSON. I built the scraper for myself, published it, and have been maintaining it for strangers ever since.',
 		technologies: [
 			{ name: 'Python', icon: 'mdi:language-python', class: 'skill-tag python' },
 			{ name: 'Web Scraping', icon: 'mdi:web', class: 'skill-tag django' }
 		],
 		highlights: [
-			'Enabled dynamic data extraction from Fiverr gig pages.',
-			'Integrated proxy support and customizable headers.',
-			'Simplified installation and usage through pip.'
+			'Return both parsed JSON and the raw soup, so callers can take my parsing or ignore it entirely.',
+			'Wired in proxy and ScraperAPI support so the caller can route around rate limits instead of forking the library.',
+			'Kept install to a single pip package, because anything harder and people just copy the file.'
 		],
 		community: {
 			people: [
@@ -385,15 +387,15 @@ export const PROJECTS = [
 		group: 'tools',
 		timeline: 'Go Library',
 		description:
-			'A Go library for Linux desktop notifications with action buttons and sound, spoken over D-Bus.',
+			'I wanted my own Go scripts to raise desktop notifications on Linux without dragging in a desktop framework, so I wrote a thin layer over D-Bus.',
 		technologies: [
 			{ name: 'Go', icon: 'logos:go', class: 'skill-tag go' },
 			{ name: 'D-Bus', icon: 'mdi:linux', class: 'skill-tag github' }
 		],
 		highlights: [
-			'Action buttons bound directly to Go functions, with click handling wired through D-Bus.',
-			'Sound alerts by freedesktop name or custom file.',
-			'Struct-based configuration rather than a builder chain.'
+			'Bound action buttons straight to Go functions, so a notification can run code rather than only appear.',
+			'Chose struct configuration over a builder chain, because the whole thing is one call and a chain would be ceremony.',
+			'Defaulted to freedesktop sound names so it behaves like everything else on the desktop.'
 		],
 		link: 'https://github.com/Bishwas-py/notify',
 		image: '/projects/notify.jpg'
@@ -402,15 +404,16 @@ export const PROJECTS = [
 		name: 'Speed Clicking',
 		group: 'products',
 		timeline: 'Browser-Based Game',
-		description: 'A game built to measure click speed, designed for gamers needing quick reflexes.',
+		description:
+			'I wanted to know my click speed and every site that measured it was buried in ads. This was a weekend build to scratch that, and I left it that way.',
 		technologies: [
 			{ name: 'Next.js', icon: 'logos:nextjs-icon', class: 'skill-tag react' },
 			{ name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss', class: 'skill-tag tailwind' }
 		],
 		highlights: [
-			'Created responsive, user-friendly gameplay mechanics.',
-			'Optimized performance for various devices and browsers.',
-			'Inspired by a personal need, making it a fun, practical solution.'
+			'Kept it to one page with nothing between arriving and playing, because the whole interaction lasts ten seconds.',
+			'Spent the time on input accuracy rather than decoration, since that is the only thing being measured.',
+			'Left it finished rather than finding reasons to keep working on it.'
 		],
 		link: 'https://github.com/Bishwas-py/speedclicking.com',
 		image: '/projects/speedclicking.jpg'
@@ -420,13 +423,14 @@ export const PROJECTS = [
 		group: 'products',
 		timeline: '97 stars, Blogging Platform',
 		description:
-			'An open-source blogging platform enhancing author autonomy while ensuring exceptional audience experience.',
+			'I wanted to find out whether a Medium alternative could give authors real control, and I wanted to learn Rails properly rather than through tutorials. This was both.',
 		technologies: [
 			{ name: 'Ruby on Rails 7', icon: 'mdi:language-ruby-on-rails', class: 'skill-tag rails' }
 		],
 		highlights: [
-			'Focused on seamless content creation and publishing workflows.',
-			'Enabled publishers with tools for better audience engagement.'
+			'Chose Rails 7 deliberately so I would learn it under real constraints instead of a toy project.',
+			'Held the data model simple on purpose; the README still argues that simple beats complex.',
+			"Ran it in the open from the first commit, which is why other people's patches ended up in it."
 		],
 		community: {
 			people: [
