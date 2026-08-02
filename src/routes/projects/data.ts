@@ -62,9 +62,9 @@ export const PROJECTS = [
 	{
 		name: 'Djapy',
 		group: 'frameworks',
-		timeline: 'Open-Source Framework',
+		timeline: '120 stars, Django Framework',
 		description:
-			'A REST API framework built on Django, emphasizing a \'no framework inside a framework\' principle.',
+			"A REST API framework built on Django, emphasizing a 'no framework inside a framework' principle.",
 		technologies: [
 			{ name: 'Django', icon: 'mdi:language-python', class: 'skill-tag django' },
 			{ name: 'Pydantic', icon: 'mdi:json', class: 'skill-tag python' },
@@ -81,7 +81,7 @@ export const PROJECTS = [
 	{
 		name: '@friendofsvelte/tipex',
 		group: 'tools',
-		timeline: '2023',
+		timeline: '425 stars, 2023',
 		description:
 			'A rich-text editor for Svelte, simplifying text editing with frameworks like Tiptap and Prosemirror.',
 		technologies: [
@@ -94,6 +94,13 @@ export const PROJECTS = [
 			'Easy integration and customization for developers.',
 			'Provided detailed documentation and npm package.'
 		],
+		featured: {
+			lead: "Listed in Svelte's official What's new in Svelte twice",
+			links: [
+				{ label: 'October 2024', url: 'https://svelte.dev/blog/whats-new-in-svelte-october-2024' },
+				{ label: 'December 2024', url: 'https://svelte.dev/blog/whats-new-in-svelte-december-2024' }
+			]
+		},
 		link: 'https://tipex.pages.dev',
 		image: '/projects/tipex.jpg'
 	},
@@ -120,8 +127,7 @@ export const PROJECTS = [
 		name: '@friendofsvelte/mermaid',
 		group: 'tools',
 		timeline: '36 stars, Svelte 5 Package',
-		description:
-			'A Mermaid renderer for Svelte 5: pass it Mermaid source, get an SVG in the DOM.',
+		description: 'A Mermaid renderer for Svelte 5: pass it Mermaid source, get an SVG in the DOM.',
 		technologies: [
 			{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' },
 			{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' }
@@ -192,9 +198,8 @@ export const PROJECTS = [
 	{
 		name: 'SEOrd - SEO Analyzer',
 		group: 'tools',
-		timeline: 'Node.js Library',
-		description:
-			'An advanced content SEO analyzer library for swift analysis of HTML content.',
+		timeline: '50 stars, Node.js Library',
+		description: 'An advanced content SEO analyzer library for swift analysis of HTML content.',
 		technologies: [
 			{ name: 'Node.js', icon: 'logos:nodejs-icon', class: 'skill-tag typescript' },
 			{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' },
@@ -210,7 +215,7 @@ export const PROJECTS = [
 	{
 		name: 'Fiverr Scraper API',
 		group: 'tools',
-		timeline: 'Python Library',
+		timeline: '84 stars, Python Library',
 		description:
 			'A Python library that programmatically extracts data from Fiverr gig pages and user profiles for analysis and automation.',
 		technologies: [
@@ -229,8 +234,7 @@ export const PROJECTS = [
 		name: 'Speed Clicking',
 		group: 'products',
 		timeline: 'Browser-Based Game',
-		description:
-			'A game built to measure click speed, designed for gamers needing quick reflexes.',
+		description: 'A game built to measure click speed, designed for gamers needing quick reflexes.',
 		technologies: [
 			{ name: 'Next.js', icon: 'logos:nextjs-icon', class: 'skill-tag react' },
 			{ name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss', class: 'skill-tag tailwind' }
@@ -246,7 +250,7 @@ export const PROJECTS = [
 	{
 		name: 'Deviser Club',
 		group: 'products',
-		timeline: 'Blogging Platform',
+		timeline: '97 stars, Blogging Platform',
 		description:
 			'An open-source blogging platform enhancing author autonomy while ensuring exceptional audience experience.',
 		technologies: [

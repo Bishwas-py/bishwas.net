@@ -82,6 +82,20 @@
 							<li>{highlight}</li>
 						{/each}
 					</ul>
+					{#if 'featured' in project}
+						<p class="featured">
+							<iconify-icon icon="simple-icons:svelte"></iconify-icon>
+							<span>
+								{project.featured.lead}:
+								{#each project.featured.links as link, i}<a
+										href={link.url}
+										target="_blank"
+										rel="noopener"
+										class="link-inked">{link.label}</a
+									>{i < project.featured.links.length - 1 ? ' and ' : '.'}{/each}
+							</span>
+						</p>
+					{/if}
 				</div>
 			{/each}
 		</div>
@@ -99,6 +113,15 @@
 
 	.description {
 		@apply mt-2.5 max-w-[62ch] leading-relaxed;
+	}
+
+	.featured {
+		@apply mt-2.5 flex items-baseline gap-1.5 max-w-[68ch] text-sm
+		text-gray-600 dark:text-gray-400;
+	}
+
+	.featured iconify-icon {
+		@apply text-[0.9em] shrink-0 text-orange-600 dark:text-orange-400;
 	}
 
 	.highlights {
