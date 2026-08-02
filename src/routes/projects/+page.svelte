@@ -208,6 +208,12 @@
         bg-gray-900 text-gray-100 dark:bg-gray-100 dark:text-gray-900;
 	}
 
+	.tip::after {
+		content: '';
+		@apply absolute top-full left-1/2 -translate-x-1/2 border-[6px] border-transparent
+        border-t-gray-900 dark:border-t-gray-100;
+	}
+
 	.face:hover .tip,
 	.face:focus-visible .tip {
 		@apply opacity-100;
