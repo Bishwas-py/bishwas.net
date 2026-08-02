@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
 			'Ships as one WSGI app, because not deploying two things was the entire point.'
 		],
 		featured: {
-			icon: 'ph:bookmark-simple-duotone',
+			icon: 'ph:bookmark-simple-fill',
 			lead: 'Listed in',
 			links: [{ label: 'sveltethemes.dev', url: 'https://sveltethemes.dev/Bishwas-py/fymo' }]
 		},
@@ -103,7 +103,7 @@ export const PROJECTS: Project[] = [
 			'Generate Swagger from the same annotations, so the documentation cannot drift away from the code.'
 		],
 		featured: {
-			icon: 'ph:bookmark-simple-duotone',
+			icon: 'ph:bookmark-simple-fill',
 			lead: 'Listed in',
 			links: [
 				{ label: 'djangopackages.org', url: 'https://djangopackages.org/packages/p/djapy/' },
@@ -192,7 +192,7 @@ export const PROJECTS: Project[] = [
 			'Fed server-side validation errors back into form state rather than duplicating the rules in the frontend.'
 		],
 		featured: {
-			icon: 'ph:bookmark-simple-duotone',
+			icon: 'ph:bookmark-simple-fill',
 			lead: 'Listed in',
 			links: [
 				{
@@ -286,7 +286,7 @@ export const PROJECTS: Project[] = [
 			'Covered it with Playwright end to end, since the failure I cared about only shows up in a real browser.'
 		],
 		featured: {
-			icon: 'ph:newspaper-clipping-duotone',
+			icon: 'ph:newspaper-clipping-fill',
 			lead: 'Written up on',
 			links: [
 				{
@@ -314,7 +314,7 @@ export const PROJECTS: Project[] = [
 			'Held it to zero dependencies beyond Svelte, because a persistence helper should not own your bundle.'
 		],
 		featured: {
-			icon: 'ph:newspaper-clipping-duotone',
+			icon: 'ph:newspaper-clipping-fill',
 			lead: 'Written up on',
 			links: [
 				{
@@ -357,7 +357,7 @@ export const PROJECTS: Project[] = [
 			'Kept it synchronous and down to one dependency, so it drops into a build step without ceremony.'
 		],
 		featured: {
-			icon: 'ph:newspaper-clipping-duotone',
+			icon: 'ph:newspaper-clipping-fill',
 			lead: 'Picked as one of twelve open-source tools for content creators by',
 			links: [
 				{

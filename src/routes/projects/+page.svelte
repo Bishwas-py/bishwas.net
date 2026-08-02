@@ -193,7 +193,7 @@
 
 	.featured iconify-icon {
 		@apply w-4 h-4 shrink-0 mt-[3px] text-base leading-none
-		text-gray-400 dark:text-gray-500;
+		text-gray-500 dark:text-gray-400;
 	}
 
 	.featured iconify-icon.svelte-mark {
