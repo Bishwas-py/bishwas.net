@@ -118,7 +118,9 @@
 							></iconify-icon>
 							<span>
 								{project.featured.lead}
-								{#if project.featured.strong}<strong>{project.featured.strong}</strong>{/if}:
+								{#if project.featured.strong}<strong>{project.featured.strong}</strong
+									>{/if}{#if project.featured.tail}
+									{project.featured.tail}{/if}:
 								{#each project.featured.links as link, i}<a
 										href={link.url}
 										target="_blank"
@@ -185,7 +187,7 @@
 	}
 
 	.featured strong {
-		@apply font-medium text-gray-700 dark:text-gray-300;
+		@apply font-semibold text-gray-800 dark:text-gray-200;
 	}
 
 	.featured iconify-icon {

@@ -13,6 +13,7 @@ export type Project = {
 		icon: string;
 		lead: string;
 		strong?: string;
+		tail?: string;
 		links: { label: string; url: string }[];
 	};
 	community?: {
@@ -148,7 +149,8 @@ export const PROJECTS: Project[] = [
 		featured: {
 			icon: 'simple-icons:svelte',
 			lead: 'Featured twice in',
-			strong: "Svelte's official newsletter",
+			strong: "Svelte's official",
+			tail: 'newsletter',
 			links: [
 				{ label: 'October 2024', url: 'https://svelte.dev/blog/whats-new-in-svelte-october-2024' },
 				{ label: 'December 2024', url: 'https://svelte.dev/blog/whats-new-in-svelte-december-2024' }
@@ -244,7 +246,8 @@ export const PROJECTS: Project[] = [
 		featured: {
 			icon: 'simple-icons:svelte',
 			lead: 'Featured under Icon Libraries in',
-			strong: "Svelte's official newsletter",
+			strong: "Svelte's official",
+			tail: 'newsletter',
 			links: [
 				{ label: 'December 2024', url: 'https://svelte.dev/blog/whats-new-in-svelte-december-2024' }
 			]
