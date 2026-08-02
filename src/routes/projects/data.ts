@@ -18,6 +18,10 @@ export const PROJECTS = [
 			'Ships a durable job queue, real-time broadcasts and scaffolded password auth you can read and delete.',
 			'Deploys as a single WSGI app, with no second server to run.'
 		],
+		featured: {
+			lead: 'Listed in',
+			links: [{ label: 'sveltethemes.dev', url: 'https://sveltethemes.dev/Bishwas-py/fymo' }]
+		},
 		link: 'https://fymo.mintlify.app/',
 		image: '/projects/fymo.jpg'
 	},
