@@ -7,7 +7,7 @@
 		django: 'from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 shadow-green-500/20 hover:shadow-green-500/30',
 		svelte: 'from-orange-500 to-rose-500 hover:from-orange-600 hover:to-rose-600 shadow-orange-500/20 hover:shadow-orange-500/30'
 	};
-	let { variant = 'svelte' }: { variant: keyof typeof gradients } = $props();
+	let { variant = 'svelte' }: { variant?: keyof typeof gradients } = $props();
 </script>
 
 <div class="flex flex-row flex-wrap gap-3 items-center justify-between">

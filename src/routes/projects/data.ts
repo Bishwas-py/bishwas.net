@@ -78,12 +78,38 @@ const PROJECTS: Project[] = [
 				{
 					label: 'University of Waterloo',
 					url: 'https://uwaterloo.ca/web-resources/blog/web-dev-rev-wrap-january-27-2026'
-				},
-				{ label: 'svelte.dev', url: 'https://svelte.dev/blog/whats-new-in-svelte-july-2026' }
+				}
 			]
 		},
 		link: 'https://webmatrices.com',
 		image: '/projects/webmatrices.jpg'
+	},
+	{
+		name: 'SuperMCP',
+		group: 'products',
+		timeline: 'Tauri desktop app, Rust and Svelte 5, 2026',
+		description:
+			'Every MCP server I tried wanted API keys and an OAuth dance for sites I was already signed into. This one borrows the Chrome session that is already open, so Claude, Cursor and Windsurf can read Reddit, X, LinkedIn and the rest without me handing anything over.',
+		technologies: [
+			{ name: 'Rust', icon: 'simple-icons:rust', class: 'skill-tag rust' },
+			{ name: 'Tauri', icon: 'simple-icons:tauri', class: 'skill-tag javascript' },
+			{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' }
+		],
+		highlights: [
+			'Wrote the worker in Rust as a single static binary and gave every AI client its own process, so one client cannot take another down.',
+			"Emulated Chrome's TLS fingerprint for the sources that answer plain HTTP and only drove a real headless browser for the ones that need a session, because the second costs seconds and the first does not.",
+			'Had every worker append to one activity log that the desktop shell tails, so you can watch which client is reading which source as it happens.',
+			'Ships as a signed installer, because the people who want this are not going to build a Rust workspace.'
+		],
+		featured: {
+			icon: 'simple-icons:svelte',
+			lead: 'Featured in',
+			strong: "Svelte's official",
+			tail: 'newsletter',
+			links: [{ label: 'July 2026', url: 'https://svelte.dev/blog/whats-new-in-svelte-july-2026' }]
+		},
+		link: 'https://webmatrices.com/mcpbrowser',
+		image: '/projects/supermcp.jpg'
 	},
 	{
 		name: 'Deviser Club',

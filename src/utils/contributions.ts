@@ -22,6 +22,28 @@ export const PATCHES: Patch[] = [
 		stars: '20.7k',
 		icon: 'simple-icons:svelte',
 		accent: 'orange',
+		title: 'POST fell through to a 405 instead of the page it belonged to',
+		prNumber: 16349,
+		mergedIn: 'closed a 2 yr 9 mo old issue',
+		diff: { added: 37, removed: 7, files: 6 },
+		symptom: {
+			code: 'POST /contact   →   +server.js exports only GET',
+			result: '405 Method Not Allowed — even though +page.server.js had a matching action'
+		},
+		context: 'Core routing, plus a test fixture that did not exist before.',
+		approval: {
+			login: 'Rich-Harris',
+			note: 'thank you!',
+			review: 'https://github.com/sveltejs/kit/pull/16349#pullrequestreview-4738993808',
+			alsoOn: ['teemingc']
+		},
+		fix: 'Routing handed the POST to the sibling endpoint and stopped there. Now an endpoint exporting neither `POST` nor `fallback` is treated as unusable and the request falls through to the page actions, mirroring the `endpoint_can_handle` pattern already used for GET/HEAD.'
+	},
+	{
+		repo: 'sveltejs/kit',
+		stars: '20.7k',
+		icon: 'simple-icons:svelte',
+		accent: 'orange',
 		title: 'Docs code blocks lost their controls on the types reference page',
 		prNumber: 12969,
 		mergedIn: 'four maintainers on the thread',
@@ -79,28 +101,6 @@ export const PATCHES: Patch[] = [
 			review: 'https://github.com/pydantic/pydantic/pull/13537#pullrequestreview-4808429838'
 		},
 		fix: 'A recent switch to `secrets.compare_digest()` broke it: the function only accepts ASCII when handed `str`. Encoding both sides to bytes first restores equality for any value and keeps the constant-time guarantee that motivated the switch.'
-	},
-	{
-		repo: 'sveltejs/kit',
-		stars: '20.7k',
-		icon: 'simple-icons:svelte',
-		accent: 'orange',
-		title: 'POST fell through to a 405 instead of the page it belonged to',
-		prNumber: 16349,
-		mergedIn: 'closed a 2 yr 9 mo old issue',
-		diff: { added: 37, removed: 7, files: 6 },
-		symptom: {
-			code: 'POST /contact   →   +server.js exports only GET',
-			result: '405 Method Not Allowed — even though +page.server.js had a matching action'
-		},
-		context: 'Core routing, plus a test fixture that did not exist before.',
-		approval: {
-			login: 'Rich-Harris',
-			note: 'thank you!',
-			review: 'https://github.com/sveltejs/kit/pull/16349#pullrequestreview-4738993808',
-			alsoOn: ['teemingc']
-		},
-		fix: 'Routing handed the POST to the sibling endpoint and stopped there. Now an endpoint exporting neither `POST` nor `fallback` is treated as unusable and the request falls through to the page actions, mirroring the `endpoint_can_handle` pattern already used for GET/HEAD.'
 	},
 	{
 		repo: 'litestar-org/litestar',
