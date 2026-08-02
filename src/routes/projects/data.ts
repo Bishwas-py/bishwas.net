@@ -88,6 +88,10 @@ export const PROJECTS: Project[] = [
 			lead: 'Cited by',
 			links: [
 				{ label: 'JavaScript Weekly', url: 'https://javascriptweekly.com/issues/782' },
+				{
+					label: 'Inc.',
+					url: 'https://www.inc.com/amanda-pressner-kreuser/6-ways-to-market-your-brand-on-linkedin.html'
+				},
 				{ label: 'The New Stack', url: 'https://thenewstack.io/ai-slop-open-source/' },
 				{ label: 'Frontend at Scale', url: 'https://frontendatscale.com/issues/55/' },
 				{
