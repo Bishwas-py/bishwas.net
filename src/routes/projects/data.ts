@@ -155,6 +155,31 @@ export const PROJECTS = [
 		image: '/projects/django-svelte-template.jpg'
 	},
 	{
+		name: 'Svelicon',
+		group: 'tools',
+		timeline: '21 stars, CLI Tool',
+		description:
+			'A CLI that turns Iconify SVGs into type-safe Svelte components, so icons ship as code instead of a runtime fetch.',
+		technologies: [
+			{ name: 'Node.js', icon: 'logos:nodejs-icon', class: 'skill-tag typescript' },
+			{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' },
+			{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' }
+		],
+		highlights: [
+			'Interactive search across the Iconify collections, with batched parallel downloads.',
+			'Generates typed components and validates tsconfig path mappings automatically.',
+			'Emits JavaScript or TypeScript depending on the project it runs in.'
+		],
+		featured: {
+			lead: "Listed under Icon Libraries in Svelte's official What's new in Svelte",
+			links: [
+				{ label: 'December 2024', url: 'https://svelte.dev/blog/whats-new-in-svelte-december-2024' }
+			]
+		},
+		link: 'https://www.npmjs.com/package/svelicon',
+		image: '/projects/fos-svelicon.jpg'
+	},
+	{
 		name: '@friendofsvelte/mermaid',
 		group: 'tools',
 		timeline: '36 stars, Svelte 5 Package',
@@ -208,49 +233,6 @@ export const PROJECTS = [
 		image: '/projects/fos-state.jpg'
 	},
 	{
-		name: 'Svelicon',
-		group: 'tools',
-		timeline: '21 stars, CLI Tool',
-		description:
-			'A CLI that turns Iconify SVGs into type-safe Svelte components, so icons ship as code instead of a runtime fetch.',
-		technologies: [
-			{ name: 'Node.js', icon: 'logos:nodejs-icon', class: 'skill-tag typescript' },
-			{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' },
-			{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' }
-		],
-		highlights: [
-			'Interactive search across the Iconify collections, with batched parallel downloads.',
-			'Generates typed components and validates tsconfig path mappings automatically.',
-			'Emits JavaScript or TypeScript depending on the project it runs in.'
-		],
-		featured: {
-			lead: "Listed under Icon Libraries in Svelte's official What's new in Svelte",
-			links: [
-				{ label: 'December 2024', url: 'https://svelte.dev/blog/whats-new-in-svelte-december-2024' }
-			]
-		},
-		link: 'https://www.npmjs.com/package/svelicon',
-		image: '/projects/fos-svelicon.jpg'
-	},
-	{
-		name: 'notify',
-		group: 'tools',
-		timeline: 'Go Library',
-		description:
-			'A Go library for Linux desktop notifications with action buttons and sound, spoken over D-Bus.',
-		technologies: [
-			{ name: 'Go', icon: 'logos:go', class: 'skill-tag go' },
-			{ name: 'D-Bus', icon: 'mdi:linux', class: 'skill-tag github' }
-		],
-		highlights: [
-			'Action buttons bound directly to Go functions, with click handling wired through D-Bus.',
-			'Sound alerts by freedesktop name or custom file.',
-			'Struct-based configuration rather than a builder chain.'
-		],
-		link: 'https://github.com/Bishwas-py/notify',
-		image: '/projects/notify.jpg'
-	},
-	{
 		name: 'SEOrd - SEO Analyzer',
 		group: 'tools',
 		timeline: '50 stars, Node.js Library',
@@ -293,6 +275,24 @@ export const PROJECTS = [
 		],
 		link: 'https://github.com/Bishwas-py/fiverr-scraping-api',
 		image: '/projects/fiverr-api.jpg'
+	},
+	{
+		name: 'notify',
+		group: 'tools',
+		timeline: 'Go Library',
+		description:
+			'A Go library for Linux desktop notifications with action buttons and sound, spoken over D-Bus.',
+		technologies: [
+			{ name: 'Go', icon: 'logos:go', class: 'skill-tag go' },
+			{ name: 'D-Bus', icon: 'mdi:linux', class: 'skill-tag github' }
+		],
+		highlights: [
+			'Action buttons bound directly to Go functions, with click handling wired through D-Bus.',
+			'Sound alerts by freedesktop name or custom file.',
+			'Struct-based configuration rather than a builder chain.'
+		],
+		link: 'https://github.com/Bishwas-py/notify',
+		image: '/projects/notify.jpg'
 	},
 	{
 		name: 'Speed Clicking',
