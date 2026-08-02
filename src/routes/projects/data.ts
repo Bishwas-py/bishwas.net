@@ -174,6 +174,12 @@ export const PROJECTS = [
 			'Generates typed components and validates tsconfig path mappings automatically.',
 			'Emits JavaScript or TypeScript depending on the project it runs in.'
 		],
+		featured: {
+			lead: "Listed under Icon Libraries in Svelte's official What's new in Svelte",
+			links: [
+				{ label: 'December 2024', url: 'https://svelte.dev/blog/whats-new-in-svelte-december-2024' }
+			]
+		},
 		link: 'https://www.npmjs.com/package/svelicon',
 		image: '/projects/fos-svelicon.jpg'
 	},
