@@ -1,12 +1,32 @@
 export const avatarOf = (login: string) => `/people/${login}.jpg`;
 
-export type Project = (typeof PROJECTS)[number];
+export type Project = {
+	name: string;
+	group: string;
+	timeline: string;
+	description: string;
+	technologies: { name: string; icon: string; class: string }[];
+	highlights: string[];
+	link: string;
+	image: string;
+	featured?: {
+		icon: string;
+		lead: string;
+		strong?: string;
+		links: { label: string; url: string }[];
+	};
+	community?: {
+		people: { login: string; did: string; url: string }[];
+		more?: string;
+		url: string;
+	};
+};
 
-export const PROJECTS = [
+export const PROJECTS: Project[] = [
 	{
 		name: 'Fymo',
 		group: 'frameworks',
-		timeline: '280 commits in nine days, 2026',
+		timeline: '2025 - Present, Python Framework',
 		description:
 			'I got tired of maintaining a frontend repo, a backend repo, and an API layer whose only job was to let the two talk. Fymo renders real Svelte 5 from Python, in one repo and one deploy.',
 		technologies: [

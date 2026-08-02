@@ -22,10 +22,7 @@
 			in:fade
 		>
 			<span class="tag-text">this site</span>
-			<iconify-icon
-				icon={project.featured.icon}
-				class:svelte-mark={project.featured.icon === 'simple-icons:svelte'}
-			></iconify-icon>
+			<iconify-icon icon="simple-icons:svelte"></iconify-icon>
 		</a> is one of them, source and all.
 	</p>
 
@@ -85,7 +82,7 @@
 							<li>{highlight}</li>
 						{/each}
 					</ul>
-					{#if 'community' in project}
+					{#if project.community}
 						<p class="worked-label">Worked with</p>
 						<ul class="worked-with">
 							{#each project.community.people as person}
@@ -104,7 +101,7 @@
 									</a>
 								</li>
 							{/each}
-							{#if 'more' in project.community}
+							{#if project.community.more}
 								<li class="rest">
 									<a href={project.community.url} target="_blank" rel="noopener" class="said">
 										{project.community.more}
@@ -113,7 +110,7 @@
 							{/if}
 						</ul>
 					{/if}
-					{#if 'featured' in project}
+					{#if project.featured}
 						<p class="featured">
 							<iconify-icon
 								icon={project.featured.icon}
@@ -121,7 +118,7 @@
 							></iconify-icon>
 							<span>
 								{project.featured.lead}
-								{#if 'strong' in project.featured}<strong>{project.featured.strong}</strong>{/if}:
+								{#if project.featured.strong}<strong>{project.featured.strong}</strong>{/if}:
 								{#each project.featured.links as link, i}<a
 										href={link.url}
 										target="_blank"
