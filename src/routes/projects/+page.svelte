@@ -180,7 +180,7 @@
 	}
 
 	.featured {
-		@apply mt-2.5 flex items-baseline gap-1.5 max-w-[68ch] text-sm
+		@apply mt-2.5 flex items-start gap-2 max-w-[68ch] text-sm
 		text-gray-600 dark:text-gray-400;
 	}
 
@@ -189,7 +189,8 @@
 	}
 
 	.featured iconify-icon {
-		@apply text-[0.95em] shrink-0 text-gray-400 dark:text-gray-500;
+		@apply w-4 h-4 shrink-0 mt-[3px] text-base leading-none
+		text-gray-400 dark:text-gray-500;
 	}
 
 	.featured iconify-icon.svelte-mark {
