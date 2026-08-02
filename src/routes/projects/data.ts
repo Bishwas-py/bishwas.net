@@ -1,6 +1,4 @@
-export const avatarOf = (login: string) => `/people/${login}.jpg`;
-
-export type Project = {
+type Project = {
 	name: string;
 	group: string;
 	timeline: string;
@@ -25,7 +23,7 @@ export type Project = {
 	};
 };
 
-export const PROJECTS: Project[] = [
+const PROJECTS: Project[] = [
 	{
 		name: 'Fymo',
 		group: 'frameworks',
@@ -599,7 +597,7 @@ export const PROJECTS: Project[] = [
 	}
 ];
 
-export const GROUPS = [
+const GROUPS = [
 	{ key: 'tools', label: 'Libraries & tools' },
 	{ key: 'frameworks', label: 'Frameworks' },
 	{ key: 'products', label: 'Products' }

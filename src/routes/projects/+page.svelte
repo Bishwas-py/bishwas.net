@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import Meta from '$item/Meta.svelte';
-	import { avatarOf, GROUPED } from './data';
+	import { GROUPED } from './data';
+	import { avatarOf } from '$utils/people';
 	import { tooltip } from '$utils/tooltip';
 </script>
 
@@ -256,11 +257,6 @@
 
 	.worked-with .rest {
 		@apply pl-[26px] text-gray-500 dark:text-gray-500;
-	}
-
-	.said {
-		@apply decoration-transparent underline underline-offset-4 duration-150
-        hover:decoration-gray-400/70 dark:hover:decoration-gray-500/70;
 	}
 
 	.featured {

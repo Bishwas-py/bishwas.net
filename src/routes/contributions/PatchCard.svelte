@@ -4,7 +4,8 @@
 </script>
 
 <script lang="ts">
-	import { avatarOf, prUrl, repoUrl, type Patch } from '$utils/contributions';
+	import { prUrl, repoUrl, type Patch } from '$utils/contributions';
+	import { avatarOf } from '$utils/people';
 	import Ticked from './Ticked.svelte';
 
 	let { patch }: { patch: Patch } = $props();
@@ -211,11 +212,6 @@
 	.approval .who {
 		@apply font-medium text-gray-800 hover:text-purple-800
         dark:text-gray-200 dark:hover:text-purple-200 duration-75;
-	}
-
-	.approval .said {
-		@apply decoration-transparent underline underline-offset-4 duration-150
-        hover:decoration-gray-400/70 dark:hover:decoration-gray-500/70;
 	}
 
 	.also {
