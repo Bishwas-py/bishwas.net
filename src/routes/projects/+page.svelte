@@ -22,7 +22,10 @@
 			in:fade
 		>
 			<span class="tag-text">this site</span>
-			<iconify-icon icon="simple-icons:svelte"></iconify-icon>
+			<iconify-icon
+				icon={project.featured.icon}
+				class:svelte-mark={project.featured.icon === 'simple-icons:svelte'}
+			></iconify-icon>
 		</a> is one of them, source and all.
 	</p>
 
@@ -112,7 +115,10 @@
 					{/if}
 					{#if 'featured' in project}
 						<p class="featured">
-							<iconify-icon icon="simple-icons:svelte"></iconify-icon>
+							<iconify-icon
+								icon={project.featured.icon}
+								class:svelte-mark={project.featured.icon === 'simple-icons:svelte'}
+							></iconify-icon>
 							<span>
 								{project.featured.lead}
 								{#if 'strong' in project.featured}<strong>{project.featured.strong}</strong>{/if}:
@@ -186,7 +192,11 @@
 	}
 
 	.featured iconify-icon {
-		@apply text-[0.9em] shrink-0 text-orange-600 dark:text-orange-400;
+		@apply text-[0.95em] shrink-0 text-gray-400 dark:text-gray-500;
+	}
+
+	.featured iconify-icon.svelte-mark {
+		@apply text-orange-600 dark:text-orange-400;
 	}
 
 	.highlights {
