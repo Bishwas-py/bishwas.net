@@ -253,6 +253,15 @@ export const PROJECTS = [
 			'Evaluates keyword density, meta descriptions, and link structure.',
 			'Fills a critical gap in the Node.js ecosystem for SEO analysis.'
 		],
+		featured: {
+			lead: 'Picked as one of twelve open-source tools for content creators by',
+			links: [
+				{
+					label: 'medevel.com',
+					url: 'https://medevel.com/12-open-source-tools-for-content-creators-in-2025-which-one-to-use/'
+				}
+			]
+		},
 		link: 'https://npmjs.com/package/seord',
 		image: '/projects/seord.jpg'
 	},
