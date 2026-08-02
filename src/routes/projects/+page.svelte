@@ -83,41 +83,38 @@
 						{/each}
 					</ul>
 					{#if 'community' in project}
-						<div class="community">
-							<p class="who-line">
-								<span class="faces">
-									{#each project.community.people as login}
-										<img
-											src={avatarOf(login)}
-											alt={login}
-											title={login}
-											width="18"
-											height="18"
-											loading="lazy"
-											decoding="async"
-										/>
-									{/each}
-								</span>
-								{#if 'more' in project.community}
-									<span class="more">+{project.community.more}</span>
-								{/if}
-								<a href={project.community.url} target="_blank" rel="noopener" class="said">
-									{project.community.summary}
-								</a>
-							</p>
-							{#if project.community.quote}
-								<a href={project.community.quote.url} target="_blank" rel="noopener" class="quote">
-									&ldquo;{project.community.quote.text}&rdquo;
-									<span class="by">{project.community.quote.who}</span>
-								</a>
+						<ul class="worked-with">
+							{#each project.community.people as person}
+								<li>
+									<img
+										src={avatarOf(person.login)}
+										alt=""
+										width="18"
+										height="18"
+										loading="lazy"
+										decoding="async"
+									/>
+									<a href={person.url} target="_blank" rel="noopener" class="said">
+										<span class="name">{person.login}</span>
+										{person.did}
+									</a>
+								</li>
+							{/each}
+							{#if 'more' in project.community}
+								<li class="rest">
+									<a href={project.community.url} target="_blank" rel="noopener" class="said">
+										{project.community.more}
+									</a>
+								</li>
 							{/if}
-						</div>
+						</ul>
 					{/if}
 					{#if 'featured' in project}
 						<p class="featured">
 							<iconify-icon icon="simple-icons:svelte"></iconify-icon>
 							<span>
-								{project.featured.lead}:
+								{project.featured.lead}
+								{#if 'strong' in project.featured}<strong>{project.featured.strong}</strong>{/if}:
 								{#each project.featured.links as link, i}<a
 										href={link.url}
 										target="_blank"
@@ -146,35 +143,26 @@
 		@apply mt-2.5 max-w-[62ch] leading-relaxed;
 	}
 
-	.community {
-		@apply mt-3 flex flex-col gap-1 max-w-[68ch] text-sm
+	.worked-with {
+		@apply mt-3 flex flex-col gap-1.5 max-w-[68ch] text-sm
 		text-gray-600 dark:text-gray-400;
 	}
 
-	.who-line {
-		@apply flex items-center gap-2 flex-wrap;
+	.worked-with li {
+		@apply flex items-center gap-2;
 	}
 
-	.more {
-		@apply text-xs text-gray-500 dark:text-gray-400 -ml-1;
+	.worked-with img {
+		@apply w-[18px] h-[18px] rounded-full shrink-0
+        outline outline-1 outline-stone-300/70 dark:outline-stone-700;
 	}
 
-	.quote {
-		@apply italic text-gray-500 dark:text-gray-400 pl-[calc(4.5rem-2.5rem)]
-		decoration-transparent underline underline-offset-4 duration-150
-		hover:decoration-gray-400/70 dark:hover:decoration-gray-500/70;
+	.worked-with .name {
+		@apply font-medium text-gray-800 dark:text-gray-200;
 	}
 
-	.quote .by {
-		@apply not-italic text-gray-400 dark:text-gray-500;
-	}
-
-	.faces {
-		@apply flex items-center -space-x-1.5 shrink-0;
-	}
-
-	.faces img {
-		@apply w-[18px] h-[18px] rounded-full ring-2 ring-white/90 dark:ring-gray-800;
+	.worked-with .rest {
+		@apply pl-[26px] text-gray-500 dark:text-gray-500;
 	}
 
 	.said {
@@ -185,6 +173,10 @@
 	.featured {
 		@apply mt-2.5 flex items-baseline gap-1.5 max-w-[68ch] text-sm
 		text-gray-600 dark:text-gray-400;
+	}
+
+	.featured strong {
+		@apply font-medium text-gray-700 dark:text-gray-300;
 	}
 
 	.featured iconify-icon {
