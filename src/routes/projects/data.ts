@@ -50,25 +50,6 @@ export const PROJECTS: Project[] = [
 		image: '/projects/fymo.jpg'
 	},
 	{
-		name: 'SatzMaster',
-		group: 'products',
-		timeline: 'July 2025 to August 2025',
-		description:
-			'I am learning German and wanted drilling rather than flashcards, so I built three modes I keep coming back to: transcribing sentences, building them from keywords, and reflex drills on grammar patterns.',
-		technologies: [
-			{ name: 'Next.js', icon: 'logos:nextjs-icon', class: 'skill-tag react' },
-			{ name: 'React', icon: 'logos:react', class: 'skill-tag react' },
-			{ name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss', class: 'skill-tag tailwind' }
-		],
-		highlights: [
-			'Made typing the input, because recognising a correct sentence and producing one are not the same skill.',
-			'Graded every mode A1 to C1, from articles and simple verbs up to subjunctive and passive, so it stays useful as I improve.',
-			'Added timed sprints and a twenty sentence marathon, since the thing I am bad at is grammar under time pressure.'
-		],
-		link: 'https://satzmacher.bishwas.net/',
-		image: '/projects/satzmacher.jpg'
-	},
-	{
 		name: 'Webmatrices',
 		group: 'products',
 		timeline: 'March 2020 to 28 July 2026',
@@ -103,6 +84,39 @@ export const PROJECTS: Project[] = [
 		},
 		link: 'https://webmatrices.com',
 		image: '/projects/webmatrices.jpg'
+	},
+	{
+		name: 'Deviser Club',
+		group: 'products',
+		timeline: '97 stars, 389 commits in six weeks',
+		description:
+			'I wanted to know whether an open source Medium alternative could put authors in charge without getting complicated. Simple beats complex was the whole bet, and I built it on Rails 7 to find out.',
+		technologies: [
+			{ name: 'Ruby on Rails 7', icon: 'mdi:language-ruby-on-rails', class: 'skill-tag rails' }
+		],
+		highlights: [
+			'Kept the data model deliberately small, because every feature I skipped was one an author would not have to think about.',
+			"Ran it in the open from the first commit, which is why other people's patches ended up in it.",
+			'Wrote 389 commits in six weeks and then stopped, because I had the answer and it was not going to be a product.'
+		],
+		community: {
+			people: [
+				{
+					login: 'yshmarov',
+					did: 'merged their three cleanup patches',
+					url: 'https://github.com/Bishwas-py/deviser-club/pulls?q=is%3Apr+author%3Ayshmarov'
+				},
+				{
+					login: 'lucascarrias',
+					did: 'merged the RSpec suite they built',
+					url: 'https://github.com/Bishwas-py/deviser-club/pull/11'
+				}
+			],
+			more: 'merged six patches in all',
+			url: 'https://github.com/Bishwas-py/deviser-club/pulls?q=is%3Apr'
+		},
+		link: 'https://github.com/Bishwas-py/deviser-club',
+		image: '/projects/deviser-club.jpg'
 	},
 	{
 		name: 'Djapy',
@@ -450,6 +464,25 @@ export const PROJECTS: Project[] = [
 		image: '/projects/notify.jpg'
 	},
 	{
+		name: 'SatzMaster',
+		group: 'products',
+		timeline: 'July 2025 to August 2025',
+		description:
+			'I am learning German and wanted drilling rather than flashcards, so I built three modes I keep coming back to: transcribing sentences, building them from keywords, and reflex drills on grammar patterns.',
+		technologies: [
+			{ name: 'Next.js', icon: 'logos:nextjs-icon', class: 'skill-tag react' },
+			{ name: 'React', icon: 'logos:react', class: 'skill-tag react' },
+			{ name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss', class: 'skill-tag tailwind' }
+		],
+		highlights: [
+			'Made typing the input, because recognising a correct sentence and producing one are not the same skill.',
+			'Graded every mode A1 to C1, from articles and simple verbs up to subjunctive and passive, so it stays useful as I improve.',
+			'Added timed sprints and a twenty sentence marathon, since the thing I am bad at is grammar under time pressure.'
+		],
+		link: 'https://satzmacher.bishwas.net/',
+		image: '/projects/satzmacher.jpg'
+	},
+	{
 		name: 'Speed Clicking',
 		group: 'products',
 		timeline: 'Browser game, 2022',
@@ -466,39 +499,6 @@ export const PROJECTS: Project[] = [
 		],
 		link: 'https://github.com/Bishwas-py/speedclicking.com',
 		image: '/projects/speedclicking.jpg'
-	},
-	{
-		name: 'Deviser Club',
-		group: 'products',
-		timeline: '97 stars, 389 commits in six weeks',
-		description:
-			'I wanted to know whether an open source Medium alternative could put authors in charge without getting complicated. Simple beats complex was the whole bet, and I built it on Rails 7 to find out.',
-		technologies: [
-			{ name: 'Ruby on Rails 7', icon: 'mdi:language-ruby-on-rails', class: 'skill-tag rails' }
-		],
-		highlights: [
-			'Kept the data model deliberately small, because every feature I skipped was one an author would not have to think about.',
-			"Ran it in the open from the first commit, which is why other people's patches ended up in it.",
-			'Wrote 389 commits in six weeks and then stopped, because I had the answer and it was not going to be a product.'
-		],
-		community: {
-			people: [
-				{
-					login: 'yshmarov',
-					did: 'merged their three cleanup patches',
-					url: 'https://github.com/Bishwas-py/deviser-club/pulls?q=is%3Apr+author%3Ayshmarov'
-				},
-				{
-					login: 'lucascarrias',
-					did: 'merged the RSpec suite they built',
-					url: 'https://github.com/Bishwas-py/deviser-club/pull/11'
-				}
-			],
-			more: 'merged six patches in all',
-			url: 'https://github.com/Bishwas-py/deviser-club/pulls?q=is%3Apr'
-		},
-		link: 'https://github.com/Bishwas-py/deviser-club',
-		image: '/projects/deviser-club.jpg'
 	}
 ];
 
