@@ -75,6 +75,14 @@ export const PROJECTS = [
 			'Integrated strict input/output control to reduce errors.',
 			'Enhanced developer experience through comprehensive Swagger documentation.'
 		],
+		featured: {
+			lead: 'Listed in',
+			links: [
+				{ label: 'djangopackages.org', url: 'https://djangopackages.org/packages/p/djapy/' },
+				{ label: 'pydeps.com', url: 'https://pydeps.com/project/djapy/' },
+				{ label: 'alternativeto.net', url: 'https://alternativeto.net/software/djapy/' }
+			]
+		},
 		link: 'https://github.com/Bishwas-py/djapy',
 		image: '/projects/djapy.jpg'
 	},
