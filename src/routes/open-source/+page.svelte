@@ -5,12 +5,12 @@
 	import Ticked from './Ticked.svelte';
 	import { MAINTAINED, PATCHES, REPORTED } from '$utils/open-source';
 
-	const totalStars = MAINTAINED.reduce((sum, project) => sum + project.stars, 0);
+	const frameworks = new Set(PATCHES.map((patch) => patch.repo)).size;
 
 	const STATS = [
 		{ value: String(PATCHES.length), label: 'merged upstream' },
-		{ value: String(MAINTAINED.length), label: 'projects maintained' },
-		{ value: totalStars.toLocaleString('en-US'), label: 'stars on them' }
+		{ value: String(frameworks), label: 'frameworks patched' },
+		{ value: String(REPORTED.length), label: 'bugs reported' }
 	];
 </script>
 
