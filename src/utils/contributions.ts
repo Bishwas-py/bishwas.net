@@ -13,7 +13,7 @@ export type Patch = {
 	approval: { login: string; note?: string; review?: string; alsoOn?: string[] };
 };
 
-export const avatarOf = (login: string) => `/reviewers/${login}.jpg`;
+export const avatarOf = (login: string) => `/people/${login}.jpg`;
 
 export const repoUrl = (repo: string) => `https://github.com/${repo}`;
 export const prUrl = (patch: Patch) => `${repoUrl(patch.repo)}/pull/${patch.prNumber}`;

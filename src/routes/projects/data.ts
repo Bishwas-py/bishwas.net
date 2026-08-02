@@ -1,3 +1,5 @@
+export const avatarOf = (login: string) => `/people/${login}.jpg`;
+
 export type Project = (typeof PROJECTS)[number];
 
 export const PROJECTS = [
@@ -313,6 +315,11 @@ export const PROJECTS = [
 			'Focused on seamless content creation and publishing workflows.',
 			'Enabled publishers with tools for better audience engagement.'
 		],
+		community: {
+			people: ['yshmarov', 'diwash007', 'lucascarrias', 'Wiechsaa'],
+			summary: '14 issues and 7 patches from four people I have never met, six merged',
+			url: 'https://github.com/Bishwas-py/deviser-club/pulls?q=is%3Apr'
+		},
 		link: 'https://github.com/Bishwas-py/deviser-club',
 		image: '/projects/deviser-club.jpg'
 	}
