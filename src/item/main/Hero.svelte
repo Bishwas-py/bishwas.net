@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import Skills from '$item/main/Skills.svelte';
-	import { FEATURED as UPSTREAM, prUrl } from '$utils/open-source';
+	import { FEATURED as UPSTREAM, prUrl } from '$utils/contributions';
 
 	const joiner = (i: number) => (i === 0 ? '' : i === UPSTREAM.length - 1 ? ' and ' : ', ');
 </script>
@@ -27,7 +27,7 @@
 			<h1 class="text-2xl mb-4 ml-2" in:fade={{ delay: 200 }}>I'm Bishwas, Full-Stack Developer</h1>
 			<p class="text-lg ml-1" in:fade={{ delay: 450 }}>
 				When I'm not building with Python or Svelte, you'll find me learning German or doing
-				<a href="/open-source" class="link-inked">open-source</a>, lately in
+				<a href="/contributions" class="link-inked">open-source</a>, lately in
 				{#each UPSTREAM as repo, i}{joiner(i)}<a
 						href={prUrl(repo)}
 						target="_blank"

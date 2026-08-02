@@ -3,7 +3,7 @@
 	import Meta from '$item/Meta.svelte';
 	import PatchCard from './PatchCard.svelte';
 	import Ticked from './Ticked.svelte';
-	import { MAINTAINED, PATCHES, REPORTED } from '$utils/open-source';
+	import { PATCHES, REPORTED } from '$utils/contributions';
 
 	const frameworks = new Set(PATCHES.map((patch) => patch.repo)).size;
 
@@ -15,15 +15,16 @@
 </script>
 
 <Meta
-	title="Open Source — patches merged into pydantic, SvelteKit and Litestar | Bishwas"
-	description="Merged upstream fixes in pydantic, SvelteKit and Litestar, plus the Python and Svelte frameworks I maintain: djapy, fymo, tipex and seord."
-	keywords="open source, pydantic, sveltekit, litestar, djapy, tipex, fymo, python, svelte, contributions"
+	title="Contributions — patches merged into pydantic, SvelteKit and Litestar | Bishwas"
+	description="Bugs found and fixed in other people's frameworks: five patches merged into pydantic, SvelteKit and Litestar, plus issues traced and filed upstream."
+	keywords="open source contributions, upstream patches, pydantic, sveltekit, litestar, python, svelte, pull requests"
 />
 
 <div class="intro max-w-3xl w-full mb-8">
-	<h1>Work I've done in the open.</h1>
+	<h1>Things I fixed in other people's code.</h1>
 	<p>
-		Patches sent upstream, and the projects I keep alive. Everything links to the pull request on
+		Bugs I found in other people's code, and what I sent them. Everything links to the pull request
+		on
 		<a
 			class="link-inked inline-flex gap-1 items-center"
 			href="https://github.com/Bishwas-py"
@@ -56,35 +57,6 @@
 	<div class="flex flex-col gap-6 mt-7">
 		{#each PATCHES as patch}
 			<PatchCard {patch} />
-		{/each}
-	</div>
-</section>
-
-<section class="max-w-3xl w-full mb-16">
-	<h2 class="section-title">
-		<iconify-icon icon="ph:package-duotone"></iconify-icon>
-		Maintained by me
-	</h2>
-	<p class="section-sub">APIs I designed and still ship.</p>
-
-	<div class="grid sm:grid-cols-2 gap-4 mt-7">
-		{#each MAINTAINED as project}
-			<a href={project.url} target="_blank" rel="noopener" class="project group">
-				<div class="project-head">
-					<iconify-icon icon={project.icon}></iconify-icon>
-					<h3>{project.name}</h3>
-				</div>
-				<p class="project-tagline">{project.tagline}</p>
-				<div class="project-meta">
-					<span class="role pill-accent">{project.role}</span>
-					<span class="metric"
-						><iconify-icon icon="ph:star-fill"></iconify-icon>{project.stars}</span
-					>
-					{#if project.commits}
-						<span class="metric">{project.commits} commits</span>
-					{/if}
-				</div>
-			</a>
 		{/each}
 	</div>
 </section>
@@ -129,47 +101,6 @@
 
 	.section-sub {
 		@apply text-gray-600 dark:text-gray-400 mt-1;
-	}
-
-	.project {
-		@apply flex flex-col gap-2 rounded-lg p-5 shadow-sm
-        bg-white/50 dark:bg-gray-800/40
-        duration-200 hover:bg-white/80 dark:hover:bg-gray-800/70
-        hover:-translate-y-0.5;
-	}
-
-	.project-head {
-		@apply flex items-center gap-2;
-	}
-
-	.project-head iconify-icon {
-		@apply text-lg text-gray-600 dark:text-gray-300;
-	}
-
-	.project-head h3 {
-		@apply font-semibold font-mono text-sm
-        group-hover:text-purple-800 dark:group-hover:text-purple-200 duration-150;
-	}
-
-	.project-tagline {
-		@apply text-sm text-gray-700 dark:text-gray-300 leading-relaxed flex-grow;
-	}
-
-	.project-meta {
-		@apply flex flex-wrap items-center gap-2 text-xs
-        text-gray-500 dark:text-gray-400;
-	}
-
-	.project-meta .metric {
-		@apply inline-flex items-center gap-1;
-	}
-
-	.project-meta .metric iconify-icon {
-		@apply text-[0.9em] text-amber-500/80 dark:text-amber-400/70;
-	}
-
-	.project-meta .role {
-		@apply px-2 py-0.5 not-italic;
 	}
 
 	.reported {

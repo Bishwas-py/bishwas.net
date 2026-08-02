@@ -4,7 +4,7 @@
 </script>
 
 <script lang="ts">
-	import { prUrl, repoUrl, type Patch } from '$utils/open-source';
+	import { prUrl, repoUrl, type Patch } from '$utils/contributions';
 	import Ticked from './Ticked.svelte';
 
 	let { patch }: { patch: Patch } = $props();
