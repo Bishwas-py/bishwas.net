@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
 	{
 		name: 'SatzMaster',
 		group: 'products',
-		timeline: '2024 - Present',
+		timeline: 'July 2025 to August 2025',
 		description:
 			'I am learning German and wanted drilling rather than flashcards, so I built three modes I keep coming back to: transcribing sentences, building them from keywords, and reflex drills on grammar patterns.',
 		technologies: [
@@ -70,7 +70,7 @@ export const PROJECTS: Project[] = [
 	{
 		name: 'Webmatrices',
 		group: 'products',
-		timeline: 'March 2020 - Present',
+		timeline: 'March 2020 to 28 July 2026',
 		description:
 			'I have run Webmatrices since 2020: a community where bloggers, publishers and freelancers bring AdSense, SEO and coding problems and get answers from people who have had them.',
 		technologies: [
