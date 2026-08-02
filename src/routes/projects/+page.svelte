@@ -118,9 +118,10 @@
 							></iconify-icon>
 							<span>
 								{project.featured.lead}
-								{#if project.featured.strong}<strong>{project.featured.strong}</strong
-									>{/if}{#if project.featured.tail}
-									{project.featured.tail}{/if}:
+								{#if project.featured.strong}<strong>{project.featured.strong}</strong>{/if}{project
+									.featured.tail
+									? ' ' + project.featured.tail
+									: ''}:
 								{#each project.featured.links as link, i}<a
 										href={link.url}
 										target="_blank"
