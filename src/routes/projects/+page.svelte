@@ -83,24 +83,35 @@
 						{/each}
 					</ul>
 					{#if 'community' in project}
-						<p class="community">
-							<span class="faces">
-								{#each project.community.people as login}
-									<img
-										src={avatarOf(login)}
-										alt={login}
-										title={login}
-										width="18"
-										height="18"
-										loading="lazy"
-										decoding="async"
-									/>
-								{/each}
-							</span>
-							<a href={project.community.url} target="_blank" rel="noopener" class="said">
-								{project.community.summary}
-							</a>
-						</p>
+						<div class="community">
+							<p class="who-line">
+								<span class="faces">
+									{#each project.community.people as login}
+										<img
+											src={avatarOf(login)}
+											alt={login}
+											title={login}
+											width="18"
+											height="18"
+											loading="lazy"
+											decoding="async"
+										/>
+									{/each}
+								</span>
+								{#if 'more' in project.community}
+									<span class="more">+{project.community.more}</span>
+								{/if}
+								<a href={project.community.url} target="_blank" rel="noopener" class="said">
+									{project.community.summary}
+								</a>
+							</p>
+							{#if project.community.quote}
+								<a href={project.community.quote.url} target="_blank" rel="noopener" class="quote">
+									&ldquo;{project.community.quote.text}&rdquo;
+									<span class="by">{project.community.quote.who}</span>
+								</a>
+							{/if}
+						</div>
 					{/if}
 					{#if 'featured' in project}
 						<p class="featured">
@@ -136,8 +147,26 @@
 	}
 
 	.community {
-		@apply mt-2.5 flex items-center gap-2 max-w-[68ch] text-sm
+		@apply mt-3 flex flex-col gap-1 max-w-[68ch] text-sm
 		text-gray-600 dark:text-gray-400;
+	}
+
+	.who-line {
+		@apply flex items-center gap-2 flex-wrap;
+	}
+
+	.more {
+		@apply text-xs text-gray-500 dark:text-gray-400 -ml-1;
+	}
+
+	.quote {
+		@apply italic text-gray-500 dark:text-gray-400 pl-[calc(4.5rem-2.5rem)]
+		decoration-transparent underline underline-offset-4 duration-150
+		hover:decoration-gray-400/70 dark:hover:decoration-gray-500/70;
+	}
+
+	.quote .by {
+		@apply not-italic text-gray-400 dark:text-gray-500;
 	}
 
 	.faces {

@@ -89,6 +89,17 @@ export const PROJECTS = [
 				{ label: 'alternativeto.net', url: 'https://alternativeto.net/software/djapy/' }
 			]
 		},
+		community: {
+			people: ['philrdubois', 'codernirdesh', 'Microturbine', 'unnamedunknownusername'],
+			more: 1,
+			summary: 'five issues and three patches merged, from five people',
+			url: 'https://github.com/Bishwas-py/djapy/pulls?q=is%3Apr',
+			quote: {
+				text: 'Swagger marks query parameters as path parameters',
+				who: 'philrdubois',
+				url: 'https://github.com/Bishwas-py/djapy/issues/32'
+			}
+		},
 		link: 'https://github.com/Bishwas-py/djapy',
 		image: '/projects/djapy.jpg'
 	},
@@ -114,6 +125,17 @@ export const PROJECTS = [
 				{ label: 'October 2024', url: 'https://svelte.dev/blog/whats-new-in-svelte-october-2024' },
 				{ label: 'December 2024', url: 'https://svelte.dev/blog/whats-new-in-svelte-december-2024' }
 			]
+		},
+		community: {
+			people: ['kinderhead', 'pymander', 'MihaelBercic', 'zulienr'],
+			more: 26,
+			summary: '40 issues from 30 people, and a patch merged from one of them',
+			url: 'https://github.com/friendofsvelte/tipex/issues?q=is%3Aissue',
+			quote: {
+				text: 'Cannot remove any default extensions',
+				who: 'kinderhead',
+				url: 'https://github.com/friendofsvelte/tipex/issues/46'
+			}
 		},
 		link: 'https://tipex.pages.dev',
 		image: '/projects/tipex.jpg'
@@ -151,6 +173,16 @@ export const PROJECTS = [
 				}
 			]
 		},
+		community: {
+			people: ['Rey092', 'cd-4'],
+			summary: 'two issues from people who cloned it',
+			url: 'https://github.com/Bishwas-py/django-svelte-template/issues?q=is%3Aissue',
+			quote: {
+				text: 'Svelte error, missing django import',
+				who: 'Rey092',
+				url: 'https://github.com/Bishwas-py/django-svelte-template/issues/1'
+			}
+		},
 		link: 'https://github.com/Bishwas-py/django-svelte-template',
 		image: '/projects/django-svelte-template.jpg'
 	},
@@ -175,6 +207,16 @@ export const PROJECTS = [
 			links: [
 				{ label: 'December 2024', url: 'https://svelte.dev/blog/whats-new-in-svelte-december-2024' }
 			]
+		},
+		community: {
+			people: ['MarArMar', 'Tyler-Petrov', 'martinejaw'],
+			summary: 'two patches and an issue from three people outside the project',
+			url: 'https://github.com/friendofsvelte/svelicon/pulls?q=is%3Apr',
+			quote: {
+				text: 'Add requierments : Svelte 5',
+				who: 'MarArMar',
+				url: 'https://github.com/friendofsvelte/svelicon/pull/1'
+			}
 		},
 		link: 'https://www.npmjs.com/package/svelicon',
 		image: '/projects/fos-svelicon.jpg'
@@ -226,8 +268,22 @@ export const PROJECTS = [
 				{
 					label: 'kitemetric.com',
 					url: 'https://kitemetric.com/blogs/svelte-5-persistent-state-effortless-persistence-with-runes'
+				},
+				{
+					label: 'libhunt.com',
+					url: 'https://www.libhunt.com/compare-friendofsvelte--state-vs-forms-manager'
 				}
 			]
+		},
+		community: {
+			people: ['notsidney', 'eikaramba'],
+			summary: 'an issue and a server-side fix, both from strangers',
+			url: 'https://github.com/friendofsvelte/state/pulls?q=is%3Apr',
+			quote: {
+				text: 'Fix storage initialization on the server',
+				who: 'notsidney',
+				url: 'https://github.com/friendofsvelte/state/pull/2'
+			}
 		},
 		link: 'https://www.npmjs.com/package/@friendofsvelte/state',
 		image: '/projects/fos-state.jpg'
@@ -255,6 +311,16 @@ export const PROJECTS = [
 				}
 			]
 		},
+		community: {
+			people: ['paulrohrbeck'],
+			summary: 'a reader found a typo in the output and sent the fix',
+			url: 'https://github.com/Bishwas-py/seord/pulls?q=is%3Apr',
+			quote: {
+				text: 'Fix this.headings typo in output message',
+				who: 'paulrohrbeck',
+				url: 'https://github.com/Bishwas-py/seord/pull/3'
+			}
+		},
 		link: 'https://npmjs.com/package/seord',
 		image: '/projects/seord.jpg'
 	},
@@ -273,6 +339,17 @@ export const PROJECTS = [
 			'Integrated proxy support and customizable headers.',
 			'Simplified installation and usage through pip.'
 		],
+		community: {
+			people: ['ruizuo11', 'mubashardev', 'south1907', 'MatteoSchifano'],
+			more: 3,
+			summary: 'seven issues from seven different people using it',
+			url: 'https://github.com/Bishwas-py/fiverr-scraping-api/issues?q=is%3Aissue',
+			quote: {
+				text: "profile_scrape() doesn't work",
+				who: 'ruizuo11',
+				url: 'https://github.com/Bishwas-py/fiverr-scraping-api/issues/1'
+			}
+		},
 		link: 'https://github.com/Bishwas-py/fiverr-scraping-api',
 		image: '/projects/fiverr-api.jpg'
 	},
@@ -327,7 +404,12 @@ export const PROJECTS = [
 		community: {
 			people: ['yshmarov', 'diwash007', 'lucascarrias', 'Wiechsaa'],
 			summary: '14 issues and 7 patches from four people I have never met, six merged',
-			url: 'https://github.com/Bishwas-py/deviser-club/pulls?q=is%3Apr'
+			url: 'https://github.com/Bishwas-py/deviser-club/pulls?q=is%3Apr',
+			quote: {
+				text: 'Loading more quick tweets crashes the app',
+				who: 'diwash007',
+				url: 'https://github.com/Bishwas-py/deviser-club/issues/17'
+			}
 		},
 		link: 'https://github.com/Bishwas-py/deviser-club',
 		image: '/projects/deviser-club.jpg'
