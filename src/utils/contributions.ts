@@ -10,7 +10,10 @@ export type Patch = {
 	symptom: { code: string; result: string };
 	context: string;
 	fix: string;
+	approval: { login: string; note?: string };
 };
+
+export const avatarOf = (login: string) => `/reviewers/${login}.jpg`;
 
 export const repoUrl = (repo: string) => `https://github.com/${repo}`;
 export const prUrl = (patch: Patch) => `${repoUrl(patch.repo)}/pull/${patch.prNumber}`;
@@ -31,6 +34,7 @@ export const PATCHES: Patch[] = [
 		},
 		context:
 			'Four docstrings promised a one-argument callable, so following the documentation was guaranteed to crash.',
+		approval: { login: 'Viicos' },
 		fix: 'The callable is handed the field name and its info object, which `ConfigDict.field_title_generator` already described correctly. This aligns the `fields.py` docstrings on `Field()`, `FieldInfo.from_field()`, `computed_field()` and `ComputedFieldInfo` with the signature the code actually calls.'
 	},
 	{
@@ -48,6 +52,10 @@ export const PATCHES: Patch[] = [
 		},
 		context:
 			'A regression I caught by reading the commit that caused it, before anyone filed a bug.',
+		approval: {
+			login: 'Viicos',
+			note: "Thanks, the documentation isn't documenting this prominently, so I missed it when reading."
+		},
 		fix: 'A recent switch to `secrets.compare_digest()` broke it: the function only accepts ASCII when handed `str`. Encoding both sides to bytes first restores equality for any value and keeps the constant-time guarantee that motivated the switch.'
 	},
 	{
@@ -64,6 +72,7 @@ export const PATCHES: Patch[] = [
 			result: '405 Method Not Allowed — even though +page.server.js had a matching action'
 		},
 		context: 'Core routing, plus a test fixture that did not exist before.',
+		approval: { login: 'Rich-Harris', note: 'thank you!' },
 		fix: 'Routing handed the POST to the sibling endpoint and stopped there. Now an endpoint exporting neither `POST` nor `fallback` is treated as unusable and the request falls through to the page actions, mirroring the `endpoint_can_handle` pattern already used for GET/HEAD.'
 	},
 	{
@@ -80,6 +89,7 @@ export const PATCHES: Patch[] = [
 			result: 'one Prometheus time series per parameter value, forever'
 		},
 		context: 'Changing a public default was the only real fix, so I argued for it and it landed.',
+		approval: { login: 'provinzkraut' },
 		fix: '`group_path=True` already collapsed these to the route template `/users/{user_id}`, but the safe behaviour was opt-in, so every default deployment leaked memory silently. I flipped the default and kept raw paths reachable through `group_path=False`.'
 	},
 	{
@@ -96,6 +106,7 @@ export const PATCHES: Patch[] = [
 			result: '"Invalid A P I Key Error"  —  published in the public API docs'
 		},
 		context: 'This text was shipping in the public API docs of every Litestar app.',
+		approval: { login: 'sobolevn', note: 'Looks good to me :)' },
 		fix: 'The splitter broke before every capital letter, including each one inside an uppercase run. Splitting only at real word boundaries keeps acronyms intact: `HTTPTimeoutError` → `HTTP Timeout Error`, `MissingJWTError` → `Missing JWT Error`.'
 	}
 ];

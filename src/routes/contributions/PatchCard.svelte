@@ -4,7 +4,7 @@
 </script>
 
 <script lang="ts">
-	import { prUrl, repoUrl, type Patch } from '$utils/contributions';
+	import { avatarOf, prUrl, repoUrl, type Patch } from '$utils/contributions';
 	import Ticked from './Ticked.svelte';
 
 	let { patch }: { patch: Patch } = $props();
@@ -19,7 +19,12 @@
 
 	<div class="body">
 		<header>
-			<a href={repoUrl(patch.repo)} target="_blank" rel="noopener" class="repo accent-{patch.accent}">
+			<a
+				href={repoUrl(patch.repo)}
+				target="_blank"
+				rel="noopener"
+				class="repo accent-{patch.accent}"
+			>
 				<iconify-icon icon={patch.icon}></iconify-icon>
 				<span class="font-semibold">{patch.repo}</span>
 				<span class="stars">
@@ -41,6 +46,30 @@
 		</div>
 
 		<p class="context">{patch.context}</p>
+
+		<p class="approval">
+			<img
+				src={avatarOf(patch.approval.login)}
+				alt=""
+				width="20"
+				height="20"
+				loading="lazy"
+				decoding="async"
+			/>
+			<span>
+				<a
+					href="https://github.com/{patch.approval.login}"
+					target="_blank"
+					rel="noopener"
+					class="who">{patch.approval.login}</a
+				>
+				{patch.approval.note
+					? 'approved it'
+					: 'reviewed and merged it'}{#if patch.approval.note}<span class="note"
+						>&ldquo;{patch.approval.note}&rdquo;</span
+					>{/if}
+			</span>
+		</p>
 
 		<footer>
 			<div class="diffbar" aria-hidden="true">
@@ -70,145 +99,163 @@
 </article>
 
 <style lang="postcss">
-    .patch {
-        @apply relative;
-    }
+	.patch {
+		@apply relative;
+	}
 
-    .glow {
-        @apply absolute inset-0 rounded-lg blur opacity-0 group-hover:opacity-60
+	.glow {
+		@apply absolute inset-0 rounded-lg blur opacity-0 group-hover:opacity-60
         bg-gradient-to-r from-purple-500/25 to-orange-500/25
         transition duration-500;
-    }
+	}
 
-    .body {
-        @apply relative rounded-lg bg-white/60 dark:bg-gray-800/50 shadow-sm p-5 md:p-6
+	.body {
+		@apply relative rounded-lg bg-white/60 dark:bg-gray-800/50 shadow-sm p-5 md:p-6
         flex flex-col gap-3;
-    }
+	}
 
-    header {
-        @apply flex flex-wrap items-center justify-between gap-2;
-    }
+	header {
+		@apply flex flex-wrap items-center justify-between gap-2;
+	}
 
-    .repo {
-        @apply inline-flex items-center gap-2 text-sm rounded-md px-2 py-1 -ml-2
+	.repo {
+		@apply inline-flex items-center gap-2 text-sm rounded-md px-2 py-1 -ml-2
         duration-150 hover:bg-stone-200/70 dark:hover:bg-stone-800/70;
-    }
+	}
 
-    .repo iconify-icon {
-        @apply text-base;
-    }
+	.repo iconify-icon {
+		@apply text-base;
+	}
 
-    .accent-rose iconify-icon {
-        @apply text-rose-600 dark:text-rose-400;
-    }
+	.accent-rose iconify-icon {
+		@apply text-rose-600 dark:text-rose-400;
+	}
 
-    .accent-orange iconify-icon {
-        @apply text-orange-600 dark:text-orange-400;
-    }
+	.accent-orange iconify-icon {
+		@apply text-orange-600 dark:text-orange-400;
+	}
 
-    .accent-amber iconify-icon {
-        @apply text-amber-600 dark:text-amber-400;
-    }
+	.accent-amber iconify-icon {
+		@apply text-amber-600 dark:text-amber-400;
+	}
 
-    .stars {
-        @apply inline-flex items-center gap-1 text-gray-500 dark:text-gray-400 text-xs;
-    }
+	.stars {
+		@apply inline-flex items-center gap-1 text-gray-500 dark:text-gray-400 text-xs;
+	}
 
-    .stars iconify-icon {
-        @apply text-[0.85em] text-amber-500/80 dark:text-amber-400/70;
-    }
+	.stars iconify-icon {
+		@apply text-[0.85em] text-amber-500/80 dark:text-amber-400/70;
+	}
 
-    .merged {
-        @apply text-xs font-medium px-2.5 py-1;
-    }
+	.merged {
+		@apply text-xs font-medium px-2.5 py-1;
+	}
 
-    h3 {
-        @apply text-lg md:text-xl font-semibold leading-snug;
-    }
+	h3 {
+		@apply text-lg md:text-xl font-semibold leading-snug;
+	}
 
-    .symptom {
-        @apply rounded-md border-l-2 border-red-400/70 dark:border-red-500/60
+	.symptom {
+		@apply rounded-md border-l-2 border-red-400/70 dark:border-red-500/60
         bg-stone-100/80 dark:bg-stone-900/60 px-3 py-2.5 flex flex-col gap-1.5;
-    }
+	}
 
-    .symptom pre {
-        @apply font-mono text-sm overflow-x-auto text-stone-800 dark:text-stone-200;
-    }
+	.symptom pre {
+		@apply font-mono text-sm overflow-x-auto text-stone-800 dark:text-stone-200;
+	}
 
-    .result {
-        @apply flex gap-1.5 items-start text-sm text-red-800 dark:text-red-300 font-mono;
-    }
+	.result {
+		@apply flex gap-1.5 items-start text-sm text-red-800 dark:text-red-300 font-mono;
+	}
 
-    .result iconify-icon {
-        @apply flex-shrink-0 mt-0.5;
-    }
+	.result iconify-icon {
+		@apply flex-shrink-0 mt-0.5;
+	}
 
-    .context {
-        @apply text-sm leading-relaxed text-gray-600 dark:text-gray-400;
-    }
+	.context {
+		@apply text-sm leading-relaxed text-gray-600 dark:text-gray-400;
+	}
 
-    .detail summary {
-        @apply cursor-pointer select-none list-none w-fit
+	.approval {
+		@apply flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400;
+	}
+
+	.approval img {
+		@apply w-5 h-5 rounded-full shrink-0
+        outline outline-1 outline-stone-300 dark:outline-stone-700;
+	}
+
+	.approval .who {
+		@apply font-medium text-gray-800 hover:text-purple-800
+        dark:text-gray-200 dark:hover:text-purple-200 duration-75;
+	}
+
+	.approval .note {
+		@apply italic text-gray-500 dark:text-gray-400 ml-1;
+	}
+
+	.detail summary {
+		@apply cursor-pointer select-none list-none w-fit
         inline-flex items-center gap-1.5 text-sm
         text-gray-500 hover:text-purple-800
         dark:text-gray-400 dark:hover:text-purple-200 duration-75;
-    }
+	}
 
-    .detail summary::-webkit-details-marker {
-        @apply hidden;
-    }
+	.detail summary::-webkit-details-marker {
+		@apply hidden;
+	}
 
-    .detail summary iconify-icon {
-        @apply text-[0.7em] duration-200;
-    }
+	.detail summary iconify-icon {
+		@apply text-[0.7em] duration-200;
+	}
 
-    .detail[open] summary iconify-icon {
-        @apply rotate-90;
-    }
+	.detail[open] summary iconify-icon {
+		@apply rotate-90;
+	}
 
-    .detail p {
-        @apply mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300;
-    }
+	.detail p {
+		@apply mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300;
+	}
 
-    footer {
-        @apply flex items-center gap-3 flex-wrap pt-1;
-    }
+	footer {
+		@apply flex items-center gap-3 flex-wrap pt-1;
+	}
 
-    .diffbar {
-        @apply flex gap-[2px] items-center;
-    }
+	.diffbar {
+		@apply flex gap-[2px] items-center;
+	}
 
-    .diffbar span {
-        @apply w-[3px] h-3.5 rounded-[1px];
-    }
+	.diffbar span {
+		@apply w-[3px] h-3.5 rounded-[1px];
+	}
 
-    .diffbar span.add {
-        @apply bg-green-500/80 dark:bg-green-400/80;
-    }
+	.diffbar span.add {
+		@apply bg-green-500/80 dark:bg-green-400/80;
+	}
 
-    .diffbar span.del {
-        @apply bg-red-500/70 dark:bg-red-400/70;
-    }
+	.diffbar span.del {
+		@apply bg-red-500/70 dark:bg-red-400/70;
+	}
 
-    .counts {
-        @apply font-mono text-xs flex gap-2;
-    }
+	.counts {
+		@apply font-mono text-xs flex gap-2;
+	}
 
-    .add-text {
-        @apply text-green-700 dark:text-green-400;
-    }
+	.add-text {
+		@apply text-green-700 dark:text-green-400;
+	}
 
-    .del-text {
-        @apply text-red-700 dark:text-red-400;
-    }
+	.del-text {
+		@apply text-red-700 dark:text-red-400;
+	}
 
-    .files {
-        @apply text-gray-500 dark:text-gray-400;
-    }
+	.files {
+		@apply text-gray-500 dark:text-gray-400;
+	}
 
-    .prlink {
-        @apply ml-auto inline-flex items-center gap-1 font-mono text-sm
+	.prlink {
+		@apply ml-auto inline-flex items-center gap-1 font-mono text-sm
         text-purple-800 hover:text-purple-600
         dark:text-purple-200 dark:hover:text-purple-400 duration-75;
-    }
+	}
 </style>
