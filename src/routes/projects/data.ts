@@ -215,6 +215,11 @@ export const PROJECTS: Project[] = [
 					url: 'https://github.com/friendofsvelte/tipex/issues?q=is%3Aissue+author%3Algrkvst'
 				},
 				{
+					login: 'MihaelBercic',
+					did: 'turned their question on Enter and Shift+Enter into the docs',
+					url: 'https://github.com/friendofsvelte/tipex/issues/44'
+				},
+				{
 					login: 'Ayush-Tripathy',
 					did: 'merged their autofocus prop',
 					url: 'https://github.com/friendofsvelte/tipex/pull/28'
