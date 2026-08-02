@@ -120,6 +120,23 @@ export const PROJECTS = [
 			'Django messages bridged into Svelte as toast and flash notifications.',
 			'Server-side validation errors surfaced back into SvelteKit form state.'
 		],
+		featured: {
+			lead: 'Listed in',
+			links: [
+				{
+					label: 'svelter.me',
+					url: 'https://svelter.me/explore/library/django-svelte-template_Bishwas-py'
+				},
+				{
+					label: 'sveltethemes.dev',
+					url: 'https://sveltethemes.dev/Bishwas-py/django-svelte-template'
+				},
+				{
+					label: 'starterindex.com',
+					url: 'https://starterindex.com/boilerplate/django-svelte-template'
+				}
+			]
+		},
 		link: 'https://github.com/Bishwas-py/django-svelte-template',
 		image: '/projects/django-svelte-template.jpg'
 	},
