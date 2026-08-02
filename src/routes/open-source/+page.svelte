@@ -120,23 +120,9 @@
         @apply text-gray-700 dark:text-gray-300;
     }
 
-    .stats {
-        @apply flex flex-wrap items-baseline gap-x-3 gap-y-2;
-    }
 
-    .stat {
-        @apply flex items-baseline gap-1.5 pr-3
-        border-r border-gray-300/70 dark:border-gray-700/70
-        last:border-r-0 last:pr-0;
-    }
 
-    .stat .value {
-        @apply text-xl font-bold text-purple-800 dark:text-purple-200;
-    }
 
-    .stat .label {
-        @apply text-sm text-gray-600 dark:text-gray-400;
-    }
 
     .section-title {
         @apply text-2xl font-bold flex items-center gap-2;
