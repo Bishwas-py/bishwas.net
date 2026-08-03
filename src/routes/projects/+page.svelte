@@ -203,33 +203,8 @@
 		@apply -translate-y-0.5 ring-purple-400/70 dark:ring-purple-500/60;
 	}
 
-	.tip {
-		@apply pointer-events-none absolute bottom-full left-1/2 z-30 mb-2 w-max
-        max-w-[min(240px,calc(100vw-2rem))] rounded-md px-2.5 py-1.5 text-xs leading-snug text-left
-        opacity-0 transition-opacity duration-150 shadow-lg
-        bg-gray-900 text-gray-100 dark:bg-gray-100 dark:text-gray-900;
-		transform: translateX(calc(-50% + var(--tip-shift, 0px)));
-	}
-
-	.tip:global(.below) {
-		@apply bottom-auto top-full mb-0 mt-2;
-	}
-
-	.tip::after {
-		content: '';
-		@apply absolute top-full border-[6px] border-transparent
-        border-t-gray-900 dark:border-t-gray-100;
-		left: calc(50% - var(--tip-shift, 0px));
-		transform: translateX(-50%);
-	}
-
-	.tip:global(.below)::after {
-		@apply top-auto bottom-full border-t-transparent
-        border-b-gray-900 dark:border-b-gray-100 dark:border-t-transparent;
-	}
-
-	.face:hover .tip,
-	.face:focus-visible .tip {
+	.face:hover :global(.tip),
+	.face:focus-visible :global(.tip) {
 		@apply opacity-100;
 	}
 

@@ -6,6 +6,7 @@
 <script lang="ts">
 	import { prUrl, repoUrl, type Patch } from '$utils/contributions';
 	import { avatarOf } from '$utils/people';
+	import { tooltip } from '$utils/tooltip';
 	import Ticked from './Ticked.svelte';
 
 	let { patch }: { patch: Patch } = $props();
@@ -76,16 +77,19 @@
 			</span>
 
 			{#if patch.approval.alsoOn}
-				<span class="also" title="Also on the thread: {patch.approval.alsoOn.join(', ')}">
+				<span class="also">
 					{#each patch.approval.alsoOn as login}
-						<img
-							src={avatarOf(login)}
-							alt={login}
-							width="18"
-							height="18"
-							loading="lazy"
-							decoding="async"
-						/>
+						<a href="https://github.com/{login}" target="_blank" rel="noopener" use:tooltip>
+							<img
+								src={avatarOf(login)}
+								alt={login}
+								width="18"
+								height="18"
+								loading="lazy"
+								decoding="async"
+							/>
+							<span class="tip"><b>{login}</b> was on the thread</span>
+						</a>
 					{/each}
 				</span>
 			{/if}
@@ -218,9 +222,24 @@
 		@apply flex items-center -space-x-1.5 shrink-0;
 	}
 
+	.also a {
+		@apply relative block hover:z-20;
+	}
+
 	.also img {
 		@apply w-[18px] h-[18px] rounded-full ring-2
-        ring-white/90 dark:ring-gray-800;
+        ring-white/90 dark:ring-gray-800
+        transition-transform duration-150;
+	}
+
+	.also a:hover img,
+	.also a:focus-visible img {
+		@apply -translate-y-0.5 ring-purple-400/70 dark:ring-purple-500/60;
+	}
+
+	.also a:hover :global(.tip),
+	.also a:focus-visible :global(.tip) {
+		@apply opacity-100;
 	}
 
 	.approval .note {
