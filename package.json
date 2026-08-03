@@ -11,7 +11,6 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@cloudflare/workerd-darwin-arm64": "^1.20260801.1",
     "@eslint/js": "^10.0.1",
     "@friendofsvelte/toggle": "^0.0.4-svelte.5",
     "@iconify/json": "^2.2.508",
