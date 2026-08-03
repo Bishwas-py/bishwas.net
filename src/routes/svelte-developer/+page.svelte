@@ -4,14 +4,41 @@
 	import SimpleIconsDjango from 'virtual:icons/simple-icons/django';
 	import LogosReactIcon from 'virtual:icons/logos/react';
 	import AwesomeCard from '$item/AwesomeCard.svelte';
-	import KeyAchievements from './key-achievements.svelte';
-	import ValueProposition from './value-proposition.svelte';
-	import TechImpact from './tech-impact.svelte';
+	import KeyAchievements from '$item/developer/KeyAchievements.svelte';
+	import ValueProposition from '$item/developer/ValueProposition.svelte';
+	import TechImpact from '$item/developer/TechImpact.svelte';
 	import ContributionHighlights from './contribution-highlights.svelte';
-	import LookingForward from './looking-forward.svelte';
-	import ExpertiseShowcase from './expertise-showcase.svelte';
+	import LookingForward from '$item/developer/LookingForward.svelte';
+	import ExpertiseShowcase from '$item/developer/ExpertiseShowcase.svelte';
 	import Meta from '$item/Meta.svelte';
 	import Video from './Video.svelte';
+
+	const achievements = [
+		{
+			title: 'Team Leadership',
+			description: 'Guided development teams in Philippines through Svelte adoption'
+		},
+		{
+			title: 'Open Source',
+			description: "Created @friendofsvelte/tipex, enhancing Svelte's ecosystem"
+		},
+		{ title: 'Performance Gains', description: 'Delivered faster, more maintainable applications' }
+	];
+
+	const impacts = [
+		{
+			title: 'Performance First',
+			desc: 'Delivered applications with 40% smaller bundles and faster initial loads'
+		},
+		{
+			title: 'Developer Experience',
+			desc: "Mentored teams in adopting Svelte's intuitive reactivity model"
+		},
+		{
+			title: 'Community Impact',
+			desc: 'Contributing back through open-source projects and knowledge sharing'
+		}
+	];
 </script>
 
 <Meta
@@ -118,7 +145,7 @@
 
 		<div class="key-achievements mt-10">
 			<h3 class="text-xl font-semibold mb-4">Impact & Achievements</h3>
-			<KeyAchievements />
+			<KeyAchievements {achievements} />
 		</div>
 
 		<div class="border-l-4 border-orange-500 pl-4 mt-10 flex items-start gap-4">
@@ -134,10 +161,25 @@
 </div>
 
 <div class="max-w-3xl mt-12" in:fade>
-	<ExpertiseShowcase />
+	<ExpertiseShowcase
+		iconClass="w-10 h-10 p-2.5 shrink-0 rounded-full bg-orange-500/10 text-green-500
+      bg-linear-to-r from-green-500/20 via-teal-400/20 to-teal-600/20
+      shadow-inner shadow-green-400/60"
+		title="Building the Svelte Ecosystem"
+		body="Beyond just using Svelte, I've become an active contributor to its ecosystem. The journey from user to advocate has been marked by real-world implementations and open-source contributions."
+	/>
 	<ContributionHighlights />
-	<TechImpact />
-	<ValueProposition />
+	<TechImpact {impacts} dot="border-orange-500" />
+	<ValueProposition
+		bar="from-orange-500/40"
+		intro="What sets me apart isn't just my technical expertise with Svelte – it's understanding that great code comes from developers who enjoy their craft. Having led teams through this journey, I've seen how the right tools and approaches can transform not just codebases, but the entire development experience."
+		teams="Looking to modernize your frontend? I bring tools that bring joy to your developers' daily work. With Svelte, your team will rediscover the peace of mind that comes from clean, intuitive code."
+		projects="Need expertise for a critical project? I offer technical leadership and hands-on development, bringing enterprise-level Svelte experience to your challenges."
+		outro="Every project is a chance to prove that development can be both powerful and peaceful. Whether you're starting fresh or evolving existing systems, I help create an environment where your team can thrive while delivering exceptional results."
+	/>
 	<Video />
-	<LookingForward />
+	<LookingForward
+		gradient="from-orange-500/5 to-purple-500/5"
+		body="The future of web development is about finding the perfect balance between power and simplicity. With Svelte, I'm not just building applications – I'm helping shape a more intuitive way of creating for the web."
+	/>
 </div>

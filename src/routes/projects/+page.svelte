@@ -3,7 +3,7 @@
 	import Meta from '$item/Meta.svelte';
 	import { GROUPED } from './data';
 	import { avatarOf } from '$utils/people';
-	import { tooltip } from '$utils/tooltip';
+	import Face from '$item/Face.svelte';
 </script>
 
 <Meta
@@ -89,17 +89,7 @@
 						{#if project.community.faces}
 							<p class="face-row">
 								{#each project.community.faces as face (face.login)}
-									<a class="face" href={face.url} target="_blank" rel="noopener" use:tooltip>
-										<img
-											src={avatarOf(face.login)}
-											alt={face.login}
-											width="22"
-											height="22"
-											loading="lazy"
-											decoding="async"
-										/>
-										<span class="tip"><b>{face.login}</b> {face.did}</span>
-									</a>
+									<Face login={face.login} href={face.url} tip={face.did} />
 								{/each}
 								{#if project.community.facesMore}
 									<span class="face-more">+{project.community.facesMore}</span>
@@ -185,29 +175,6 @@
 
 	.face-row {
 		@apply mt-1.5 flex items-center -space-x-2;
-	}
-
-	.face {
-		@apply relative block;
-	}
-
-	.face img {
-		@apply w-[22px] h-[22px] rounded-full ring-2 ring-white/90 dark:ring-gray-900
-        transition-transform duration-150;
-	}
-
-	.face:hover {
-		@apply z-20;
-	}
-
-	.face:hover img,
-	.face:focus-visible img {
-		@apply -translate-y-0.5 ring-purple-400/70 dark:ring-purple-500/60;
-	}
-
-	.face:hover :global(.tip),
-	.face:focus-visible :global(.tip) {
-		@apply opacity-100;
 	}
 
 	.face-more {

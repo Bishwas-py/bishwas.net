@@ -3,13 +3,43 @@
 	import SimpleIconsDjango from 'virtual:icons/simple-icons/django';
 	import LogosPythonIcon from 'virtual:icons/logos/python';
 	import AwesomeCard from '$item/AwesomeCard.svelte';
-	import KeyAchievements from './key-achievements.svelte';
-	import ValueProposition from './value-proposition.svelte';
-	import TechImpact from './tech-impact.svelte';
+	import KeyAchievements from '$item/developer/KeyAchievements.svelte';
+	import ValueProposition from '$item/developer/ValueProposition.svelte';
+	import TechImpact from '$item/developer/TechImpact.svelte';
 	import ContributionHighlights from './contribution-highlights.svelte';
-	import LookingForward from './looking-forward.svelte';
-	import ExpertiseShowcase from './expertise-showcase.svelte';
+	import LookingForward from '$item/developer/LookingForward.svelte';
+	import ExpertiseShowcase from '$item/developer/ExpertiseShowcase.svelte';
 	import Meta from '$item/Meta.svelte';
+
+	const achievements = [
+		{
+			title: 'Framework Creation',
+			description: 'Developed Djapy.io, a streamlined REST framework for Django'
+		},
+		{
+			title: 'Community Impact',
+			description: 'Built and maintained Webmatrices platform serving thousands'
+		},
+		{
+			title: 'Open Source',
+			description: 'Created django-svelte-template for modern full-stack development'
+		}
+	];
+
+	const impacts = [
+		{
+			title: 'Framework Innovation',
+			desc: 'Created Djapy.io, simplifying Django REST development while maintaining core functionality'
+		},
+		{
+			title: 'Community Growth',
+			desc: 'Built Webmatrices platform serving thousands of developers and content creators'
+		},
+		{
+			title: 'Developer Experience',
+			desc: 'Streamlined Django deployment processes and created reusable project templates'
+		}
+	];
 </script>
 
 <Meta
@@ -27,10 +57,10 @@
 	<div class="journey-timeline" in:fly={{ y: 20, duration: 600 }}>
 		<div class="flex flex-col gap-2">
 			<p class="text-gray-800 dark:text-gray-200">
-				Every developer's story has its humble beginnings. Mine started during the COVID lockdown, as a 12th
-				grader with a content writing site and a dream to automate the tedious. What began as a simple
-				tool to check Adsense eligibility would evolve into a passion for Django development that shapes
-				my work to this day.
+				Every developer's story has its humble beginnings. Mine started during the COVID lockdown,
+				as a 12th grader with a content writing site and a dream to automate the tedious. What began
+				as a simple tool to check Adsense eligibility would evolve into a passion for Django
+				development that shapes my work to this day.
 			</p>
 		</div>
 
@@ -52,17 +82,18 @@
 				<img
 					alt="djapy"
 					src="https://raw.githubusercontent.com/Bishwas-py/djapy-docs/refs/heads/main/docs/images/icons/djapylogoGreen.svg"
-					class="w-20 h-8" />
+					class="w-20 h-8"
+				/>
 				<span class="text-sm">Djapy</span>
 			</div>
 		</div>
 
 		<div class="mt-6 flex flex-col gap-2" in:fly={{ y: 20, duration: 600, delay: 400 }}>
 			<p class="text-gray-800 dark:text-gray-200">
-				The journey from writing my first Django view to creating Djapy.io has been marked by continuous
-				learning and innovation. Through freelancing, building tools that generate revenue, and
-				ultimately leading to full-time roles, Django has been the constant companion in my developer
-				journey.
+				The journey from writing my first Django view to creating Djapy.io has been marked by
+				continuous learning and innovation. Through freelancing, building tools that generate
+				revenue, and ultimately leading to full-time roles, Django has been the constant companion
+				in my developer journey.
 			</p>
 		</div>
 	</div>
@@ -94,9 +125,9 @@
 
 		<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
 			<AwesomeCard title="From Side Project to Framework">
-				Created Djapy.io, a Django REST framework born from real-world needs and battle-tested across
-				multiple platforms. It's not just another framework - it's the culmination of years of Django
-				development experience.
+				Created Djapy.io, a Django REST framework born from real-world needs and battle-tested
+				across multiple platforms. It's not just another framework - it's the culmination of years
+				of Django development experience.
 			</AwesomeCard>
 
 			<AwesomeCard title="Building with Purpose">
@@ -119,24 +150,40 @@
 		<div class="border-l-4 border-green-500 pl-4 mt-10 flex items-start gap-4">
 			<div class="flex flex-col gap-2">
 				<p class="text-gray-800 dark:text-gray-200 italic">
-					"Django taught me that the best solutions grow from real needs. Every challenge I faced as a
-					developer became an opportunity to build something better for the next person."
+					"Django taught me that the best solutions grow from real needs. Every challenge I faced as
+					a developer became an opportunity to build something better for the next person."
 				</p>
 			</div>
 		</div>
 
 		<div class="key-achievements mt-10">
 			<h3 class="text-xl font-semibold mb-4">Impact & Achievements</h3>
-			<KeyAchievements />
+			<KeyAchievements {achievements} />
 		</div>
 	</div>
 </div>
 
 <div class="max-w-3xl mt-12" in:fade>
-	<ExpertiseShowcase />
+	<ExpertiseShowcase
+		iconClass="w-10 h-10 p-2.5 shrink-0 rounded-full bg-green-500/10 text-green-500
+      bg-linear-to-r from-green-500/20 via-teal-400/20 to-teal-600/20
+      shadow-inner shadow-green-400/60"
+		title="Mastering the Django Ecosystem"
+		body="From writing that first view to architecting complex systems, my journey with Django has evolved into creating tools that empower other developers. The transition from user to contributor reflects a deep understanding of Django's capabilities and its community's needs."
+	/>
 	<ContributionHighlights />
 
-	<TechImpact />
-	<ValueProposition />
-	<LookingForward />
+	<TechImpact {impacts} dot="border-green-500" />
+	<ValueProposition
+		bar="from-green-500/40"
+		intro="What sets me apart isn't just technical expertise with Django – it's understanding how to transform business requirements into elegant solutions. From automating tedious tasks to building frameworks that simplify development, each project has been about solving real problems effectively."
+		teams="Need to scale your Django applications? I bring experience in building and maintaining large-scale Django systems, with a focus on maintainable, efficient code that grows with your needs."
+		projects="Looking for Django expertise? I offer technical leadership and hands-on development, bringing enterprise-level Django experience to your challenges."
+		outro="Every project is an opportunity to demonstrate that Django development can be both powerful and efficient. Whether you're starting fresh or evolving existing systems, I help create solutions that deliver exceptional results while maintaining clean, maintainable codebases."
+	/>
+	<LookingForward
+		gradient="from-green-500/5 to-teal-500/5"
+		variant="django"
+		body="The future of web development is about finding the perfect balance between robust backends and modern frontends. With Django and frameworks like Djapy.io, I'm not just building applications – I'm helping shape a more efficient way of creating for the web. From that first COVID-era project to today's innovations, the journey continues to evolve."
+	/>
 </div>
