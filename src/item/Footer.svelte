@@ -1,81 +1,37 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
 	let showExtraSocial = $state(false);
-	const pathname = $derived($page.url.pathname);
+	const pathname = $derived(page.url.pathname);
+
+	const socials = [
+		{ label: 'Github', href: 'https://github.com/bishwas-py', icon: 'mdi:github', tag: 'github', y: 10, duration: 300 },
+		{ label: 'Twitter', href: 'https://twitter.com/BhBishwas', icon: 'mdi:twitter', tag: 'twitter', y: 20, duration: 480 },
+		{ label: 'Instagram', href: 'https://www.instagram.com/bishwas.py/', icon: 'mdi:instagram', tag: 'instagram', y: 25, duration: 570 },
+		{ label: 'Facebook', href: 'https://www.facebook.com/bishwasbh/', icon: 'mdi:facebook', tag: 'facebook', y: 30, duration: 660 },
+		{ label: 'Reddit', href: 'https://www.reddit.com/user/bishwasbhn', icon: 'mdi:reddit', tag: 'reddit', y: 35, duration: 750 },
+		{ label: 'Linkedin', href: 'https://www.linkedin.com/in/bishwasbh/', icon: 'mdi:linkedin', tag: 'linkedin', y: 15, duration: 390 }
+	];
 </script>
 
-<footer>
-	<div class="footer-left">
+<footer class="mx-auto z-30 max-w-3xl justify-start w-full items-start mt-12 flex px-2">
+	<div class="flex gap-2 flex-wrap relative md:gap-7">
 		{#if showExtraSocial && pathname === '/'}
 			<div class="socials" in:fly={{ y: 30, duration: 50 }} out:fly={{ y: 30, duration: 760 }}>
-				<a
-					class="social-tag github"
-					href="https://github.com/bishwas-py"
-					target="_blank"
-					rel="noopener noreferrer"
-					transition:fly={{ y: 10, duration: 300 }}
-					aria-label="Github"
-					title="Github"
-				>
-					<iconify-icon icon="mdi:github"></iconify-icon>
-				</a>
-				<a
-					class="social-tag twitter"
-					href="https://twitter.com/BhBishwas"
-					target="_blank"
-					rel="noopener noreferrer"
-					transition:fly={{ y: 20, duration: 480 }}
-					aria-label="Twitter"
-					title="Twitter"
-				>
-					<iconify-icon icon="mdi:twitter"></iconify-icon>
-				</a>
-				<a
-					class="social-tag instagram"
-					href="https://www.instagram.com/bishwas.py/"
-					target="_blank"
-					rel="noopener noreferrer"
-					transition:fly={{ y: 25, duration: 570 }}
-					aria-label="Instagram"
-					title="Instagram"
-				>
-					<iconify-icon icon="mdi:instagram"></iconify-icon>
-				</a>
-				<a
-					class="social-tag facebook"
-					href="https://www.facebook.com/bishwasbh/"
-					target="_blank"
-					rel="noopener noreferrer"
-					transition:fly={{ y: 30, duration: 660 }}
-					aria-label="Facebook"
-					title="Facebook"
-				>
-					<iconify-icon icon="mdi:facebook"></iconify-icon>
-				</a>
-				<a
-					class="social-tag reddit"
-					href="https://www.reddit.com/user/bishwasbhn"
-					target="_blank"
-					rel="noopener noreferrer"
-					transition:fly={{ y: 35, duration: 750 }}
-					aria-label="Reddit"
-					title="Reddit"
-				>
-					<iconify-icon icon="mdi:reddit"></iconify-icon>
-				</a>
-				<a
-					class="social-tag linkedin"
-					href="https://www.linkedin.com/in/bishwasbh/"
-					target="_blank"
-					rel="noopener noreferrer"
-					transition:fly={{ y: 15, duration: 390 }}
-					aria-label="Linkedin"
-					title="Linkedin"
-				>
-					<iconify-icon icon="mdi:linkedin"></iconify-icon>
-				</a>
+				{#each socials as social (social.href)}
+					<a
+						class="social-tag {social.tag}"
+						href={social.href}
+						target="_blank"
+						rel="noopener noreferrer"
+						transition:fly={{ y: social.y, duration: social.duration }}
+						aria-label={social.label}
+						title={social.label}
+					>
+						<iconify-icon icon={social.icon}></iconify-icon>
+					</a>
+				{/each}
 			</div>
 		{/if}
 		{#if pathname === '/'}
@@ -99,16 +55,3 @@
 		<span>mail me</span>
 	</a>
 </footer>
-
-<style lang="postcss">
-	@reference '../styles/app.css';
-
-	footer {
-		@apply mx-auto z-30 max-w-3xl justify-start w-full items-start mt-12 flex;
-		@apply px-2;
-	}
-
-	.footer-left {
-		@apply flex gap-2 flex-wrap relative md:gap-7;
-	}
-</style>

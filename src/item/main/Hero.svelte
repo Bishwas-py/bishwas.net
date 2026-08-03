@@ -6,9 +6,9 @@
 	const joiner = (i: number) => (i === 0 ? '' : i === UPSTREAM.length - 1 ? ' and ' : ', ');
 </script>
 
-<header class="max-w-3xl">
-	<div class="hero-content">
-		<div class="avatar-slot w-32 h-32" data-avatar>
+<header class="max-w-3xl flex flex-col items-center justify-center text-slate-900 dark:text-slate-100">
+	<div class="flex flex-col md:flex-row items-start gap-4 md:gap-9">
+		<div class="w-32 h-32 shrink-0 md:sticky top-7" data-avatar>
 			<div class="hero-image-container w-full h-full">
 				<img
 					src="/me-bishwas.jpeg"
@@ -17,7 +17,7 @@
 				/>
 			</div>
 		</div>
-		<div class="hero-text">
+		<div class="flex flex-col w-full">
 			<span
 				class="text-5xl duration-200 sm:text-6xl md:text-7xl px-0 mb-1"
 				in:fade={{ delay: 100 }}
@@ -39,26 +39,3 @@
 		</div>
 	</div>
 </header>
-
-<style lang="postcss">
-	@reference '../../styles/app.css';
-
-	header {
-		@apply flex flex-col items-center justify-center;
-		@apply text-slate-900 dark:text-slate-100;
-	}
-
-	.hero-content {
-		@apply flex flex-col md:flex-row items-start;
-		@apply gap-4 md:gap-9;
-	}
-
-	.avatar-slot {
-		@apply shrink-0 md:sticky top-7;
-	}
-
-	.hero-text {
-		@apply flex-col flex;
-		@apply w-full;
-	}
-</style>

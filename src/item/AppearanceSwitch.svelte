@@ -6,37 +6,21 @@
 
 <TrackAppearance />
 
-<button onclick={()=>{
-  appearance.dark=!appearance.dark
-}} transition:fade>
-  <span transition:fly={{y: 5, duration: 1060}} class="icons">
-      {#if appearance.dark}
-        <iconify-icon icon="mdi:weather-night"></iconify-icon>
-      {:else}
-        <iconify-icon icon="mdi:weather-sunny"></iconify-icon>
-      {/if}
-  </span>
+<button
+	class="absolute top-4 md:top-14 right-7 duration-700 active:scale-95 p-2 w-20 gap-2 items-center justify-between flex dark:drop-shadow-white-md dark:active:drop-shadow-white-xl active:drop-shadow-dark-xl"
+	onclick={() => {
+		appearance.dark = !appearance.dark;
+	}}
+	transition:fade
+>
+	<span transition:fly={{ y: 5, duration: 1060 }} class="flex flex-col items-center justify-center">
+		{#if appearance.dark}
+			<iconify-icon class="text-2xl p-0 m-0" icon="mdi:weather-night"></iconify-icon>
+		{:else}
+			<iconify-icon class="text-2xl p-0 m-0" icon="mdi:weather-sunny"></iconify-icon>
+		{/if}
+	</span>
 	<span class="text">
-        {appearance.dark ? 'Night' : 'Day'}
-    </span>
+		{appearance.dark ? 'Night' : 'Day'}
+	</span>
 </button>
-
-<style lang="postcss">
-	@reference '../styles/app.css';
-
-    button {
-        @apply absolute top-4 md:top-14 right-7
-        duration-700 active:scale-95
-        p-2 w-20
-        gap-2 items-center justify-between flex
-        dark:drop-shadow-white-md dark:active:drop-shadow-white-xl active:drop-shadow-dark-xl;
-    }
-
-    button .icons {
-        @apply flex flex-col items-center justify-center;
-    }
-
-    button .icons iconify-icon {
-        @apply text-2xl p-0 m-0;
-    }
-</style>

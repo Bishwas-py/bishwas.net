@@ -54,20 +54,13 @@
 			<iconify-icon icon="mdi:broadcast"></iconify-icon>
 		</div>
 	{/if}
-	<button class="load-more" onclick={toggleLoadMoreSkills} in:fade={{ delay: 830 }}>
+	<button
+		class="flex items-center justify-center active:scale-95 duration-200"
+		onclick={toggleLoadMoreSkills}
+		in:fade={{ delay: 830 }}
+	>
 		<span class="tag-text">{loadMore ? 'Show less' : 'Show more'}</span>
-		<iconify-icon icon={loadMore ? 'mdi:chevron-up' : 'mdi:chevron-down'}></iconify-icon>
+		<iconify-icon class="w-5 h-5 text-xl" icon={loadMore ? 'mdi:chevron-up' : 'mdi:chevron-down'}
+		></iconify-icon>
 	</button>
 </div>
-
-<style lang="postcss">
-	@reference '../../styles/app.css';
-
-    .load-more {
-        @apply flex items-center justify-center active:scale-95 duration-200;
-    }
-
-    .load-more iconify-icon {
-        @apply w-5 h-5 text-xl;
-    }
-</style>
