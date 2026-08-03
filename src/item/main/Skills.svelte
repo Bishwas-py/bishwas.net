@@ -1,10 +1,7 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { skillTag, skillTagIcon, type SkillTone } from '$utils/tags';
-	import { introOnce } from '$utils/intro';
-
-	const animate = introOnce('skills');
-	const intro = (delay: number) => (animate ? { delay } : { duration: 0 });
+	import { introFade } from '$utils/intro';
 
 	let loadMore = $state(false);
 
@@ -24,7 +21,7 @@
 <div class="flex flex-wrap gap-2 duration-300 mt-5">
 	<a
 		class={skillTag({ tone: 'svelte' })}
-		in:fade={intro(780)}
+		use:introFade={{ key: 'skills-svelte', delay: 780 }}
 		href="/svelte-developer"
 		aria-label="Svelte Developer"
 		title="Svelte Developer"
@@ -35,14 +32,14 @@
 	</a>
 	<a
 		class={skillTag({ tone: 'django' })}
-		in:fade={intro(670)}
+		use:introFade={{ key: 'skills-django', delay: 670 }}
 		href="/django-developer"
 		aria-label="Django Developer"
 	>
 		<span class="tag-text">Django</span>
 		<iconify-icon class={skillTagIcon} icon="simple-icons:django"></iconify-icon>
 	</a>
-	<div class={skillTag({ tone: 'python' })} in:fade={intro(580)}>
+	<div class={skillTag({ tone: 'python' })} use:introFade={{ key: 'skills-python', delay: 580 }}>
 		<span class="tag-text">Python</span>
 		<iconify-icon class={skillTagIcon} icon="mdi:language-python"></iconify-icon>
 	</div>
@@ -57,7 +54,7 @@
 	<button
 		class="flex items-center justify-center active:scale-95 duration-200"
 		onclick={toggleLoadMoreSkills}
-		in:fade={intro(830)}
+		use:introFade={{ key: 'skills-more', delay: 830 }}
 	>
 		<span class="tag-text">{loadMore ? 'Show less' : 'Show more'}</span>
 		<iconify-icon class="w-5 h-5 text-xl" icon={loadMore ? 'mdi:chevron-up' : 'mdi:chevron-down'}
