@@ -15,7 +15,7 @@
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-	{#each achievements as achievement}
+	{#each achievements as achievement (achievement)}
 		<AwesomeCard unglow>
 			{#snippet cus()}
 				<h4 class="font-semibold mb-2">{achievement.title}</h4>

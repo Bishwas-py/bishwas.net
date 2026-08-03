@@ -39,7 +39,7 @@
 </div>
 
 <div class="stats max-w-3xl w-full mb-12">
-	{#each STATS as stat, i}
+	{#each STATS as stat, i (i)}
 		<div class="stat" in:fly={{ y: 12, delay: i * 70, duration: 400 }}>
 			<span class="value">{stat.value}</span>
 			<span class="label">{stat.label}</span>
@@ -55,7 +55,7 @@
 	<p class="section-sub">Frameworks I did not write. Correctness bugs, not typos.</p>
 
 	<div class="flex flex-col gap-6 mt-7">
-		{#each PATCHES as patch}
+		{#each PATCHES as patch (patch.prNumber)}
 			<PatchCard {patch} />
 		{/each}
 	</div>
@@ -69,7 +69,7 @@
 	<p class="section-sub">Traced and filed in projects I only use.</p>
 
 	<ul class="reported mt-6">
-		{#each REPORTED as issue}
+		{#each REPORTED as issue (issue.repo)}
 			<li>
 				<a href={issue.url} target="_blank" rel="noopener">
 					<span class="repo">{issue.repo}</span>

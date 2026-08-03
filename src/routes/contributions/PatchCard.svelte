@@ -78,7 +78,7 @@
 
 			{#if patch.approval.alsoOn}
 				<span class="also">
-					{#each patch.approval.alsoOn as login}
+					{#each patch.approval.alsoOn as login (login)}
 						<a href="https://github.com/{login}" target="_blank" rel="noopener" use:tooltip>
 							<img
 								src={avatarOf(login)}
@@ -97,7 +97,7 @@
 
 		<footer>
 			<div class="diffbar" aria-hidden="true">
-				{#each BAR_SLOTS as _, i}
+				{#each BAR_SLOTS as _, i (i)}
 					<span class={i < addedBars ? 'add' : 'del'}></span>
 				{/each}
 			</div>

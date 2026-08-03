@@ -28,7 +28,7 @@
 			<p class="text-lg ml-1" in:fade={{ delay: 450 }}>
 				When I'm not building with Python or Svelte, you'll find me learning German or doing
 				<a href="/contributions" class="link-inked">open-source</a>, lately in
-				{#each UPSTREAM as repo, i}{joiner(i)}<a
+				{#each UPSTREAM as repo, i (repo.prNumber)}{joiner(i)}<a
 						href={prUrl(repo)}
 						target="_blank"
 						rel="noopener"

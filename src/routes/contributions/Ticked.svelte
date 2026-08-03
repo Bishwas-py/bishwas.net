@@ -4,7 +4,7 @@
 	let parts = $derived(text.split('`'));
 </script>
 
-{#each parts as part, i}{#if i % 2 === 1}<code>{part}</code>{:else}{part}{/if}{/each}
+{#each parts as part, i (i)}{#if i % 2 === 1}<code>{part}</code>{:else}{part}{/if}{/each}
 
 <style lang="postcss">
     code {

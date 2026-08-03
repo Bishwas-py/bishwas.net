@@ -35,12 +35,12 @@
 	</p>
 </div>
 
-{#each GROUPED as group}
+{#each GROUPED as group (group.key)}
 	<section class="max-w-3xl w-full mb-14">
 		<h2 class="group-title">{group.label}</h2>
 
 		<div class="flex flex-col gap-9 mt-6">
-			{#each group.projects as project}
+			{#each group.projects as project (project.name)}
 				<div class="flex flex-col">
 					<div class="flex w-full gap-4">
 						<a
@@ -69,7 +69,7 @@
 							<h2 class="text-xl font-semibold">{project.name}</h2>
 							<p class="text-gray-600 dark:text-gray-400 text-sm">{project.timeline}</p>
 							<ul class="tags mt-1.5">
-								{#each project.technologies as tech}
+								{#each project.technologies as tech (tech.name)}
 									<li class={tech.class}>
 										<iconify-icon icon={tech.icon}></iconify-icon>
 										{tech.name}
@@ -80,7 +80,7 @@
 					</div>
 					<p class="description">{project.description}</p>
 					<ul class="highlights">
-						{#each project.highlights as highlight}
+						{#each project.highlights as highlight (highlight)}
 							<li>{highlight}</li>
 						{/each}
 					</ul>
@@ -88,7 +88,7 @@
 						<p class="worked-label">Worked with</p>
 						{#if project.community.faces}
 							<p class="face-row">
-								{#each project.community.faces as face}
+								{#each project.community.faces as face (face.login)}
 									<a class="face" href={face.url} target="_blank" rel="noopener" use:tooltip>
 										<img
 											src={avatarOf(face.login)}
@@ -107,7 +107,7 @@
 							</p>
 						{/if}
 						<ul class="worked-with">
-							{#each project.community.people as person}
+							{#each project.community.people as person (person.login)}
 								<li>
 									<img
 										src={avatarOf(person.login)}
@@ -144,7 +144,7 @@
 									.featured.tail
 									? ' ' + project.featured.tail
 									: ''}:
-								{#each project.featured.links as link, i}<a
+								{#each project.featured.links as link, i (link.url)}<a
 										href={link.url}
 										target="_blank"
 										rel="noopener"

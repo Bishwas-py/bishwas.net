@@ -107,7 +107,7 @@
 	</p>
 
 	<div class="mt-6 flex flex-wrap gap-2">
-		{#each CATEGORIES as c}
+		{#each CATEGORIES as c (c)}
 			<button
 				type="button"
 				onclick={() => (activeCategory = c)}

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { fly, fade } from 'svelte/transition';
 	import TrackAppearance from '@friendofsvelte/toggle';
 	import { appearance } from '@friendofsvelte/toggle';
