@@ -31,15 +31,15 @@
 		<a href="/projects" class="link-inked">projects</a> and enjoy building tools that help other developers.
 	</p>
 
-	<div class="stats mt-5">
-		<div class="stat">
-			<span class="value">{yearsSince(FULL_TIME_SINCE)}</span>
-			<span class="label">years full-time</span>
-		</div>
-		<div class="stat">
-			<span class="value">{yearsSince(FREELANCING_SINCE)}</span>
-			<span class="label">years including freelance</span>
-		</div>
+	<div class="flex flex-wrap items-baseline gap-x-3 gap-y-2 mt-5">
+		{#each [{ value: yearsSince(FULL_TIME_SINCE), label: 'years full-time' }, { value: yearsSince(FREELANCING_SINCE), label: 'years including freelance' }] as stat (stat.label)}
+			<div
+				class="flex items-baseline gap-1.5 pr-3 border-r border-gray-300/70 dark:border-gray-700/70 last:border-r-0 last:pr-0"
+			>
+				<span class="text-xl font-bold text-purple-800 dark:text-purple-200">{stat.value}</span>
+				<span class="text-sm text-gray-600 dark:text-gray-400">{stat.label}</span>
+			</div>
+		{/each}
 	</div>
 </div>
 

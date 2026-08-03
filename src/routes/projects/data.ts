@@ -1,9 +1,11 @@
+import type { SkillTone } from '$utils/tags';
+
 type Project = {
 	name: string;
 	group: string;
 	timeline: string;
 	description: string;
-	technologies: { name: string; icon: string; class: string }[];
+	technologies: { name: string; icon: string; tone: SkillTone }[];
 	highlights: string[];
 	link: string;
 	image: string;
@@ -31,9 +33,9 @@ const PROJECTS: Project[] = [
 		description:
 			'I got tired of maintaining a frontend repo, a backend repo, and an API layer whose only job was to let the two talk. Fymo renders real Svelte 5 from Python, in one repo and one deploy.',
 		technologies: [
-			{ name: 'Python', icon: 'mdi:language-python', class: 'skill-tag python' },
-			{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' },
-			{ name: 'esbuild', icon: 'logos:esbuild', class: 'skill-tag javascript' }
+			{ name: 'Python', icon: 'mdi:language-python', tone: 'python' },
+			{ name: 'Svelte 5', icon: 'logos:svelte-icon', tone: 'svelte' },
+			{ name: 'esbuild', icon: 'logos:esbuild', tone: 'javascript' }
 		],
 		highlights: [
 			'Compile Svelte once at build time and keep a long-lived Node process for rendering, so nothing compiles per request.',
@@ -56,8 +58,8 @@ const PROJECTS: Project[] = [
 		description:
 			'I have run Webmatrices since 2020: a community where bloggers, publishers and freelancers bring AdSense, SEO and coding problems and get answers from people who have had them.',
 		technologies: [
-			{ name: 'Django/Djapy', icon: 'mdi:language-python', class: 'skill-tag django' },
-			{ name: 'SvelteKit', icon: 'logos:svelte-icon', class: 'skill-tag svelte' }
+			{ name: 'Django/Djapy', icon: 'mdi:language-python', tone: 'django' },
+			{ name: 'SvelteKit', icon: 'logos:svelte-icon', tone: 'svelte' }
 		],
 		highlights: [
 			'Built its APIs on djapy, my own framework, so I was the first person to live with its mistakes.',
@@ -91,9 +93,9 @@ const PROJECTS: Project[] = [
 		description:
 			'Every MCP server I tried wanted API keys and an OAuth dance for sites I was already signed into. This one borrows the Chrome session that is already open, so Claude, Cursor and Windsurf can read Reddit, X, LinkedIn and the rest without me handing anything over.',
 		technologies: [
-			{ name: 'Rust', icon: 'simple-icons:rust', class: 'skill-tag rust' },
-			{ name: 'Tauri', icon: 'simple-icons:tauri', class: 'skill-tag javascript' },
-			{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' }
+			{ name: 'Rust', icon: 'simple-icons:rust', tone: 'rust' },
+			{ name: 'Tauri', icon: 'simple-icons:tauri', tone: 'javascript' },
+			{ name: 'Svelte 5', icon: 'logos:svelte-icon', tone: 'svelte' }
 		],
 		highlights: [
 			'Wrote the worker in Rust as a single static binary and gave every AI client its own process, so one client cannot take another down.',
@@ -117,9 +119,7 @@ const PROJECTS: Project[] = [
 		timeline: '97 stars, 389 commits in six weeks',
 		description:
 			'I wanted to know whether an open source Medium alternative could put authors in charge without getting complicated. Simple beats complex was the whole bet, and I built it on Rails 7 to find out.',
-		technologies: [
-			{ name: 'Ruby on Rails 7', icon: 'mdi:language-ruby-on-rails', class: 'skill-tag rails' }
-		],
+		technologies: [{ name: 'Ruby on Rails 7', icon: 'mdi:language-ruby-on-rails', tone: 'rails' }],
 		highlights: [
 			'Kept the data model deliberately small, because every feature I skipped was one an author would not have to think about.',
 			"Ran it in the open from the first commit, which is why other people's patches ended up in it.",
@@ -151,9 +151,9 @@ const PROJECTS: Project[] = [
 		description:
 			'Django REST Framework kept asking me to write serializers for things Django already knew. Djapy uses type hints as the contract instead: a decorator, a return type, done.',
 		technologies: [
-			{ name: 'Django', icon: 'mdi:language-python', class: 'skill-tag django' },
-			{ name: 'Pydantic', icon: 'mdi:json', class: 'skill-tag python' },
-			{ name: 'Swagger', icon: 'mdi:api', class: 'skill-tag python' }
+			{ name: 'Django', icon: 'mdi:language-python', tone: 'django' },
+			{ name: 'Pydantic', icon: 'mdi:json', tone: 'python' },
+			{ name: 'Swagger', icon: 'mdi:api', tone: 'python' }
 		],
 		highlights: [
 			'Made the function signature the schema, so there is no second place to keep in sync.',
@@ -195,9 +195,9 @@ const PROJECTS: Project[] = [
 		description:
 			'I wanted a rich-text editor for SvelteKit that looked finished the moment it was installed. TipTap and ProseMirror handle the document model; everything above them is mine.',
 		technologies: [
-			{ name: 'Tiptap', icon: 'mdi:format-text', class: 'skill-tag react' },
-			{ name: 'Prosemirror', icon: 'material-symbols:owl', class: 'skill-tag react' },
-			{ name: 'Svelte', icon: 'logos:svelte-icon', class: 'skill-tag svelte' }
+			{ name: 'Tiptap', icon: 'mdi:format-text', tone: 'react' },
+			{ name: 'Prosemirror', icon: 'material-symbols:owl', tone: 'react' },
+			{ name: 'Svelte', icon: 'logos:svelte-icon', tone: 'svelte' }
 		],
 		highlights: [
 			'Took TipTap rather than hand-rolling a ProseMirror layer, so I inherited its extension system and only had to own the Svelte side.',
@@ -298,9 +298,9 @@ const PROJECTS: Project[] = [
 		description:
 			'Every time I paired Django with SvelteKit I rebuilt the same plumbing. I solved it once properly and made that the starting point instead of doing it again.',
 		technologies: [
-			{ name: 'Django', icon: 'mdi:language-python', class: 'skill-tag django' },
-			{ name: 'SvelteKit', icon: 'logos:svelte-icon', class: 'skill-tag svelte' },
-			{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' }
+			{ name: 'Django', icon: 'mdi:language-python', tone: 'django' },
+			{ name: 'SvelteKit', icon: 'logos:svelte-icon', tone: 'svelte' },
+			{ name: 'TypeScript', icon: 'logos:typescript-icon', tone: 'typescript' }
 		],
 		highlights: [
 			'Got session auth working through server-side rendering, which is the part that breaks first and costs the most to debug.',
@@ -350,9 +350,9 @@ const PROJECTS: Project[] = [
 		description:
 			'Every Svelte project I start needs icons, and the libraries I tried either fetched them at runtime or shipped the whole set. I wrote a CLI that puts the icons into the project as real components.',
 		technologies: [
-			{ name: 'Node.js', icon: 'logos:nodejs-icon', class: 'skill-tag typescript' },
-			{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' },
-			{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' }
+			{ name: 'Node.js', icon: 'logos:nodejs-icon', tone: 'typescript' },
+			{ name: 'TypeScript', icon: 'logos:typescript-icon', tone: 'typescript' },
+			{ name: 'Svelte 5', icon: 'logos:svelte-icon', tone: 'svelte' }
 		],
 		highlights: [
 			'Generate typed components ahead of time, so icons cost nothing at runtime and a wrong name fails at compile.',
@@ -393,8 +393,8 @@ const PROJECTS: Project[] = [
 		description:
 			'I needed Mermaid diagrams on a server-rendered SvelteKit site, and the wrappers I found either broke during SSR or pulled mermaid.js into the first load. So I wrote the component I wanted.',
 		technologies: [
-			{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' },
-			{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' }
+			{ name: 'Svelte 5', icon: 'logos:svelte-icon', tone: 'svelte' },
+			{ name: 'TypeScript', icon: 'logos:typescript-icon', tone: 'typescript' }
 		],
 		highlights: [
 			'Load mermaid.js behind a dynamic import so it never reaches the server bundle.',
@@ -421,8 +421,8 @@ const PROJECTS: Project[] = [
 		description:
 			'Runes gave me reactivity but not persistence, and I kept rewriting the same localStorage glue in every project. This is that glue written once, typed.',
 		technologies: [
-			{ name: 'Svelte 5', icon: 'logos:svelte-icon', class: 'skill-tag svelte' },
-			{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' }
+			{ name: 'Svelte 5', icon: 'logos:svelte-icon', tone: 'svelte' },
+			{ name: 'TypeScript', icon: 'logos:typescript-icon', tone: 'typescript' }
 		],
 		highlights: [
 			'Put definition, persistence and cross-component sync in a single class, so there is nothing else to learn.',
@@ -463,9 +463,9 @@ const PROJECTS: Project[] = [
 		description:
 			'I had a hard time finding a decent SEO analyser for Node, so I wrote one. For 2.0 I rebuilt it as a rule engine rather than the pile of checks it had grown into.',
 		technologies: [
-			{ name: 'Node.js', icon: 'logos:nodejs-icon', class: 'skill-tag typescript' },
-			{ name: 'TypeScript', icon: 'logos:typescript-icon', class: 'skill-tag typescript' },
-			{ name: 'JavaScript', icon: 'skill-icons:javascript', class: 'skill-tag javascript' }
+			{ name: 'Node.js', icon: 'logos:nodejs-icon', tone: 'typescript' },
+			{ name: 'TypeScript', icon: 'logos:typescript-icon', tone: 'typescript' },
+			{ name: 'JavaScript', icon: 'skill-icons:javascript', tone: 'javascript' }
 		],
 		highlights: [
 			'Turned 22 checks into individually disableable rules, so the score can be explained rather than just produced.',
@@ -502,8 +502,8 @@ const PROJECTS: Project[] = [
 		description:
 			'I needed Fiverr gig and profile data as structured JSON and there was no clean way to get it, so I wrote the library and put it on PyPI. Seven people have filed issues against it since.',
 		technologies: [
-			{ name: 'Python', icon: 'mdi:language-python', class: 'skill-tag python' },
-			{ name: 'Web Scraping', icon: 'mdi:web', class: 'skill-tag django' }
+			{ name: 'Python', icon: 'mdi:language-python', tone: 'python' },
+			{ name: 'Web Scraping', icon: 'mdi:web', tone: 'django' }
 		],
 		highlights: [
 			'Return both parsed JSON and the raw soup, so callers can take my parsing or ignore it entirely.',
@@ -573,8 +573,8 @@ const PROJECTS: Project[] = [
 		description:
 			'I wanted my own Go scripts to raise desktop notifications on Linux without dragging in a desktop framework, so I wrote a thin layer over D-Bus.',
 		technologies: [
-			{ name: 'Go', icon: 'logos:go', class: 'skill-tag go' },
-			{ name: 'D-Bus', icon: 'mdi:linux', class: 'skill-tag github' }
+			{ name: 'Go', icon: 'logos:go', tone: 'go' },
+			{ name: 'D-Bus', icon: 'mdi:linux', tone: 'github' }
 		],
 		highlights: [
 			'Bound action buttons straight to Go functions, so a notification can run code rather than only appear.',
@@ -591,9 +591,9 @@ const PROJECTS: Project[] = [
 		description:
 			'I am learning German and wanted drilling rather than flashcards, so I built three modes I keep coming back to: transcribing sentences, building them from keywords, and reflex drills on grammar patterns.',
 		technologies: [
-			{ name: 'Next.js', icon: 'logos:nextjs-icon', class: 'skill-tag react' },
-			{ name: 'React', icon: 'logos:react', class: 'skill-tag react' },
-			{ name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss', class: 'skill-tag tailwind' }
+			{ name: 'Next.js', icon: 'logos:nextjs-icon', tone: 'react' },
+			{ name: 'React', icon: 'logos:react', tone: 'react' },
+			{ name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss', tone: 'tailwind' }
 		],
 		highlights: [
 			'Made typing the input, because recognising a correct sentence and producing one are not the same skill.',
@@ -610,8 +610,8 @@ const PROJECTS: Project[] = [
 		description:
 			'My fourteen year old brother plays Minecraft and wanted the clicking trainer he used to do more. I asked why I should not just build it, so I did, and shipped what he asked for.',
 		technologies: [
-			{ name: 'Next.js', icon: 'logos:nextjs-icon', class: 'skill-tag react' },
-			{ name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss', class: 'skill-tag tailwind' }
+			{ name: 'Next.js', icon: 'logos:nextjs-icon', tone: 'react' },
+			{ name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss', tone: 'tailwind' }
 		],
 		highlights: [
 			'Built the features he actually named: fullscreen, a much bigger click area, and a dark mode I threw in.',

@@ -17,8 +17,8 @@
 			showcasing Django's capabilities in handling large-scale applications.
 		</AwesomeCard>
 		<AwesomeCard title="Deployment Expertise">
-			Pioneered efficient Django deployment strategies, particularly for cPanel environments, helping
-			countless developers through Fiverr and open-source contributions.
+			Pioneered efficient Django deployment strategies, particularly for cPanel environments,
+			helping countless developers through Fiverr and open-source contributions.
 		</AwesomeCard>
 	</div>
 </div>

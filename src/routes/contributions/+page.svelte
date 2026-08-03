@@ -20,9 +20,11 @@
 	keywords="open source contributions, upstream patches, pydantic, sveltekit, litestar, python, svelte, pull requests"
 />
 
-<div class="intro max-w-3xl w-full mb-8">
-	<h1>Things I fixed in other people's code.</h1>
-	<p>
+<div class="max-w-3xl w-full mb-8">
+	<h1 class="text-3xl md:text-4xl font-bold leading-tight mb-3">
+		Things I fixed in other people's code.
+	</h1>
+	<p class="text-gray-700 dark:text-gray-300">
 		Bugs I found in other people's code, and what I sent them. Everything links to the pull request
 		on
 		<a
@@ -38,21 +40,27 @@
 	</p>
 </div>
 
-<div class="stats max-w-3xl w-full mb-12">
+<div class="flex flex-wrap items-baseline gap-x-3 gap-y-2 max-w-3xl w-full mb-12">
 	{#each STATS as stat, i (i)}
-		<div class="stat" in:fly={{ y: 12, delay: i * 70, duration: 400 }}>
-			<span class="value">{stat.value}</span>
-			<span class="label">{stat.label}</span>
+		<div
+			class="flex items-baseline gap-1.5 pr-3 border-r border-gray-300/70 dark:border-gray-700/70 last:border-r-0 last:pr-0"
+			in:fly={{ y: 12, delay: i * 70, duration: 400 }}
+		>
+			<span class="text-xl font-bold text-purple-800 dark:text-purple-200">{stat.value}</span>
+			<span class="text-sm text-gray-600 dark:text-gray-400">{stat.label}</span>
 		</div>
 	{/each}
 </div>
 
 <section class="max-w-3xl w-full mb-16">
-	<h2 class="section-title">
-		<iconify-icon icon="ph:git-merge-duotone"></iconify-icon>
+	<h2 class="text-2xl font-bold flex items-center gap-2">
+		<iconify-icon class="text-purple-700 dark:text-purple-300" icon="ph:git-merge-duotone"
+		></iconify-icon>
 		Merged upstream
 	</h2>
-	<p class="section-sub">Frameworks I did not write. Correctness bugs, not typos.</p>
+	<p class="text-gray-600 dark:text-gray-400 mt-1">
+		Frameworks I did not write. Correctness bugs, not typos.
+	</p>
 
 	<div class="flex flex-col gap-6 mt-7">
 		{#each PATCHES as patch (patch.prNumber)}
@@ -62,75 +70,36 @@
 </section>
 
 <section class="max-w-3xl w-full">
-	<h2 class="section-title">
-		<iconify-icon icon="ph:bug-beetle-duotone"></iconify-icon>
+	<h2 class="text-2xl font-bold flex items-center gap-2">
+		<iconify-icon class="text-purple-700 dark:text-purple-300" icon="ph:bug-beetle-duotone"
+		></iconify-icon>
 		Also reported
 	</h2>
-	<p class="section-sub">Traced and filed in projects I only use.</p>
+	<p class="text-gray-600 dark:text-gray-400 mt-1">Traced and filed in projects I only use.</p>
 
-	<ul class="reported mt-6">
+	<ul class="flex flex-col mt-6">
 		{#each REPORTED as issue (issue.repo)}
 			<li>
-				<a href={issue.url} target="_blank" rel="noopener">
-					<span class="repo">{issue.repo}</span>
-					<span class="stars"><iconify-icon icon="ph:star-fill"></iconify-icon>{issue.stars}</span>
-					<span class="title"><Ticked text={issue.title} /></span>
-					<iconify-icon icon="ph:arrow-up-right-bold"></iconify-icon>
+				<a
+					class="flex items-center gap-2 flex-wrap py-2.5 px-3 -mx-3 rounded-md text-sm duration-150 hover:bg-white/60 dark:hover:bg-gray-800/50"
+					href={issue.url}
+					target="_blank"
+					rel="noopener"
+				>
+					<span class="font-mono font-medium">{issue.repo}</span>
+					<span class="inline-flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400"
+						><iconify-icon
+							class="text-[0.9em] text-amber-500/80 dark:text-amber-400/70"
+							icon="ph:star-fill"
+						></iconify-icon>{issue.stars}</span
+					>
+					<span class="text-gray-700 dark:text-gray-300"><Ticked text={issue.title} /></span>
+					<iconify-icon
+						class="ml-auto text-gray-400 dark:text-gray-500"
+						icon="ph:arrow-up-right-bold"
+					></iconify-icon>
 				</a>
 			</li>
 		{/each}
 	</ul>
 </section>
-
-<style lang="postcss">
-	@reference '../../styles/app.css';
-
-	.intro h1 {
-		@apply text-3xl md:text-4xl font-bold leading-tight mb-3;
-	}
-
-	.intro p {
-		@apply text-gray-700 dark:text-gray-300;
-	}
-
-	.section-title {
-		@apply text-2xl font-bold flex items-center gap-2;
-	}
-
-	.section-title iconify-icon {
-		@apply text-purple-700 dark:text-purple-300;
-	}
-
-	.section-sub {
-		@apply text-gray-600 dark:text-gray-400 mt-1;
-	}
-
-	.reported {
-		@apply flex flex-col;
-	}
-
-	.reported li a {
-		@apply flex items-center gap-2 flex-wrap py-2.5 px-3 -mx-3 rounded-md text-sm
-        duration-150 hover:bg-white/60 dark:hover:bg-gray-800/50;
-	}
-
-	.reported .repo {
-		@apply font-mono font-medium;
-	}
-
-	.reported .stars {
-		@apply inline-flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400;
-	}
-
-	.reported .stars iconify-icon {
-		@apply text-[0.9em] text-amber-500/80 dark:text-amber-400/70;
-	}
-
-	.reported .title {
-		@apply text-gray-700 dark:text-gray-300;
-	}
-
-	.reported li a > iconify-icon {
-		@apply ml-auto text-gray-400 dark:text-gray-500;
-	}
-</style>

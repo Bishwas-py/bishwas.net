@@ -165,25 +165,22 @@
 
 <div class="max-w-3xl mt-12" in:fade>
 	<ExpertiseShowcase
-		iconClass="w-10 h-10 p-2.5 shrink-0 rounded-full bg-green-500/10 text-green-500
-      bg-linear-to-r from-green-500/20 via-teal-400/20 to-teal-600/20
-      shadow-inner shadow-green-400/60"
+		accent="django"
 		title="Mastering the Django Ecosystem"
 		body="From writing that first view to architecting complex systems, my journey with Django has evolved into creating tools that empower other developers. The transition from user to contributor reflects a deep understanding of Django's capabilities and its community's needs."
 	/>
 	<ContributionHighlights />
 
-	<TechImpact {impacts} dot="border-green-500" />
+	<TechImpact {impacts} accent="django" />
 	<ValueProposition
-		bar="from-green-500/40"
+		accent="django"
 		intro="What sets me apart isn't just technical expertise with Django – it's understanding how to transform business requirements into elegant solutions. From automating tedious tasks to building frameworks that simplify development, each project has been about solving real problems effectively."
 		teams="Need to scale your Django applications? I bring experience in building and maintaining large-scale Django systems, with a focus on maintainable, efficient code that grows with your needs."
 		projects="Looking for Django expertise? I offer technical leadership and hands-on development, bringing enterprise-level Django experience to your challenges."
 		outro="Every project is an opportunity to demonstrate that Django development can be both powerful and efficient. Whether you're starting fresh or evolving existing systems, I help create solutions that deliver exceptional results while maintaining clean, maintainable codebases."
 	/>
 	<LookingForward
-		gradient="from-green-500/5 to-teal-500/5"
-		variant="django"
+		accent="django"
 		body="The future of web development is about finding the perfect balance between robust backends and modern frontends. With Django and frameworks like Djapy.io, I'm not just building applications – I'm helping shape a more efficient way of creating for the web. From that first COVID-era project to today's innovations, the journey continues to evolve."
 	/>
 </div>

@@ -162,16 +162,14 @@
 
 <div class="max-w-3xl mt-12" in:fade>
 	<ExpertiseShowcase
-		iconClass="w-10 h-10 p-2.5 shrink-0 rounded-full bg-orange-500/10 text-green-500
-      bg-linear-to-r from-green-500/20 via-teal-400/20 to-teal-600/20
-      shadow-inner shadow-green-400/60"
+		accent="svelte"
 		title="Building the Svelte Ecosystem"
 		body="Beyond just using Svelte, I've become an active contributor to its ecosystem. The journey from user to advocate has been marked by real-world implementations and open-source contributions."
 	/>
 	<ContributionHighlights />
-	<TechImpact {impacts} dot="border-orange-500" />
+	<TechImpact {impacts} accent="svelte" />
 	<ValueProposition
-		bar="from-orange-500/40"
+		accent="svelte"
 		intro="What sets me apart isn't just my technical expertise with Svelte – it's understanding that great code comes from developers who enjoy their craft. Having led teams through this journey, I've seen how the right tools and approaches can transform not just codebases, but the entire development experience."
 		teams="Looking to modernize your frontend? I bring tools that bring joy to your developers' daily work. With Svelte, your team will rediscover the peace of mind that comes from clean, intuitive code."
 		projects="Need expertise for a critical project? I offer technical leadership and hands-on development, bringing enterprise-level Svelte experience to your challenges."
@@ -179,7 +177,7 @@
 	/>
 	<Video />
 	<LookingForward
-		gradient="from-orange-500/5 to-purple-500/5"
+		accent="svelte"
 		body="The future of web development is about finding the perfect balance between power and simplicity. With Svelte, I'm not just building applications – I'm helping shape a more intuitive way of creating for the web."
 	/>
 </div>

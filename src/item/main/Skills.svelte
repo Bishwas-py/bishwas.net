@@ -1,16 +1,25 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
+	import { skillTag, skillTagIcon, type SkillTone } from '$utils/tags';
 
 	let loadMore = $state(false);
 
 	function toggleLoadMoreSkills() {
 		loadMore = !loadMore;
 	}
+
+	const moreSkills: { tone: SkillTone; label: string; icon: string }[] = [
+		{ tone: 'typescript', label: 'TypeScript', icon: 'mdi:language-typescript' },
+		{ tone: 'react', label: 'React.js', icon: 'mdi:react' },
+		{ tone: 'rails', label: 'Ruby on Rails', icon: 'mdi:language-ruby-on-rails' },
+		{ tone: 'tailwind', label: 'Tailwind CSS', icon: 'simple-icons:tailwindcss' },
+		{ tone: 'sockets', label: 'Sockets', icon: 'mdi:broadcast' }
+	];
 </script>
 
-<div class="tags mt-5">
+<div class="flex flex-wrap gap-2 duration-300 mt-5">
 	<a
-		class="skill-tag svelte"
+		class={skillTag({ tone: 'svelte' })}
 		in:fade={{ delay: 780 }}
 		href="/svelte-developer"
 		aria-label="Svelte Developer"
@@ -18,41 +27,28 @@
 	>
 		<span class="tag-text">Svelte</span>
 		<span class="sr-only">Hire Svelte Developer</span>
-		<iconify-icon icon="simple-icons:svelte"></iconify-icon>
+		<iconify-icon class={skillTagIcon} icon="simple-icons:svelte"></iconify-icon>
 	</a>
 	<a
-		class="skill-tag django"
+		class={skillTag({ tone: 'django' })}
 		in:fade={{ delay: 670 }}
 		href="/django-developer"
-		aria-label="Django Developer">
+		aria-label="Django Developer"
+	>
 		<span class="tag-text">Django</span>
-		<iconify-icon icon="simple-icons:django"></iconify-icon>
+		<iconify-icon class={skillTagIcon} icon="simple-icons:django"></iconify-icon>
 	</a>
-	<div class="skill-tag python" in:fade={{ delay: 580 }}>
+	<div class={skillTag({ tone: 'python' })} in:fade={{ delay: 580 }}>
 		<span class="tag-text">Python</span>
-		<iconify-icon icon="mdi:language-python"></iconify-icon>
+		<iconify-icon class={skillTagIcon} icon="mdi:language-python"></iconify-icon>
 	</div>
 	{#if loadMore}
-		<div class="skill-tag typescript" in:fade>
-			<span class="tag-text">TypeScript</span>
-			<iconify-icon icon="mdi:language-typescript"></iconify-icon>
-		</div>
-		<div class="skill-tag react" in:fade>
-			<span class="tag-text">React.js</span>
-			<iconify-icon icon="mdi:react"></iconify-icon>
-		</div>
-		<div class="skill-tag rails" in:fade>
-			<span class="tag-text">Ruby on Rails</span>
-			<iconify-icon icon="mdi:language-ruby-on-rails"></iconify-icon>
-		</div>
-		<div class="skill-tag tailwind" in:fade>
-			<span class="tag-text">Tailwind CSS</span>
-			<iconify-icon icon="simple-icons:tailwindcss"></iconify-icon>
-		</div>
-		<div class="skill-tag sockets" in:fade>
-			<span class="tag-text">Sockets</span>
-			<iconify-icon icon="mdi:broadcast"></iconify-icon>
-		</div>
+		{#each moreSkills as skill (skill.label)}
+			<div class={skillTag({ tone: skill.tone })} in:fade>
+				<span class="tag-text">{skill.label}</span>
+				<iconify-icon class={skillTagIcon} icon={skill.icon}></iconify-icon>
+			</div>
+		{/each}
 	{/if}
 	<button
 		class="flex items-center justify-center active:scale-95 duration-200"

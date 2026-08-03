@@ -1,18 +1,35 @@
 <script lang="ts">
+	import { tv, type VariantProps } from 'tailwind-variants';
 	import AwesomeCard from '$item/AwesomeCard.svelte';
 
+	const bar = tv({
+		base: 'absolute left-0 w-1 h-full bg-linear-to-b to-transparent rounded-full',
+		variants: {
+			accent: {
+				svelte: 'from-orange-500/40',
+				django: 'from-green-500/40'
+			}
+		}
+	});
+
 	let {
-		bar,
+		accent,
 		intro,
 		teams,
 		projects,
 		outro
-	}: { bar: string; intro: string; teams: string; projects: string; outro: string } = $props();
+	}: {
+		accent: VariantProps<typeof bar>['accent'];
+		intro: string;
+		teams: string;
+		projects: string;
+		outro: string;
+	} = $props();
 </script>
 
 <div class="mt-10 mb-12">
 	<div class="relative">
-		<div class="absolute left-0 w-1 h-full bg-linear-to-b {bar} to-transparent rounded-full"></div>
+		<div class={bar({ accent })}></div>
 
 		<div class="pl-6">
 			<h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">

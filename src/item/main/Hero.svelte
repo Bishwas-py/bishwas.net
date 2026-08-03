@@ -1,21 +1,18 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
+	import Avatar from '$item/Avatar.svelte';
 	import Skills from '$item/main/Skills.svelte';
 	import { FEATURED as UPSTREAM, prUrl } from '$utils/contributions';
 
 	const joiner = (i: number) => (i === 0 ? '' : i === UPSTREAM.length - 1 ? ' and ' : ', ');
 </script>
 
-<header class="max-w-3xl flex flex-col items-center justify-center text-slate-900 dark:text-slate-100">
+<header
+	class="max-w-3xl flex flex-col items-center justify-center text-slate-900 dark:text-slate-100"
+>
 	<div class="flex flex-col md:flex-row items-start gap-4 md:gap-9">
 		<div class="w-32 h-32 shrink-0 md:sticky top-7" data-avatar>
-			<div class="hero-image-container w-full h-full">
-				<img
-					src="/me-bishwas.jpeg"
-					alt="Bishwas Bhandari - Full-Stack Developer"
-					class="hero-image"
-				/>
-			</div>
+			<Avatar alt="Bishwas Bhandari - Full-Stack Developer" />
 		</div>
 		<div class="flex flex-col w-full">
 			<span

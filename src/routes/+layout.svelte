@@ -14,7 +14,9 @@
 	avatarFlight();
 </script>
 
-<div class="text-slate-900 dark:text-slate-100 w-full min-h-screen flex flex-col relative z-10 pb-7">
+<div
+	class="text-slate-900 dark:text-slate-100 w-full min-h-screen flex flex-col relative z-10 pb-7"
+>
 	<Navbar />
 	<main class="pt-9 flex flex-col items-center">
 		<div class="flex flex-col items-center w-full px-4">
@@ -26,7 +28,9 @@
 </div>
 
 <div class="fixed top-0 w-screen h-screen">
-	<div class="h-full w-full bg-linear-to-b from-purple-100/75 to-slate-200/75 dark:from-gray-950/95 dark:to-slate-950/95"></div>
+	<div
+		class="h-full w-full bg-linear-to-b from-purple-100/75 to-slate-200/75 dark:from-gray-950/95 dark:to-slate-950/95"
+	></div>
 	<img
 		src="/bg.png"
 		alt="Bishwas Bhandari PNG"
