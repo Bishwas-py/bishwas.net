@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { FULL_TIME_SINCE, yearsSince } from '$utils/years';
+	import { introOnce } from '$utils/intro';
+
+	const intro = introOnce('content') ? { delay: 920 } : { duration: 0 };
 </script>
 
-<div in:fade={{ delay: 920 }}>
+<div in:fade={intro}>
 	<div class="intro max-w-3xl mt-12">
 		<h2 class="text-2xl mb-3">Intro</h2>
 		<p class="text-lg">
