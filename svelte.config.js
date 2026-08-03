@@ -15,7 +15,6 @@ const config = {
 			$icons: './src/icons'
 		}
 	},
-	plugins: [],
 	compilerOptions: {
 		runes: true
 	}

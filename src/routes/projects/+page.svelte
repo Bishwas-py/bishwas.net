@@ -35,7 +35,7 @@
 			target="_blank"
 			in:fade
 		>
-			<span class="tag-text">this site</span>
+			<span>this site</span>
 			<iconify-icon icon="simple-icons:svelte"></iconify-icon>
 		</a> is one of them, source and all.
 	</p>

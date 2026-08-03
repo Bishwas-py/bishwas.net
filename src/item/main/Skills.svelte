@@ -26,7 +26,7 @@
 		aria-label="Svelte Developer"
 		title="Svelte Developer"
 	>
-		<span class="tag-text">Svelte</span>
+		<span>Svelte</span>
 		<span class="sr-only">Hire Svelte Developer</span>
 		<iconify-icon class={skillTagIcon} icon="simple-icons:svelte"></iconify-icon>
 	</a>
@@ -36,17 +36,17 @@
 		href="/django-developer"
 		aria-label="Django Developer"
 	>
-		<span class="tag-text">Django</span>
+		<span>Django</span>
 		<iconify-icon class={skillTagIcon} icon="simple-icons:django"></iconify-icon>
 	</a>
 	<div class={skillTag({ tone: 'python' })} use:introFade={{ key: 'skills-python', delay: 580 }}>
-		<span class="tag-text">Python</span>
+		<span>Python</span>
 		<iconify-icon class={skillTagIcon} icon="mdi:language-python"></iconify-icon>
 	</div>
 	{#if loadMore}
 		{#each moreSkills as skill (skill.label)}
 			<div class={skillTag({ tone: skill.tone })} in:fade>
-				<span class="tag-text">{skill.label}</span>
+				<span>{skill.label}</span>
 				<iconify-icon class={skillTagIcon} icon={skill.icon}></iconify-icon>
 			</div>
 		{/each}
@@ -56,7 +56,7 @@
 		onclick={toggleLoadMoreSkills}
 		use:introFade={{ key: 'skills-more', delay: 830 }}
 	>
-		<span class="tag-text">{loadMore ? 'Show less' : 'Show more'}</span>
+		<span>{loadMore ? 'Show less' : 'Show more'}</span>
 		<iconify-icon class="w-5 h-5 text-xl" icon={loadMore ? 'mdi:chevron-up' : 'mdi:chevron-down'}
 		></iconify-icon>
 	</button>
