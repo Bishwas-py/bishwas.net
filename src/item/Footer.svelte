@@ -101,6 +101,8 @@
 </footer>
 
 <style lang="postcss">
+	@reference '../styles/app.css';
+
 	footer {
 		@apply mx-auto z-30 max-w-3xl justify-start w-full items-start mt-12 flex;
 		@apply px-2;

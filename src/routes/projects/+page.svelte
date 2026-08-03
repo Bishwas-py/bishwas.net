@@ -53,7 +53,7 @@
 								alt={project.name}
 								loading="lazy"
 								decoding="async"
-								class="w-auto h-full rounded group-hover:opacity-75 transition-opacity duration-300"
+								class="w-auto h-full rounded-sm group-hover:opacity-75 transition-opacity duration-300"
 							/>
 							<div
 								class="absolute inset-0 bg-black/60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -164,6 +164,8 @@
 {/each}
 
 <style lang="postcss">
+	@reference '../../styles/app.css';
+
 	.intro h1 {
 		@apply text-3xl md:text-4xl font-bold leading-tight mb-3;
 	}

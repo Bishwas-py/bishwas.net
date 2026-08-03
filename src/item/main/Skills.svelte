@@ -61,6 +61,8 @@
 </div>
 
 <style lang="postcss">
+	@reference '../../styles/app.css';
+
     .load-more {
         @apply flex items-center justify-center active:scale-95 duration-200;
     }

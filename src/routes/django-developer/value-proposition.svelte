@@ -5,7 +5,7 @@
 <div class="mt-10 mb-12">
 	<div class="relative">
 		<div
-			class="absolute left-0 w-1 h-full bg-gradient-to-b from-green-500/40 to-transparent rounded-full"></div>
+			class="absolute left-0 w-1 h-full bg-linear-to-b from-green-500/40 to-transparent rounded-full"></div>
 
 		<div class="pl-6">
 			<h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">

@@ -73,7 +73,7 @@
 			<div class="flex items-center gap-4">
 				<LogosSvelteIcon
 					class="w-10 h-10 p-2 shrink-0 rounded-full bg-orange-500/10 text-orange-600
-        bg-gradient-to-r from-orange-500/20 via-red-400/20 to-pink-600/20
+        bg-linear-to-r from-orange-500/20 via-red-400/20 to-pink-600/20
         shadow-inner shadow-orange-400/60"
 				/>
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">The Transformation</h2>

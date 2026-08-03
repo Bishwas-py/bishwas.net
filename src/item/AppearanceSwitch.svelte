@@ -22,6 +22,8 @@
 </button>
 
 <style lang="postcss">
+	@reference '../styles/app.css';
+
     button {
         @apply absolute top-4 md:top-14 right-7
         duration-700 active:scale-95

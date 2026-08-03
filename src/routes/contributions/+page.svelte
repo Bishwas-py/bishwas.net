@@ -83,6 +83,8 @@
 </section>
 
 <style lang="postcss">
+	@reference '../../styles/app.css';
+
 	.intro h1 {
 		@apply text-3xl md:text-4xl font-bold leading-tight mb-3;
 	}

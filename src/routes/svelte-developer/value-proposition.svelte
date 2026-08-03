@@ -7,7 +7,7 @@
 <div class="mt-10 mb-12">
   <div class="relative">
     <div
-      class="absolute left-0 w-1 h-full bg-gradient-to-b from-orange-500/40 to-transparent rounded-full"
+      class="absolute left-0 w-1 h-full bg-linear-to-b from-orange-500/40 to-transparent rounded-full"
     ></div>
 
     <div class="pl-6">

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import 'iconify-icon';
 	import '$styles/app.css';
-	import '$styles/icons.css';
 
 	import '$fonts/styles/noto-sans.css';
 
@@ -32,6 +31,8 @@
 </div>
 
 <style lang="postcss">
+	@reference '../styles/app.css';
+
 	div.layout-container {
 		@apply text-slate-900 dark:text-slate-100
         w-full min-h-screen
@@ -51,7 +52,7 @@
 	}
 
 	.bg-overlay .overlay {
-		@apply h-full w-full bg-gradient-to-b from-purple-100/75 to-slate-200/75 dark:from-gray-950/95 dark:to-slate-950/95;
+		@apply h-full w-full bg-linear-to-b from-purple-100/75 to-slate-200/75 dark:from-gray-950/95 dark:to-slate-950/95;
 	}
 
 	.bg-overlay img {

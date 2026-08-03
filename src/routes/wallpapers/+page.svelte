@@ -95,7 +95,7 @@
 
 <section class="intro max-w-3xl mb-8" in:fade={{ duration: 300 }}>
 	<h1 class="text-3xl sm:text-4xl font-semibold mb-3">
-		<span class="bg-gradient-to-r from-purple-600 via-fuchsia-500 to-orange-500 bg-clip-text text-transparent">
+		<span class="bg-linear-to-r from-purple-600 via-fuchsia-500 to-orange-500 bg-clip-text text-transparent">
 			Wallpapers
 		</span>
 		<span class="opacity-80">— free for your screens.</span>
@@ -190,6 +190,8 @@
 </p>
 
 <style lang="postcss">
+	@reference '../../styles/app.css';
+
     .intro {
         @apply text-slate-900 dark:text-slate-100;
     }
@@ -205,7 +207,7 @@
     }
 
     .chip-active {
-        @apply bg-gradient-to-r from-purple-500/15 to-orange-500/15
+        @apply bg-linear-to-r from-purple-500/15 to-orange-500/15
         border-purple-500/40 dark:border-purple-300/40
         text-purple-900 dark:text-purple-100 font-semibold shadow-sm;
     }
@@ -243,7 +245,7 @@
     .card-inner {
         @apply relative rounded-2xl overflow-hidden
         bg-white/70 dark:bg-gray-900/60
-        backdrop-blur-sm shadow-sm
+        backdrop-blur-xs shadow-xs
         border border-purple-500/5 dark:border-purple-300/5;
     }
 
@@ -262,7 +264,7 @@
 
     .overlay {
         @apply absolute inset-0 flex items-end justify-start p-3
-        bg-gradient-to-t from-black/60 via-black/15 to-transparent
+        bg-linear-to-t from-black/60 via-black/15 to-transparent
         opacity-0 group-hover:opacity-100 transition duration-300;
     }
 
@@ -312,7 +314,7 @@
         @apply inline-flex items-center gap-1.5 text-sm font-semibold
         text-purple-900 dark:text-purple-100
         px-3 py-1.5 rounded-full
-        bg-gradient-to-r from-purple-500/15 to-orange-500/15
+        bg-linear-to-r from-purple-500/15 to-orange-500/15
         hover:from-purple-500/30 hover:to-orange-500/30
         border border-purple-500/30 dark:border-purple-300/30
         transition;

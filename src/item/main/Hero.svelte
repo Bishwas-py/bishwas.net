@@ -41,6 +41,8 @@
 </header>
 
 <style lang="postcss">
+	@reference '../../styles/app.css';
+
 	header {
 		@apply flex flex-col items-center justify-center;
 		@apply text-slate-900 dark:text-slate-100;
@@ -52,7 +54,7 @@
 	}
 
 	.avatar-slot {
-		@apply flex-shrink-0 md:sticky top-7;
+		@apply shrink-0 md:sticky top-7;
 	}
 
 	.hero-text {

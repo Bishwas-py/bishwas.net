@@ -1,26 +1,156 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import './icons.css';
 
-@keyframes wobble {
-	0%,
-	100% {
-		border-radius: 28% 25% 28% 25%;
-		transform: rotate(0deg);
-	}
-	25% {
-		border-radius: 25% 28% 25% 28%;
-		transform: rotate(-1deg);
-	}
-	50% {
-		border-radius: 28% 25% 28% 25%;
-		transform: rotate(0deg);
-	}
-	75% {
-		border-radius: 25% 28% 25% 28%;
-		transform: rotate(1deg);
-		scale: 103%;
-	}
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-noto-sans: noto-sans, sans-serif;
+
+  --drop-shadow-white-sm: 0 1px 2px rgba(255, 255, 255, 0.05);
+  --drop-shadow-white-md: 0 4px 6px rgba(255, 255, 255, 0.1);
+  --drop-shadow-white-lg: 0px 15px 15px rgba(255, 255, 255, 1);
+  --drop-shadow-white-xl: 0px 20px 25px rgba(255, 255, 255, 1);
+  --drop-shadow-dark-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --drop-shadow-dark-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --drop-shadow-dark-lg: 0px 15px 15px rgba(0, 0, 0, 1);
+  --drop-shadow-dark-xl: 0px 20px 25px rgba(0, 0, 0, 1);
+  --drop-shadow-gold-sm: 0 1px 2px rgba(255, 215, 0, 0.05);
+  --drop-shadow-gold-md: 0 4px 6px rgba(255, 215, 0, 0.1);
+  --drop-shadow-gold-lg: 0px 15px 15px rgba(255, 215, 0, 1);
+  --drop-shadow-gold-xl: 0px 20px 25px rgba(255, 215, 0, 1);
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility link-inked {
+  @apply text-purple-800 font-semibold hover:text-purple-600
+        dark:text-purple-200 dark:hover:text-purple-400
+        duration-75;
+}
+
+@utility stats {
+  @apply flex flex-wrap items-baseline gap-x-3 gap-y-2;
+}
+
+@utility stat {
+  @apply flex items-baseline gap-1.5 pr-3
+        border-r border-gray-300/70 dark:border-gray-700/70
+        last:border-r-0 last:pr-0;
+
+  & .value {
+    @apply text-xl font-bold text-purple-800 dark:text-purple-200;
+  }
+
+  & .label {
+    @apply text-sm text-gray-600 dark:text-gray-400;
+  }
+}
+
+@utility value {
+  .stat & {
+    @apply text-xl font-bold text-purple-800 dark:text-purple-200;
+  }
+}
+
+@utility label {
+  .stat & {
+    @apply text-sm text-gray-600 dark:text-gray-400;
+  }
+}
+
+@utility said {
+  @apply underline decoration-transparent underline-offset-4 duration-150
+        hover:decoration-gray-400/70 dark:hover:decoration-gray-500/70;
+}
+
+@utility tip {
+  @apply pointer-events-none absolute bottom-full left-1/2 z-30 mb-2 w-max
+        max-w-[min(240px,calc(100vw-2rem))] rounded-md px-2.5 py-1.5 text-xs leading-snug text-left
+        opacity-0 transition-opacity duration-150 shadow-lg
+        bg-gray-900 text-gray-100 dark:bg-gray-100 dark:text-gray-900;
+  transform: translateX(calc(-50% + var(--tip-shift, 0px)));
+
+  &.below {
+    @apply bottom-auto top-full mb-0 mt-2;
+  }
+
+  &::after {
+    content: '';
+    @apply absolute top-full border-[6px] border-transparent
+        border-t-gray-900 dark:border-t-gray-100;
+    left: calc(50% - var(--tip-shift, 0px));
+    transform: translateX(-50%);
+  }
+
+  &.below::after {
+    @apply top-auto bottom-full border-t-transparent
+        border-b-gray-900 dark:border-b-gray-100 dark:border-t-transparent;
+  }
+}
+
+@utility below {
+  &.tip {
+    @apply bottom-auto top-full mb-0 mt-2;
+  }
+
+  &.tip::after {
+    @apply top-auto bottom-full border-t-transparent
+        border-b-gray-900 dark:border-b-gray-100 dark:border-t-transparent;
+  }
+}
+
+@utility pill-accent {
+  @apply rounded-full bg-purple-100/80 text-purple-900
+        dark:bg-purple-950/70 dark:text-purple-200;
+}
+
+@utility hero-image-container {
+  @apply overflow-hidden shadow-md dark:outline-solid dark:outline-1 dark:outline-stone-700;
+  animation: wobble 2s infinite;
+  border-radius: 28% 25% 28% 25%;
+}
+
+@utility hero-image {
+  @apply w-full h-full object-cover scale-110 hover:scale-150 hover:object-top duration-200 cursor-zoom-in;
+}
+
+@layer utilities {
+  @keyframes wobble {
+    0%,
+    100% {
+      border-radius: 28% 25% 28% 25%;
+      transform: rotate(0deg);
+    }
+    25% {
+      border-radius: 25% 28% 25% 28%;
+      transform: rotate(-1deg);
+    }
+    50% {
+      border-radius: 28% 25% 28% 25%;
+      transform: rotate(0deg);
+    }
+    75% {
+      border-radius: 25% 28% 25% 28%;
+      transform: rotate(1deg);
+      scale: 103%;
+    }
+  }
 }
 
 @layer base {
@@ -47,76 +177,5 @@
 
 	.dark ::-webkit-scrollbar-thumb {
 		@apply bg-gray-500;
-	}
-}
-
-@layer components {
-	.link-inked {
-		@apply text-purple-800 font-semibold hover:text-purple-600
-        dark:text-purple-200 dark:hover:text-purple-400
-        duration-75;
-	}
-
-	.stats {
-		@apply flex flex-wrap items-baseline gap-x-3 gap-y-2;
-	}
-
-	.stat {
-		@apply flex items-baseline gap-1.5 pr-3
-        border-r border-gray-300/70 dark:border-gray-700/70
-        last:border-r-0 last:pr-0;
-	}
-
-	.stat .value {
-		@apply text-xl font-bold text-purple-800 dark:text-purple-200;
-	}
-
-	.stat .label {
-		@apply text-sm text-gray-600 dark:text-gray-400;
-	}
-
-	.said {
-		@apply underline decoration-transparent underline-offset-4 duration-150
-        hover:decoration-gray-400/70 dark:hover:decoration-gray-500/70;
-	}
-
-	.tip {
-		@apply pointer-events-none absolute bottom-full left-1/2 z-30 mb-2 w-max
-        max-w-[min(240px,calc(100vw-2rem))] rounded-md px-2.5 py-1.5 text-xs leading-snug text-left
-        opacity-0 transition-opacity duration-150 shadow-lg
-        bg-gray-900 text-gray-100 dark:bg-gray-100 dark:text-gray-900;
-		transform: translateX(calc(-50% + var(--tip-shift, 0px)));
-	}
-
-	.tip.below {
-		@apply bottom-auto top-full mb-0 mt-2;
-	}
-
-	.tip::after {
-		content: '';
-		@apply absolute top-full border-[6px] border-transparent
-        border-t-gray-900 dark:border-t-gray-100;
-		left: calc(50% - var(--tip-shift, 0px));
-		transform: translateX(-50%);
-	}
-
-	.tip.below::after {
-		@apply top-auto bottom-full border-t-transparent
-        border-b-gray-900 dark:border-b-gray-100 dark:border-t-transparent;
-	}
-
-	.pill-accent {
-		@apply rounded-full bg-purple-100/80 text-purple-900
-        dark:bg-purple-950/70 dark:text-purple-200;
-	}
-
-	.hero-image-container {
-		@apply overflow-hidden shadow-md dark:outline dark:outline-1 dark:outline-stone-700;
-		animation: wobble 2s infinite;
-		border-radius: 28% 25% 28% 25%;
-	}
-
-	.hero-image {
-		@apply w-full h-full object-cover scale-110 hover:scale-150 hover:object-top duration-200 cursor-zoom-in;
 	}
 }

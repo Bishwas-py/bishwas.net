@@ -7,6 +7,8 @@
 {#each parts as part, i (i)}{#if i % 2 === 1}<code>{part}</code>{:else}{part}{/if}{/each}
 
 <style lang="postcss">
+	@reference '../../styles/app.css';
+
     code {
         @apply font-mono text-[0.9em] px-1 py-0.5 rounded
         bg-stone-200/70 text-stone-800

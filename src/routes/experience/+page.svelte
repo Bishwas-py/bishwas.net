@@ -255,6 +255,8 @@
 	</p>
 </div>
 <style lang="postcss">
+	@reference '../../styles/app.css';
+
     .experience-intro {
         @apply max-w-3xl;
     }

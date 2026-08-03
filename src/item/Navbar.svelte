@@ -29,6 +29,8 @@
 </nav>
 
 <style lang="postcss">
+	@reference '../styles/app.css';
+
 	nav {
 		@apply flex justify-center items-center gap-4 flex-col relative mt-20 md:mt-14 py-1;
 	}

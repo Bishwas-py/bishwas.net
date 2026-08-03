@@ -74,7 +74,7 @@
 			<div class="flex items-center gap-4">
 				<SimpleIconsDjango
 					class="w-10 h-10 p-2 shrink-0 rounded-full bg-green-500/10 text-green-600
-        bg-gradient-to-r from-green-500/20 via-green-400/20 to-teal-600/20
+        bg-linear-to-r from-green-500/20 via-green-400/20 to-teal-600/20
         shadow-inner shadow-green-400/60"
 				/>
 				<h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">The Evolution</h2>

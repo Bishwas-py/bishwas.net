@@ -123,18 +123,20 @@
 </article>
 
 <style lang="postcss">
+	@reference '../../styles/app.css';
+
 	.patch {
 		@apply relative;
 	}
 
 	.glow {
 		@apply absolute inset-0 rounded-lg blur opacity-0 group-hover:opacity-60
-        bg-gradient-to-r from-purple-500/25 to-orange-500/25
+        bg-linear-to-r from-purple-500/25 to-orange-500/25
         transition duration-500;
 	}
 
 	.body {
-		@apply relative rounded-lg bg-white/60 dark:bg-gray-800/50 shadow-sm p-5 md:p-6
+		@apply relative rounded-lg bg-white/60 dark:bg-gray-800/50 shadow-xs p-5 md:p-6
         flex flex-col gap-3;
 	}
 
@@ -197,7 +199,7 @@
 	}
 
 	.result iconify-icon {
-		@apply flex-shrink-0 mt-0.5;
+		@apply shrink-0 mt-0.5;
 	}
 
 	.context {
