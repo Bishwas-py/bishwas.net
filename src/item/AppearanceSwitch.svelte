@@ -39,8 +39,4 @@
     button .icons iconify-icon {
         @apply text-2xl p-0 m-0;
     }
-
-    button .icons text {
-        @apply text-xs h-min;
-    }
 </style>
