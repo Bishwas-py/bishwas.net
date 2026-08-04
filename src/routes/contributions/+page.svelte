@@ -15,8 +15,8 @@
 </script>
 
 <Meta
-	title="Contributions — patches merged into pydantic, SvelteKit and Litestar | Bishwas"
-	description="Bugs found and fixed in other people's frameworks: five patches merged into pydantic, SvelteKit and Litestar, plus issues traced and filed upstream."
+	title="Contributions — patches merged into Biome, pydantic, SvelteKit and Litestar | Bishwas"
+	description="Bugs found and fixed in other people's frameworks: eight patches merged into Biome, pydantic, SvelteKit, Litestar and dj-stripe, plus issues traced and filed upstream."
 	keywords="open source contributions, upstream patches, pydantic, sveltekit, litestar, python, svelte, pull requests"
 />
 

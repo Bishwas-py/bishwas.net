@@ -2,7 +2,7 @@ export type Patch = {
 	repo: string;
 	stars: string;
 	icon: string;
-	accent: 'rose' | 'orange' | 'amber' | 'emerald';
+	accent: 'rose' | 'orange' | 'amber' | 'emerald' | 'blue';
 	title: string;
 	prNumber: number;
 	mergedIn: string;
@@ -38,6 +38,26 @@ export const PATCHES: Patch[] = [
 			alsoOn: ['teemingc']
 		},
 		fix: 'Routing handed the POST to the sibling endpoint and stopped there. Now an endpoint exporting neither `POST` nor `fallback` is treated as unusable and the request falls through to the page actions, mirroring the `endpoint_can_handle` pattern already used for GET/HEAD.'
+	},
+	{
+		repo: 'biomejs/biome',
+		stars: '25.5k',
+		icon: 'simple-icons:biome',
+		accent: 'blue',
+		title: '`biome-ignore` could not suppress `noPositiveTabindex` on multiline tags',
+		prNumber: 11201,
+		mergedIn: 'merged after two review rounds',
+		diff: { added: 38, removed: 1, files: 4 },
+		symptom: {
+			code: '<!-- biome-ignore lint/a11y/noPositiveTabindex: ... -->\n<slot\n  name="icon"\n  tabindex="2"\n></slot>',
+			result: 'the suppression is ignored — the diagnostic fires anyway'
+		},
+		context: "Biome's own maintainer filed it as issue 11182; I sent the fix the same day.",
+		approval: {
+			login: 'ematipico',
+			review: 'https://github.com/biomejs/biome/pull/11201#pullrequestreview-4843873767'
+		},
+		fix: 'The rule anchored its suppression range to the `tabindex` value, a line a comment above the element can never reach once attributes wrap. Implementing `text_range` widens it to the whole opening tag, the same shape the JSX rule already used, so the comment lands where authors actually write it.'
 	},
 	{
 		repo: 'sveltejs/kit',

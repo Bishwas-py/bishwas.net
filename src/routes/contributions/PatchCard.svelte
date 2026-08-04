@@ -11,7 +11,8 @@
 				rose: 'text-rose-600 dark:text-rose-400',
 				orange: 'text-orange-600 dark:text-orange-400',
 				amber: 'text-amber-600 dark:text-amber-400',
-				emerald: 'text-emerald-600 dark:text-emerald-400'
+				emerald: 'text-emerald-600 dark:text-emerald-400',
+				blue: 'text-blue-600 dark:text-blue-400'
 			}
 		}
 	});
