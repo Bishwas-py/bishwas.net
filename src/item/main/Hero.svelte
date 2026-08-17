@@ -34,6 +34,20 @@
 						class="link-inked">{repo.repo}</a
 					>{/each}. Nepal-born, globally connected.
 			</p>
+			<p
+				class="text-sm ml-1 mt-3 flex flex-wrap items-center gap-x-1.5 text-gray-600 dark:text-gray-400"
+				use:introFade={{ key: 'hero-svelte-feature', delay: 520 }}
+			>
+				<iconify-icon class="text-orange-600 dark:text-orange-400" icon="simple-icons:svelte"
+				></iconify-icon>
+				Featured by the Svelte team in
+				<a
+					href="https://svelte.dev/blog/whats-new-in-svelte-august-2026#:~:text=me%20everything%20by-,Bishwas%20Bhandari,-is%20a%20personal"
+					target="_blank"
+					rel="noopener"
+					class="link-inked">What's new in Svelte, August 2026</a
+				>
+			</p>
 			<Skills />
 		</div>
 	</div>

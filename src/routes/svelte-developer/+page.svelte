@@ -11,7 +11,7 @@
 	import LookingForward from '$item/developer/LookingForward.svelte';
 	import ExpertiseShowcase from '$item/developer/ExpertiseShowcase.svelte';
 	import Meta from '$item/Meta.svelte';
-	import Video from './Video.svelte';
+	import SvelteFeature from './SvelteFeature.svelte';
 
 	const achievements = [
 		{
@@ -167,6 +167,7 @@
 		body="Beyond just using Svelte, I've become an active contributor to its ecosystem. The journey from user to advocate has been marked by real-world implementations and open-source contributions."
 	/>
 	<ContributionHighlights />
+	<SvelteFeature />
 	<TechImpact {impacts} accent="svelte" />
 	<ValueProposition
 		accent="svelte"
@@ -175,7 +176,6 @@
 		projects="Need expertise for a critical project? I offer technical leadership and hands-on development, bringing enterprise-level Svelte experience to your challenges."
 		outro="Every project is a chance to prove that development can be both powerful and peaceful. Whether you're starting fresh or evolving existing systems, I help create an environment where your team can thrive while delivering exceptional results."
 	/>
-	<Video />
 	<LookingForward
 		accent="svelte"
 		body="The future of web development is about finding the perfect balance between power and simplicity. With Svelte, I'm not just building applications – I'm helping shape a more intuitive way of creating for the web."
