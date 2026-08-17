@@ -84,7 +84,25 @@ export const PATCHES: Patch[] = [
 	},
 	{
 		repo: 'pydantic/pydantic',
-		stars: '28.4k',
+		stars: '28.5k',
+		icon: 'simple-icons:pydantic',
+		accent: 'rose',
+		title: 'A computed field that serialization drops was still advertised as required',
+		prNumber: 13563,
+		mergedIn: 'merged by a maintainer',
+		diff: { added: 31, removed: 1, files: 2 },
+		symptom: {
+			code: '@computed_field(exclude_if=lambda v: v == 0)\ndef b(self) -> int:\n    return 0',
+			result: "model_dump() returns {} — but the serialization schema still lists 'b' as required"
+		},
+		context:
+			'Regular fields already handled this. `exclude_if` was later added to computed fields without touching the schema generator, so the sibling path was missed.',
+		approval: { login: 'Viicos' },
+		fix: "`_name_required_computed_fields()` hardcoded `True` for every computed field, so a field the serializer may drop was still promised to consumers of the schema. It now returns `field.get('serialization_exclude_if') is None`, matching the rule regular fields already followed. One line, plus the test that proves it."
+	},
+	{
+		repo: 'pydantic/pydantic',
+		stars: '28.5k',
 		icon: 'simple-icons:pydantic',
 		accent: 'rose',
 		title: '`field_title_generator` was documented with a signature it never accepted',
@@ -102,7 +120,7 @@ export const PATCHES: Patch[] = [
 	},
 	{
 		repo: 'pydantic/pydantic',
-		stars: '28.4k',
+		stars: '28.5k',
 		icon: 'simple-icons:pydantic',
 		accent: 'rose',
 		title: '`SecretStr` equality raised `TypeError` on non-ASCII values',
