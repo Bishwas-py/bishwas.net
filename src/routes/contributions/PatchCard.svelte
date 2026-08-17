@@ -32,7 +32,7 @@
 	import { prUrl, repoUrl, type Patch } from '$utils/contributions';
 	import { avatarOf } from '$utils/people';
 	import Face from '$item/Face.svelte';
-	import Ticked from './Ticked.svelte';
+	import Ticked from '$item/Ticked.svelte';
 
 	let { patch }: { patch: Patch } = $props();
 

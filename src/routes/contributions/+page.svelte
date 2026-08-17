@@ -2,7 +2,7 @@
 	import { fade, fly } from 'svelte/transition';
 	import Meta from '$item/Meta.svelte';
 	import PatchCard from './PatchCard.svelte';
-	import Ticked from './Ticked.svelte';
+	import Ticked from '$item/Ticked.svelte';
 	import { PATCHES, REPORTED } from '$utils/contributions';
 
 	const frameworks = new Set(PATCHES.map((patch) => patch.repo)).size;
