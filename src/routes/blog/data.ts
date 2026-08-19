@@ -63,7 +63,11 @@ const POSTS: Post[] = [
 		date: '2026-08-02',
 		minutes: 6,
 		tags: ['sveltekit', 'animation'],
-		receipt: { kind: 'own', label: 'bishwas.net source', url: 'https://github.com/Bishwas-py/bishwas.net' },
+		receipt: {
+			kind: 'own',
+			label: 'bishwas.net source',
+			url: 'https://github.com/Bishwas-py/bishwas.net'
+		},
 		body: [
 			{
 				t: 'p',
@@ -202,7 +206,10 @@ export function avatarFlight() {
 	}
 ];
 
-export const SORTED = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
+/** Only posts with a body are published. The rest sit in POSTS as the queue. */
+export const SORTED = POSTS.filter((post) => post.body).sort((a, b) =>
+	b.date.localeCompare(a.date)
+);
 
 export const fmtDate = (iso: string) =>
 	new Date(iso + 'T00:00:00Z').toLocaleDateString('en-GB', {
