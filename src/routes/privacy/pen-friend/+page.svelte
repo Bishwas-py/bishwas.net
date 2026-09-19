@@ -21,7 +21,8 @@
 			list: [
 				'A picture of the page you are on, your ink and the images on it, is sent when you use the pen friend, and shortly after you stop writing so the briefing stays current. This includes pages in locked folders.',
 				'With that picture goes the text Pen Friend has already written about your worklogs: titles, labels, keywords, short summaries and their history, your folder names, and labels you corrected. The same text is sent on its own when you search by meaning or ask for worklogs to be filed.',
-				'Each request carries a random number that names your install of Pen Friend. It is used only to limit how fast requests can be made. It is not tied to your name, your Apple ID or your device’s identifiers.'
+				'Each request carries a random number that names your install of Pen Friend. It is used only to limit how fast requests can be made. It is not tied to your name, your Apple ID or your device’s identifiers.',
+				'Each request is also signed by your iPad’s secure chip, using Apple’s App Attest, so the relay can tell it comes from a genuine copy of Pen Friend and not from someone imitating it. The first time, your iPad asks Apple to certify the key it made for this. Apple learns that this app asked for a certificate, and nothing about what you write. The key is made for this app alone and is not tied to your name or your Apple ID.'
 			]
 		},
 		{
