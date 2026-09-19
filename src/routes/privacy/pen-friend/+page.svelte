@@ -42,10 +42,10 @@
 		},
 		{
 			title: 'Permissions Pen Friend asks for',
-			body: [],
+			body: ['Two of these belong to Desktop mode, which is off until you turn it on in Settings. With it off, Pen Friend asks for neither and uses neither.'],
 			list: [
-				'Photos, so a screenshot you take on the iPad can land in Pen Friend. Pen Friend reads new screenshots only, and they stay on your iPad unless they are on a page you ask the model to read.',
-				'Local network, to find your Mac.',
+				'Photos, in Desktop mode only, so a screenshot you take on the iPad can land in Pen Friend. Pen Friend reads new screenshots only, and they stay on your iPad unless they are on a page you ask the model to read.',
+				'Local network, in Desktop mode only, to find your Mac.',
 				'Face ID or Touch ID, to open locked folders. The check is done by iPadOS. Pen Friend never sees your face or fingerprint data, only a yes or a no.'
 			]
 		},
