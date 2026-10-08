@@ -70,6 +70,8 @@
 		<p class="mt-4 leading-relaxed text-gray-700 dark:text-gray-300">
 			Everything you make in Loaded Bible stays on your iPhone: your kits, the names you type, your
 			messages and the verses you save. There is no account, and nothing is sent to me or to anyone else.
+			The rest is in the
+			<a class="text-purple-800 dark:text-purple-200 underline" href="/privacy/loaded-bible">privacy policy</a>.
 		</p>
 	</section>
 </article>
