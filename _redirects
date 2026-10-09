@@ -1,0 +1,14 @@
+# The app support and privacy pages moved to apps.bishwas.net. These URLs are
+# in shipped App Store listings, so they have to keep resolving.
+/pen-friend/support     https://apps.bishwas.net/pen-friend/support     301
+/loaded-bible/support   https://apps.bishwas.net/loaded-bible/support   301
+/privacy/pen-friend     https://apps.bishwas.net/pen-friend/privacy     301
+/privacy/loaded-bible   https://apps.bishwas.net/loaded-bible/privacy   301
+
+# Pen Friend was called AirPad first. Sent straight to the new address rather
+# than through the old one, so there is no redirect chain.
+/privacy/airpad         https://apps.bishwas.net/pen-friend/privacy     301
+
+# These never existed here, but they are the obvious things to type.
+/pen-friend             https://apps.bishwas.net/pen-friend            301
+/loaded-bible           https://apps.bishwas.net/loaded-bible          301
